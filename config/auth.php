@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Looksy\User::class,
+            'model' => Looksy\Models\User::class,
         ],
 
         // 'users' => [

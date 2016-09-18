@@ -4,6 +4,7 @@ namespace Looksy\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Looksy\Models\User;
+use Auth;
 
 class AuthController extends Controller
 {
@@ -34,8 +35,24 @@ class AuthController extends Controller
 		return view('auth.signin');
 	}
 
-	public function postSignin()
+	public function postSignin(Request $request)
 	{
-		dd('signin');
+		$this->validate($request, [
+			'email' => 'required', 
+			'password' => 'required'
+		]);
+
+		if(!Auth::attempt($request->only(['email', 'password']), $request->has('remember'))) {
+			return redirect()->back()->with('info', 'Could not sign you in with those details');
+		}
+
+		return redirect()->route('home')->with('info', 'You are now signed in');
+	}
+
+	public function getSignout()
+	{
+		Auth::logout();
+
+		return redirect()->route('home')->with('info', 'You are now signed out');
 	}
 }
