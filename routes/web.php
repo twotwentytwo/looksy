@@ -84,4 +84,16 @@ Route::get('/friends/accept/{username}', [
     'middleware' => ['auth']
 ]);
 
+Route::post('/status', [
+    'uses' => '\Looksy\Http\Controllers\StatusController@postStatus',
+    'as' => 'status.post', 
+    'middleware' => ['auth']
+]);
+
+Route::post('/status/{statusId}', [
+    'uses' => '\Looksy\Http\Controllers\StatusController@postReply',
+    'as' => 'status.reply', 
+    'middleware' => ['auth']
+]);
+
 
