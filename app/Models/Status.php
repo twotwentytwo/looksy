@@ -17,4 +17,14 @@ class Status extends Model
     	{
     		return $this->belongsTo('Looksy\Models\User', 'user_id');
     	}
+
+    	public function scopeNotReply($query) 
+    	{
+    		return $query->whereNull('parent_id');
+    	}
+
+    	public function replies() 
+    	{
+    		return $this->hasMany('Looksy\Models\Status', 'parent_id');
+    	}
 }

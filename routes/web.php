@@ -90,7 +90,7 @@ Route::post('/status', [
     'middleware' => ['auth']
 ]);
 
-Route::post('/status/{statusId}', [
+Route::post('/status/{statusId}/reply', [
     'uses' => '\Looksy\Http\Controllers\StatusController@postReply',
     'as' => 'status.reply', 
     'middleware' => ['auth']
