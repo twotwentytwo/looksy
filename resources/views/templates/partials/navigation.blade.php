@@ -1,9 +1,16 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="{{ route('home') }}">Looksy</a>
-        </div>
-        <div class="collapse navbar-collapse">
+        <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#looksy-menu" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <a class="navbar-brand" href="{{ route('home') }}">Pick List</a>
+    </div>
+        <div class="collapse navbar-collapse" id="looksy-menu">
             @if (Auth::check())
                 <ul class="nav navbar-nav">
                     <li><a href="{{ route('home') }}">Timeline</a></li>
