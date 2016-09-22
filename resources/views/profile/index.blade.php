@@ -3,9 +3,6 @@
 @section('content')
 <div class="row">
     <div class="col-lg-5">
-        @include('user.partials.userblock')
-        <hr>
-
         @if(!$statuses->count())
                 <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet</p>
             @else
@@ -43,7 +40,7 @@
                             @if($authUserIsFriend|| Auth::user()->id === $status->user->id)
                                 <form role="form" action="{{ route('status.reply', ['statusId' => $status->id]) }}" method="post">
                                     <div class="form-group{{ $errors->has("reply-{$status->id}") ? ' has-error': '' }}">
-                                        <textarea name="reply-{{ $status->id }}" class="form-control" rows="2" placeholder="Reply to this status"></textarea>
+                                        <textarea name="reply-{{ $status->id }}" class="form-control" rows="2" placeholder="Reply to this"></textarea>
                                         @if($errors->has("reply-{$status->id}"))
                                             <span class="help-block">{{ $errors->first("reply-{$status->id}") }}</span> 
                                         @endif
