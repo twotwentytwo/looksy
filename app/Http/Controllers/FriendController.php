@@ -21,7 +21,7 @@ class FriendController extends Controller
 	public function getAdd($username)
 	{	
 
-		//dd($username);
+		
 
 		$user = User::where('username', $username)->first();
 
