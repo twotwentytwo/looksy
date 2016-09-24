@@ -1,0 +1,69 @@
+/*
+ * LOOKSY STYLES 
+ */
+
+
+/*
+ * TEMPLATE
+ */
+
+
+.image img {
+    width: 100%;
+}
+
+h1, h2, h3, p, li, a, input, textarea, button, label {
+    font-family: 'Karla', sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+	text-align:center;
+}
+
+h1 a {
+	color: #ff8d6b;
+	font-weight: bolder;
+	letter-spacing: 0.1px;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+.container {
+	margin-bottom: 100px;
+}
+
+a {
+	color: #ff6462;
+	font-weight: bold;
+}
+
+
+/*
+ * NAVIGATION
+ */
+
+ .looksy-navigation {
+ 	list-style: none;
+ 	background: #f4eeed;
+ 	padding:0;
+ 	margin:0;
+ 	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+ }
+
+ .looksy-navigation li {
+ 	display:inline;
+ 	margin-right: 16px;
+ }
+
+.looksy-navigation li img {
+	width: 44px;
+}
+

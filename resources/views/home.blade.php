@@ -1,6 +1,6 @@
 @extends('templates.default')
 
 @section('content')
-	<h1>Pick List</h1>
-	<p>Share your top things with friends</p>
+	<h2>Share your top picks with friends</h2>
+	<p class="introduction">Sign up or sign in and start sharing your top cultural picks today. </p>
 @stop

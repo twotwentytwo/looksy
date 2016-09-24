@@ -38,6 +38,10 @@
                 <button type="submit" class="btn btn-default">Update</button>
             </div>
             <input type="hidden" name="_token" value="{{ Session::token() }}">
+
+            @if (Auth::check())      
+                <a href="{{ route('auth.signout') }}">Sign out</a>
+            @endif
         </form>
     </div>
 </div>
