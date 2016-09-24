@@ -48,7 +48,6 @@ a {
  .looksy-navigation {
  	list-style: none;
  	background: #f4eeed;
- 	padding:0;
  	margin:0;
  	position: fixed;
     bottom: 0;
@@ -56,6 +55,8 @@ a {
     width: 100%;
     z-index: 1;
     text-align: center;
+    padding: 0.5em 0;
+    border-top: 5px solid #ff6462;
  }
 
  .looksy-navigation li {

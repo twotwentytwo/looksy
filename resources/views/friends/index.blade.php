@@ -11,6 +11,7 @@
                 <button type="submit" class="btn btn-default">Search</button>
             </form>
         </div>
+        <hr>
         <div class="col-lg-6">
             <h3>Your friends</h3>
 
@@ -23,6 +24,7 @@
 
         @endif
         </div>
+        <hr>
         <div class="col-lg-6">
             <h3>Your friend requests</h3>
             

@@ -61,6 +61,7 @@
                 
             @endif
     </div>
+    <hr>
     <div class="col-lg-4 col-lg-offset-3">
         
         @if(Auth::user()->hasFriendRequestPending($user)) 
