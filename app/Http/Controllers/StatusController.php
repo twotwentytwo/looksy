@@ -33,6 +33,11 @@ class StatusController extends Controller
     		->with('info', 'Status posted');
     }
 
+    public function getAdd()
+    {
+        return view('add.index');
+    }
+
     public function postReply(Request $request, $statusId)
     {
     	$this->validate($request, [

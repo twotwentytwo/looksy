@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col-lg-5">
-        <h3>Your latest picks</h3>
+        <h3>{{ $user->getNameOrUsername() }}'s latest picks</h3>
         @if(!$statuses->count())
                 <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet</p>
             @else

@@ -96,4 +96,9 @@ Route::post('/status/{statusId}/reply', [
     'middleware' => ['auth']
 ]);
 
+Route::get('/add', [
+    'uses' => '\Looksy\Http\Controllers\StatusController@getAdd',
+    'as' => 'add.index'
+]);
+
 

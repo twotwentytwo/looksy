@@ -8,7 +8,7 @@
                 @if (Auth::check())
                     <li><a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}"><img src="{{asset('img/navigation/list.png')}}" /></a></li>
                 @endif
-                    <li><a href="{{ route('home') }}"><img src="{{asset('img/navigation/add.png')}}" /></a></li>
+                    <li><a href="{{ route('add.index') }}"><img src="{{asset('img/navigation/add.png')}}" /></a></li>
                     <li><a href="{{ route('friend.index') }}"><img src="{{asset('img/navigation/friends.png')}}" /></a></li>
                 @if (Auth::check())      
                     <li><a href="{{ route('profile.edit') }}"><img src="{{asset('img/navigation/settings.png')}}" /></a></li>
