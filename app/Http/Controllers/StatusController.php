@@ -17,8 +17,15 @@ class StatusController extends Controller
     		'status' => 'required|max:1000'
     	]);
 
+        // should refactor this and move into a model 
+
+        $id = $request->input('status');
+            parse_str(parse_url( $id, PHP_URL_QUERY ), $get_id_from_url );
+            //dd($get_id_from_url['v']);
+
     	Auth::user()->statuses()->create([
-    		'body' => $request->input('status')
+    		'body' => $request->input('status'), 
+            'item_id' => $get_id_from_url['v']
     	]);
 
     	return redirect()
