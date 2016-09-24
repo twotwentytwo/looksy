@@ -57,7 +57,7 @@ class User extends Model implements AuthenticatableContract
 
     public function statuses()
     {
-        return $this->hasMany('Looksy\Models\Status', 'user_id');
+        return $this->hasMany('Looksy\Models\Status', 'user_id')->orderBy('created_at');
     }
 
 
