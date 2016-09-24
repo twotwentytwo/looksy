@@ -3,10 +3,14 @@
 @section('content')
 <div class="row">
     <div class="col-lg-5">
+        <h3>Your latest picks</h3>
         @if(!$statuses->count())
                 <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet</p>
             @else
                 @foreach($statuses as $status)
+                    <div class="image">
+                        <img class="media-object" src="http://ingridwu.dmmdmcfatter.com/wp-content/uploads/2015/01/placeholder.png" />
+                    </div>
                     <div class="media">
                         <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
                             <img class="media-object" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl() }}">
@@ -69,7 +73,7 @@
             <a class="btn btn-primary" href="{{ route('friend.add', ['username' => $user->username]) }}">Add as friend</a>
         @endif
 
-        <h4>{{ $user->getFirstNameOrUsername() }}'s friends.</h4>
+        <h3>Friends</h3>
         @if (!$user->friends()->count())
         	<p>{{ $user->getFirstNameOrUsername() }} has no friends.</p>
         @else
