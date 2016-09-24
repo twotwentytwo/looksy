@@ -25,9 +25,9 @@
 	        	<p>There's nothing in your timeline yet</p>
 	        @else
 	        	@foreach($statuses as $status)
-	        		<div class="image">
-	        			<img class="media-object" src="http://ingridwu.dmmdmcfatter.com/wp-content/uploads/2015/01/placeholder.png" />
-	        		</div>
+	        		<div class="videoWrapper">
+                        <iframe src="https://www.youtube.com/embed/{{ $status->body }} " frameborder="0" allowfullscreen></iframe>
+                    </div>
 	        		<div class="media">
 					    <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
 					        <img class="media-object" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl() }}">
