@@ -3,9 +3,10 @@
 @section('content')
     <div class="row">
         <div class="col-lg-6">
-         <form class="navbar-form navbar-left" role="search" action="{{ route('search.results') }}">
+            <h3>Find friends</h3>
+            <form class="navbar-form navbar-left" role="search" action="{{ route('search.results') }}">
                 <div class="form-group">
-                    <input type="text" name="query" class="form-control" placeholder="Find friends">
+                    <input type="text" name="query" class="form-control" placeholder="Search for your friends">
                 </div>
                 <button type="submit" class="btn btn-default">Search</button>
             </form>

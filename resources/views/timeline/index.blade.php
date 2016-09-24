@@ -3,9 +3,10 @@
 @section('content')
 	<div class="row">
 	    <div class="col-lg-6">
+	    	<h3>Share something</h3>
 	        <form role="form" action="{{ route('status.post') }}" method="post">
 	            <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-	                <textarea placeholder="Share a URL {{ Auth::user()->getFirstNameOrUsername() }}" name="status" class="form-control" rows="2"></textarea>
+	                <textarea placeholder="Share a URL with your friends {{ Auth::user()->getFirstNameOrUsername() }}" name="status" class="form-control" rows="2"></textarea>
 	                @if($errors->has('status'))
 	                	<span class="help-block">{{ $errors->first('status') }}</span>
 	                @endif
@@ -19,6 +20,7 @@
 
 	<div class="row">
 	    <div class="col-lg-5">
+	    	<h3>Picks from you and friends</h3>
 	        @if(!$statuses->count())
 	        	<p>There's nothing in your timeline yet</p>
 	        @else
