@@ -21,12 +21,11 @@
                     	<div class="website-wrapper">
                     		<a href="{{ $status->url }}"><img src="{{ $status->image }}" /></a>
                     		<a href="{{ $status->url }}"><h4>{{ $status->title }}</h4></a>
-                    		
                     	</div>
                     @endif
 	        		<div class="media">
 					    <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-					        <img class="media-object" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl() }}">
+					        <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl() }}">
 					    </a>
 					    <div class="media-body">
 					        <h4 class="media-heading"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
