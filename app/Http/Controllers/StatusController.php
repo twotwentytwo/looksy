@@ -88,7 +88,8 @@ class StatusController extends Controller
             'image' => $image, 
             'title' => $title, 
             'url' => $url,
-            'description' => $description
+            'description' => $description, 
+            'source' => $source
     	]);
 
     	return redirect()
