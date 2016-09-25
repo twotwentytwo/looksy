@@ -17,7 +17,7 @@
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
-                            <p>{{ $status->body }}</p>
+                            <p>{{ $status->body }} @ <a href="#">YouTube</a></p>
                             <ul class="list-inline">
                                 <li>{{ $status->created_at->diffForHumans() }}</li>
                                 <!--<li><a href="#">Like</a></li>

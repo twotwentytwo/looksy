@@ -5,6 +5,7 @@ namespace Looksy\Http\Controllers;
 
 use Auth;	
 use Looksy\Models\User;
+use Looksy\Models\OpenGraph;
 use Looksy\Models\Status;
 use Illuminate\Http\Request;
 
@@ -17,15 +18,77 @@ class StatusController extends Controller
     		'status' => 'required|max:1000'
     	]);
 
-        // should refactor this and move into a model 
 
-        $id = $request->input('status');
-            parse_str(parse_url( $id, PHP_URL_QUERY ), $get_id_from_url );
-            //dd($get_id_from_url['v']);
 
-    	Auth::user()->statuses()->create([
+        // CALCULATE TYPE FROM URL
+
+        $url = $request->input('status');
+
+        if (strpos($url, 'youtube') > 0) {
+            $type = 'YouTube';
+        } elseif (strpos($url, 'spotify') > 0) {
+            $type = 'Spotify';
+        } else {
+            $type = 'Web';
+        }
+        
+        // PREPARE THE ID TO BE SAVED 
+
+        if($type == 'YouTube') {
+
+            $url = $request->input('status');
+            parse_str(parse_url( $url, PHP_URL_QUERY ), $get_id_from_url );
+            $segment = $get_id_from_url['v'];
+
+            $image = null;
+            $title = null;
+            $url = null;
+            $description = null;
+            $source = 'YouTube';
+
+        } elseif($type == 'Spotify') {
+            
+            $url = $request->input('status');
+            $path = parse_url($url, PHP_URL_PATH);
+            $segments = explode('/', rtrim($path, '/'));
+            $segment = $segments[2];
+
+            $image = null;
+            $title = null;
+            $url = null;
+            $description = null;
+            $source = 'Spotify';
+
+        } else {
+
+            $url = $request->input('status');
+            $site_html = file_get_contents($url);
+            $matches = null;
+            preg_match_all('~<\s*meta\s+property="(og:[^"]+)"\s+content="([^"]*)~i', $site_html,$matches);
+            $ogtags = array();
+            for($i = 0; $i<count($matches[1]); $i++)
+            {
+                $ogtags[$matches[1][$i]]=$matches[2][$i];
+            }
+
+            $image = $ogtags['og:image'];
+            $title = $ogtags['og:title'];
+            $url = $ogtags['og:url'];
+            $description = $ogtags['og:description'];
+            $source = $ogtags['og:site_name'];
+
+            $segment = null;
+        
+        }
+
+        Auth::user()->statuses()->create([
     		'body' => $request->input('status'), 
-            'item_id' => $get_id_from_url['v']
+            'item_id' => $segment, 
+            'type' => $type, 
+            'image' => $image, 
+            'title' => $title, 
+            'url' => $url,
+            'description' => $description
     	]);
 
     	return redirect()
@@ -65,6 +128,8 @@ class StatusController extends Controller
 
     	return redirect()->back();
     }
+
+    
 
     
 }

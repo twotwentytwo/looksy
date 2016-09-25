@@ -9,16 +9,28 @@
 	        	<p>There's nothing in your timeline yet</p>
 	        @else
 	        	@foreach($statuses as $status)
+	        		@if($status->type == 'YouTube')
 	        		<div class="videoWrapper">
                         <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
                     </div>
+                    @elseif($status->type == 'Spotify')
+                    <div class="videoWrapper">
+                        <iframe src="https://embed.spotify.com/?uri=spotify:album:{{ $status->item_id }}&theme=white&view=coverart" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
+                    </div>
+                    @elseif($status->type == 'Web')
+                    	<div class="website-wrapper">
+                    		<a href="{{ $status->url }}"><img src="{{ $status->image }}" /></a>
+                    		<a href="{{ $status->url }}"><h4>{{ $status->title }}</h4></a>
+                    		<p>{{ $status->description }}</p>
+                    	</div>
+                    @endif
 	        		<div class="media">
 					    <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
 					        <img class="media-object" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl() }}">
 					    </a>
 					    <div class="media-body">
 					        <h4 class="media-heading"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
-					        <p>{{ $status->body }}</p>
+					        <p>{{ $status->body }} @ <a href="#">{{ $status->source }}</a></p>
 					        <ul class="list-inline">
 					            <li>{{ $status->created_at->diffForHumans() }}</li>
 					             <!--<li><a href="#">Like</a></li>

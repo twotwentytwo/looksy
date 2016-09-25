@@ -83,3 +83,11 @@ a {
 	height: 100%;
 }
 
+.website-wrapper img {
+	width: 100%;
+}
+
+.website-wrapper {
+ margin-top: 20px;
+}
+
