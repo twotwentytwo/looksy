@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col-lg-5">
-        <h3>{{ $user->getNameOrUsername() }}'s latest picks</h3>
+        <h3>{{ $user->getNameOrUsername() }}'s picks</h3>
         @if(!$statuses->count())
                 <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet</p>
             @else
@@ -20,7 +20,7 @@
                         <div class="website-wrapper">
                             <a href="{{ $status->url }}"><img src="{{ $status->image }}" /></a>
                             <a href="{{ $status->url }}"><h4>{{ $status->title }}</h4></a>
-                            <p>{{ $status->description }}</p>
+                            
                         </div>
                     @endif
                     <div class="media">

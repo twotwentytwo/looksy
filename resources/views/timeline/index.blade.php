@@ -21,7 +21,7 @@
                     	<div class="website-wrapper">
                     		<a href="{{ $status->url }}"><img src="{{ $status->image }}" /></a>
                     		<a href="{{ $status->url }}"><h4>{{ $status->title }}</h4></a>
-                    		<p>{{ $status->description }}</p>
+                    		
                     	</div>
                     @endif
 	        		<div class="media">
