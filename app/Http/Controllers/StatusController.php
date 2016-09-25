@@ -71,12 +71,11 @@ class StatusController extends Controller
                 $ogtags[$matches[1][$i]]=$matches[2][$i];
             }
 
-            $image = $ogtags['og:image'];
-            $title = $ogtags['og:title'];
-            $url = $ogtags['og:url'];
-            $description = $ogtags['og:description'];
-            $source = $ogtags['og:site_name'];
-
+            $url = (empty($ogtags['og:url'])) ? null : $ogtags['og:url'];
+            $title = (empty($ogtags['og:title'])) ? null : $ogtags['og:title'];
+            $description = (empty($ogtags['og:description'])) ? null : $ogtags['og:description'];
+            $image = (empty($ogtags['og:image'])) ? null : $ogtags['og:image'];
+            $source = (empty($ogtags['og:site_name'])) ? 'Web' : $ogtags['og:site_name'];
             $segment = null;
         
         }
