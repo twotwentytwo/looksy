@@ -14,12 +14,12 @@
         @elseif($status->type == 'Web')
             <div class="website-wrapper">
                 <div class="image">
-                    <a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
+                    <a href="{{ $status->url }}"><img src="{{ $status->image }}" /></a>
                 </div>
                 <div class="details">
-                    <p class="source"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->source }}</a></p>
-                    <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
-                    <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
+                    <p class="source"><a href="#">{{ $status->source }}</a></p>
+                    <p class="title"><a href="{{ $status->url }}">{{ $status->title }}</a></p>
+                    
                 </div>
             </div>
         @endif
