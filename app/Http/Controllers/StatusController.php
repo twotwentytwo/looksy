@@ -18,8 +18,6 @@ class StatusController extends Controller
     		'status' => 'required|max:1000'
     	]);
 
-
-
         // CALCULATE TYPE FROM URL
 
         $url = $request->input('status');
@@ -31,6 +29,23 @@ class StatusController extends Controller
         } else {
             $type = 'Web';
         }
+
+        $url = $request->input('status');
+        $site_html = file_get_contents($url);
+        $matches = null;
+        preg_match_all('~<\s*meta\s+property="(og:[^"]+)"\s+content="([^"]*)~i', $site_html,$matches);
+        $ogtags = array();
+        for($i = 0; $i<count($matches[1]); $i++)
+        {
+            $ogtags[$matches[1][$i]]=$matches[2][$i];
+        }
+
+        $url = (empty($ogtags['og:url'])) ? null : $ogtags['og:url'];
+        $title = (empty($ogtags['og:title'])) ? null : $ogtags['og:title'];
+        $description = (empty($ogtags['og:description'])) ? null : $ogtags['og:description'];
+        $image = (empty($ogtags['og:image'])) ? null : $ogtags['og:image'];
+        $source = (empty($ogtags['og:site_name'])) ? 'Web' : $ogtags['og:site_name'];
+        $segment = null;
         
         // PREPARE THE ID TO BE SAVED 
 
@@ -39,11 +54,6 @@ class StatusController extends Controller
             $url = $request->input('status');
             parse_str(parse_url( $url, PHP_URL_QUERY ), $get_id_from_url );
             $segment = $get_id_from_url['v'];
-
-            $image = null;
-            $title = null;
-            $url = null;
-            $description = null;
             $source = 'YouTube';
 
         } elseif($type == 'Spotify') {
@@ -52,33 +62,9 @@ class StatusController extends Controller
             $path = parse_url($url, PHP_URL_PATH);
             $segments = explode('/', rtrim($path, '/'));
             $segment = $segments[2];
-
-            $image = null;
-            $title = null;
-            $url = null;
-            $description = null;
             $source = 'Spotify';
 
-        } else {
-
-            $url = $request->input('status');
-            $site_html = file_get_contents($url);
-            $matches = null;
-            preg_match_all('~<\s*meta\s+property="(og:[^"]+)"\s+content="([^"]*)~i', $site_html,$matches);
-            $ogtags = array();
-            for($i = 0; $i<count($matches[1]); $i++)
-            {
-                $ogtags[$matches[1][$i]]=$matches[2][$i];
-            }
-
-            $url = (empty($ogtags['og:url'])) ? null : $ogtags['og:url'];
-            $title = (empty($ogtags['og:title'])) ? null : $ogtags['og:title'];
-            $description = (empty($ogtags['og:description'])) ? null : $ogtags['og:description'];
-            $image = (empty($ogtags['og:image'])) ? null : $ogtags['og:image'];
-            $source = (empty($ogtags['og:site_name'])) ? 'Web' : $ogtags['og:site_name'];
-            $segment = null;
-        
-        }
+        } 
 
         Auth::user()->statuses()->create([
     		'body' => $request->input('status'), 
@@ -127,6 +113,16 @@ class StatusController extends Controller
     	$status->replies()->save($reply);
 
     	return redirect()->back();
+    }
+
+    public function showPick($statusId)
+    {
+        $user = Auth::user();
+        $status = Status::find($statusId);
+        
+        return view('pick.index')
+            ->with('status', $status)
+            ->with('authUserIsFriend', Auth::user()->isFriendsWith($user));
     }
 
     

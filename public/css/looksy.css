@@ -89,6 +89,36 @@ a {
 
 .website-wrapper {
  margin-top: 20px;
+ position: relative;
+}
+
+.website-wrapper .details {
+	padding: 0;
+    position: absolute;
+    top: 50px;
+    left: 99px;
+    text-align: center;
+    margin: 0 auto;
+    width: 210px;
+}
+
+.website-wrapper .details a {
+	color: #fff;
+	background: #ff6462;
+	display:inline-block;
+}
+
+.website-wrapper .details .title {
+	font-size: 1.4em;
+}
+
+.website-wrapper .details .timing {
+    color: #fff;
+    background: #ff6462;
+    display: inline-block;
+}
+.website-wrapper .details a.source {
+	color: #ccc;
 }
 
 .profile-image {
@@ -96,3 +126,6 @@ a {
 	height:40px;
 }
 
+.reply {
+	margin-top: 10px;
+}

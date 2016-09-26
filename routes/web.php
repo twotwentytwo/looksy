@@ -101,4 +101,9 @@ Route::get('/add', [
     'as' => 'add.index'
 ]);
 
+Route::get('/pick/{statusId}', [
+    'uses' => '\Looksy\Http\Controllers\StatusController@showPick',
+    'as' => 'pick.index'
+]);
+
 
