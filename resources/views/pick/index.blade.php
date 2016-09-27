@@ -15,10 +15,7 @@
     <body>
         
         <div class="container">
-            <nav class="navbar navbar-default" role="navigation">
-                <h1>Friends</h1>
-                @include('templates.partials.navigation')
-            </nav>
+            
             @include('templates.partials.alerts')
             <div class="row">
                 <nav class="navbar navbar-default" role="navigation">
