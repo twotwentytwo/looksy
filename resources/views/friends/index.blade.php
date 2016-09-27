@@ -13,11 +13,12 @@
             
     </head>
     <body class="friends">
-        <nav class="navbar navbar-default" role="navigation">
-            <h1>Friends</h1>
-            @include('templates.partials.navigation')
-        </nav>
+        
         <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                <h1>Friends</h1>
+                @include('templates.partials.navigation')
+            </nav>
             @include('templates.partials.alerts')
             <div class="row">
                 <div class="col-lg-6">
