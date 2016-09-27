@@ -7,17 +7,22 @@
  * TEMPLATE
  */
 
+h1, h2, h3, p, li, a, input, textarea, button, label {
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+	background: #F3EDEC;
+}
 
 .image img {
     width: 100%;
 }
 
-h1, h2, h3, p, li, a, input, textarea, button, label {
-    font-family: 'Karla', sans-serif;
-}
-
 h1 {
-	font-size: 3em;
+	font-size: 2em;
+	text-align:center;
+	color: #ff8d6b;
 }
 
 h1 a {
@@ -29,7 +34,7 @@ h2 {
 }
 
 .container {
-	margin-bottom: 100px;
+	margin-bottom: 120px;
 }
 
 a {
@@ -37,6 +42,14 @@ a {
 	font-weight: bold;
 }
 
+.navbar-default {
+	background:none;
+	border:none;
+}
+
+.navbar {
+	margin:0;
+}
 
 
 /*
@@ -105,7 +118,7 @@ a {
     width: 100%;
     z-index: 1;
     text-align: center;
-    padding: 0.5em 0;
+    padding: 20px 0;
     border-top: 5px solid #ff6462;
  }
 
@@ -114,8 +127,63 @@ a {
  	margin-right: 16px;
  }
 
-.looksy-navigation li img {
-	width: 44px;
+.reply {
+	margin-top: 10px;
+}
+
+.looksy-navigation .home img {
+	width: 40px;
+	height: 40px;
+}
+
+.looksy-navigation .search img {
+	width: 40px;
+	height: 40px;
+}
+
+.looksy-navigation .add img {
+	width: 60px;
+	height: 60px;
+}
+
+.looksy-navigation .friends img {
+	width: 50px;
+	height: 40px;
+}
+
+.looksy-navigation .notification img {
+	width: 40px;
+	height: 50px;
+}
+
+
+/*
+ * TIMELINE
+ */
+
+
+.user {
+	position: absolute;
+	bottom: 18px;
+	left: 8px;
+}
+
+.profile-image, 
+.user .profile-image {
+	width: 40px;
+	height: 40px;
+}
+
+.user .username a {
+	background: #FF6464;
+	display:inline-block;
+	color: #fff;
+}
+
+.user .timing {
+	background: #FF6464;
+	display:inline-block;
+	color: #fff;
 }
 
 .videoWrapper {
@@ -140,6 +208,8 @@ a {
 .website-wrapper {
  margin-top: 20px;
  position: relative;
+ border-bottom: 4px solid #fff;
+    padding-bottom: 20px;
 }
 
 .website-wrapper .details {
@@ -159,23 +229,11 @@ a {
 }
 
 .website-wrapper .details .title {
-	font-size: 1.4em;
+	font-size: 1.6em;
 }
 
 .website-wrapper .details .timing {
     color: #fff;
     background: #ff6462;
     display: inline-block;
-}
-.website-wrapper .details a.source {
-	color: #ccc;
-}
-
-.profile-image {
-	width:40px;
-	height:40px;
-}
-
-.reply {
-	margin-top: 10px;
 }
