@@ -8,7 +8,7 @@
             <li class="add"><a href="{{ route('add.index') }}"><img src="{{asset('img/icons/nav/add.png')}}" /></a></li>
             <li class="friends"><a href="{{ route('friend.index') }}"><img src="{{asset('img/icons/nav/friends.png')}}" /></a></li>
         @if (Auth::check())      
-            <li class="notification"><a href="#"><img src="{{asset('img/icons/nav/bell.png')}}" /></a></li>
+            <li class="notification"><a href="{{ route('profile.edit') }}"><img src="{{asset('img/navigation/settings.png')}}" /></a></li>
         @endif
     </ul>
 </div>

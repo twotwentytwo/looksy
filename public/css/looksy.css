@@ -153,14 +153,13 @@ a {
 
 .looksy-navigation .notification img {
 	width: 40px;
-	height: 50px;
+	height: 40px;
 }
 
 
 /*
  * TIMELINE
  */
-
 
 .user {
 	position: absolute;
@@ -264,6 +263,14 @@ a {
  }
 
 .add-strapline {
+	font-size: 1.4em;
+}
+
+/*
+ * EDIT 
+ */
+
+.edit input {
 	font-size: 1.4em;
 }
 
