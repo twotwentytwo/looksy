@@ -20,10 +20,7 @@
         <div class="container">
             @include('templates.partials.alerts')
             <div class="row">
-                
-                
                 <div class="col-lg-6">
-                    <h3>Friends</h3>
                     <div class="friend-block">
                         @if (!$friends->count())
                             <p>You have no friends.</p>
