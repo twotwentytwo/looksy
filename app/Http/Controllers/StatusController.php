@@ -56,15 +56,7 @@ class StatusController extends Controller
             $segment = $get_id_from_url['v'];
             $source = 'YouTube';
 
-        } elseif($type == 'Spotify') {
-            
-            $url = $request->input('status');
-            $path = parse_url($url, PHP_URL_PATH);
-            $segments = explode('/', rtrim($path, '/'));
-            $segment = $segments[2];
-            $source = 'Spotify';
-
-        } 
+        }
 
         Auth::user()->statuses()->create([
     		'body' => $request->input('status'), 
