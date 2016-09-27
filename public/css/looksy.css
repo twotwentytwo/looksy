@@ -18,13 +18,10 @@ h1, h2, h3, p, li, a, input, textarea, button, label {
 
 h1 {
 	font-size: 3em;
-	text-align:center;
 }
 
 h1 a {
 	color: #ff8d6b;
-	font-weight: bolder;
-	letter-spacing: 0.1px;
 }
 
 h2 {
@@ -38,6 +35,59 @@ h2 {
 a {
 	color: #ff6462;
 	font-weight: bold;
+}
+
+
+
+/*
+ * SIGN IN
+ */
+
+
+.authentication {
+	background: url('../img/template/auth_background.jpg') 0 0 no-repeat;
+}
+
+.authentication #email {
+	background: #fff url('../img/icons/email.png') 4px 7px no-repeat;
+	padding-left: 33px;
+}
+
+.authentication #password {
+	background: #fff url('../img/icons/password.png') 4px 3px no-repeat;
+	padding-left: 33px;
+}
+
+.authentication #username {
+	background: #fff url('../img/icons/username.png') 4px 3px no-repeat;
+	padding-left: 33px;
+}
+
+.authentication h1 {
+	color: #FF6464;
+	font-size: 5em;
+	font-weight: bold;
+}
+
+.authentication .strapline {
+	font-size: 1.4em;
+}
+
+.authentication .form-control {
+	font-size: 1.4em;
+}
+
+.authentication button {
+	background: #FF6464;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	border: none;
+	font-size: 1.4em;
+}
+
+.authentication .auth-form {
+	margin-top: 100px;
 }
 
 

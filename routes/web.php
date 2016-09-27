@@ -20,7 +20,6 @@ Route::get('/signup', [
 	'uses' => '\Looksy\Http\Controllers\AuthController@getSignup', 
 	'as' => 'auth.signup', 
 	'middleware' => ['guest']
-
 ]);
 
 Route::post('/signup', [

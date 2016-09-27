@@ -22,6 +22,6 @@ class HomeController extends Controller
 				->with('statuses', $statuses);
 		}
 
-		return view('home');
+		return view('auth.signin');
 	}
 }
