@@ -118,6 +118,21 @@ class StatusController extends Controller
             ->with('authUserIsFriend', Auth::user()->isFriendsWith($user));
     }
 
+    public function getEditPick($statusId)
+    {
+        $status = Status::find($statusId);
+        return view('pick.edit')
+            ->with('status', $status);
+    }
+
+    public function postEditPick($statusId)
+    {
+       $status = Status::find($statusId);
+        return view('pick.edit')
+            ->with('info', 'Your pick has been updated')
+            ->with('status', $status);
+    }
+
     
 
     

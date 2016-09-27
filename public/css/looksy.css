@@ -321,3 +321,33 @@ a {
 .edit input {
 	font-size: 1.4em;
 }
+
+.edit form {
+	margin-top: 10px;
+}
+
+.edit #description {
+	min-height: 80px;
+	font-size: 1em;
+}
+
+.edit-link a {
+	color: #fff;
+	background: #ff6462;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.edit-link a:hover {
+	text-decoration:none;
+}
+
+select {
+	background: #fff;
+	font-size: 1.4em;
+	width: 100%;
+	margin-bottom: 10px;
+	font-family: 'Karla', sans-serif;
+	padding: 4px 8px;
+	color: #999;
+}

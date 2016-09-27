@@ -102,7 +102,19 @@ Route::get('/add', [
 
 Route::get('/pick/{statusId}', [
     'uses' => '\Looksy\Http\Controllers\StatusController@showPick',
-    'as' => 'pick.index'
+    'as' => 'pick.index', 
+    'middleware' => ['auth']
 ]);
 
+Route::get('/pick/{statusId}/edit', [
+    'uses' => '\Looksy\Http\Controllers\StatusController@getEditPick',
+    'as' => 'pick.edit', 
+    'middleware' => ['auth']
+]);
+
+Route::post('/pick/{statusId}/edit', [
+    'uses' => '\Looksy\Http\Controllers\StatusController@postEditPick',
+    'as' => 'pick.edit', 
+    'middleware' => ['auth']
+]);
 

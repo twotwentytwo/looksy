@@ -25,7 +25,9 @@
                     @if($status->type == 'YouTube')
                     <div class="videoWrapper">
                         <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
-
+                         <div class="edit-link">
+                                <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit pick</a>
+                            </div>
                     </div>
                     <div class="media">
                             <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
@@ -36,10 +38,6 @@
                                 <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                             </div>
                         </div>
-                    @elseif($status->type == 'Spotify')
-                    <div class="videoWrapper">
-                        <iframe src="https://embed.spotify.com/?uri=spotify:album:{{ $status->item_id }}&theme=white&view=coverart" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
-                    </div>
                     @elseif($status->type == 'Web')
                         <div class="website-wrapper">
                             <div class="image">
@@ -57,8 +55,13 @@
                                     <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                                 </div>
                             </div>
+                            <div class="edit-link">
+                                <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit pick</a>
+                            </div>
                         </div>
                     @endif
+
+                    
 
                     @foreach($status->replies as $reply)
                         <div class="media">
@@ -88,7 +91,6 @@
                             <input type="submit" value="Reply" class="btn btn-default btn-sm">
                             <input type="hidden" name="_token" value="{{ Session::token() }}">
                         </form>
-                    
                         
                     </div>
                       

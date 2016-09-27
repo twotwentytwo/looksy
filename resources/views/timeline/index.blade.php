@@ -22,7 +22,7 @@
  			<div class="row">
 			    <div class="col-lg-5">
 			        @if(!$statuses->count())
-			        	<p>There's nothing in your timeline yet</p>
+			        	<p>You've not posted any picks yet.</p>
 			        @else
 			        	@foreach($statuses as $status)
 			            	<div class="website-wrapper">
