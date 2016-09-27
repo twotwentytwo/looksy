@@ -111,7 +111,7 @@ class StatusController extends Controller
     {
         $user = Auth::user();
         $status = Status::find($statusId);
-        
+
         return view('pick.index')
             ->with('status', $status)
             ->with('user', $user)
