@@ -114,6 +114,7 @@ class StatusController extends Controller
         
         return view('pick.index')
             ->with('status', $status)
+            ->with('user', $user)
             ->with('authUserIsFriend', Auth::user()->isFriendsWith($user));
     }
 
