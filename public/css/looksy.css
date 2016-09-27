@@ -53,6 +53,52 @@ a {
 	min-height: 90px;
 }
 
+.alert-info {
+    color: #fff;
+    background-color: #ff6462;
+    border-color: #ff6462;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.4em;
+}
+
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #ff6462;
+    border-color: #ff6462;
+     font-family: 'Karla', sans-serif;
+}
+
+.pagination>.disabled>a, 
+.pagination>.disabled>a:focus, 
+.pagination>.disabled>a:hover, 
+.pagination>.disabled>span, 
+.pagination>.disabled>span:focus, 
+.pagination>.disabled>span:hover {
+    color: #777;
+    cursor: not-allowed;
+    background-color: none;
+    border-color: none;
+}
+
+.pagination li a, .pagination li span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #333;
+    text-decoration: none;
+    background-color: none!important;
+    border: none;
+}
+
 
 /*
  * SIGN IN
@@ -231,7 +277,7 @@ a {
 }
 
 .website-wrapper .details .title {
-	font-size: 1.6em;
+	font-size: 1.4em;
 }
 
 .website-wrapper .details .timing {
