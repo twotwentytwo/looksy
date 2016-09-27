@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <nav class="navbar navbar-default" role="navigation">
-        <h1>PickList</h1>
+        <h1>{{ $status->title }}</h1>
     </nav>
     <div class="col-lg-5">
         @if($status->type == 'YouTube')
