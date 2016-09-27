@@ -16,7 +16,7 @@
         
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
-                <h1><a href="{{ route('home') }}">Edit profile</a></h1>
+                <h1>Edit profile</h1>
                 @include('templates.partials.navigation')
             </nav>
             @include('templates.partials.alerts')
