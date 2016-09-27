@@ -47,7 +47,7 @@
 			            </div>
 			            <input type="hidden" name="_token" value="{{ Session::token() }}">
 			        </form>
-			        <p>Signed up? Now try <a class="sign-up" href="{{ route('auth.signup') }}">signing in</a>.</p>
+			        <p>Signed up? Now try <a class="sign-up" href="{{ route('auth.signin') }}">signing in</a>.</p>
 			    </div>
 			</div>
  		</div>
