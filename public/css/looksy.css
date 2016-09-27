@@ -90,7 +90,7 @@ a {
 	font-size: 1.4em;
 }
 
-.authentication button {
+.btn {
 	background: #FF6464;
 	width: 100%;
 	text-align: center;
@@ -237,3 +237,34 @@ a {
     background: #ff6462;
     display: inline-block;
 }
+
+/*
+ * FRIENDS
+ */
+
+.friends #friends {
+	background: #fff url('../img/icons/username.png') 4px 3px no-repeat;
+	padding-left: 33px;
+	font-size: 1.4em;
+}
+
+.friend-block {
+	border-bottom: #fff 4px solid;
+	padding-bottom: 20px;
+}
+
+/*
+ * ADD
+ */
+
+ .add .add {
+ 	font-size: 1.2em;
+ 	margin-bottom: 10px;
+ }
+
+.add-strapline {
+	font-size: 1.4em;
+}
+
+
+

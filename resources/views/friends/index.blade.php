@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
             
     </head>
-    <body>
+    <body class="friends">
         <nav class="navbar navbar-default" role="navigation">
             <h1><a href="{{ route('home') }}">Friends</a></h1>
             @include('templates.partials.navigation')
@@ -20,39 +20,41 @@
         <div class="container">
             @include('templates.partials.alerts')
             <div class="row">
+                
+                
                 <div class="col-lg-6">
-                    <h3>Find friends</h3>
+                    <h3>Friends</h3>
+                    <div class="friend-block">
+                        @if (!$friends->count())
+                            <p>You have no friends.</p>
+                        @else
+                            @foreach($friends as $user)
+                                @include('user/partials/userblock')
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h3>Friend requests</h3>
+                    <div class="friend-block">
+                        @if (!$requests->count())
+                            <p>You have no friend requests.</p>
+                        @else
+                            @foreach($requests as $user)
+                                @include('user.partials.userblock')
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
                     <form class="navbar-form navbar-left" role="search" action="{{ route('search.results') }}">
                         <div class="form-group">
-                            <input type="text" name="query" class="form-control" placeholder="Search for your friends">
+                            <input type="text" name="query" class="form-control" placeholder="Find a friend" id="friends">
                         </div>
                         <button type="submit" class="btn btn-default">Search</button>
                     </form>
-                </div>
-                <hr>
-                <div class="col-lg-6">
-                    <h3>Your friends</h3>
-
-                    @if (!$friends->count())
-                        <p>You have no friends.</p>
-                    @else
-                    @foreach($friends as $user)
-                        @include('user/partials/userblock')
-                    @endforeach
-
-                @endif
-                </div>
-                <hr>
-                <div class="col-lg-6">
-                    <h3>Your friend requests</h3>
-                    
-                    @if (!$requests->count())
-                        <p>You have no friend requests.</p>
-                    @else
-                        @foreach($requests as $user)
-                            @include('user.partials.userblock')
-                        @endforeach
-                    @endif
                 </div>
             </div>
         </div>
