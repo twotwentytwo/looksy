@@ -14,7 +14,7 @@
     </head>
     <body class="home">
     	<nav class="navbar navbar-default" role="navigation">
-	        <h1><a href="{{ route('home') }}">PickList</a></h1>
+	        <h1>PickList</h1>
 	        @include('templates.partials.navigation')
 		</nav>
  		<div class="container">

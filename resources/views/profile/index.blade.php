@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
-                <h1><a href="{{ route('home') }}">{{ $user->getNameOrUsername() }}'s picks</a></h1>
+                <h1>{{ $user->getNameOrUsername() }}'s picks</h1>
                 @include('templates.partials.navigation')
             </nav>
             <div class="row">
