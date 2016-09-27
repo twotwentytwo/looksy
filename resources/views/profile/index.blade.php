@@ -68,7 +68,7 @@
                         @endforeach
                     @endif
 
-                    <p><a href="">Edit profile</a></p>
+                    <!--<p><a href="{{ route('profile.edit') }}">Edit profile</a></p>-->
                 </div>
             </div>
         </div>
