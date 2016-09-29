@@ -48,6 +48,8 @@ Route::get('/search', [
     'as' => 'search.results'
 ]);
 
+
+
 Route::get('/user/{username}', [
     'uses' => '\Looksy\Http\Controllers\ProfileController@getProfile',
     'as' => 'profile.index'
@@ -115,6 +117,12 @@ Route::get('/pick/{statusId}/edit', [
 Route::post('/pick/{statusId}/edit', [
     'uses' => '\Looksy\Http\Controllers\StatusController@postEditPick',
     'as' => 'pick.edit', 
+    'middleware' => ['auth']
+]);
+
+Route::get('/searchpicks', [
+    'uses' => '\Looksy\Http\Controllers\StatusController@getSearch',
+    'as' => 'search.index',
     'middleware' => ['auth']
 ]);
 

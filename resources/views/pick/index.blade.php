@@ -52,9 +52,10 @@
                                 </a>
                                 <div class="media-body">
                                     <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
-                                    <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
+                                    
                                 </div>
                             </div>
+                            <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                             <div class="edit-link">
                                 <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit pick</a>
                             </div>

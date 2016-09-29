@@ -4,6 +4,7 @@ namespace Looksy\Http\Controllers;
 
 
 use Auth;	
+use DB;
 use Looksy\Models\User;
 use Looksy\Models\OpenGraph;
 use Looksy\Models\Status;
@@ -79,6 +80,14 @@ class StatusController extends Controller
         return view('add.index');
     }
 
+    public function getSearch()
+    {
+        $user = Auth::user();
+        $statuses = DB::table('statuses')->get()->where('parent_id', null);
+        return view('search.index')
+            ->with('statuses', $statuses);
+    }
+
     public function postReply(Request $request, $statusId)
     {
     	$this->validate($request, [
@@ -132,8 +141,6 @@ class StatusController extends Controller
             ->with('info', 'Your pick has been updated')
             ->with('status', $status);
     }
-
-    
 
     
 }

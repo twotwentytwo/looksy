@@ -16,10 +16,14 @@
     	
  		<div class="container">
  			<nav class="navbar navbar-default" role="navigation">
-                <h1>Search friends</h1>
+                <h1>Results</h1>
                 @include('templates.partials.navigation')
             </nav>
  			@include('templates.partials.alerts')
+
+        
+
+
  			<h3>Your search for "{{ Request::input('query') }}"</h3>
 
 			@if(!$users->count())
@@ -27,9 +31,31 @@
 			@else
 				<div class="row">
 					<div class="col-lg-12">
+
+            <h3>People</h3>
 						@foreach ($users as $user)
 							@include('user/partials/userblock')
 						@endforeach
+
+
+            <h3>Picks</h3>
+            @foreach ($statuses as $status)
+              @if(!$statuses->count())
+                        <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet</p>
+                    @else
+                        @foreach($statuses as $status)
+                            <div class="website-wrapper">
+                                <div class="image">
+                                    <a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
+                                </div>
+                                <div class="details">
+                                    <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
+                                </div>
+                            </div>
+                            
+                        @endforeach
+                    @endif
+            @endforeach
 					</div>
 				</div>
 			@endif

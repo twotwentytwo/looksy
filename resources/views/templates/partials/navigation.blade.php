@@ -1,14 +1,10 @@
 <div id="looksy-menu">
     <ul class="looksy-navigation">
         <li class="home"><a href="{{ route('home') }}"><img src="{{asset('img/icons/nav/home.png')}}" /></a></li>
-        @if (Auth::check())
-            <!-- {{ route('profile.index', ['username' => Auth::user()->username]) }} -->
-            <li class="search"><a href="#"><img src="{{asset('img/icons/nav/search.png')}}" /></a></li>
-        @endif
+       <li class="search"><a href="{{ route('search.index') }}"><img src="{{asset('img/icons/nav/search.png')}}" /></a></li>
             <li class="add"><a href="{{ route('add.index') }}"><img src="{{asset('img/icons/nav/add.png')}}" /></a></li>
             <li class="friends"><a href="{{ route('friend.index') }}"><img src="{{asset('img/icons/nav/friends.png')}}" /></a></li>
-        @if (Auth::check())      
-            <li class="notification"><a href="{{ route('profile.edit') }}"><img src="{{asset('img/navigation/settings.png')}}" /></a></li>
-        @endif
+            <li class="profile"><a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}"><img src="{{asset('img/icons/nav/profile.png')}}" /></a></li>
+       
     </ul>
 </div>

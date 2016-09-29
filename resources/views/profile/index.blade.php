@@ -15,8 +15,13 @@
     <body>
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
-                <h1>{{ $user->getNameOrUsername() }}'s picks</h1>
+                <h1>{{ $user->getNameOrUsername() }}</h1>
                 @include('templates.partials.navigation')
+                
+                
+                    <p class="profile-edit"><a href="{{ route('profile.edit') }}"><img src="{{asset('img/navigation/settings.png')}}" /></a></li>
+               
+               
             </nav>
             <div class="row">
                 <div class="col-lg-5">
@@ -38,9 +43,10 @@
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
-                                        <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
+                                        
                                     </div>
                                 </div>
+                                <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                             </div>
                             
                         @endforeach

@@ -204,6 +204,11 @@ a {
 	height: 40px;
 }
 
+.looksy-navigation .profile img {
+	width: 40px;
+	height: 40px;
+}
+
 
 /*
  * TIMELINE
@@ -211,7 +216,7 @@ a {
 
 .user {
 	position: absolute;
-	bottom: 18px;
+	bottom: 56px;
 	left: 8px;
 }
 
@@ -228,10 +233,9 @@ a {
 	color: #fff;
 }
 
-.user .timing {
-	background: #FF6464;
-	display:inline-block;
-	color: #fff;
+.timing {
+	font-weight: bold;
+	margin-top: 4px;
 }
 
 .videoWrapper {
@@ -313,6 +317,22 @@ a {
 .add-strapline {
 	font-size: 1.4em;
 }
+
+/*
+ * PROFILE EDIT
+ */
+
+ .profile-edit {
+ 	    position: absolute;
+    top: 23px;
+    right: 0;
+ }
+
+ .profile-edit img {
+ 	    height: 44px;
+    width: 44px;
+ }
+
 
 /*
  * EDIT 

@@ -16,37 +16,19 @@
         
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
-                <h1>Friends</h1>
+                <h1>Search</h1>
                 @include('templates.partials.navigation')
             </nav>
             @include('templates.partials.alerts')
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="friend-block">
-                        @if (!$friends->count())
-                            <p>You have no friends.</p>
-                        @else
-                            @foreach($friends as $user)
-                                @include('user/partials/userblock')
-                            @endforeach
-                        @endif
-                    </div>
+                    <form class="navbar-form navbar-left" role="search" action="{{ route('search.results') }}">
+                        <div class="form-group">
+                            <textarea type="text" name="query" class="form-control" rows="2" placeholder="Search for people or picks"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
                 </div>
-                
-                <div class="col-lg-6">
-                    <h3>Friend requests</h3>
-                    <div class="friend-block">
-                        @if (!$requests->count())
-                            <p>You have no friend requests.</p>
-                        @else
-                            @foreach($requests as $user)
-                                @include('user.partials.userblock')
-                            @endforeach
-                        @endif
-                    </div>
-                </div>
-
-                
             </div>
         </div>
     </body>

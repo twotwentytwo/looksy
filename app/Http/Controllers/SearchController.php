@@ -21,6 +21,14 @@ class SearchController extends Controller
     	->orWhere('username', 'LIKE', "%{$query}%")
     	->get();
 
-        return view('search.results')->with('users', $users);
+        $statuses = DB::table('statuses')
+        ->where('title', 'LIKE', "%{$query}%")
+        ->get();
+
+        return view('search.results')
+            ->with('users', $users)
+            ->with('statuses', $statuses);
     }
+
+    
 }
