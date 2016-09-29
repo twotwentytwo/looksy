@@ -18,9 +18,9 @@
                 <h1>{{ $user->getNameOrUsername() }}</h1>
                 @include('templates.partials.navigation')
                 
-                
+                @if(Auth::user()->id == $user->id)
                     <p class="profile-edit"><a href="{{ route('profile.edit') }}"><img src="{{asset('img/navigation/settings.png')}}" /></a></li>
-               
+               @endif
                
             </nav>
             <div class="row">

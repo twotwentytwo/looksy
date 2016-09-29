@@ -56,9 +56,10 @@
                                 </div>
                             </div>
                             <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
-                            <div class="edit-link">
+                            @if(Auth::user()->id !== $user->id)<div class="edit-link">
                                 <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit pick</a>
                             </div>
+                            @endif
                         </div>
                     @endif
 
