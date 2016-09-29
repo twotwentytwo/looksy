@@ -52,7 +52,10 @@
                                     <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
                                 </div>
                             </div>
-                            
+                            @if(!$statuses->count())
+                              <p>No results found, sorry.</p>
+                            @endif
+
                         @endforeach
                     @endif
             @endforeach
