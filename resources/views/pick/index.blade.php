@@ -107,11 +107,13 @@
                 </div>
 
                 @if(Auth::user()->id == $user->id)
-                        <div class="edit-link">
-                            <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}"><img src="../img/icons/edit.png" /></a>
-                        </div>
-                       
-                        @endif
+                <div class="edit-link">
+                    <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}"><img src="../img/icons/edit.png" /></a>
+                </div>
+                <div class="delete-link">
+                    <a href="{{ route('pick.remove', ['statusId' => $status->id]) }}"><img src="../img/icons/remove.png" /></a>
+                </div>
+                @endif
                 
             </div>
         </div>

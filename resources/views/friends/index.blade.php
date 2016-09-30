@@ -41,6 +41,9 @@
                         @else
                             @foreach($requests as $user)
                                 @include('user.partials.userblock')
+                                @if(Auth::user()->hasFriendRequestReceived($user))
+                                    <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
+                                @endif
                             @endforeach
                         @endif
                     </div>
