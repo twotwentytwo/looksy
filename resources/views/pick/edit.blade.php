@@ -22,7 +22,7 @@
             @include('templates.partials.alerts')
             <div class="row">
                 <div class="col-lg-6">
-                    @if($status->type == 'YouTube')
+                    @if($status->source == 'YouTube')
                     <div class="videoWrapper">
                         <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
 
@@ -36,7 +36,7 @@
                             <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                         </div>
                     </div>
-                    @elseif($status->type == 'Web')
+                    @else
                         <div class="website-wrapper">
                             <div class="image">
                                 <a href="{{ $status->url }}"><img src="{{ $status->image }}" /></a>
@@ -44,12 +44,19 @@
                         </div>
                     @endif
 
-                    <form class="form-vertical" role="form" method="post" action="#">
+                    @if(Auth::user()->id !== $user->id)
+                        
+                        <div class="delete-link">
+                            <a href="{{ route('pick.remove', ['statusId' => $status->id]) }}">Delete pick</a>
+                        </div>
+                        @endif
+
+                    <form class="form-vertical" role="form" method="post" action="">
                         <div class="form-group{{ $errors->has('title') ? ' has-error': '' }}">
                             <input type="text" name="title" class="form-control" id="title" placeholder="Title" value="{{ $status->title }}">
                         </div>
-                        <div class="form-group{{ $errors->has('source') ? ' has-error': '' }}">
-                            <input type="text" name="source" class="form-control" id="source" placeholder="Source" value="{{ $status->source }}">
+                        <div class="form-group{{ $errors->has('review') ? ' has-error': '' }}">
+                            <input type="text" name="review" class="form-control" id="review" placeholder="Review" value="{{ $status->review }}">
                         </div>
 
                         <select name="type">

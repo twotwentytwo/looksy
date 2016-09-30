@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
             
     </head>
-    <body class="friends">
+    <body class="search">
         
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">

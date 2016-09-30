@@ -11,7 +11,7 @@ class Status extends Model
 	    protected $table = 'statuses';
 
     	protected $fillable = [
-        	'body', 'item_id', 'type', 'title', 'description', 'url', 'image', 'source'
+        	'body', 'item_id', 'type', 'title', 'description', 'url', 'image', 'source', 'review'
     	];
 
     	public function user() 

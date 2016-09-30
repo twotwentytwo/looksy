@@ -25,12 +25,14 @@
 			        	<p>You've not posted any picks yet.</p>
 			        @else
 			        	@foreach($statuses as $status)
-			            	<div class="website-wrapper">
+			            	<div class="website-wrapper {{ $status->type }}">
+			            		<div class="type {{ $status->type }}"></div>
 			            		<div class="image">
 			            			<a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
 			            		</div>
 			            		<div class="details">
 			            			<p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
+			            			<p class="review">"{{ $status->review }}"</p>
 			            		</div>
 			            		<div class="media user">
 								    <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">

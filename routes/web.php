@@ -120,6 +120,13 @@ Route::post('/pick/{statusId}/edit', [
     'middleware' => ['auth']
 ]);
 
+
+Route::get('/pick/{statusId}/remove', [
+    'uses' => '\Looksy\Http\Controllers\StatusController@postRemovePick',
+    'as' => 'pick.remove', 
+    'middleware' => ['auth']
+]);
+
 Route::get('/searchpicks', [
     'uses' => '\Looksy\Http\Controllers\StatusController@getSearch',
     'as' => 'search.index',

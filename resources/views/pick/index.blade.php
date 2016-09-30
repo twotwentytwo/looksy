@@ -22,12 +22,9 @@
                      @include('templates.partials.navigation')
                 </nav>
                 <div class="col-lg-5">
-                    @if($status->type == 'YouTube')
+                    @if($status->source == 'YouTube')
                     <div class="videoWrapper">
                         <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
-                         <div class="edit-link">
-                                <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit pick</a>
-                            </div>
                     </div>
                     <div class="media">
                             <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
@@ -38,13 +35,22 @@
                                 <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                             </div>
                         </div>
-                    @elseif($status->type == 'Web')
+
+                        @if(Auth::user()->id !== $user->id)
+                        <div class="edit-link">
+                            <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit pick</a>
+                        </div>
+                        
+                        @endif
+                    @else
                         <div class="website-wrapper">
+                            <div class="type {{ $status->type }}"></div>
                             <div class="image">
                                 <a href="{{ $status->url }}"><img src="{{ $status->image }}" /></a>
                             </div>
                             <div class="details">
                                 <p class="title"><a href="{{ $status->url }}">{{ $status->title }}</a></p>
+                                <p class="review">"{{ $status->review }}"</p>
                             </div>
                             <div class="media user">
                                 <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
@@ -52,16 +58,13 @@
                                 </a>
                                 <div class="media-body">
                                     <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
-                                    
                                 </div>
                             </div>
-                            <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
-                            @if(Auth::user()->id !== $user->id)<div class="edit-link">
-                                <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit pick</a>
-                            </div>
-                            @endif
+                            <p class="timing">{{ $status->created_at->diffForHumans() }}</p>                           
                         </div>
+                        
                     @endif
+
 
                     
 
@@ -82,6 +85,11 @@
                         </div>
                     @endforeach
 
+
+                        
+                   
+
+
                    
                         <form role="form" action="{{ route('status.reply', ['statusId' => $status->id]) }}" method="post" class="reply">
                             <div class="form-group{{ $errors->has("reply-{$status->id}") ? ' has-error': '' }}">
@@ -97,6 +105,15 @@
                     </div>
                       
                 </div>
+
+                @if(Auth::user()->id == $user->id)
+                        <div class="edit-link">
+                            <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}"><img src="../img/icons/edit.png" /></a>
+                        </div>
+                        <div class="delete-link">
+                            <a href="{{ route('pick.remove', ['statusId' => $status->id]) }}"><img src="../img/icons/remove.png" /></a>
+                        </div>
+                        @endif
                 
             </div>
         </div>

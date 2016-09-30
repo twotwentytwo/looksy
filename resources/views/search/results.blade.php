@@ -33,15 +33,15 @@
 					<div class="col-lg-12">
 
             <h3>People</h3>
-						@foreach ($users as $user)
-							@include('user/partials/userblock')
-						@endforeach
+			@foreach ($users as $user)
+				@include('user/partials/userblock')
+			@endforeach
 
 
             <h3>Picks</h3>
-            @foreach ($statuses as $status)
+            
               @if(!$statuses->count())
-                        <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet</p>
+                        <p>Cannot find any picks with "{{ Request::input('query') }}"</p>
                     @else
                         @foreach($statuses as $status)
                             <div class="website-wrapper">
@@ -52,13 +52,11 @@
                                     <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
                                 </div>
                             </div>
-                            @if(!$statuses->count())
-                              <p>No results found, sorry.</p>
-                            @endif
+                            
 
                         @endforeach
                     @endif
-            @endforeach
+            
 					</div>
 				</div>
 			@endif

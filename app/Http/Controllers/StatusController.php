@@ -129,17 +129,47 @@ class StatusController extends Controller
 
     public function getEditPick($statusId)
     {
+        $user = Auth::user();
         $status = Status::find($statusId);
         return view('pick.edit')
+         ->with('user', $user)
             ->with('status', $status);
     }
 
     public function postEditPick($statusId)
     {
-       $status = Status::find($statusId);
+        $user = Auth::user();
+        $status = Status::find($statusId);
+
+        $title = $status->title;
+        $type = $status->type;
+        $review = $status->review;
+
+        Auth::user()->statuses()
+            ->where('id', $statusId)
+            ->update([
+                'title' => $title, 
+                'review' => $review, 
+                'type' => $type
+            ]);
+
         return view('pick.edit')
             ->with('info', 'Your pick has been updated')
+            ->with('user', $user)
             ->with('status', $status);
+    }
+
+    public function postRemovePick($statusId)
+    {
+        $user = Auth::user();
+        $statuses = $user->statuses()->notReply()->get();
+
+        DB::table('statuses')->where('id', $statusId)->delete();
+
+        return view('profile.index')
+            ->with('info', 'Your pick has been removed')
+            ->with('statuses', $statuses)
+            ->with('user', $user);
     }
 
     
