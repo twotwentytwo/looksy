@@ -399,6 +399,25 @@ a {
     width: 44px;
  }
 
+/*
+ * SEARCH
+ */
+
+
+.categories {
+	padding:12px 0 0 0;
+	margin:0;
+	list-style:none;
+}
+
+.categories li {
+	padding-bottom: 16px;
+}
+
+.categories span {
+	padding-left: 8px;
+}
+
 
 /*
  * EDIT 

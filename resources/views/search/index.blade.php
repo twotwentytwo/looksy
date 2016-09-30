@@ -32,6 +32,19 @@
                     </form>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Categories</h3>
+                    <ul class="categories">
+                        <li class="tv"><a href="{{ route('pick.category', ['category' => 'tv']) }}"><img src="../img/icons/categories/tv.png" /><span>TV</span></a></li>
+                        <li class="film"><a href="{{ route('pick.category', ['category' => 'film']) }}"><img src="../img/icons/categories/film.png" /><span>Film</span></a></li>
+                        <li class="music"><a href="{{ route('pick.category', ['category' => 'music']) }}"><img src="../img/icons/categories/music.png" /><span>Music</span></a></li>
+                        <li class="food"><a href="{{ route('pick.category', ['category' => 'food']) }}"><img src="../img/icons/categories/eats.png" /><span>Food</span></a></li>
+                        <li class="art"><a href="{{ route('pick.category', ['category' => 'art']) }}"><img src="../img/icons/categories/art.png" /><span>Art</span></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
         </div>
     </body>
     

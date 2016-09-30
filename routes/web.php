@@ -108,6 +108,12 @@ Route::get('/pick/{statusId}', [
     'middleware' => ['auth']
 ]);
 
+Route::get('/picks/{category}', [
+    'uses' => '\Looksy\Http\Controllers\StatusController@getPicksByCategory',
+    'as' => 'pick.category', 
+    'middleware' => ['auth']
+]);
+
 Route::get('/pick/{statusId}/edit', [
     'uses' => '\Looksy\Http\Controllers\StatusController@getEditPick',
     'as' => 'pick.edit', 
