@@ -5,6 +5,7 @@ namespace Looksy\Http\Controllers;
 use Auth;
 use Looksy\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class FriendController extends Controller
 {
@@ -49,6 +50,11 @@ class FriendController extends Controller
 		}
 
 		Auth::user()->addFriend($user);
+
+		Mail::send('emails.test', ['name'=> 'Tom'], function($message) 
+    	{
+        	$message->to('tmkersh@gmail.com', 'Some guy')->subject('Welcome!');
+    	});
 
 		return redirect()
 			->route('profile.index', ['username' => $user->username])
