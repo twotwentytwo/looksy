@@ -27,11 +27,13 @@
 			                <textarea placeholder="Paste in a URL here" name="status" class="form-control add" rows="2"></textarea>
                       <select name="type">
                             <option value="">Choose category</option>
-                            <option value="movie">Movie</option>
                             <option value="tv">TV show</option>
-                            <option value="video">Video clip</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="film">Film</option>
                             <option value="music">Music</option>
-                            <option value="app">App</option>
+                            <option value="app">Mobile app</option>
+                            <option value="art">Food &amp; drink</option>
+                            <option value="art">Art</option>
                         </select>
                       <textarea placeholder="Mini review" name="review" class="form-control add" rows="2"></textarea>
 			                @if($errors->has('status'))

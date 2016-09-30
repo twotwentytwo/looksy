@@ -53,12 +53,14 @@
                         </div>
 
                          <select name="type">
-                            <option value="">Choose category</option>
-                            <option value="movie">Movie</option>
+                            <option value="{{ $status->type }}">{{ $status->type }}</option>
                             <option value="tv">TV show</option>
-                            <option value="video">Video clip</option>
-                            <option value="track">Music</option>
-                            <option value="track">App</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="film">Film</option>
+                            <option value="music">Music</option>
+                            <option value="app">Mobile app</option>
+                            <option value="art">Food &amp; drink</option>
+                            <option value="art">Art</option>
                         </select>
 
                         <div class="form-group">
