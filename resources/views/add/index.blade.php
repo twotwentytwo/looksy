@@ -25,6 +25,16 @@
 			        <form role="form" action="{{ route('status.post') }}" method="post">
 			            <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
 			                <textarea placeholder="Paste in a URL here" name="status" class="form-control add" rows="2"></textarea>
+                      <select name="type">
+                            <option value="">Choose type</option>
+                            <option value="movie">Movie</option>
+                            <option value="tv">TV show</option>
+                            <option value="website">Website</option>
+                            <option value="video">Video clip</option>
+                            <option value="track">Track</option>
+                            <option value="track">App</option>
+                        </select>
+                      <textarea placeholder="Mini review" name="review" class="form-control add" rows="2"></textarea>
 			                @if($errors->has('status'))
 			                	<span class="help-block">{{ $errors->first('status') }}</span>
 			                @endif

@@ -63,12 +63,13 @@ class StatusController extends Controller
         Auth::user()->statuses()->create([
     		'body' => $request->input('status'), 
             'item_id' => $segment, 
-            'type' => $type, 
+            'type' => $request->input('type'),
+            'review' => $request->input('review'), 
             'image' => $image, 
             'title' => $title, 
             'url' => $url,
             'description' => $description, 
-            'source' => $source
+            'source' => $source, 
     	]);
 
     	return redirect()
