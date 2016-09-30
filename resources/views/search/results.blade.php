@@ -21,9 +21,6 @@
             </nav>
  			@include('templates.partials.alerts')
 
-        
-
-
  			<h3>Your search for "{{ Request::input('query') }}"</h3>
 
 			@if(!$users->count() && !$statuses->count())

@@ -44,12 +44,10 @@
                         </div>
                     @endif
 
-                    @if(Auth::user()->id !== $user->id)
+                    
                         
-                        <div class="delete-link">
-                            <a href="{{ route('pick.remove', ['statusId' => $status->id]) }}">Delete pick</a>
-                        </div>
-                        @endif
+                       
+                       
 
                     <form class="form-vertical" role="form" method="post" action="">
                         <div class="form-group{{ $errors->has('title') ? ' has-error': '' }}">
@@ -76,6 +74,11 @@
                     </form>
                 </div>
             </div>
+            @if(Auth::user()->id == $user->id)
+             <div class="delete-link">
+                <a href="{{ route('pick.remove', ['statusId' => $status->id]) }}"><img src="../../img/icons/remove.png" /></a>
+            </div>
+            @endif
         </div>
     </body>
     
