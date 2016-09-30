@@ -35,7 +35,7 @@
                             <option value="food">Food &amp; drink</option>
                             <option value="art">Art</option>
                         </select>
-                      <textarea placeholder="Mini review" name="review" class="form-control add" rows="2"></textarea>
+                      <textarea placeholder="Add a mini review" name="review" class="form-control add" rows="2"></textarea>
 			                @if($errors->has('status'))
 			                	<span class="help-block">{{ $errors->first('status') }}</span>
 			                @endif
