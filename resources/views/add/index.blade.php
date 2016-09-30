@@ -30,8 +30,8 @@
                             <option value="movie">Movie</option>
                             <option value="tv">TV show</option>
                             <option value="video">Video clip</option>
-                            <option value="track">Music</option>
-                            <option value="track">App</option>
+                            <option value="music">Music</option>
+                            <option value="app">App</option>
                         </select>
                       <textarea placeholder="Mini review" name="review" class="form-control add" rows="2"></textarea>
 			                @if($errors->has('status'))
