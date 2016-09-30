@@ -26,7 +26,7 @@
 
  			<h3>Your search for "{{ Request::input('query') }}"</h3>
 
-			@if(!$users->count())
+			@if(!$users->count() && !$statuses->count())
 				<p>No results found, sorry.</p>
 			@else
 				<div class="row">

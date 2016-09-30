@@ -43,7 +43,7 @@ Route::get('/signout', [
 	'as' => 'auth.signout'
 ]);
 
-Route::get('/search', [
+Route::get('/results', [
     'uses' => '\Looksy\Http\Controllers\SearchController@getResults',
     'as' => 'search.results'
 ]);
@@ -127,7 +127,7 @@ Route::get('/pick/{statusId}/remove', [
     'middleware' => ['auth']
 ]);
 
-Route::get('/searchpicks', [
+Route::get('/search', [
     'uses' => '\Looksy\Http\Controllers\StatusController@getSearch',
     'as' => 'search.index',
     'middleware' => ['auth']
