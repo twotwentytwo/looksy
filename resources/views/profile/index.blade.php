@@ -19,7 +19,12 @@
                 @include('templates.partials.navigation')
                 
                 @if(Auth::user()->id == $user->id)
-                    <p class="profile-edit"><a href="{{ route('profile.edit') }}"><img src="{{asset('img/navigation/settings.png')}}" /></a></li>
+                    <div class="edit-link">
+                        <a href="{{ route('profile.edit') }}"><img src="{{asset('../img/icons/edit.png')}}" /></a>
+                    </div>
+                    <div class="back-link">
+                        <a href="{{ url()->previous() }}"><img src="{{asset('../img/icons/back.png')}}" /></a>
+                    </div>
                @endif
                
             </nav>

@@ -452,6 +452,12 @@ a {
 	left: 16px;
 }
 
+.back-link {
+	position: absolute;
+	top: 30px;
+	left: 16px;
+}
+
 select {
 	background: #fff;
 	font-size: 1.2em;
