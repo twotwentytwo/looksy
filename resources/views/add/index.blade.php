@@ -38,6 +38,11 @@
 			                	<span class="help-block">{{ $errors->first('status') }}</span>
 			                @endif
 			                <p class="add-strapline">Why not post something to inspire your friends?</p>
+                      <ol>
+                        <li>Copy in the URL</li>
+                        <li>Add the type e.g. TV show</li>
+                        <li>Add a mini review</li>
+                      </ol>
 			                <p class="add-strapline">Good things happen when we share.</p>
 			            </div>
 			            <button type="submit" class="btn btn-default">Share</button>

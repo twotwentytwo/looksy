@@ -44,11 +44,6 @@
                         </div>
                     @endif
 
-                    
-                        
-                       
-                       
-
                     <form class="form-vertical" role="form" method="post" action="">
                         <div class="form-group{{ $errors->has('title') ? ' has-error': '' }}">
                             <input type="text" name="title" class="form-control" id="title" placeholder="Title" value="{{ $status->title }}">
