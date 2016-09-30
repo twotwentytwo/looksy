@@ -49,6 +49,22 @@
                     </div>
                 </div>
 
+                <div class="col-lg-6">
+                    <h3>Invite friends</h3>
+                    <div class="friend-block">
+                        <form role="form" action="" method="post">
+                        <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
+                            <input placeholder="Type in friends email here" name="friend" class="form-control add">
+                            @if($errors->has('status'))
+                                <span class="help-block">{{ $errors->first('status') }}</span>
+                            @endif
+                        </div>
+                        <button type="submit" class="btn btn-default">Invite</button>
+                        <input type="hidden" name="_token" value="{{ Session::token() }}">
+                    </form>
+                    </div>
+                </div>
+
                 
             </div>
         </div>
