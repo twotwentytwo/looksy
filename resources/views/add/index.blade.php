@@ -32,7 +32,7 @@
                             <option value="film">Film</option>
                             <option value="music">Music</option>
                             <option value="app">Mobile app</option>
-                            <option value="art">Food &amp; drink</option>
+                            <option value="food">Food &amp; drink</option>
                             <option value="art">Art</option>
                         </select>
                       <textarea placeholder="Mini review" name="review" class="form-control add" rows="2"></textarea>

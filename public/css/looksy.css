@@ -336,6 +336,10 @@ a {
 	background: url('../img/icons/categories/bomb.png') 0 0 no-repeat;
 }
 
+.type.food {
+	background: url('../img/icons/categories/eats.png') 0 0 no-repeat;
+}
+
 
 
 .website-wrapper .details .timing {
