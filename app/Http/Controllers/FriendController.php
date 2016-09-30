@@ -51,9 +51,10 @@ class FriendController extends Controller
 
 		Auth::user()->addFriend($user);
 
-		Mail::send('emails.test', ['name'=> 'Tom'], function($message) 
+		Mail::send('emails.friendrequest', ['name'=> $user->username], function($message) 
     	{
-        	$message->to('tmkersh@gmail.com', 'Some guy')->subject('Welcome!');
+
+        	$message->to('tmkersh@gmail.com', 'Tom Kershaw')->subject('You have a new friend request on Pick List');
     	});
 
 		return redirect()

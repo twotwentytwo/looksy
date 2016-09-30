@@ -1,0 +1,1 @@
+Hello there {{ $name }}, you have a new friend request on Pick List. 

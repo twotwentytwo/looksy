@@ -9,6 +9,7 @@ use Looksy\Models\User;
 use Looksy\Models\OpenGraph;
 use Looksy\Models\Status;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class StatusController extends Controller
 {
@@ -112,6 +113,14 @@ class StatusController extends Controller
     	 ])->user()->associate(Auth::user());
 
     	$status->replies()->save($reply);
+
+        $user = Auth::user();
+
+        Mail::send('emails.comment', ['name'=> $user->username], function($message) 
+        {
+
+            $message->to('tmkersh@gmail.com', 'Tom Kershaw')->subject('You have a new comment on your picks on Pick List');
+        });
 
     	return redirect()->back();
     }

@@ -27,6 +27,12 @@ class AuthController extends Controller
 			'password' => bcrypt($request->input('password'))
 		]);
 
+		 Mail::send('emails.signup', ['name'=> $user->username], function($message) 
+        {
+
+            $message->to('tmkersh@gmail.com', 'Tom Kershaw')->subject('You have signed up to Pick List, welcome.');
+        });
+
 		return redirect()->route('home')->with('info', 'Your account has been created and you can now sign in'); 
 	}
 
