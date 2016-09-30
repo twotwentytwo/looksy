@@ -26,12 +26,11 @@
 			            <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
 			                <textarea placeholder="Paste in a URL here" name="status" class="form-control add" rows="2"></textarea>
                       <select name="type">
-                            <option value="">Choose type</option>
+                            <option value="">Choose category</option>
                             <option value="movie">Movie</option>
                             <option value="tv">TV show</option>
-                            <option value="website">Website</option>
                             <option value="video">Video clip</option>
-                            <option value="track">Track</option>
+                            <option value="track">Music</option>
                             <option value="track">App</option>
                         </select>
                       <textarea placeholder="Mini review" name="review" class="form-control add" rows="2"></textarea>

@@ -57,13 +57,12 @@
                             <input type="text" name="review" class="form-control" id="review" placeholder="Review" value="{{ $status->review }}">
                         </div>
 
-                        <select name="type">
-                            <option value="">Choose type</option>
+                         <select name="type">
+                            <option value="">Choose category</option>
                             <option value="movie">Movie</option>
                             <option value="tv">TV show</option>
-                            <option value="website">Website</option>
                             <option value="video">Video clip</option>
-                            <option value="track">Track</option>
+                            <option value="track">Music</option>
                             <option value="track">App</option>
                         </select>
 
