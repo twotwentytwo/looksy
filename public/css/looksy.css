@@ -441,22 +441,25 @@ a {
 }
 
 .comment h5 {
-	display:inline;
+	display:block;
 }
 
 .comment h5 a {
 	color: #fff;
+	line-height: 0.5em;
 }
 
 .comment p {
-	display:inline;
+	display:block;
 	color: #fff;
+	line-height: 0.5em;
 }
 
 .comment p.timing {
 	display:block;
 	font-size: 0.8em;
 	color: #fff;
+	line-height: 0.5em;
 }
 
 
