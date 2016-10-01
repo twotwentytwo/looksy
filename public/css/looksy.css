@@ -431,7 +431,7 @@ a {
 
 /*
  * COMMENT 
- */
+ 
 
 .comment {
 	background: url('../img/template/comment.png') 0 0 no-repeat;
@@ -461,6 +461,8 @@ a {
 	color: #fff;
 	line-height: 0.5em;
 }
+
+*/
 
 
 

@@ -70,12 +70,17 @@
 
                     @foreach($status->replies as $reply)
                         <div class="media">
-                           <div class="comment">
+                            <a class="pull-left" href="{{ route('profile.index', ['username' => $reply->user->username]) }}">
+                                <img class="media-object  profile-image" alt="{{ $reply->user->getNameOrUsername() }}" src="{{ $reply->user->getAvatarUrl() }}">
+                            </a>
                             <div class="media-body">
                                 <h5 class="media-heading"><a href="{{ route('profile.index', ['username' => $reply->user->username]) }}">{{ $reply->user->getNameOrUsername() }}</a></h5>
                                 <p>{{ $reply->body }}</p>
-                                <p class="timing">{{ $reply->created_at->diffForHumans() }}</p>
-                            </div>
+                                <ul class="list-inline">
+                                    <li>{{ $reply->created_at->diffForHumans() }}</li>
+                                     <!--<li><a href="#">Like</a></li>
+                        <li>10 likes</li>-->
+                                </ul>
                             </div>
                         </div>
                     @endforeach
