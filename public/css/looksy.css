@@ -436,7 +436,8 @@ a {
 .comment {
 	background: url('../img/template/comment.png') 0 0 no-repeat;
 	height: 58px;
-    padding-left: 30px;
+    padding-left: 20px;
+    padding-top: 4px;
 }
 
 .comment h5 {
