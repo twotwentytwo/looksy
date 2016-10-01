@@ -128,9 +128,9 @@ class StatusController extends Controller
 
         $user = Auth::user();
 
-        Mail::send('emails.comment', ['name'=> $user->username], function($message) 
+        Mail::send('emails.comment', ['name'=> $user->username], function($message) use($user)
         {
-            $message->to('tmkersh@gmail.com', 'Tom Kershaw')->subject('You have a new comment on your picks on Pick List');
+            $message->to($user->email, $user->username)->subject('You have a new comment on your picks on Pick List');
         });
 
     	return redirect()

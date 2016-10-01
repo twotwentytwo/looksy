@@ -4,6 +4,7 @@ namespace Looksy\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Looksy\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Auth;
 
 class AuthController extends Controller
