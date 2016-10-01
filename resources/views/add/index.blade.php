@@ -31,7 +31,6 @@
                             <option value="youtube">YouTube</option>
                             <option value="film">Film</option>
                             <option value="music">Music</option>
-                            <option value="app">Mobile app</option>
                             <option value="food">Food &amp; drink</option>
                             <option value="art">Art</option>
                         </select>
