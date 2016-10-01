@@ -85,11 +85,12 @@ class StatusController extends Controller
     public function getPicksByCategory($category)
     {
 
-        $statuses = DB::table('statuses')->get()->where('type', $category);
+        $statuses = DB::table('statuses')->get()
+            ->where('type', $category);
 
         return view('pick.category')
-            ->with('statuses', $statuses)
-            ->with('category', $category);
+                ->with('statuses', $statuses)
+                ->with('category', $category);    
     }
 
     public function getSearch()
