@@ -115,7 +115,7 @@ class User extends Model implements AuthenticatableContract
 
     public function friendsEmailAddress(User $user)
     {
-        return $this->friendOf()->email;
+        return 'tmkersh@gmail.com';
     }
 
 }

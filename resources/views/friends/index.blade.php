@@ -52,9 +52,9 @@
                 <div class="col-lg-6">
                     <h3>Invite friends</h3>
                     <div class="friend-block">
-                        <form role="form" action="" method="post">
+                        <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
                         <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-                            <input placeholder="Type in friends email here" name="friend" class="form-control add">
+                            <input placeholder="Type in friends email here" name="invite" class="form-control add">
                             @if($errors->has('status'))
                                 <span class="help-block">{{ $errors->first('status') }}</span>
                             @endif

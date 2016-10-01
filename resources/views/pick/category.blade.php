@@ -22,7 +22,6 @@
                      @include('templates.partials.navigation')
                 </nav>
                 <div class="col-lg-5">
-
                     <h3>Picks tagged as '{{ $category }}'</h3>
                     @if(!$statuses->count())
                         <p>There are no picks tagged as '{{ $category }}' right now</p>
@@ -37,17 +36,10 @@
                                     <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
                                     <p class="review">"{{ $status->review }}"</p>
                                 </div>
-                                
                             </div>
                         @endforeach
-                        
                     @endif
-                
                 </div>
-
-
-                    
-                
             </div>
         </div>
     </body>

@@ -24,10 +24,8 @@
                 <div class="col-lg-6">
                     <form class="navbar-form navbar-left" role="search" action="{{ route('search.results') }}">
                         <div class="form-group">
-                            <textarea type="text" name="query" class="form-control" rows="2" placeholder="Find people or picks"></textarea>
+                            <input type="text" name="query" class="form-control" placeholder="Find people or picks">
                         </div>
-                        
-                            
                         <button type="submit" class="btn btn-default">Search</button>
                     </form>
                 </div>

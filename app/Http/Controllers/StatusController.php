@@ -87,8 +87,6 @@ class StatusController extends Controller
 
         $statuses = DB::table('statuses')->get()->where('type', $category);
 
-        //dd($statuses);
-
         return view('pick.category')
             ->with('statuses', $statuses)
             ->with('category', $category);
@@ -131,11 +129,11 @@ class StatusController extends Controller
 
         Mail::send('emails.comment', ['name'=> $user->username], function($message) 
         {
-
             $message->to('tmkersh@gmail.com', 'Tom Kershaw')->subject('You have a new comment on your picks on Pick List');
         });
 
-    	return redirect()->back();
+    	return redirect()
+            ->back();
     }
 
     public function showPick($statusId)
@@ -154,7 +152,7 @@ class StatusController extends Controller
         $user = Auth::user();
         $status = Status::find($statusId);
         return view('pick.edit')
-         ->with('user', $user)
+            ->with('user', $user)
             ->with('status', $status);
     }
 

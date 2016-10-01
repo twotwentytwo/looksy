@@ -53,7 +53,6 @@ class FriendController extends Controller
 
 		Mail::send('emails.friendrequest', ['name'=> $user->username], function($message) 
     	{
-
         	$message->to('tmkersh@gmail.com', 'Tom Kershaw')->subject('You have a new friend request on Pick List');
     	});
 
@@ -83,6 +82,20 @@ class FriendController extends Controller
 		return redirect()
 			->route('profile.index', ['username' => $username])
 			->with('info', 'Friend request accepted');
+	}
+
+	public function postSendToFriend(Request $request)
+	{
+		$email = $request->input('invite');
+		
+		Mail::send('emails.sendtofriend', ['email' => $email], function($message) {
+        	$message->to('tmkersh@gmail.com', 'Tom Kershaw')->subject('Someone wants you to check out Pick List.');
+    	});
+
+		return redirect()
+			->route('friend.index')
+			->with('info', 'Invite to friend sent.');
+
 	}
 
 

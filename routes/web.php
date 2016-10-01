@@ -49,7 +49,6 @@ Route::get('/results', [
 ]);
 
 
-
 Route::get('/user/{username}', [
     'uses' => '\Looksy\Http\Controllers\ProfileController@getProfile',
     'as' => 'profile.index'
@@ -126,7 +125,6 @@ Route::post('/pick/{statusId}/edit', [
     'middleware' => ['auth']
 ]);
 
-
 Route::get('/pick/{statusId}/remove', [
     'uses' => '\Looksy\Http\Controllers\StatusController@postRemovePick',
     'as' => 'pick.remove', 
@@ -136,6 +134,12 @@ Route::get('/pick/{statusId}/remove', [
 Route::get('/search', [
     'uses' => '\Looksy\Http\Controllers\StatusController@getSearch',
     'as' => 'search.index',
+    'middleware' => ['auth']
+]);
+
+Route::post('/invite', [
+    'uses' => '\Looksy\Http\Controllers\FriendController@postSendToFriend',
+    'as' => 'emails.sendtofriend',
     'middleware' => ['auth']
 ]);
 
