@@ -46,10 +46,10 @@
                         <div class="website-wrapper">
                             <div class="type {{ $status->type }}"></div>
                             <div class="image">
-                                <a href="{{ $status->url }}"><img src="{{ $status->image }}" /></a>
+                                <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
                             </div>
                             <div class="details">
-                                <p class="title"><a href="{{ $status->url }}">{{ $status->title }}</a></p>
+                                <p class="title"><a  target="_blank" href="{{ $status->url }}">{{ $status->title }}</a></p>
                                 <p class="review">"{{ $status->review }}"</p>
                             </div>
                             <div class="media user">
