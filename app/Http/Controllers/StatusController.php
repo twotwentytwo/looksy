@@ -157,14 +157,14 @@ class StatusController extends Controller
             ->with('status', $status);
     }
 
-    public function postEditPick($statusId)
+    public function postEditPick(Request $request, $statusId)
     {
         $user = Auth::user();
         $status = Status::find($statusId);
 
-        $title = $status->title;
-        $type = $status->type;
-        $review = $status->review;
+        $title = $request->input('title');
+        $type = $request->input('type');
+        $review = $request->input('review');
 
         Auth::user()->statuses()
             ->where('id', $statusId)
@@ -174,7 +174,7 @@ class StatusController extends Controller
                 'type' => $type
             ]);
 
-        return view('pick.edit')
+        return view('pick.index')
             ->with('info', 'Your pick has been updated')
             ->with('user', $user)
             ->with('status', $status);
