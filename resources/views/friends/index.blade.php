@@ -32,7 +32,6 @@
                         @endif
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
                     <h3>Friend requests</h3>
                     <div class="friend-block">
@@ -44,11 +43,11 @@
                                 @if(Auth::user()->hasFriendRequestReceived($user))
                                     <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
                                 @endif
+                               
                             @endforeach
                         @endif
                     </div>
                 </div>
-
                 <div class="col-lg-6">
                     <h3>Invite friends</h3>
                     <div class="friend-block">
@@ -64,8 +63,6 @@
                     </form>
                     </div>
                 </div>
-
-                
             </div>
         </div>
     </body>

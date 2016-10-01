@@ -364,6 +364,17 @@ a {
     top: 26px;
  }
 
+  .unfriend {
+ 	    display: inline;
+    position: absolute;
+    width: 100px;
+    right: 16px;
+    top: 26px;
+    background: #fff;
+    color: #ff6462;
+    border: 1px solid #ccc;
+ }
+
 /*
  * FRIENDS
  */
@@ -384,7 +395,6 @@ a {
  */
 
  .add .add {
- 	font-size: 1.2em;
  	margin-bottom: 10px;
  }
 
@@ -460,7 +470,6 @@ a {
 
 select {
 	background: #fff;
-	font-size: 1.2em;
 	width: 100%;
 	margin-bottom: 10px;
 	font-family: 'Karla', sans-serif;

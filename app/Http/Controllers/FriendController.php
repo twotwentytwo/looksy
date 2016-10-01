@@ -63,6 +63,20 @@ class FriendController extends Controller
 		
 	}
 
+	public function getRemove($username)
+	{	
+
+		$user = User::where('username', $username)->first();
+
+		Auth::user()->removeFriend($user);
+
+		return redirect()
+			->route('profile.index', ['username' => $user->username])
+			->with('info', 'You are no longer friends');
+
+		
+	}
+
 	public function getAccept($username) 
 	{	
 		$user = User::where('username', $username)->first();

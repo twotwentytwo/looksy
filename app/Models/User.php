@@ -101,6 +101,7 @@ class User extends Model implements AuthenticatableContract
         $this->friendOf()->attach($user->id);
     }
 
+
     public function acceptFriendRequest(User $user)
     {
         $this->friendRequests()->where('id', $user->id)->first()->pivot->update([

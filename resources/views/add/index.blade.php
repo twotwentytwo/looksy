@@ -24,7 +24,7 @@
 			    	
 			        <form role="form" action="{{ route('status.post') }}" method="post">
 			            <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-			                <textarea placeholder="Paste in a URL here" name="status" class="form-control add" rows="2"></textarea>
+			                <input placeholder="Paste in a URL here" name="status" class="form-control add">
                       <select name="type">
                             <option value="">Choose category</option>
                             <option value="tv">TV show</option>
