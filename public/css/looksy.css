@@ -144,7 +144,6 @@ a {
 	text-align: center;
 	color: #fff;
 	border: none;
-	font-size: 1.4em;
 }
 
 .authentication .auth-form {
@@ -304,7 +303,6 @@ a {
 }
 
 .type{
-	
     width: 40px;
     height: 40px;
     position: absolute;
