@@ -429,6 +429,36 @@ a {
 	padding-left: 8px;
 }
 
+/*
+ * COMMENT 
+ */
+
+.comment {
+	background: url('../img/template/comment.png') 0 0 no-repeat;
+	height: 58px;
+    padding-left: 30px;
+}
+
+.comment h5 {
+	display:inline;
+}
+
+.comment h5 a {
+	color: #fff;
+}
+
+.comment p {
+	display:inline;
+	color: #fff;
+}
+
+.comment p.timing {
+	display:block;
+	font-size: 0.8em;
+	color: #fff;
+}
+
+
 
 /*
  * EDIT 
