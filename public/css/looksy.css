@@ -337,6 +337,10 @@ a {
 	background: url('../img/icons/categories/eats.png') 0 0 no-repeat;
 }
 
+.type.youtube {
+	background: url('../img/icons/categories/youtube.png') 0 0 no-repeat;
+}
+
 
 
 .website-wrapper .details .timing {
