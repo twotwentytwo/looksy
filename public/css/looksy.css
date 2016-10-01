@@ -54,9 +54,8 @@ a {
 }
 
 .alert-info {
-    color: #fff;
-    background-color: #ff6462;
-    border-color: #ff6462;
+    color: #ff6464;
+    background-color: #fff;
     font-family: 'Karla', sans-serif;
     font-size: 1.4em;
 }
