@@ -24,8 +24,7 @@ class AuthController extends Controller
 
 		User::create([
 			'email' => $request->input('email'), 
-			'username' => $request->input('username'), 
-			'image' => 'http://twotwentytwo.co.uk/dev/looksy/profile_deafult.png', 
+			'username' => $request->input('username'),
 			'password' => bcrypt($request->input('password'))
 		]);
 
