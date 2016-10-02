@@ -25,16 +25,18 @@ class AuthController extends Controller
 		User::create([
 			'email' => $request->input('email'), 
 			'username' => $request->input('username'), 
+			'image' => 'http://twotwentytwo.co.uk/dev/looksy/profile_deafult.png', 
 			'password' => bcrypt($request->input('password'))
 		]);
 
 		 Mail::send('emails.signup', ['name'=> $request->input('username')], function($message) use($request)
         {
-
             $message->to($request->input('email'), $request->input('username'))->subject('You have signed up to Pick List, welcome.');
         });
 
-		return redirect()->route('home')->with('info', 'Your account has been created and you can now sign in'); 
+		return redirect()
+			->route('home')
+			->with('info', 'Your account has been created and you can now sign in'); 
 	}
 
 	public function getSignin()

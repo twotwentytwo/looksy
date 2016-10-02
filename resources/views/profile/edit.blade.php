@@ -24,10 +24,11 @@
                 <div class="col-lg-6">
                     <form class="form-vertical" role="form" method="post" action="#" enctype="multipart/form-data">
 
-                      
+                      @if(Storage::disk('public')->has('profile_' . strtolower(Auth::user()->first_name) . '.png'))
                         <div class="image">
                             <img src="{{ route('profile.image', ['filename' => 'profile_' . strtolower(Auth::user()->first_name) . '.png']) }}" />
                         </div>
+                      @endif
                         
 
                         <div class="form-group{{ $errors->has('first_name') ? ' has-error': '' }}">

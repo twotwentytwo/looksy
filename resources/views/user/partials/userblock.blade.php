@@ -1,7 +1,9 @@
 <div class="media">
-    <a class="pull-left" href="{{ route('profile.index', ['username' =>  $user->username]) }}">
-        <img class="media-object profile-image" alt="{{ $user->getNameOrUsername() }}" src="{{ $user->getAvatarUrl() }}">
-    </a>
+	@if(Storage::disk('public')->has('profile_' . strtolower($user->first_name) . '.png'))
+    	<a class="pull-left" href="{{ route('profile.index', ['username' =>  $user->username]) }}">
+        	<img class="media-object profile-image" alt="{{ $user->getNameOrUsername() }}" src="{{ route('profile.image', ['filename' => 'profile_' . strtolower($user->first_name) . '.png']) }}">
+   		</a>
+    @endif
     <div class="media-body">
         <h4 class="media-heading"><a href="{{ route('profile.index', ['username' =>  $user->username]) }}">{{ $user->getNameOrUsername() }}</a></h4>
     </div>

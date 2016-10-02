@@ -23,6 +23,8 @@
 			    <div class="col-lg-5">
 			        @if(!$statuses->count())
 			        	<p>You've not posted any picks yet.</p>
+
+			        	<p>Check out the search to view other people's picks.</p>
 			        @else
 			        	@foreach($statuses as $status)
 			            	<div class="website-wrapper {{ $status->type }}">
@@ -35,9 +37,11 @@
 			            			<p class="review">"{{ $status->review }}"</p>
 			            		</div>
 			            		<div class="media user">
-								    <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-								        <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ route('profile.image', ['filename' => 'profile_' . strtolower(Auth::user()->first_name) . '.png']) }}">
-								    </a>
+								    @if(Storage::disk('public')->has('profile_' . strtolower($status->user->first_name) . '.png'))
+                                        <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
+                                            <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ route('profile.image', ['filename' => 'profile_' . strtolower($status->user->first_name) . '.png']) }}">
+                                        </a>
+                                    @endif
 								    <div class="media-body">
 								        <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
 								        
