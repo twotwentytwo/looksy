@@ -25,7 +25,7 @@
                     <form class="form-vertical" role="form" method="post" action="#" enctype="multipart/form-data">
 
                       @if(Storage::disk('public')->has('profile_' . strtolower(Auth::user()->first_name) . '.png'))
-                        <div class="image">
+                        <div class="profile-image-edit">
                             <img src="{{ route('profile.image', ['filename' => 'profile_' . strtolower(Auth::user()->first_name) . '.png']) }}" />
                         </div>
                       @endif
