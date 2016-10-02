@@ -510,6 +510,11 @@ a {
 	margin: 0 auto 8px;
 }
 
+.profile-image-edit img {
+	width: 145px;
+	height: 145px;
+}
+
 select {
 	background: #fff;
 	width: 100%;
