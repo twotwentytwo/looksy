@@ -22,34 +22,46 @@
             @include('templates.partials.alerts')
             <div class="row">
                 <div class="col-lg-6">
-                    <form class="form-vertical" role="form" method="post" action="#">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group{{ $errors->has('first_name') ? ' has-error': '' }}">
-                                   
-                                    <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First name" value="{{ Request::old('first_name') ?: Auth::user()->first_name }}">
-                                    @if($errors->has('first_name'))
-                                        <span class="help-block">{{ $errors->first('first_name') }}</span> 
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group{{ $errors->has('last_name') ? ' has-error': '' }}">
-                                    
-                                    <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last name" value="{{ Request::old('last_name') ?: Auth::user()->last_name }}">
-                                    @if($errors->has('last_name'))
-                                        <span class="help-block">{{ $errors->first('last_name') }}</span> 
-                                    @endif
-                                </div>
-                            </div>
+                    <form class="form-vertical" role="form" method="post" action="#" enctype="multipart/form-data">
+
+                      
+                        <div class="image">
+                            <img src="{{ route('profile.image', ['filename' => 'profile_' . strtolower(Auth::user()->first_name) . '.png']) }}" />
                         </div>
-                        <div class="form-group{{ $errors->has('location') ? ' has-error': '' }}">
+                        
+
+                        <div class="form-group{{ $errors->has('first_name') ? ' has-error': '' }}">
+                            <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First name" value="{{ Request::old('first_name') ?: Auth::user()->first_name }}">
+                            @if($errors->has('first_name'))
+                                <span class="help-block">{{ $errors->first('first_name') }}</span> 
+                            @endif
+                        </div>
+                    
+                        <div class="form-group{{ $errors->has('last_name') ? ' has-error': '' }}">
                             
+                            <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last name" value="{{ Request::old('last_name') ?: Auth::user()->last_name }}">
+                            @if($errors->has('last_name'))
+                                <span class="help-block">{{ $errors->first('last_name') }}</span> 
+                            @endif
+                        </div>
+                       
+                        <div class="form-group{{ $errors->has('location') ? ' has-error': '' }}">
                             <input type="text" name="location" class="form-control" id="location" placeholder="Location" value="{{ Request::old('location') ?: Auth::user()->location }}">
                             @if($errors->has('location'))
-                                        <span class="help-block">{{ $errors->first('location') }}</span> 
-                                    @endif
+                                <span class="help-block">{{ $errors->first('location') }}</span> 
+                            @endif
                         </div>
+                        
+                        <div class="form-group{{ $errors->has('image') ? ' has-error': '' }}">
+                            
+                            <input type="file" name="image" class="form-control" id="image" placeholder="Upload image">
+                            @if($errors->has('image'))
+                                <span class="help-block">{{ $errors->first('image') }}</span> 
+                            @endif
+                            <p>Image should be 100px x 100px</p>
+                        </div>
+
+
                         <div class="form-group">
                             <button type="submit" class="btn btn-default">Update</button>
                         </div>

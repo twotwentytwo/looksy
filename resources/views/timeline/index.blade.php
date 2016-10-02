@@ -36,7 +36,7 @@
 			            		</div>
 			            		<div class="media user">
 								    <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-								        <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl() }}">
+								        <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ route('profile.image', ['filename' => 'profile_' . strtolower(Auth::user()->first_name) . '.png']) }}">
 								    </a>
 								    <div class="media-body">
 								        <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>

@@ -468,14 +468,12 @@ a {
 
 */
 
-
-
 /*
  * EDIT 
  */
 
 .edit input {
-	font-size: 1.4em;
+	font-size: 1em;
 }
 
 .edit form {
@@ -503,6 +501,13 @@ a {
 	position: absolute;
 	top: 30px;
 	left: 16px;
+}
+
+.edit .image {
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto 8px;
 }
 
 select {

@@ -79,7 +79,7 @@
                                 <ul class="list-inline">
                                     <li>{{ $reply->created_at->diffForHumans() }}</li>
                                      <!--<li><a href="#">Like</a></li>
-                        <li>10 likes</li>-->
+                                    <li>10 likes</li>-->
                                 </ul>
                             </div>
                         </div>
