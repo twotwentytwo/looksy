@@ -25,22 +25,32 @@
 			        <form role="form" action="{{ route('status.post') }}" method="post">
 			            <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
 			                <input placeholder="Paste in a URL here" name="status" class="form-control add">
-                      <select name="type">
-                            <option value="">Choose category</option>
-                            <option value="tv">TV show</option>
-                            <option value="youtube">YouTube</option>
-                            <option value="film">Film</option>
-                            <option value="music">Music</option>
-                            <option value="food">Food &amp; drink</option>
-                            <option value="art">Art</option>
-                        </select>
-                      <textarea placeholder="Add a mini review" name="review" class="form-control add" rows="2"></textarea>
-			                @if($errors->has('status'))
-			                	<span class="help-block">{{ $errors->first('status') }}</span>
-			                @endif
-			                <p class="add-strapline">Why not post something to inspire your friends?</p>
-			                <p class="add-strapline">Good things happen when we share.</p>
-			            </div>
+                      @if($errors->has('status'))
+                        <span class="help-block">{{ $errors->first('status') }}</span>
+                      @endif
+                  </div>
+                  <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
+                    <select name="type">
+                      <option value="">Choose category</option>
+                      <option value="tv">TV show</option>
+                      <option value="youtube">YouTube</option>
+                      <option value="film">Film</option>
+                      <option value="music">Music</option>
+                      <option value="food">Food &amp; drink</option>
+                      <option value="art">Art</option>
+                    </select>
+                    @if($errors->has('category'))
+                      <span class="help-block">{{ $errors->first('category') }}</span>
+                    @endif
+                  </div>
+                  <div class="form-group{{ $errors->has('review') ? ' has-error' : '' }}">
+                    <textarea placeholder="Add a mini review" name="review" class="form-control add" rows="2"></textarea>
+                    @if($errors->has('review'))
+                      <span class="help-block">{{ $errors->first('review') }}</span>
+                    @endif
+                  </div>    
+                  <p class="add-strapline">Why not post something to inspire your friends?</p>
+                  <p class="add-strapline">Good things happen when we share.</p>
 			            <button type="submit" class="btn btn-default">Share</button>
 			            <input type="hidden" name="_token" value="{{ Session::token() }}">
 			        </form>
