@@ -132,7 +132,7 @@ class StatusController extends Controller
 
         Mail::send('emails.comment', ['name'=> $user->username], function($message) use($user, $status)
         {
-            $message->to($status->user->email, $user->username)->subject('You have a new comment on your picks on Pick List');
+            $message->to($status->user->email, $user->username)->subject('You have a new comment on "'. $status->title . '" on Pick List');
         });
 
     	return redirect()
