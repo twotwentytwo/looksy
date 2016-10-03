@@ -22,8 +22,6 @@ class FriendController extends Controller
 	public function getAdd($username)
 	{	
 
-		
-
 		$user = User::where('username', $username)->first();
 
 		if(!$user) {
@@ -100,6 +98,12 @@ class FriendController extends Controller
 
 	public function postSendToFriend(Request $request)
 	{
+
+		$this->validate($request, [
+    		'invite' => 'required|max:500'
+    	]);
+
+
 		$email = $request->input('invite');
 		
 		Mail::send('emails.sendtofriend', ['email' => $email], function($message) use ($email)

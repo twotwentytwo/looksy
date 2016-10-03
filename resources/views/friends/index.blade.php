@@ -51,10 +51,10 @@
                     <h3>Invite friends</h3>
                     <div class="friend-block">
                         <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
-                            <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('invite') ? ' has-error' : '' }}">
                                 <input placeholder="Type in friends email here" name="invite" class="form-control add">
-                                @if($errors->has('status'))
-                                    <span class="help-block">{{ $errors->first('status') }}</span>
+                                @if($errors->has('invite'))
+                                    <span class="help-block">{{ $errors->first('invite') }}</span>
                                 @endif
                             </div>
                             <button type="submit" class="btn btn-default">Invite</button>
