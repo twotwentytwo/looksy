@@ -22,8 +22,11 @@
             <div class="row">
                 <div class="col-lg-6">
                     <form class="navbar-form navbar-left" role="search" action="{{ route('search.results') }}">
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">
                             <input type="text" name="query" class="form-control" placeholder="Find people or picks">
+                            @if($errors->has('query'))
+                                <span class="help-block">{{ $errors->first('query') }}</span>
+                            @endif
                         </div>
                         <button type="submit" class="btn btn-default">Search</button>
                     </form>

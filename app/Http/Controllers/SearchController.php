@@ -11,6 +11,11 @@ class SearchController extends Controller
 
     public function getResults(Request $request)
     {
+
+        $this->validate($request, [
+            'query' => 'required|max:500'
+        ]);
+
     	$query = $request->input('query');
 
     	if(!$query) {
@@ -18,12 +23,12 @@ class SearchController extends Controller
     	}
 
     	$users = User::where(DB::raw("CONCAT(first_name, '', last_name)"), 'LIKE', "%{$query}%")
-    	->orWhere('username', 'LIKE', "%{$query}%")
-    	->get();
+    	   ->orWhere('username', 'LIKE', "%{$query}%")
+    	   ->get();
 
         $statuses = DB::table('statuses')
-        ->where('title', 'LIKE', "%{$query}%")
-        ->get();
+            ->where('title', 'LIKE', "%{$query}%")
+            ->get();
 
         return view('search.results')
             ->with('users', $users)
