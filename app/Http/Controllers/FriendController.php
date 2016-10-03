@@ -108,7 +108,7 @@ class FriendController extends Controller
 		
 		Mail::send('emails.sendtofriend', ['email' => $email], function($message) use ($email)
 		{
-        	$message->to($email, 'Tom Kershaw')->subject('Someone wants you to check out Pick List on http://middletonprototype.com - a new mobile app for sharing cultural recommendations with your friends. Check it out today.');
+        	$message->to($email, 'Tom Kershaw')->subject('Someone wants you to check out Pick List');
     	});
 
 		return redirect()
