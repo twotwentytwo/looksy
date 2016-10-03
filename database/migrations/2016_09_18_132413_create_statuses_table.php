@@ -18,6 +18,14 @@ class CreateStatusesTable extends Migration
             $table->integer('user_id')->nullable();
             $table->integer('parent_id')->nullable();
             $table->text('body');
+            $table->integer('item_id')->nullable();
+            $table->integer('type')->nullable();
+            $table->integer('image')->default('http://twotwentytwo.co.uk/dev/looksy/placeholder_image.png');
+            $table->integer('title')->nullable();
+            $table->integer('url')->nullable();
+            $table->integer('description')->nullable();
+            $table->integer('source')->nullable();
+            $table->integer('review')->nullable();
             $table->timestamps();
         });
     }
