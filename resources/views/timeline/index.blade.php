@@ -23,7 +23,6 @@
 			    <div class="col-lg-5">
 			        @if(!$statuses->count())
 			        	<p>You've not posted any picks yet.</p>
-
 			        	<p>Check out the <a href="{{ route('search.index') }}">search</a> to view other people's picks. Or why not <a href="{{ route('add.index') }}">start sharing your picks</a> today. </p>
 			        @else
 			        	@foreach($statuses as $status)
@@ -46,7 +45,6 @@
 								        <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
 								        
 								    </div>
-
 								</div>
 								<p class="timing">{{ $status->created_at->diffForHumans() }}</p>
 			            	</div>

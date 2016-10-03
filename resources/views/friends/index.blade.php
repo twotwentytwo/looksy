@@ -13,7 +13,6 @@
             
     </head>
     <body class="friends">
-        
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
                 <h1>Friends</h1>
@@ -52,15 +51,15 @@
                     <h3>Invite friends</h3>
                     <div class="friend-block">
                         <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
-                        <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-                            <input placeholder="Type in friends email here" name="invite" class="form-control add">
-                            @if($errors->has('status'))
-                                <span class="help-block">{{ $errors->first('status') }}</span>
-                            @endif
-                        </div>
-                        <button type="submit" class="btn btn-default">Invite</button>
-                        <input type="hidden" name="_token" value="{{ Session::token() }}">
-                    </form>
+                            <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
+                                <input placeholder="Type in friends email here" name="invite" class="form-control add">
+                                @if($errors->has('status'))
+                                    <span class="help-block">{{ $errors->first('status') }}</span>
+                                @endif
+                            </div>
+                            <button type="submit" class="btn btn-default">Invite</button>
+                            <input type="hidden" name="_token" value="{{ Session::token() }}">
+                        </form>
                     </div>
                 </div>
             </div>

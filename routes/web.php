@@ -48,7 +48,6 @@ Route::get('/results', [
     'as' => 'search.results'
 ]);
 
-
 Route::get('/user/{username}', [
     'uses' => '\Looksy\Http\Controllers\ProfileController@getProfile',
     'as' => 'profile.index'
@@ -148,4 +147,3 @@ Route::post('/invite', [
     'as' => 'emails.sendtofriend',
     'middleware' => ['auth']
 ]);
-

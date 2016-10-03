@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
 			
     </head>
-    <body class="authentication">
+    <body class="authentication sign-up">
  		<div class="container">
  			<div class="row">
  				<div class="col-lg-6">

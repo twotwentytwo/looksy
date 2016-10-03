@@ -13,7 +13,6 @@
             
     </head>
     <body class="search">
-        
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
                 <h1>Search</h1>

@@ -28,7 +28,7 @@ class AuthController extends Controller
 			'password' => bcrypt($request->input('password'))
 		]);
 
-		 Mail::send('emails.signup', ['name'=> $request->input('username')], function($message) use($request)
+		Mail::send('emails.signup', ['name'=> $request->input('username')], function($message) use($request)
         {
             $message->to($request->input('email'), $request->input('username'))->subject('You have signed up to Pick List, welcome.');
         });

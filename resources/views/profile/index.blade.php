@@ -26,7 +26,6 @@
                         <a href="{{ url()->previous() }}"><img src="{{asset('../img/icons/back.png')}}" /></a>
                     </div>
                @endif
-               
             </nav>
             <div class="row">
                 <div class="col-lg-5">
@@ -51,18 +50,15 @@
                                     @endif
                                     <div class="media-body">
                                         <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
-                                        
                                     </div>
                                 </div>
                                 <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                             </div>
-                            
                         @endforeach
                     @endif
                 </div>
                 <hr>
                 <div class="col-lg-4 col-lg-offset-3">
-                    
                     @if(Auth::user()->hasFriendRequestPending($user)) 
                         <p>Waiting for {{ $user->getNameOrUsername() }} to accept your request.</p>
                     @elseif(Auth::user()->hasFriendRequestReceived($user))
@@ -72,7 +68,6 @@
                     @elseif(Auth::user()->id !== $user->id)
                         <a class="btn btn-primary" href="{{ route('friend.add', ['username' => $user->username]) }}">Add as friend</a>
                     @endif
-
                     <h3>Friends</h3>
                     @if (!$user->friends()->count())
                         <p>{{ $user->getFirstNameOrUsername() }} has no friends.</p>
@@ -81,8 +76,6 @@
                             @include('user/partials/userblock')
                         @endforeach
                     @endif
-
-                    
                 </div>
             </div>
         </div>
