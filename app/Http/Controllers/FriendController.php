@@ -49,23 +49,24 @@ class FriendController extends Controller
 
 		Auth::user()->addFriend($user);
 
-		Mail::send('emails.friendrequest', ['name'=> $user->username], function($message) use($user)
-    	{
-        	$message->to($user->email, $user->username)->subject('You have a new friend request on Pick List');
+		Mail::send('emails.friendrequest', 
+			['name'=> $user->username], 
+				function($message) use($user)
+    				{
+        				$message
+        					->to($user->email, $user->username)
+        					->subject('You have a new friend request from on Pick List');
     	});
 
 		return redirect()
 			->route('profile.index', ['username' => $user->username])
 			->with('info', 'Friend request sent');
-
-		
 	}
 
 	public function getRemove($username)
 	{	
 
 		$user = User::where('username', $username)->first();
-
 		Auth::user()->removeFriend($user);
 
 		return redirect()
@@ -103,20 +104,16 @@ class FriendController extends Controller
     		'invite' => 'required|max:500'
     	]);
 
-
 		$email = $request->input('invite');
 		
 		Mail::send('emails.sendtofriend', ['email' => $email], function($message) use ($email)
 		{
-        	$message->to($email, 'Tom Kershaw')->subject('Someone wants you to check out Pick List.');
+        	$message->to($email, 'Tom Kershaw')->subject('Someone wants you to check out Pick List on http://middletonprototype.com - a new mobile app for sharing cultural recommendations with your friends. Check it out today.');
     	});
 
 		return redirect()
 			->route('friend.index')
 			->with('info', 'Invite to friend sent.');
 
-	}
-
-
-    
+	}    
 }
