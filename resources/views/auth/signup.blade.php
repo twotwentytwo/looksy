@@ -43,7 +43,7 @@
 			                @endif
 			            </div>
 			            <div class="form-group">
-			                <button type="submit" class="btn btn-default">Sign up</button>
+			                <button type="submit" class="btn btn-default">Create account</button>
 			            </div>
 			            <input type="hidden" name="_token" value="{{ Session::token() }}">
 			        </form>
