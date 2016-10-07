@@ -301,7 +301,7 @@ a {
   text-overflow: ellipsis;
 }
 
-.type{
+.type {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -365,17 +365,6 @@ a {
     top: 26px;
  }
 
-  .unfriend {
- 	    display: inline;
-    position: absolute;
-    width: 100px;
-    right: 16px;
-    top: 26px;
-    background: #fff;
-    color: #ff6462;
-    border: 1px solid #ccc;
- }
-
 /*
  * FRIENDS
  */
@@ -390,6 +379,23 @@ a {
 	border-bottom: #fff 4px solid;
 	padding-bottom: 20px;
 }
+
+.unfriend {
+ 	display: block;
+    width: 100%;
+    background: #fff;
+    color: #ff6462;
+    border: 1px solid #ccc;
+ }
+
+ .friends .unfriend {
+ 	display: inline;
+    width: 120px;
+    position: absolute;
+    right:16px;
+    top:0;
+    
+ }
 
 /*
  * ADD
@@ -432,41 +438,6 @@ a {
 .categories span {
 	padding-left: 8px;
 }
-
-/*
- * COMMENT 
- 
-
-.comment {
-	background: url('../img/template/comment.png') 0 0 no-repeat;
-	height: 58px;
-    padding-left: 20px;
-    padding-top: 4px;
-}
-
-.comment h5 {
-	display:block;
-}
-
-.comment h5 a {
-	color: #fff;
-	line-height: 0.5em;
-}
-
-.comment p {
-	display:block;
-	color: #fff;
-	line-height: 0.5em;
-}
-
-.comment p.timing {
-	display:block;
-	font-size: 0.8em;
-	color: #fff;
-	line-height: 0.5em;
-}
-
-*/
 
 /*
  * EDIT 

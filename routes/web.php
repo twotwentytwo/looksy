@@ -89,6 +89,12 @@ Route::get('/friends/accept/{username}', [
     'middleware' => ['auth']
 ]);
 
+Route::post('/friends/remove/{username}', [
+    'uses' => '\Looksy\Http\Controllers\FriendController@postRemove',
+    'as' => 'friend.remove',
+    'middleware' => ['auth']
+]);
+
 Route::post('/status', [
     'uses' => '\Looksy\Http\Controllers\StatusController@postStatus',
     'as' => 'status.post', 

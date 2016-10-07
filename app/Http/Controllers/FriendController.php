@@ -59,21 +59,23 @@ class FriendController extends Controller
     	});
 
 		return redirect()
-			->route('profile.index', ['username' => $user->username])
+			->route('friend.index', ['username' => $user->username])
 			->with('info', 'Friend request sent');
 	}
 
-	public function getRemove($username)
+	public function postRemove($username)
 	{	
-
 		$user = User::where('username', $username)->first();
+
+		if(!Auth::user()->isFriendsWith($user)) {
+			return redirect()->back();
+		}
+
 		Auth::user()->removeFriend($user);
 
 		return redirect()
-			->route('profile.index', ['username' => $user->username])
-			->with('info', 'You are no longer friends');
-
-		
+			->route('friend.index', ['username' => $user->username])
+			->with('info', 'Friend removed');
 	}
 
 	public function getAccept($username) 
@@ -93,7 +95,7 @@ class FriendController extends Controller
 		Auth::user()->acceptFriendRequest($user);
 
 		return redirect()
-			->route('profile.index', ['username' => $username])
+			->route('friend.index', ['username' => $username])
 			->with('info', 'Friend request accepted');
 	}
 

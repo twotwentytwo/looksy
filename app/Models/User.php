@@ -101,6 +101,11 @@ class User extends Model implements AuthenticatableContract
         $this->friendOf()->attach($user->id);
     }
 
+    public function removeFriend(User $user) 
+    {   
+        $this->friendOf()->detach($user->id);
+        $this->friendsOfMine()->detach($user->id);
+    }
 
     public function acceptFriendRequest(User $user)
     {
