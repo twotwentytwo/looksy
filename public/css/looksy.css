@@ -354,11 +354,10 @@ a {
 
  .friends .unfriend {
  	display: inline;
-    width: 120px;
-    position: absolute;
-    right:16px;
-    top:0;
-    
+    width: 100px;
+    position: relative;
+    left: 282px;
+    top: -40px;
  }
 
 /*

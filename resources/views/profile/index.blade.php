@@ -44,16 +44,6 @@
                                     <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
                                     <p class="review">"{{ $status->review }}"</p>
                                 </div>
-                                <div class="media user">
-                                     @if(Storage::disk('public')->has('profile_' . strtolower($status->user->first_name) . '.png'))
-                                        <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-                                            <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ route('profile.image', ['filename' => 'profile_' . strtolower($status->user->first_name) . '.png']) }}">
-                                        </a>
-                                    @endif
-                                    <div class="media-body">
-                                        <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
-                                    </div>
-                                </div>
                                 <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                             </div>
                         @endforeach
@@ -69,7 +59,7 @@
                         <p>You and {{ $user->getNameOrUsername() }} are friends.</p>
 
                         <form action="{{ route('friend.remove', ['username' => $user->username]) }}" method="post">
-                            <input type="submit" value="Remove Friend" class="unfriend">
+                            <input type="submit" value="Unfriend" class="unfriend">
                             <input type="hidden" name="_token" value="{{ Session::token() }}">
                         </form>
                     @elseif(Auth::user()->id !== $user->id)
