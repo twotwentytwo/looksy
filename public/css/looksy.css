@@ -309,39 +309,61 @@ a {
     left: 8px;
 }
 
-.type.tv {
-	background: url('../img/icons/categories/tv.png') 0 0 no-repeat;
-}
-
 .type.film {
 	background: url('../img/icons/categories/film.png') 0 0 no-repeat;
 }
 
-.type.art {
-	background: url('../img/icons/categories/art.png') 0 0 no-repeat;
+.type.tv {
+	background: url('../img/icons/categories/tv.png') 0 0 no-repeat;
+}
+
+.type.video {
+	background: url('../img/icons/categories/video.png') 0 0 no-repeat;
 }
 
 .type.music {
 	background: url('../img/icons/categories/music.png') 0 0 no-repeat;
 }
 
+.type.podcast {
+	background: url('../img/icons/categories/podcast.png') 0 0 no-repeat;
+}
+
+.type.web {
+	background: url('../img/icons/categories/web.png') 0 0 no-repeat;
+}
+
+.type.app {
+	background: url('../img/icons/categories/app.png') 0 0 no-repeat;
+}
+
+.type.food {
+	background: url('../img/icons/categories/food.png') 0 0 no-repeat;
+}
+
+.type.art {
+	background: url('../img/icons/categories/art.png') 0 0 no-repeat;
+}
+
+.type.book {
+	background: url('../img/icons/categories/book.png') 0 0 no-repeat;
+}
+
+.type.shop {
+	background: url('../img/icons/categories/shop.png') 0 0 no-repeat;
+}
+
+.type.location {
+	background: url('../img/icons/categories/location.png') 0 0 no-repeat;
+}
+
 .type.idea {
 	background: url('../img/icons/categories/idea.png') 0 0 no-repeat;
 }
 
-.type.bomb {
-	background: url('../img/icons/categories/bomb.png') 0 0 no-repeat;
+.type.random {
+	background: url('../img/icons/categories/random.png') 0 0 no-repeat;
 }
-
-.type.food {
-	background: url('../img/icons/categories/eats.png') 0 0 no-repeat;
-}
-
-.type.youtube {
-	background: url('../img/icons/categories/youtube.png') 0 0 no-repeat;
-}
-
-
 
 .website-wrapper .details .timing {
     color: #fff;
