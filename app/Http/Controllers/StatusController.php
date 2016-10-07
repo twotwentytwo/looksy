@@ -27,7 +27,9 @@ class StatusController extends Controller
         $url = $request->input('status');
 
         if (strpos($url, 'youtube') > 0) {
-            $type = 'YouTube';
+            $type = 'video';
+        } else {
+            $type = $request->input('type');
         }
 
         // GET OG TAGS
@@ -51,11 +53,10 @@ class StatusController extends Controller
         
         // GET YOUTUBE ID IF REQUIRED
 
-        if($type == 'YouTube') {
+        if($type == 'video') {
             $url = $request->input('status');
             parse_str(parse_url( $url, PHP_URL_QUERY ), $get_id_from_url );
             $segment = $get_id_from_url['v'];
-            $source = 'YouTube';
         }
 
         // CREATE PICK 
