@@ -39,6 +39,7 @@
                       <option value="music">Music</option>
                       <option value="podcast">Podcast</option>
                       <option value="web">Web</option>
+                      <option value="news">News</option>
                       <option value="app">Mobile app</option>
                       <option value="food">Food &amp; drink</option>
                       <option value="art">Art</option>

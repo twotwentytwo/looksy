@@ -42,6 +42,7 @@
                         <li class="music"><a href="{{ route('pick.category', ['category' => 'music']) }}"><img src="../img/icons/categories/music.png" /><span>Music</span></a></li>
                         <li class="podcast"><a href="{{ route('pick.category', ['category' => 'podcast']) }}"><img src="../img/icons/categories/podcast.png" /><span>Podcast</span></a></li>
                         <li class="web"><a href="{{ route('pick.category', ['category' => 'web']) }}"><img src="../img/icons/categories/web.png" /><span>Website</span></a></li>
+                        <li class="news"><a href="{{ route('pick.category', ['category' => 'news']) }}"><img src="../img/icons/categories/news.png" /><span>News</span></a></li>
                         <li class="app"><a href="{{ route('pick.category', ['category' => 'app']) }}"><img src="../img/icons/categories/app.png" /><span>Mobile app</span></a></li>
                         <li class="food"><a href="{{ route('pick.category', ['category' => 'food']) }}"><img src="../img/icons/categories/eats.png" /><span>Food &amp; drink</span></a></li>
                         <li class="art"><a href="{{ route('pick.category', ['category' => 'art']) }}"><img src="../img/icons/categories/art.png" /><span>Art</span></a></li>

@@ -349,6 +349,10 @@ a {
 	background: url('../img/icons/categories/book.png') 0 0 no-repeat;
 }
 
+.type.news {
+	background: url('../img/icons/categories/news.png') 0 0 no-repeat;
+}
+
 .type.shop {
 	background: url('../img/icons/categories/shop.png') 0 0 no-repeat;
 }
