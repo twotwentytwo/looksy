@@ -52,7 +52,6 @@
                             @if($errors->has('image'))
                                 <span class="help-block">{{ $errors->first('image') }}</span> 
                             @endif
-                            <p>Image should be minimum 100px x 100px</p>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-default">Update</button>

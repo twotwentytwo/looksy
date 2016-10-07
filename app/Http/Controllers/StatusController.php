@@ -74,9 +74,7 @@ class StatusController extends Controller
             'source' => $source, 
     	]);
 
-    	return redirect()
-    		->route('home')
-    		->with('info', 'Status posted');
+    	return redirect()->route('home');
     }
 
     public function getAdd()
@@ -130,9 +128,11 @@ class StatusController extends Controller
 
         $user = Auth::user();
 
-        Mail::send('emails.comment', ['name'=> $user->username], function($message) use($user, $status)
+        Mail::send('emails.comment', ['name'=> $status->user->username, 'friend' => Auth::user()->username, 'pick' => $status->title, 'id' => $status->id], function($message) use($user, $status)
         {
-            $message->to($status->user->email, $user->username)->subject('You have a new comment on "'. $status->title . '" on Pick List');
+            $message
+                ->to($status->user->email, $user->username)
+                ->subject('You have a new comment from '. Auth::user()->username .' on "'. $status->title . '" on Pick List');
         });
 
     	return redirect()

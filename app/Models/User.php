@@ -119,9 +119,4 @@ class User extends Model implements AuthenticatableContract
         return (bool) $this->friends()->where('id', $user->id)->count();
     }
 
-    public function friendsEmailAddress(User $user)
-    {
-        return 'tmkersh@gmail.com';
-    }
-
 }
