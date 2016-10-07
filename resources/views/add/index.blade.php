@@ -31,13 +31,21 @@
                   </div>
                   <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
                     <select name="type">
+                      
                       <option value="">Choose category</option>
-                      <option value="tv">TV show</option>
-                      <option value="youtube">YouTube</option>
                       <option value="film">Film</option>
+                      <option value="tv">TV show</option>
+                      <option value="video">Video clip</option>
                       <option value="music">Music</option>
+                      <option value="podcast">Podcast</option>
+                      <option value="web">Web</option>
+                      <option value="app">Mobile app</option>
                       <option value="food">Food &amp; drink</option>
                       <option value="art">Art</option>
+                      <option value="book">Book / Writing</option>
+                      <option value="shop">Shop</option>
+                      <option value="location">Location</option>
+
                     </select>
                     @if($errors->has('category'))
                       <span class="help-block">{{ $errors->first('category') }}</span>
