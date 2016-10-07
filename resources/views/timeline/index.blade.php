@@ -53,7 +53,6 @@
 								<p class="timing">{{ $status->created_at->diffForHumans() }}</p>
 			            	</div>
 			        	@endforeach
-			        	{!! $statuses->render() !!}
 			        @endif
 			    </div>
 			</div>
