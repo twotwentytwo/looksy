@@ -30,7 +30,10 @@
 					<div class="col-lg-12">
 
             <h3>People</h3>
-			@foreach ($users as $user)
+			@if(!$users->count())
+                <p>Cannot find any users called "{{ Request::input('query') }}"</p>
+            @else
+            @foreach ($users as $user)
 				@include('user/partials/userblock')
                 @if(Auth::user()->hasFriendRequestPending($user)) 
                         <p>Waiting for {{ $user->getNameOrUsername() }} to accept your request.</p>
@@ -42,6 +45,7 @@
                         <a class="btn btn-primary accept" href="{{ route('friend.add', ['username' => $user->username]) }}">Add</a>
                     @endif
 			@endforeach
+            @endif
 
 
             <h3>Picks</h3>
