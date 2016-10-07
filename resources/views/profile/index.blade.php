@@ -22,9 +22,6 @@
                     <div class="edit-link">
                         <a href="{{ route('profile.edit') }}"><img src="{{asset('../img/icons/edit.png')}}" /></a>
                     </div>
-                    <div class="back-link">
-                        <a href="{{ url()->previous() }}"><img src="{{asset('../img/icons/back.png')}}" /></a>
-                    </div>
                @endif
             </nav>
             <div class="row">
