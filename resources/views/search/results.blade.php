@@ -31,7 +31,7 @@
 
             <h3>People</h3>
 			@if(!$users->count())
-                <p>Cannot find any users called "{{ Request::input('query') }}"</p>
+                <p>Cannot find any people called "{{ Request::input('query') }}"</p>
             @else
             @foreach ($users as $user)
 				@include('user/partials/userblock')
