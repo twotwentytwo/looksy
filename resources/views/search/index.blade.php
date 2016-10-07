@@ -44,7 +44,7 @@
                         <li class="web"><a href="{{ route('pick.category', ['category' => 'web']) }}"><img src="../img/icons/categories/web.png" /><span>Website</span></a></li>
                         <li class="news"><a href="{{ route('pick.category', ['category' => 'news']) }}"><img src="../img/icons/categories/news.png" /><span>News</span></a></li>
                         <li class="app"><a href="{{ route('pick.category', ['category' => 'app']) }}"><img src="../img/icons/categories/app.png" /><span>Mobile app</span></a></li>
-                        <li class="food"><a href="{{ route('pick.category', ['category' => 'food']) }}"><img src="../img/icons/categories/eats.png" /><span>Food &amp; drink</span></a></li>
+                        <li class="food"><a href="{{ route('pick.category', ['category' => 'food']) }}"><img src="../img/icons/categories/food.png" /><span>Food &amp; drink</span></a></li>
                         <li class="art"><a href="{{ route('pick.category', ['category' => 'art']) }}"><img src="../img/icons/categories/art.png" /><span>Art</span></a></li>
                         <li class="book"><a href="{{ route('pick.category', ['category' => 'book']) }}"><img src="../img/icons/categories/book.png" /><span>Book / Writing</span></a></li>
                         <li class="shop"><a href="{{ route('pick.category', ['category' => 'shop']) }}"><img src="../img/icons/categories/shop.png" /><span>Shop</span></a></li>
