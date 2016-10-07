@@ -22,56 +22,53 @@ class StatusController extends Controller
             'review' => 'required|max:1000'
     	]);
 
-        // CALCULATE TYPE FROM URL
+        // WORK OUT IF ITS A YOUTUBE VIDEO 
 
         $url = $request->input('status');
 
         if (strpos($url, 'youtube') > 0) {
             $type = 'YouTube';
-        } elseif (strpos($url, 'spotify') > 0) {
-            $type = 'Spotify';
-        } else {
-            $type = 'Web';
         }
+
+        // GET OG TAGS
 
         $url = $request->input('status');
         $site_html = file_get_contents($url);
         $matches = null;
         preg_match_all('~<\s*meta\s+property="(og:[^"]+)"\s+content="([^"]*)~i', $site_html,$matches);
         $ogtags = array();
-        for($i = 0; $i<count($matches[1]); $i++)
-        {
+        for($i = 0; $i<count($matches[1]); $i++) {
             $ogtags[$matches[1][$i]]=$matches[2][$i];
         }
 
+        // POPULATE OG TAGS 
+
         $url = (empty($ogtags['og:url'])) ? null : $ogtags['og:url'];
         $title = (empty($ogtags['og:title'])) ? null : $ogtags['og:title'];
-        //$description = (empty($ogtags['og:description'])) ? null : $ogtags['og:description'];
         $image = (empty($ogtags['og:image'])) ? null : $ogtags['og:image'];
         $source = (empty($ogtags['og:site_name'])) ? 'Web' : $ogtags['og:site_name'];
         $segment = null;
         
-        // PREPARE THE ID TO BE SAVED 
+        // GET YOUTUBE ID IF REQUIRED
 
         if($type == 'YouTube') {
-
             $url = $request->input('status');
             parse_str(parse_url( $url, PHP_URL_QUERY ), $get_id_from_url );
             $segment = $get_id_from_url['v'];
             $source = 'YouTube';
-
         }
+
+        // CREATE PICK 
 
         Auth::user()->statuses()->create([
     		'body' => $request->input('status'), 
             'item_id' => $segment, 
             'type' => $request->input('type'),
             'review' => $request->input('review'), 
-            'image' => $image, 
-            'title' => $title, 
-            'url' => $url,
-            //'description' => $description, 
-            'source' => $source, 
+            'image' => (isset($image) ? $image : 'http://twotwentytwo.co.uk/dev/looksy/placeholder_image.png'), 
+            'title' => (isset($title) ? $title : null), 
+            'url' => (isset($url) ? $url : null),
+            'source' => (isset($source) ? $source : null) 
     	]);
 
     	return redirect()->route('home');
@@ -193,6 +190,4 @@ class StatusController extends Controller
             ->with('statuses', $statuses)
             ->with('user', $user);
     }
-
-    
 }
