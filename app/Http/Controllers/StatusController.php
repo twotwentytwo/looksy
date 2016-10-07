@@ -46,7 +46,7 @@ class StatusController extends Controller
 
         $url = (empty($ogtags['og:url'])) ? null : $ogtags['og:url'];
         $title = (empty($ogtags['og:title'])) ? null : $ogtags['og:title'];
-        $description = (empty($ogtags['og:description'])) ? null : $ogtags['og:description'];
+        //$description = (empty($ogtags['og:description'])) ? null : $ogtags['og:description'];
         $image = (empty($ogtags['og:image'])) ? null : $ogtags['og:image'];
         $source = (empty($ogtags['og:site_name'])) ? 'Web' : $ogtags['og:site_name'];
         $segment = null;
@@ -70,7 +70,7 @@ class StatusController extends Controller
             'image' => $image, 
             'title' => $title, 
             'url' => $url,
-            'description' => $description, 
+            //'description' => $description, 
             'source' => $source, 
     	]);
 
