@@ -20,7 +20,8 @@ class ProfileController extends Controller
     		abort(404);
     	}
 
-        $statuses = $user->statuses()->notReply()->get();
+        $statuses_collection = collect($user->statuses()->notReply()->get());
+        $statuses = $statuses_collection->reverse();
 
     	return view('profile.index')
             ->with('user', $user)
