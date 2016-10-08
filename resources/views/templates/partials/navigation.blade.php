@@ -6,4 +6,5 @@
 		<li class="friends"><a href="{{ route('friend.index') }}">Friends</a></li>
 		<li class="profile"><a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">Profile</a></li>
     </ul>
+    <div class="friend-requests"></div>
 </div>
