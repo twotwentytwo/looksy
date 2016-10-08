@@ -25,6 +25,7 @@
 			        	<p>You've not posted any picks yet.</p>
 			        	<p>Check out the <a href="{{ route('search.index') }}">search</a> to view other people's picks. Or why not <a href="{{ route('add.index') }}">start sharing your picks</a> today. </p>
 			        @else
+			        <div class="scroll">
 			        	@foreach($statuses as $status)
 			            	<div class="website-wrapper {{ $status->type }}">
 			            		<div class="type {{ $status->type }}">
@@ -58,17 +59,20 @@
 								<p class="timing">{{ $status->created_at->diffForHumans() }}</p>
 			            	</div>
 			        	@endforeach
+			        </div>
 			        @endif
 			    </div>
 			</div>
  		</div>
     </body>
     
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	  <script src="{{asset('js/looksy.js')}}"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script src="{{asset('js/jquery.jscroll.min.js')}}"></script>
+	<script src="{{asset('js/looksy.js')}}"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

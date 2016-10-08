@@ -107,22 +107,6 @@ a {
 	position: relative;
 }
 
-.looksy-menu .friend-requests {
-    position: fixed;
-    right: 116px;
-    bottom: 8px;
-    z-index: 3;
-}
-
-.looksy-menu .friend-requests .count {
-	background: url('../img/icons/count.png') 0px 0px no-repeat;
-    background-size: 20px;
-    color: #fff;
-    width: 20px;
-    height: 20px;
-    padding-left: 7px;
-}
-
 .looksy-navigation {
  	list-style: none;
  	background: #f4eeed;
@@ -237,6 +221,22 @@ a {
 	height: 40px;
 	position: relative;
 	top: 8px;
+}
+
+.looksy-menu .friend-requests {
+    position: fixed;
+    right: 116px;
+    bottom: 8px;
+    z-index: 3;
+}
+
+.looksy-menu .friend-requests .count {
+	background: url('../img/icons/count.png') 0px 0px no-repeat;
+    background-size: 20px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    padding-left: 7px;
 }
 
 
