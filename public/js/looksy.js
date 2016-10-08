@@ -1,1 +1,1 @@
-$('.scroll').jscroll();
+//$('.scroll').jscroll();

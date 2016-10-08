@@ -25,7 +25,6 @@
 			        	<p>You've not posted any picks yet.</p>
 			        	<p>Check out the <a href="{{ route('search.index') }}">search</a> to view other people's picks. Or why not <a href="{{ route('add.index') }}">start sharing your picks</a> today. </p>
 			        @else
-			        <div class="scroll">
 			        	@foreach($statuses as $status)
 			            	<div class="website-wrapper {{ $status->type }}">
 			            		<div class="type {{ $status->type }}">
@@ -59,7 +58,6 @@
 								<p class="timing">{{ $status->created_at->diffForHumans() }}</p>
 			            	</div>
 			        	@endforeach
-			        </div>
 			        @endif
 			    </div>
 			</div>
