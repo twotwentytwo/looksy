@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
             
     </head>
-    <body>
+    <body class="profile">
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
                 <h1>{{ $user->getNameOrUsername() }}</h1>

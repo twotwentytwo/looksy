@@ -14,9 +14,9 @@
     </head>
     <body class="error 404">
  		<div class="container">
- 			<h1>Sorry...</h1>
- 			<p>There has been an error, please try again later</p>
- 			<p><a href="{{ route('home') }}">Go home</a></p>
+ 			<h1>PickList</h1>
+ 			<p>Sorry... there has been an error somewhere, please try again later.</p>
+ 			<p>Try going back <a href="{{ route('home') }}">home</a> and logging out and in again.</p>
  		</div>
     </body>
     

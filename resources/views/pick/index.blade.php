@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
     </head>
-    <body>
+    <body class="pick">
         <div class="container">
             @include('templates.partials.alerts')
             <div class="row">

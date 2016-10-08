@@ -60,6 +60,8 @@ a {
     font-size: 1em;
 }
 
+
+/*
 .pagination>.active>a, 
 .pagination>.active>a:focus, 
 .pagination>.active>a:hover, 
@@ -73,7 +75,6 @@ a {
     border-color: #ff6462;
      font-family: 'Karla', sans-serif;
 }
-
 .pagination>.disabled>a, 
 .pagination>.disabled>a:focus, 
 .pagination>.disabled>a:hover, 
@@ -85,7 +86,6 @@ a {
     background-color: none;
     border-color: none;
 }
-
 .pagination li a, .pagination li span {
     position: relative;
     float: left;
@@ -97,12 +97,98 @@ a {
     background-color: none!important;
     border: none;
 }
+*/
+
+.looksy-navigation .home a {
+	background: url('../img/navigation/off/home.png') 0 0 no-repeat;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 8px;
+}
+
+.home .looksy-navigation .home a {
+	background: url('../img/navigation/on/home.png') 0 0 no-repeat;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 8px;
+}
+
+.looksy-navigation .search a {
+	background: url('../img/navigation/off/search.png') 0 0 no-repeat;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 8px;
+}
+
+.search .looksy-navigation .search a {
+	background: url('../img/navigation/on/search.png') 0 0 no-repeat;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 8px;
+}
+
+.looksy-navigation .add a {
+	background: url('../img/navigation/off/add.png') 0 0 no-repeat;
+	background-size: 60px;
+	width: 60px;
+	height: 60px;
+}
+
+.add-page .looksy-navigation .add a {
+	background: url('../img/navigation/on/add.png') 0 0 no-repeat;
+	background-size: 60px;
+	width: 60px;
+	height: 60px;
+}
+
+.looksy-navigation .friends a {
+	background: url('../img/navigation/off/friends.png') 0 0 no-repeat;
+    background-size: 48px;
+    width: 49px;
+    height: 41px;
+    position: relative;
+    top: 8px;
+}
+
+.friends .looksy-navigation .friends a {
+	background: url('../img/navigation/on/friends.png') 0 0 no-repeat;
+	background-size: 48px;
+    width: 49px;
+    height: 41px;
+    position: relative;
+    top: 8px;
+}
+
+.looksy-navigation .profile a {
+	background: url('../img/navigation/off/profile.png') 0 0 no-repeat;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 8px;
+}
+
+.profile .looksy-navigation .profile a {
+	background: url('../img/navigation/on/profile.png') 0 0 no-repeat;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 8px;
+}
 
 
 /*
  * SIGN IN
  */
-
 
 .authentication {
 	background: url('../img/template/auth_background.jpg') 0 0 no-repeat;
@@ -164,47 +250,23 @@ a {
     width: 100%;
     z-index: 1;
     text-align: center;
-    padding: 10px 0;
+    padding: 0 0 10px 0;
     border-top: 5px solid #ff6462;
  }
 
- .looksy-navigation li {
- 	display:inline;
+.looksy-navigation li {
+ 	display: inline-block;
  	margin-right: 16px;
- }
+ 	font-size: 0;
+}
+
+.looksy-navigation li a {
+ 	display: inline-block;
+ 	font-size: 0;
+}
 
 .reply {
 	margin-top: 10px;
-}
-
-.looksy-navigation .home img {
-	width: 40px;
-	height: 40px;
-}
-
-.looksy-navigation .search img {
-	width: 40px;
-	height: 40px;
-}
-
-.looksy-navigation .add img {
-	width: 60px;
-	height: 60px;
-}
-
-.looksy-navigation .friends img {
-	width: 50px;
-	height: 40px;
-}
-
-.looksy-navigation .notification img {
-	width: 40px;
-	height: 40px;
-}
-
-.looksy-navigation .profile img {
-	width: 40px;
-	height: 40px;
 }
 
 

@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
 			
     </head>
-    <body class="add">
+    <body class="add-page">
  		<div class="container">
  			<nav class="navbar navbar-default" role="navigation">
           <h1>Add pick</h1>
