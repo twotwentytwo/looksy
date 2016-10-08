@@ -42,10 +42,10 @@
                     @else
                         <div class="website-wrapper">
                             <div class="type {{ $status->type }}">
-                                    <a href="{{ route('pick.category', ['category' => $status->type]) }}">
-                                        <img src="../img/icons/categories/{{ $status->type }}.png" />
-                                    </a>
-                                </div>
+                                <a href="{{ route('pick.category', ['category' => $status->type]) }}">
+                                    <img src="../img/icons/categories/{{ $status->type }}.png" />
+                                </a>
+                            </div>
                             <div class="image">
                                 <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
                             </div>
