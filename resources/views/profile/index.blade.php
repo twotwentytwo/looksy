@@ -44,6 +44,12 @@
                                     <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
                                     <p class="review">"{{ $status->review }}"</p>
                                 </div>
+                                @if($status->replies()->count())
+                                    <div class="comments">
+                                        <img src="{{asset('img/icons/comments.png')}}" />
+                                        <p class="count">{{ $status->replies()->count() }}</p>
+                                    </div>
+                                @endif
                                 <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                             </div>
                         @endforeach
