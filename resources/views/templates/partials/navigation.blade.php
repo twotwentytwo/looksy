@@ -6,7 +6,7 @@
 		<li class="friends"><a href="{{ route('friend.index') }}">Friends</a></li>
 		<li class="profile"><a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">Profile</a></li>
     </ul>
-    @if(Auth::user()->friendRequests())
+    @if(Auth::user()->friendRequests()->count())
     	<div class="friend-requests">
     		<p class="count">{{ Auth::user()->friendRequests()->count() }}</p>
     	</div>
