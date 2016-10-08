@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
             
     </head>
-    <body class="categories">
+    <body class="categories-page">
         <div class="container">
             @include('templates.partials.alerts')
             <div class="row">
