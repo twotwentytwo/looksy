@@ -256,10 +256,10 @@ a {
 }
 
 .website-wrapper {
- margin-top: 20px;
- position: relative;
- border-bottom: 4px solid #fff;
-    padding-bottom: 20px;
+	margin-top: 20px;
+	position: relative;
+	border-bottom: 4px solid #fff;
+	padding-bottom: 20px;
 }
 
 .website-wrapper .details {
@@ -296,9 +296,9 @@ a {
 	margin:0;
 	color: #000;
 	width: 320px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .type {
@@ -314,10 +314,34 @@ a {
 }
 
 /*
+ * COMMENTS
+ */
+
+.comments img {
+	width: 45px;
+	height: 42px;
+	position: absolute;
+	right: 8px;
+	bottom: 60px;
+}
+
+.comments .count {
+	background: url('../img/icons/count.png') 0px 0px no-repeat;
+    background-size: 20px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    bottom: 48px;
+    width: 20px;
+    height: 20px;
+    padding-left: 7px;
+}
+
+/*
  * FRIENDS
  */
 
- .search textarea{
+  .search textarea{
  	font-size: 1.2em;
  }
 
@@ -328,10 +352,6 @@ a {
     right: 16px;
     top: 26px;
  }
-
-/*
- * FRIENDS
- */
 
 .friends #friends {
 	background: #fff url('../img/icons/username.png') 4px 3px no-repeat;

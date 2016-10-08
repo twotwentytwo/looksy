@@ -39,6 +39,12 @@
 			            			<p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
 			            			<p class="review">"{{ $status->review }}"</p>
 			            		</div>
+			            		@if($status->replies()->count())
+				            		<div class="comments">
+				            			<img src="{{asset('img/icons/comments.png')}}" />
+				            			<p class="count">{{ $status->replies()->count() }}</p>
+				            		</div>
+			            		@endif
 			            		<div class="media user">
 								    @if(Storage::disk('public')->has('profile_' . strtolower($status->user->first_name) . '.png'))
                                         <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
@@ -47,7 +53,6 @@
                                     @endif
 								    <div class="media-body">
 								        <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
-								        
 								    </div>
 								</div>
 								<p class="timing">{{ $status->created_at->diffForHumans() }}</p>
