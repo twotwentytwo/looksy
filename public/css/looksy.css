@@ -518,6 +518,12 @@ a {
 
 .edit-link {
 	position: absolute;
+	top: 32px;
+	right: 16px;
+}
+
+.profile .edit-link {
+	position: absolute;
 	top: 0;
 	right: 0;
 }
@@ -530,7 +536,7 @@ a {
 
 .back-link {
 	position: absolute;
-	top: 36px;
+	top: 32px;
 	left: 16px;
 }
 
