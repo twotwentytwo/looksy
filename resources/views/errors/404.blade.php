@@ -13,10 +13,13 @@
 			
     </head>
     <body class="error 404">
+      <nav class="navbar navbar-default" role="navigation">
+          <h1>PickList</h1>
+          
+    </nav>
  		<div class="container">
- 			<h1>PickList</h1>
- 			<p>Sorry... there has been an error somewhere, please try again later.</p>
- 			<p>Try going back <a href="{{ route('home') }}">home</a> and logging out and in again.</p>
+ 			<p>Sorry... there has been an error somewhere.</p>
+ 			<p>Try going back <a href="{{ route('home') }}">home</a> to try again.</p>
  		</div>
     </body>
     
