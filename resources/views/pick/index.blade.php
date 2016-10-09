@@ -25,10 +25,11 @@
                         </div>
                         <div class="media">
                             <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-                                <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ {{ $status->user->getAvatarUrl('40') }} }}">
+                                <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl('40') }}">
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
+                                <p class="review">{{ $status->review }}</p>
                                 <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                             </div>
                         </div>
@@ -52,11 +53,9 @@
                                 <p class="review">"{{ $status->review }}"</p>
                             </div>
                             <div class="media user">
-                                @if(!empty($status->user->location))
-                                    <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-                                        <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->location }}">
-                                    </a>
-                                @endif
+                                <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
+                                    <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl('40') }}">
+                                </a>
                                 <div class="media-body">
                                     <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
                                 </div>

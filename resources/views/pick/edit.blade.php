@@ -29,7 +29,7 @@
                     </div>
                     <div class="media">
                         <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-                            <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl() }}">
+                            <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl(40) }}">
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
