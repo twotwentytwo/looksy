@@ -48,7 +48,14 @@
                             @endif
                         </div>
 
-                        <input type="hidden" role="uploadcare-uploader" name="image">
+                        <input type="hidden"
+                            role="uploadcare-uploader" 
+                            name="image"
+                            data-images-only
+                            data-crop="1:1"
+                            data-clearable="true"
+                            data-image-shrink="200x200"
+                        >
                             
                         <div class="form-group">
                             <button type="submit" class="btn btn-default">Update</button>

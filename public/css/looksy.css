@@ -562,3 +562,9 @@ select {
 	padding: 4px 8px;
 	color: #999;
 }
+
+.uploadcare-widget-button-open {
+	font-family: 'Karla', sans-serif;
+	margin-bottom: 16px;
+	background: #FF6464;
+}
