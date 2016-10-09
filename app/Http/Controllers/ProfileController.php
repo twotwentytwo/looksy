@@ -40,29 +40,21 @@ class ProfileController extends Controller
     	$this->validate($request, [
 			'first_name' => 'alpha|max:50', 
 			'last_name' => 'alpha|max:50', 
-			'location' => 'max:20'
+			'location' => 'max:20', 
+            'image' => 'max:255'
 		]);
+
+        //dd($request->input('image'));
 
         Auth::user()->update([
             'first_name' => $request->input('first_name'), 
             'last_name' => $request->input('last_name'), 
-            'location' => $request->input('location')
+            'location' => $request->input('image'), 
+            'location2' => $request->input('location')
         ]);
-       
-        $file = $request->file('image');
-        $filename = 'profile_' . strtolower($request->input('first_name')) . '.png';
-        if($file) {
-            Storage::disk('public')->put($filename, File::get($file));
-        }
 
 		return redirect()
 			->route('profile.edit')
 			->with('info', 'Your profile has been updated');
-    }
-
-    public function getUserImage($filename) 
-    {
-        $file = Storage::disk('public')->get($filename);
-        return new Response($file, 200);
     }
 }

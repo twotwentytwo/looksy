@@ -65,12 +65,6 @@ Route::post('/profile/edit', [
     'middleware' => ['auth']
 ]);
 
-Route::get('/profileimage/{filename}', [
-    'uses' => '\Looksy\Http\Controllers\ProfileController@getUserImage',
-    'as' => 'profile.image', 
-    'middleware' => ['auth']
-]);
-
 Route::get('/friends', [
     'uses' => '\Looksy\Http\Controllers\FriendController@getIndex',
     'as' => 'friend.index',

@@ -23,11 +23,11 @@
             <div class="row">
                 <div class="col-lg-6">
                     <form class="form-vertical" role="form" method="post" action="#" enctype="multipart/form-data">
-                        @if(Storage::disk('public')->has('profile_' . strtolower(Auth::user()->first_name) . '.png'))
-                            <div class="profile-image-edit">
-                                <img src="{{ route('profile.image', ['filename' => 'profile_' . strtolower(Auth::user()->first_name) . '.png']) }}" />
-                            </div>
+
+                        @if(Auth::user()->location)
+                            <img src="{{Auth::user()->location}}" class="profile-image-edit" />
                         @endif
+                        
                         <div class="form-group{{ $errors->has('first_name') ? ' has-error': '' }}">
                             <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First name" value="{{ Request::old('first_name') ?: Auth::user()->first_name }}">
                             @if($errors->has('first_name'))
@@ -42,17 +42,14 @@
                             @endif
                         </div>
                         <div class="form-group{{ $errors->has('location') ? ' has-error': '' }}">
-                            <input type="text" name="location" class="form-control" id="location" placeholder="Location" value="{{ Request::old('location') ?: Auth::user()->location }}">
+                            <input type="text" name="location2" class="form-control" id="location2" placeholder="Location" value="{{ Request::old('location2') ?: Auth::user()->location2 }}">
                             @if($errors->has('location'))
                                 <span class="help-block">{{ $errors->first('location') }}</span> 
                             @endif
                         </div>
-                        <div class="form-group{{ $errors->has('image') ? ' has-error': '' }}">
-                            <input type="file" name="image" class="form-control" id="image" placeholder="Upload image">
-                            @if($errors->has('image'))
-                                <span class="help-block">{{ $errors->first('image') }}</span> 
-                            @endif
-                        </div>
+
+                        <input type="hidden" role="uploadcare-uploader" name="image">
+                            
                         <div class="form-group">
                             <button type="submit" class="btn btn-default">Update</button>
                         </div>
@@ -71,6 +68,13 @@
     <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script src="{{asset('js/looksy.js')}}"></script>
+
+        <script>
+            UPLOADCARE_LOCALE = 'en';
+            UPLOADCARE_LIVE = false;
+            UPLOADCARE_PUBLIC_KEY = "74a5ae6645e941547e29";
+        </script>
+        <script charset="utf-8" src="//ucarecdn.com/widget/2.10.0/uploadcare/uploadcare.full.min.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
