@@ -29,7 +29,7 @@
                                 @include('user/partials/userblock')
                                 @if(Auth::user()->isFriendsWith($user))
                                     <form action="{{ route('friend.remove', ['username' => $user->username]) }}" method="post">
-                                        <input type="submit" value="Unfriend" class="unfriend">
+                                        <input type="submit" value="Unfriend" class="unfriend btn btn-primary">
                                         <input type="hidden" name="_token" value="{{ Session::token() }}">
                                     </form>
                                 @endif
