@@ -46,11 +46,12 @@
                             <p>You have no friend requests.</p>
                         @else
                             @foreach($requests as $user)
-                                @include('user.partials.userblock')
-                                @if(Auth::user()->hasFriendRequestReceived($user))
-                                    <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
-                                @endif
-                               
+                                <div class="not-yet-friend-of-mine">
+                                    @include('user.partials.userblock')
+                                    @if(Auth::user()->hasFriendRequestReceived($user))
+                                        <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
+                                    @endif
+                                </div>
                             @endforeach
                         @endif
                     </div>

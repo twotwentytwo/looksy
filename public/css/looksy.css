@@ -429,13 +429,20 @@ a {
  * FRIENDS
  */
 
- .search textarea{
- 	font-size: 1.2em;
- }
+.search textarea{
+	font-size: 1.2em;
+}
 
- .accept {
-    width: 100px;
- }
+.accept {
+	width: 100px;
+	position: absolute;
+	top:0;
+	right:0;
+}
+
+.friend-block {
+	margin-bottom: 32px;
+}
 
 .friends #friends {
 	background: #fff url('../img/icons/username.png') 4px 3px no-repeat;
@@ -443,11 +450,18 @@ a {
 	font-size: 1.4em;
 }
 
-.friend-of-mine, 
-.friends .requests .friend-block {
+.not-yet-friend-of-mine {
 	border-bottom: #fff 4px solid;
 	padding-bottom: 16px;
 	margin-bottom: 16px;
+	position:relative;
+}
+
+.friend-of-mine {
+	border-bottom: #fff 4px solid;
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+	position:relative;
 }
 
 .unfriend {
@@ -458,8 +472,11 @@ a {
 	border: 1px solid #ccc;
 }
 
-.unfriend {
+.friends .unfriend {
 	width: 100px;
+	position: absolute;
+	top:0;
+	right:0;
 }
 
 .friends .media {
