@@ -364,10 +364,7 @@ a {
 	font-size: 1.4em;
 	padding:0;
 	margin:0;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	width: 280px;
+	width: 90%;
 }
 
 .website-wrapper .details .review {
