@@ -24,9 +24,7 @@
                 <div class="col-lg-6">
                     <form class="form-vertical" role="form" method="post" action="#" enctype="multipart/form-data">
 
-                        @if(Auth::user()->location)
-                            <img src="{{Auth::user()->location}}" class="profile-image-edit" />
-                        @endif
+                        <img src="{{Auth::user()->getAvatarUrl('200') }}" class="profile-image-edit" />
                         
                         <div class="form-group{{ $errors->has('first_name') ? ' has-error': '' }}">
                             <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First name" value="{{ Request::old('first_name') ?: Auth::user()->first_name }}">
@@ -41,21 +39,14 @@
                                 <span class="help-block">{{ $errors->first('last_name') }}</span> 
                             @endif
                         </div>
-                        <div class="form-group{{ $errors->has('location') ? ' has-error': '' }}">
+                        <div class="form-group{{ $errors->has('location2') ? ' has-error': '' }}">
                             <input type="text" name="location2" class="form-control" id="location2" placeholder="Location" value="{{ Request::old('location2') ?: Auth::user()->location2 }}">
-                            @if($errors->has('location'))
-                                <span class="help-block">{{ $errors->first('location') }}</span> 
+                            @if($errors->has('location2'))
+                                <span class="help-block">{{ $errors->first('location2') }}</span> 
                             @endif
                         </div>
 
-                        <input type="hidden"
-                            role="uploadcare-uploader" 
-                            name="image"
-                            data-images-only
-                            data-crop="1:1"
-                            data-clearable="true"
-                            data-image-shrink="200x200"
-                        >
+                        <input type="hidden" role="uploadcare-uploader" name="image" data-clearable="true">
                             
                         <div class="form-group">
                             <button type="submit" class="btn btn-default">Update</button>

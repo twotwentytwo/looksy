@@ -44,12 +44,12 @@ class ProfileController extends Controller
             'image' => 'max:255'
 		]);
 
-        //dd($request->input('image'));
+        $image_id = substr($request->input('image'), -37, 36);
 
         Auth::user()->update([
             'first_name' => $request->input('first_name'), 
             'last_name' => $request->input('last_name'), 
-            'location' => $request->input('image'), 
+            'location' => $image_id, 
             'location2' => $request->input('location')
         ]);
 

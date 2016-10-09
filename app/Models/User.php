@@ -50,9 +50,14 @@ class User extends Model implements AuthenticatableContract
         return $this->first_name ?: $this->username;
     }
 
-     public function getAvatarUrl() 
+     public function getAvatarUrl($size) 
     {
-        return $this->image;
+        if($this->location) {
+            return 'https://ucarecdn.com/' . $this->location . '/-/scale_crop/400x400/center/-/quality/best/-/progressive/yes/-/resize/' . $size . '/';
+        }
+        
+        return 'https://www.gravatar.com/avatar/' .
+            md5(strtolower($this->email)) . '?s=' . $size . '&d=mm';
     }
 
     public function statuses()
@@ -118,5 +123,4 @@ class User extends Model implements AuthenticatableContract
     {
         return (bool) $this->friends()->where('id', $user->id)->count();
     }
-
 }

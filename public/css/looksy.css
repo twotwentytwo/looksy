@@ -544,8 +544,6 @@ a {
 
 .edit .profile-image-edit {
 	display: block;
-	width: 150px;
-	height: 150px;
 	margin: 0 auto 8px;
 }
 
@@ -567,4 +565,11 @@ select {
 	font-family: 'Karla', sans-serif;
 	margin-bottom: 16px;
 	background: #FF6464;
+}
+
+.uploadcare-widget-circle--canvas {
+  width: 1em;
+  height: 1em;
+  color: #FF6464;
+  border-color: #FF6464;
 }
