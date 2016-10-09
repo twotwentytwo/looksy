@@ -434,7 +434,6 @@ a {
  }
 
  .accept {
- 	
     width: 100px;
  }
 
@@ -444,23 +443,33 @@ a {
 	font-size: 1.4em;
 }
 
-.friend-block {
+.friend-of-mine, 
+.friends .requests .friend-block {
 	border-bottom: #fff 4px solid;
-	padding-bottom: 20px;
+	padding-bottom: 16px;
+	margin-bottom: 16px;
 }
 
 .unfriend {
- 	display: block;
-    width: 100%;
-    background: #fff;
-    color: #ff6462;
-    border: 1px solid #ccc;
- }
+	display: block;
+	width: 100%;
+	background: #fff;
+	color: #ff6462;
+	border: 1px solid #ccc;
+}
 
- .unfriend {
- 	
-    width: 100px;
- }
+.unfriend {
+	width: 100px;
+}
+
+.friends .media {
+	margin-bottom: 8px;
+}
+
+.friends .media h4, 
+.friends .media p{
+	margin-bottom: 0;
+}
 
 /*
  * ADD
