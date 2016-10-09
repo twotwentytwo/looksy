@@ -223,20 +223,20 @@ a {
 	top: 8px;
 }
 
-.looksy-menu .friend-requests {
-    position: fixed;
-    right: 116px;
-    bottom: 8px;
-    z-index: 3;
+.looksy-menu .friends {
+	position: relative;
+	height: 52px;
 }
 
-.looksy-menu .friend-requests .count {
-	background: url('../img/icons/count.png') 0px 0px no-repeat;
+.looksy-menu .friends .friend-requests {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display:block;
+    background: url('../img/icons/count.png') 0px 0px no-repeat;
     background-size: 20px;
-    color: #fff;
     width: 20px;
     height: 20px;
-    padding-left: 7px;
 }
 
 
@@ -289,10 +289,6 @@ a {
 	margin-top: 100px;
 }
 
-
-
-
-
 /*
  * TIMELINE
  */
@@ -323,6 +319,7 @@ a {
 	height: 0;
 	margin-top: 20px;
 }
+
 .videoWrapper iframe {
 	position: absolute;
 	top: 0;
@@ -421,16 +418,15 @@ a {
  * FRIENDS
  */
 
-  .search textarea{
+ .search textarea{
  	font-size: 1.2em;
  }
 
  .accept {
- 	    display: inline;
-    position: absolute;
+ 	position: relative;
     width: 100px;
-    right: 16px;
-    top: 26px;
+    left: 280px;
+    top: -52px;
  }
 
 .friends #friends {
