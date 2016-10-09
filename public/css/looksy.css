@@ -24,6 +24,8 @@ h1 {
 	text-align: center;
 	color: #ff8d6b;
 	font-weight: bold;
+	padding:0;
+	margin:0;
 }
 
 h1 a {
@@ -49,8 +51,7 @@ a {
 }
 
 .navbar {
-	margin:0;
-	min-height: 90px;
+	margin: 30px 0;
 }
 
 .alert-info {
@@ -294,8 +295,13 @@ a {
 
 .user {
 	position: absolute;
-	bottom: 60px;
+	bottom: 42px;
 	left: 8px;
+}
+
+.media-left, 
+.media>.pull-left {
+    padding-right: 4px;
 }
 
 .profile-image, 
@@ -332,10 +338,10 @@ a {
 }
 
 .website-wrapper {
-	margin-top: 20px;
 	position: relative;
 	border-bottom: 4px solid #fff;
-	padding-bottom: 20px;
+	padding-bottom: 8px;
+	margin-bottom: 16px;
 }
 
 .website-wrapper .details {
@@ -407,7 +413,7 @@ a {
     background-size: 20px;
     color: #fff;
     position: absolute;
-    right: 10px;
+    right: 8px;
     bottom: 48px;
     width: 20px;
     height: 20px;
@@ -512,7 +518,7 @@ a {
 
 .edit-link {
 	position: absolute;
-	top: 22px;
+	top: 0;
 	right: 0;
 }
 
@@ -524,7 +530,7 @@ a {
 
 .back-link {
 	position: absolute;
-	top: 30px;
+	top: 36px;
 	left: 16px;
 }
 

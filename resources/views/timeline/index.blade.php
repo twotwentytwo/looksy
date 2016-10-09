@@ -23,7 +23,8 @@
 			    <div class="col-lg-5">
 			        @if(!$statuses->count())
 			        	<p>You've not posted any picks yet.</p>
-			        	<p>Check out the <a href="{{ route('search.index') }}">search</a> to view other people's picks. Or why not <a href="{{ route('add.index') }}">start sharing your picks</a> today. </p>
+			        	<p>Check out the <a href="{{ route('search.index') }}">search</a> to find <a href="{{ route('friend.index') }}">friends</a> or picks already posted.</p>
+			        	<p>You can <a href="{{ route('add.index') }}">start sharing your picks</a> today.</p>
 			        @else
 			        	@foreach($statuses as $status)
 			            	<div class="website-wrapper {{ $status->type }}">

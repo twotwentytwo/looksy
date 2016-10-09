@@ -24,7 +24,7 @@
                 <div class="col-lg-6">
                     <form class="form-vertical" role="form" method="post" action="#" enctype="multipart/form-data">
 
-                        <img src="{{Auth::user()->getAvatarUrl('200') }}" class="profile-image-edit" />
+                        <img src="{{Auth::user()->getAvatarUrl('144') }}" class="profile-image-edit" />
                         
                         <div class="form-group{{ $errors->has('first_name') ? ' has-error': '' }}">
                             <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First name" value="{{ Request::old('first_name') ?: Auth::user()->first_name }}">
@@ -58,6 +58,11 @@
                     </form>
                 </div>
             </div>
+            
+            <div class="back-link">
+                <a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}"><img src="{{asset('img/icons/back.png')}}" /></a>
+            </div>
+            
         </div>
     </body>
     
