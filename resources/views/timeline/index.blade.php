@@ -46,9 +46,9 @@
 				            		</div>
 			            		@endif
 			            		<div class="media user">
-								    @if(Storage::disk('public')->has('profile_' . strtolower($status->user->first_name) . '.png'))
+								    @if($status->user->location)
                                         <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-                                            <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ route('profile.image', ['filename' => 'profile_' . strtolower($status->user->first_name) . '.png']) }}">
+                                            <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->location }}">
                                         </a>
                                     @endif
 								    <div class="media-body">

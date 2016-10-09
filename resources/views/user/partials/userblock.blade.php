@@ -1,13 +1,13 @@
 <div class="media">
-	@if(Storage::disk('public')->has('profile_' . strtolower($user->first_name) . '.png'))
+	@if(!empty($user->location))
     	<a class="pull-left" href="{{ route('profile.index', ['username' =>  $user->username]) }}">
-        	<img class="media-object profile-image" alt="{{ $user->getNameOrUsername() }}" src="{{ route('profile.image', ['filename' => 'profile_' . strtolower($user->first_name) . '.png']) }}">
+        	<img class="media-object profile-image" alt="{{ $user->getNameOrUsername() }}" src="{{ $user->location }}">
    		</a>
     @endif
     <div class="media-body">
         <h4 class="media-heading"><a href="{{ route('profile.index', ['username' =>  $user->username]) }}">{{ $user->getNameOrUsername() }}</a></h4>
     </div>
-    @if ($user->location)
-    	<p>{{ $user->location }}</p>
+    @if ($user->location2)
+    	<p>{{ $user->location2 }}</p>
     @endif
 </div>

@@ -24,9 +24,9 @@
                             <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
                         </div>
                         <div class="media">
-                             @if(Auth::user()->image == null)
+                             @if(!empty($status->user->location))
                                 <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-                                    <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ route('profile.image', ['filename' => 'profile_' . strtolower(Auth::user()->first_name) . '.png']) }}">
+                                    <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ {{ $status->user->location }} }}">
                                 </a>
                             @endif
                             <div class="media-body">
@@ -54,11 +54,11 @@
                                 <p class="review">"{{ $status->review }}"</p>
                             </div>
                             <div class="media user">
-                                 @if(Auth::user()->image == null)
-                                        <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-                                            <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ route('profile.image', ['filename' => 'profile_' . strtolower(Auth::user()->first_name) . '.png']) }}">
-                                        </a>
-                                    @endif
+                                @if(!empty($status->user->location))
+                                    <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
+                                        <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->location }}">
+                                    </a>
+                                @endif
                                 <div class="media-body">
                                     <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
                                 </div>
@@ -69,7 +69,7 @@
                         @foreach($status->replies as $reply)
                             <div class="media">
                                 <a class="pull-left" href="{{ route('profile.index', ['username' => $reply->user->username]) }}">
-                                    <img class="media-object  profile-image" alt="{{ $reply->user->getNameOrUsername() }}" src="{{ $reply->user->getAvatarUrl() }}">
+                                    <img class="media-object  profile-image" alt="{{ $reply->user->getNameOrUsername() }}" src="{{ $reply->user->location }}">
                                 </a>
                                 <div class="media-body">
                                     <h5 class="media-heading"><a href="{{ route('profile.index', ['username' => $reply->user->username]) }}">{{ $reply->user->getNameOrUsername() }}</a></h5>
