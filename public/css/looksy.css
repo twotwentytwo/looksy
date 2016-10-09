@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-	font-size: 2.6em;
+	font-size: 2.4em;
 	text-align: center;
 	color: #ff8d6b;
 	font-weight: bold;
@@ -104,18 +104,17 @@ a {
  */
 
 .looksy-menu {
-	position: relative;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 .looksy-navigation {
  	list-style: none;
  	background: #f4eeed;
  	margin:0;
- 	position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
     text-align: center;
     padding: 0 0 10px 0;
     border-top: 5px solid #ff6462;
@@ -138,27 +137,27 @@ a {
 
 .looksy-navigation .home a {
 	background: url('../img/navigation/off/home.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
 	position: relative;
 	top: 8px;
 }
 
 .home .looksy-navigation .home a {
 	background: url('../img/navigation/on/home.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
 	position: relative;
 	top: 8px;
 }
 
 .looksy-navigation .search a {
 	background: url('../img/navigation/off/search.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
 	position: relative;
 	top: 8px;
 }
@@ -166,59 +165,59 @@ a {
 .search .looksy-navigation .search a, 
 .categories-page .looksy-navigation .search a  {
 	background: url('../img/navigation/on/search.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
 	position: relative;
 	top: 8px;
 }
 
 .looksy-navigation .add a {
 	background: url('../img/navigation/off/add.png') 0 0 no-repeat;
-	background-size: 60px;
-	width: 60px;
-	height: 60px;
+	background-size: 50px;
+	width: 50px;
+	height: 50px;
 }
 
 .add-page .looksy-navigation .add a {
 	background: url('../img/navigation/on/add.png') 0 0 no-repeat;
-	background-size: 60px;
-	width: 60px;
-	height: 60px;
+	background-size: 50px;
+	width: 50px;
+	height: 50px;
 }
 
 .looksy-navigation .friends a {
 	background: url('../img/navigation/off/friends.png') 0 0 no-repeat;
-    background-size: 48px;
-    width: 49px;
-    height: 41px;
+    background-size: 38px;
+    width: 38px;
+    height: 32px;
     position: relative;
     top: 8px;
 }
 
 .friends .looksy-navigation .friends a {
 	background: url('../img/navigation/on/friends.png') 0 0 no-repeat;
-	background-size: 48px;
-    width: 49px;
-    height: 41px;
+	background-size: 38px;
+    width: 38px;
+    height: 32px;
     position: relative;
     top: 8px;
 }
 
 .looksy-navigation .profile a {
 	background: url('../img/navigation/off/profile.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
 	position: relative;
 	top: 8px;
 }
 
 .profile .looksy-navigation .profile a {
 	background: url('../img/navigation/on/profile.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
 	position: relative;
 	top: 8px;
 }
@@ -230,13 +229,13 @@ a {
 
 .looksy-menu .friends .friend-requests {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: -4px;
+    bottom: 8px;
     display:block;
     background: url('../img/icons/count.png') 0px 0px no-repeat;
-    background-size: 20px;
-    width: 20px;
-    height: 20px;
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
 }
 
 
@@ -342,7 +341,7 @@ a {
 .website-wrapper .details {
 	padding: 0;
     position: absolute;
-    top: 80px;
+    bottom: 98px;
     left: 8px;
     text-align: left;
     margin: 0 auto;
@@ -365,6 +364,10 @@ a {
 	font-size: 1.4em;
 	padding:0;
 	margin:0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 280px;
 }
 
 .website-wrapper .details .review {
@@ -372,7 +375,7 @@ a {
 	padding:0;
 	margin:0;
 	color: #000;
-	width: 320px;
+	width: 280px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -423,10 +426,8 @@ a {
  }
 
  .accept {
- 	position: relative;
+ 	
     width: 100px;
-    left: 280px;
-    top: -52px;
  }
 
 .friends #friends {
@@ -448,12 +449,9 @@ a {
     border: 1px solid #ccc;
  }
 
- .friends .unfriend {
- 	display: inline;
+ .unfriend {
+ 	
     width: 100px;
-    position: relative;
-    left: 280px;
-    top: -52px;
  }
 
 /*
@@ -517,8 +515,8 @@ a {
 
 .edit-link {
 	position: absolute;
-	top: 26px;
-	right: 16px;
+	top: 22px;
+	right: 0;
 }
 
 .delete-link {
