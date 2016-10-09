@@ -12,11 +12,11 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
 			
     </head>
-    <body>
+    <body class="search">
     	
  		<div class="container">
  			<nav class="navbar navbar-default" role="navigation">
-                <h1>Results</h1>
+                <h1>Search results</h1>
                 @include('templates.partials.navigation')
             </nav>
  			@include('templates.partials.alerts')
