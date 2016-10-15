@@ -21,6 +21,11 @@
                     <h1>{{ $user->getNameOrUsername() }}</h1>
                 @endif
                 @include('templates.partials.navigation')
+                @if(Auth::user()->id == $user->id)
+                    <div class="edit-link">
+                        <a href="{{ route('profile.edit') }}"><img src="{{asset('../img/icons/edit.png')}}" /></a>
+                    </div>
+                @endif
             </nav>
             <div class="row">
                 <div class="col-lg-5">

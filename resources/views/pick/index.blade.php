@@ -16,7 +16,7 @@
             <div class="row">
                 <nav class="navbar navbar-default" role="navigation">
                     <h1>PickList</h1>
-                     @include('templates.partials.navigation')
+                    @include('templates.partials.navigation')
                 </nav>
                 <div class="col-lg-5">
                     @if($status->source == 'YouTube')
