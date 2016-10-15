@@ -63,10 +63,6 @@ class StatusController extends Controller
             $segment = $id[1];
         }
 
-        //dd($url, $title, $image, $source, $segment);
-
-        // http://youtu.be/bqUIX3Z4r3k 
-
         // CREATE ITEM 
 
         Auth::user()->statuses()->create([

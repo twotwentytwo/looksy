@@ -389,7 +389,7 @@ a {
     left: 8px;
     text-align: left;
     margin: 0 auto;
-    width: 90%;
+    width: 96%;
 }
 
 .website-wrapper .details a {
@@ -408,6 +408,7 @@ a {
 	font-size: 1em;
 	padding:0 4px;
 	margin:0;
+	display:block;
 }
 
 .website-wrapper .details .review {
@@ -415,6 +416,7 @@ a {
 	padding:0 4px;
 	margin:0;
 	color: #000;
+	display:block;
 }
 
 .type {
