@@ -23,6 +23,7 @@
                         <div class="videoWrapper">
                             <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
                         </div>
+                        <!--
                         <div class="media attribution">
                             <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
                                 <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl('40') }}">
@@ -32,7 +33,7 @@
                                 <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                             </div>
                         </div>
-                        
+                        -->
                     @else
                         <div class="website-wrapper">
                             <div class="type {{ $status->type }}">

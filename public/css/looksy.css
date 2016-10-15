@@ -79,7 +79,7 @@ a {
     cursor: default;
     background-color: #ff6462;
     border-color: #ff6462;
-     font-family: 'Karla', sans-serif;
+    font-family: 'Karla', sans-serif;
 }
 .pagination>.disabled>a, 
 .pagination>.disabled>a:focus, 
@@ -415,10 +415,16 @@ a {
  * PICKS
  */
 
-.pick .attribution {
-	margin-bottom: 16px;
+.pick .videoWrapper {
+	margin-bottom: 8px;
+	border-bottom:none;
 	padding-bottom: 8px;
-	border-bottom: 4px solid #fff;
+}
+
+.pick .website-wrapper {
+	margin-bottom: 8px;
+	border-bottom:none;
+	padding-bottom: 8px;
 }
 
 .pick .review {
@@ -439,6 +445,10 @@ a {
 .pick .review .comment .text {
 	padding:0;
 	margin:0;
+	width: 280px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .pick .review .user {
@@ -447,6 +457,10 @@ a {
 
 .pick .review .profile-image {
 	margin-top: 32px;
+}
+
+.pick .details {
+	bottom: 16px;
 }
 
 
