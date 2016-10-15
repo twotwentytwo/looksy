@@ -23,7 +23,7 @@
                 <div class="col-lg-6">
                     <div class="friend-block">
                         @if (!$friends->count())
-                            <p>You have no friends.</p>
+                            <p>You don't have any friends yet.</p>
                         @else
                             @foreach($friends as $user)
                                 <div class="friend-of-mine">
