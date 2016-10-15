@@ -6,10 +6,11 @@ namespace Looksy\Http\Controllers;
 use Auth;	
 use DB;
 use Looksy\Models\User;
-use Looksy\Models\OpenGraph;
 use Looksy\Models\Status;
+use Looksy\Models\Metadata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Fusonic\OpenGraph\Consumer;
 
 class StatusController extends Controller
 {
@@ -40,22 +41,16 @@ class StatusController extends Controller
         // GET OG TAGS
 
         $url = $request->input('status');
-        $site_html = file_get_contents($url);
-        $matches = null;
-        preg_match_all('~<\s*meta\s+property="(og:[^"]+)"\s+content="([^"]*)~i', $site_html,$matches);
-        $ogtags = array();
-        for($i = 0; $i<count($matches[1]); $i++) {
-            $ogtags[$matches[1][$i]]=$matches[2][$i];
-        }
 
-        // POPULATE OG TAGS 
+        $consumer = new Consumer();
+        $object = $consumer->loadUrl($url);
 
-        $url = (empty($ogtags['og:url'])) ? null : $ogtags['og:url'];
-        $title = (empty($ogtags['og:title'])) ? null : $ogtags['og:title'];
-        $image = (empty($ogtags['og:image'])) ? null : $ogtags['og:image'];
-        $source = (empty($ogtags['og:site_name'])) ? 'Web' : $ogtags['og:site_name'];
+        $url = $object->url;
+        $title = $object->title;
+        $image = $object->images[0]->url;
+        $source = $object->siteName;
         $segment = null;
-        
+
         // GET YOUTUBE ID IF REQUIRED
 
         if($youtube_desktop) {
@@ -68,9 +63,11 @@ class StatusController extends Controller
             $segment = $id[1];
         }
 
+        //dd($url, $title, $image, $source, $segment);
+
         // http://youtu.be/bqUIX3Z4r3k 
 
-        // CREATE PICK 
+        // CREATE ITEM 
 
         Auth::user()->statuses()->create([
     		'body' => $request->input('status'), 
