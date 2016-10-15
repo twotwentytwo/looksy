@@ -89,11 +89,6 @@
                 <div class="back-link">
                     <a href="{{ url()->previous() }}"><img src="{{asset('../img/icons/back.png')}}" /></a>
                 </div>
-                @if(Auth::user()->id == $status->user->id)
-                    <div class="edit-link">
-                        <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}"><img src="{{asset('../img/icons/edit.png')}}" /></a>
-                    </div>
-                @endif
             </div>
         </div>
     </body>
