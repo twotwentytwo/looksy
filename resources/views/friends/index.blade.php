@@ -39,9 +39,9 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-lg-6 requests">
+                <div class="col-lg-6">
                     <h3>Friend requests</h3>
-                    <div class="friend-block">
+                    <div class="friend-block requests">
                         @if (!$requests->count())
                             <p>You have no friend requests.</p>
                         @else

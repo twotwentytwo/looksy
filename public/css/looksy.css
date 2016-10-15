@@ -570,6 +570,12 @@ a {
 	margin-bottom: 16px;
 }
 
+.friend-block.requests {
+	margin-bottom: 8px;
+	border-bottom: 4px solid #fff;
+	padding-bottom: 8px;
+}
+
 .friends #friends {
 	background: #fff url('../img/icons/username.png') 4px 3px no-repeat;
 	padding-left: 33px;
@@ -577,9 +583,6 @@ a {
 }
 
 .not-yet-friend-of-mine {
-	border-bottom: #fff 4px solid;
-	padding-bottom: 16px;
-	margin-bottom: 16px;
 	position:relative;
 }
 
