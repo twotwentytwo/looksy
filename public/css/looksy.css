@@ -244,6 +244,28 @@ a {
     height: 15px;
 }
 
+.looksy-menu .categories {
+	position: absolute;
+    top: -49px;
+    margin: 0;
+    height: 49px;
+    width: 100%;
+    padding: 8px;
+    overflow-x: scroll;
+    background: #FF6464;
+    display:none;
+}
+
+.looksy-menu .categories ul {
+	width: 652px; 
+	padding:0;
+	margin:0;
+}
+
+.looksy-menu .categories li {
+	display:inline;
+	margin-right: 16px;
+}
 
 /*
  * SIGN IN
@@ -533,7 +555,7 @@ a {
  * FRIENDS
  */
 
-.search textarea{
+.search textarea {
 	font-size: 1.2em;
 }
 
@@ -545,7 +567,7 @@ a {
 }
 
 .friend-block {
-	margin-bottom: 32px;
+	margin-bottom: 16px;
 }
 
 .friends #friends {
@@ -590,6 +612,12 @@ a {
 .friends .media h4, 
 .friends .media p{
 	margin-bottom: 0;
+}
+
+.friends .search-form {
+	margin: 0 0 16px 0;
+	padding: 0 0 16px 0;
+	border-bottom: 4px solid white;
 }
 
 /*

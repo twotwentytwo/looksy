@@ -28,45 +28,24 @@
 			@else
 				<div class="row">
 					<div class="col-lg-12">
-
-            <h3>People</h3>
-			@if(!$users->count())
-                <p>Cannot find any people called "{{ Request::input('query') }}"</p>
-            @else
-            @foreach ($users as $user)
-				@include('user/partials/userblock')
-                @if(Auth::user()->hasFriendRequestPending($user)) 
-                        <p>Waiting for {{ $user->getNameOrUsername() }} to accept your request.</p>
-                    @elseif(Auth::user()->hasFriendRequestReceived($user))
-                        <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
-                    @elseif(Auth::user()->isFriendsWith($user))
-                        <p>You and {{ $user->getNameOrUsername() }} are friends.</p>
-                    @elseif(Auth::user()->id !== $user->id)
-                        <a class="btn btn-primary accept" href="{{ route('friend.add', ['username' => $user->username]) }}">Add</a>
-                    @endif
-			@endforeach
-            @endif
-
-
-            <h3>Picks</h3>
-            
-              @if(!$statuses->count())
-                        <p>Cannot find any picks with "{{ Request::input('query') }}"</p>
-                    @else
-                        @foreach($statuses as $status)
-                            <div class="website-wrapper">
-                                <div class="image">
-                                    <a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
-                                </div>
-                                <div class="details">
-                                    <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
-                                </div>
-                            </div>
-                            
-
-                        @endforeach
-                    @endif
-            
+                        
+            			@if(!$users->count())
+                            <p>Cannot find any friends called "{{ Request::input('query') }}".</p>
+                            <p>Try <a href="{{ route('friend.index') }}">searching</a> again...</p>
+                        @else
+                        @foreach ($users as $user)
+            				@include('user/partials/userblock')
+                            @if(Auth::user()->hasFriendRequestPending($user)) 
+                                <p>Waiting for {{ $user->getNameOrUsername() }} to accept your request.</p>
+                            @elseif(Auth::user()->hasFriendRequestReceived($user))
+                                <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
+                            @elseif(Auth::user()->isFriendsWith($user))
+                                <p>You and {{ $user->getNameOrUsername() }} are friends.</p>
+                            @elseif(Auth::user()->id !== $user->id)
+                                <a class="btn btn-primary accept" href="{{ route('friend.add', ['username' => $user->username]) }}">Add</a>
+                            @endif
+            			@endforeach
+                        @endif            
 					</div>
 				</div>
 			@endif
@@ -90,10 +69,3 @@
 
     </script>
 </html>
-
-@extends('templates.default')
-
-@section('content')
-	
-	
-@stop

@@ -57,6 +57,18 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
+                    <h3>Search friends</h3>
+                    <form class="navbar-form navbar-left search-form" role="search" action="{{ route('search.results') }}">
+                        <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">
+                            <input type="text" name="query" class="form-control" placeholder="Enter friends name">
+                            @if($errors->has('query'))
+                                <span class="help-block">{{ $errors->first('query') }}</span>
+                            @endif
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
                     <h3>Invite friends</h3>
                     <div class="friend-block">
                         <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">

@@ -14,3 +14,8 @@ $(".add-form .add").change(function() {
 		}
 	});   
 });
+
+$(".looksy-menu .search a").click(function(e) {
+	e.preventDefault();
+  	$(".categories").toggle();
+});
