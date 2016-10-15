@@ -22,9 +22,9 @@
  			<div class="row">
 			    <div class="col-lg-5">
 			        @if(!$statuses->count())
-			        	<p>You've not posted any picks yet.</p>
-			        	<p>Check out the <a href="{{ route('search.index') }}">search</a> to find <a href="{{ route('friend.index') }}">friends</a> or picks already posted.</p>
-			        	<p>You can <a href="{{ route('add.index') }}">start sharing your picks</a> today.</p>
+			        	<h3>Get started</h3>
+			        	<p>First of all you want to add some <a href="{{ route('friend.index') }}">friends</a> - they may have already posted some picks you might like...</p>
+			        	<p>Or you can start <a href="{{ route('add.index') }}">sharing your top picks</a> to inspire your friends right away.</p>
 			        @else
 			        	@foreach($statuses as $status)
 			            	<div class="website-wrapper {{ $status->type }}">

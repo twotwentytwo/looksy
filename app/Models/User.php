@@ -56,8 +56,7 @@ class User extends Model implements AuthenticatableContract
             return 'https://ucarecdn.com/' . $this->location . '/-/scale_crop/400x400/center/-/quality/best/-/progressive/yes/-/resize/' . $size . '/';
         }
         
-        return 'https://www.gravatar.com/avatar/' .
-            md5(strtolower($this->email)) . '?s=' . $size . '&d=mm';
+        return 'https://www.gravatar.com/avatar/' . md5(strtolower($this->email)) . '?s=' . $size . '&d=mm';
     }
 
     public function statuses()
