@@ -80,6 +80,9 @@
              <div class="delete-link">
                 <a href="{{ route('pick.remove', ['statusId' => $status->id]) }}"><img src="../../img/icons/remove.png" /></a>
             </div>
+            <div class="back-link">
+                <a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}"><img src="{{asset('img/icons/back.png')}}" /></a>
+            </div>
             @endif
         </div>
     </body>

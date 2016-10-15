@@ -707,8 +707,8 @@ a {
 
 .delete-link {
 	position: absolute;
-	top: 26px;
-	left: 16px;
+	top: 30px;
+	right: 16px;
 }
 
 .back-link {
