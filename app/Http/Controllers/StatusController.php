@@ -27,9 +27,14 @@ class StatusController extends Controller
         $url = $request->input('status');
 
         if (strpos($url, 'youtube') > 0) {
-            $type = 'video';
+            $youtube_desktop = true;
+            $youtube_mobile = false;
+        } elseif(strpos($url, 'youtu.be') > 0) {
+            $youtube_desktop = false;
+            $youtube_mobile = true;
         } else {
-            $type = $request->input('type');
+            $youtube_desktop = false;
+            $youtube_mobile = false;
         }
 
         // GET OG TAGS
@@ -53,17 +58,23 @@ class StatusController extends Controller
         
         // GET YOUTUBE ID IF REQUIRED
 
-        if($type == 'video') {
+        if($youtube_desktop) {
             $url = $request->input('status');
             parse_str(parse_url( $url, PHP_URL_QUERY ), $get_id_from_url );
             $segment = $get_id_from_url['v'];
+        } elseif ($youtube_mobile) {
+            $url = $request->input('status');
+            preg_match('/youtu\.be\/([^\&\?\/]+)/', $url, $id);
+            $segment = $id[1];
         }
+
+        // http://youtu.be/bqUIX3Z4r3k 
 
         // CREATE PICK 
 
         Auth::user()->statuses()->create([
     		'body' => $request->input('status'), 
-            'item_id' => $segment, 
+            'item_id' => (isset($segment) ? $segment : null), 
             'type' => $request->input('type'),
             'review' => $request->input('review'), 
             'image' => (isset($image) ? $image : 'http://twotwentytwo.co.uk/dev/looksy/placeholder_image.png'), 

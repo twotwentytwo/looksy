@@ -416,9 +416,8 @@ a {
  */
 
 .pick .videoWrapper {
-	margin-bottom: 8px;
+	margin-bottom: 16px;
 	border-bottom:none;
-	padding-bottom: 8px;
 }
 
 .pick .website-wrapper {
