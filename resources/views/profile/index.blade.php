@@ -20,15 +20,7 @@
                 @else
                     <h1>{{ $user->getNameOrUsername() }}</h1>
                 @endif
-
-                
                 @include('templates.partials.navigation')
-                
-                @if(Auth::user()->id == $user->id)
-                    <div class="edit-link">
-                        <a href="{{ route('profile.edit') }}"><img src="{{asset('../img/icons/edit.png')}}" /></a>
-                    </div>
-                @endif
             </nav>
             <div class="row">
                 <div class="col-lg-5">
@@ -37,26 +29,37 @@
                         <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet</p>
                     @else
                         @foreach($statuses as $status)
-                            <div class="website-wrapper">
+                            <div class="website-wrapper pick">
+                                
                                 <div class="type {{ $status->type }}">
                                     <a href="{{ route('pick.category', ['category' => $status->type]) }}">
                                         <img src="../img/icons/categories/{{ $status->type }}.png" />
                                     </a>
                                 </div>
+                                
                                 <div class="image">
                                     <a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
                                 </div>
                                 <div class="details">
-                                    <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
-                                    <p class="review">"{{ $status->review }}"</p>
+                                    <p class="title">
+                                        <a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a>
+                                    </p>
+                                    <!--<p class="review">"{{ $status->review }}"</p>-->
                                 </div>
+                                <!--
                                 @if($status->replies()->count())
                                     <div class="comments">
                                         <img src="{{asset('img/icons/comments.png')}}" />
                                         <p class="count">{{ $status->replies()->count() }}</p>
                                     </div>
                                 @endif
-                                <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
+                                -->
+                                <!--<p class="timing">{{ $status->created_at->diffForHumans() }}</p>-->
+                                @if(Auth::user()->id == $user->id)
+                                    <div class="edit-pick">
+                                        <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit</a>
+                                    </div>
+                                @endif
                             </div>
                         @endforeach
                     @endif

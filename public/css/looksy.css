@@ -603,19 +603,59 @@ a {
 }
 
 /*
+ * PROFILE
+ */
+
+.profile .pick {
+	height: 140px;
+	overflow: hidden;
+	margin-bottom: 16px;
+	position: relative;
+}
+
+.profile .pick .details {
+	position: absolute;
+	top: 72px;
+	left: 8px;
+}
+
+.profile .pick .type {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
+
+.profile .pick .edit-pick {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+.profile .pick .edit-pick a {
+	color: #fff;
+	background: #FF6464;
+	font-size: 1.2em;
+	padding: 0 4px;
+	text-transform: uppercase;
+}
+
+
+
+
+/*
  * PROFILE EDIT
  */
 
- .profile-edit {
- 	    position: absolute;
-    top: 23px;
-    right: 0;
- }
+.profile-edit {
+	position: absolute;
+	top: 23px;
+	right: 0;
+}
 
- .profile-edit img {
- 	    height: 44px;
-    width: 44px;
- }
+.profile-edit img {
+	height: 44px;	
+	width: 44px;
+}
 
 /*
  * SEARCH
