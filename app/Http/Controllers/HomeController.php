@@ -16,7 +16,7 @@ class HomeController extends Controller
 						);
 			})
 			->orderBy('created_at', 'desc')
-			->get();
+			->paginate(10);
 
 			return view('timeline.index')
 				->with('statuses', $statuses);

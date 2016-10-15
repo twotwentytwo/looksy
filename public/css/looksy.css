@@ -66,8 +66,6 @@ a {
     font-size: 1em;
 }
 
-
-/*
 .pagination>.active>a, 
 .pagination>.active>a:focus, 
 .pagination>.active>a:hover, 
@@ -81,6 +79,7 @@ a {
     border-color: #ff6462;
     font-family: 'Karla', sans-serif;
 }
+
 .pagination>.disabled>a, 
 .pagination>.disabled>a:focus, 
 .pagination>.disabled>a:hover, 
@@ -92,6 +91,7 @@ a {
     background-color: none;
     border-color: none;
 }
+
 .pagination li a, .pagination li span {
     position: relative;
     float: left;
@@ -103,7 +103,7 @@ a {
     background-color: none!important;
     border: none;
 }
-*/
+
 
 /*
  * NAVIGATION
