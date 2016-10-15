@@ -362,7 +362,7 @@ a {
 .website-wrapper .details {
 	padding: 0;
     position: absolute;
-    bottom: 98px;
+    bottom: 92px;
     left: 8px;
     text-align: left;
     margin: 0 auto;
@@ -382,13 +382,13 @@ a {
 }
 
 .website-wrapper .details .title {
-	font-size: 1.4em;
+	font-size: 1em;
 	padding:0 4px;
 	margin:0;
 }
 
 .website-wrapper .details .review {
-	font-size: 1.4em;
+	font-size: 1em;
 	padding:0 4px;
 	margin:0;
 	color: #000;
@@ -772,3 +772,22 @@ select {
   color: #FF6464;
   border-color: #FF6464;
 }
+
+
+/* desktop styles for neatness */
+
+@media only screen and (min-device-width : 1024px) { 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
