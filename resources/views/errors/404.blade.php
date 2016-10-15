@@ -15,10 +15,9 @@
     <body class="error 404">
       <nav class="navbar navbar-default" role="navigation">
           <h1>PickList</h1>
-          
     </nav>
  		<div class="container">
- 			<p>Sorry... there has been an error somewhere.</p>
+ 			<p>Sorry... there has been an error.</p>
  			<p>Try going back <a href="{{ route('home') }}">home</a> to try again.</p>
  		</div>
     </body>

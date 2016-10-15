@@ -300,13 +300,18 @@ a {
 
 .user {
 	position: absolute;
-	bottom: 42px;
+	bottom: 45px;
 	left: 8px;
+}
+
+.media-heading {
+    margin-top: 4px;
+    margin-bottom:0;
 }
 
 .media-left, 
 .media>.pull-left {
-    padding-right: 4px;
+    padding-right: 8px;
 }
 
 .profile-image, 
@@ -316,10 +321,15 @@ a {
 	z-index: 0;
 }
 
+.media .location {
+	padding: 0 4px;
+}
+
 .user .username a {
 	background: #FF6464;
 	display:inline-block;
 	color: #fff;
+	padding: 0 4px;
 }
 
 .videoWrapper {
@@ -373,14 +383,13 @@ a {
 
 .website-wrapper .details .title {
 	font-size: 1.4em;
-	padding:0;
+	padding:0 4px;
 	margin:0;
-	width: 100%;
 }
 
 .website-wrapper .details .review {
 	font-size: 1.4em;
-	padding:0;
+	padding:0 4px;
 	margin:0;
 	color: #000;
 	width: 280px;
@@ -401,6 +410,88 @@ a {
     display: inline-block;
 }
 
+
+/*
+ * PICKS
+ */
+
+.pick .attribution {
+	margin-bottom: 16px;
+	padding-bottom: 8px;
+	border-bottom: 4px solid #fff;
+}
+
+.pick .review {
+	position: relative;
+}
+
+.pick .review .comment {
+	color: #fff;
+	padding: 8px 16px;
+	background: url('../img/template/comment.png') 0px 0px no-repeat;
+	height: 58px;
+	width: 321px;
+	position: absolute;
+	left: 44px;
+	top: 0;
+}
+
+.pick .review .comment .text {
+	padding:0;
+	margin:0;
+}
+
+.pick .review .user {
+	position: initial;
+}
+
+.pick .review .profile-image {
+	margin-top: 32px;
+}
+
+
+/*
+ * REPLIES
+ */
+
+.reply {
+	padding:0;
+	margin:0;
+}
+
+.pick .reply {
+	position: relative;
+}
+
+.pick .reply .comment {
+	color: #fff;
+	padding: 8px 16px;
+	background: url('../img/template/reply.png') 0px 0px no-repeat;
+	height: 33px;
+	width: 144px;
+	position: absolute;
+	left: 44px;
+	top: 0;
+}
+
+.pick .reply .comment .text {
+	padding:0;
+	margin:0;
+}
+
+.pick .reply .user {
+	position: initial;
+}
+
+.pick .reply .profile-image {
+	margin-top: 16px;
+}
+
+.form-reply {
+	margin-top: 16px;
+}
+
+
 /*
  * COMMENTS
  */
@@ -410,7 +501,7 @@ a {
 	height: 42px;
 	position: absolute;
 	right: 8px;
-	bottom: 60px;
+	bottom: 44px;
 }
 
 .comments .count {
@@ -418,8 +509,8 @@ a {
     background-size: 20px;
     color: #fff;
     position: absolute;
-    right: 8px;
-    bottom: 48px;
+    right: 4px;
+    bottom: 36px;
     width: 20px;
     height: 20px;
     padding-left: 7px;
