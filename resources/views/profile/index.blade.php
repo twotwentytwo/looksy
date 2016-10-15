@@ -69,31 +69,6 @@
                         @endforeach
                     @endif
                 </div>
-                <hr>
-                <div class="col-lg-4 col-lg-offset-3">
-                    @if(Auth::user()->hasFriendRequestPending($user)) 
-                        <p>Waiting for {{ $user->getNameOrUsername() }} to accept your request.</p>
-                    @elseif(Auth::user()->hasFriendRequestReceived($user))
-                        <a class="btn btn-primary" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept friend request</a>
-                    @elseif(Auth::user()->isFriendsWith($user))
-                        <p>You and {{ $user->getNameOrUsername() }} are friends.</p>
-
-                        <form action="{{ route('friend.remove', ['username' => $user->username]) }}" method="post">
-                            <input type="submit" value="Unfriend" class="unfriend">
-                            <input type="hidden" name="_token" value="{{ Session::token() }}">
-                        </form>
-                    @elseif(Auth::user()->id !== $user->id)
-                        <a class="btn btn-primary" href="{{ route('friend.add', ['username' => $user->username]) }}">Add as friend</a>
-                    @endif
-                    <h3>Friends</h3>
-                    @if (!$user->friends()->count())
-                        <p>{{ $user->getFirstNameOrUsername() }} has no friends.</p>
-                    @else
-                        @foreach($user->friends() as $user)
-                            @include('user/partials/userblock')
-                        @endforeach
-                    @endif
-                </div>
             </div>
         </div>
     </body>
