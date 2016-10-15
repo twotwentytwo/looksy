@@ -633,7 +633,7 @@ a {
 
 .profile .pick .details {
 	position: absolute;
-	top: 72px;
+	bottom: 16px;
 	left: 8px;
 }
 
@@ -657,9 +657,6 @@ a {
 	text-transform: uppercase;
 }
 
-
-
-
 /*
  * PROFILE EDIT
  */
@@ -674,6 +671,15 @@ a {
 	height: 44px;	
 	width: 44px;
 }
+
+/*
+ * CATEGORIES 
+ */
+
+.categories-page .details {
+	bottom: 16px;
+}
+
 
 /*
  * SEARCH

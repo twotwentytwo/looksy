@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="details">
                                     <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
-                                    <p class="review">"{{ $status->review }}"</p>
+                                    <!--<p class="review">"{{ $status->review }}"</p>-->
                                 </div>
                             </div>
                         @endforeach
