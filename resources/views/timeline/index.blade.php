@@ -40,7 +40,7 @@
 			            			<a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
 			            		</div>
 			            		<div class="details">
-			            			<p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><span>{{ $status->title }}</span></a>@if(isset($status->source)) @ {{ $status->source }}@endif</p>	
+			            			<p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><span>{{ $status->title }}</span></a></p>	
 			            			<p class="review"><span>"{{ $status->review }}"</span></p>
 			            		</div>
 			            		@if($status->replies()->count())
