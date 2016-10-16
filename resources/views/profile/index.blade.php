@@ -31,7 +31,8 @@
                 <div class="col-lg-5">
                     @include('templates.partials.alerts')
                     @if(!$statuses->count())
-                        <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet</p>
+                        <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet.</p>
+                        <p>Start <a href="{{ route('add.index') }}">posting</a> your top picks.</p>
                     @else
                         @foreach($statuses as $status)
                             <div class="website-wrapper pick">

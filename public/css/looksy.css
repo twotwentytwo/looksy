@@ -391,6 +391,11 @@ ol li {
 	margin-bottom: 16px;
 }
 
+.website-wrapper .image {
+	height: 200px;
+	overflow: hidden;
+}
+
 .website-wrapper .details {
 	padding: 0;
     position: absolute;
