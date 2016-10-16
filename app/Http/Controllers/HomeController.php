@@ -18,9 +18,6 @@ class HomeController extends Controller
 			->orderBy('created_at', 'desc')
 			->paginate(10);
 
-			//$friends = DB::table('users')->get();
-			//dd($friends);
-
 			return view('timeline.index')
 				->with('statuses', $statuses);
 		}

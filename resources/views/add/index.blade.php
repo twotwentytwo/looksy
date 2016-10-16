@@ -21,7 +21,7 @@
  			@include('templates.partials.alerts')
  			<div class="row">
 			    <div class="col-lg-6">
-            @if(Auth::user()->statuses()->count() >=10)
+            @if(Auth::user()->statuses()->notReply()->count() >= 10)
               <p>You already have your top 10 picks... To add another you must remove an existing pick on your <a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">profile</a> page.</p>
             @else
               <form role="form" action="{{ route('status.post') }}" method="post" class="add-form">
