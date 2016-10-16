@@ -168,7 +168,12 @@ class StatusController extends Controller
         $title = $request->input('title');
         $type = $request->input('type');
         $review = $request->input('review');
-        $image = $request->input('image');
+
+        if(!empty($request->input('image'))) {
+            $image = $request->input('image');
+        } else {
+            $image = $status->image;
+        }
 
         Auth::user()->statuses()
             ->where('id', $statusId)
