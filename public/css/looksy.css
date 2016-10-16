@@ -383,8 +383,6 @@ ol li {
 
 .website-wrapper .image img {
 	width: 100%;
-	height: 320px;
-	object-fit: cover;
 }
 
 .website-wrapper {
@@ -396,6 +394,7 @@ ol li {
 
 .website-wrapper .image {
 	overflow: hidden;
+	height: 206px;
 }
 
 .website-wrapper .details {
