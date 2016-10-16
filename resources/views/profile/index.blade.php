@@ -16,9 +16,9 @@
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
                 @if(Auth::user()->id == $user->id)
-                    <h1>My top 5 picks</h1>
+                    <h1>My top 10 picks</h1>
                 @else
-                    <h1>{{ $user->getNameOrUsername() }}'s 5 picks</h1>
+                    <h1>{{ $user->getNameOrUsername() }}'s 10 picks</h1>
                 @endif
                 @include('templates.partials.navigation')
                 @if(Auth::user()->id == $user->id)
