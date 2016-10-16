@@ -23,8 +23,11 @@
 			    <div class="col-lg-5">
 			        @if(!$statuses->count())
 			        	<h3>Get started</h3>
-			        	<p>First of all you want to add some <a href="{{ route('friend.index') }}">friends</a> - they may have already posted some picks you might like...</p>
-			        	<p>Or you can start <a href="{{ route('add.index') }}">sharing your top picks</a> to inspire your friends right away.</p>
+			        	<ol>
+			        		<li>First of all you want to add some <a href="{{ route('friend.index') }}">friends</a> - they may have already posted some picks you might like...</li>
+			        		<li>You can start <a href="{{ route('add.index') }}">sharing your top picks</a> to inspire your friends right away.</li>
+			        		<li>You can have up to 10 picks. If you already have 10, then you have to remove one to add more.</li>
+			        	</ol>
 			        @else
 			        	@foreach($statuses as $status)
 			            	<div class="website-wrapper {{ $status->type }}">
