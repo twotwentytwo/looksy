@@ -343,7 +343,7 @@ ol li {
 
 .media-left, 
 .media>.pull-left {
-    padding-right: 8px;
+    padding-right: 4px;
 }
 
 .profile-image, 
@@ -362,6 +362,7 @@ ol li {
 	display:inline-block;
 	color: #fff;
 	padding: 0 4px;
+	font-size: 0.8em;
 }
 
 .videoWrapper {
