@@ -23,17 +23,6 @@
                         <div class="videoWrapper">
                             <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <!--
-                        <div class="media attribution">
-                            <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-                                <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl('40') }}">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
-                                <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
-                            </div>
-                        </div>
-                        -->
                     @else
                         <div class="website-wrapper">
                             <div class="type {{ $status->type }}">
@@ -45,7 +34,7 @@
                                 <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
                             </div>
                             <div class="details">
-                                <p class="title"><a  target="_blank" href="{{ $status->url }}">{{ $status->title }}</a></p>
+                                <p class="title"><a target="_blank" href="{{ $status->url }}">{{ $status->title }}</a> @if(isset($status->source)) @ {{ $status->source }} @endif</p>
                             </div>        
                         </div>
                     @endif
@@ -71,7 +60,6 @@
                                 </div>
                             </div>
                         @endforeach
-
                         @if(Auth::user()->isFriendsWith($status->user))
                             <form role="form" action="{{ route('status.reply', ['statusId' => $status->id]) }}" method="post" class="form-reply">
                                 <div class="form-group{{ $errors->has("reply-{$status->id}") ? ' has-error': '' }}">

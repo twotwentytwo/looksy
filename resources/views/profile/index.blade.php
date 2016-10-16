@@ -36,31 +36,22 @@
                     @else
                         @foreach($statuses as $status)
                             <div class="website-wrapper pick">
-                                
                                 <div class="type {{ $status->type }}">
                                     <a href="{{ route('pick.category', ['category' => $status->type]) }}">
                                         <img src="../img/icons/categories/{{ $status->type }}.png" />
                                     </a>
                                 </div>
-                                
                                 <div class="image">
                                     <a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
                                 </div>
                                 <div class="details">
                                     <p class="title">
                                         <a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a>
+                                        @if(isset($status->source))
+                                            <span class="source">@ {{ $status->source }}</span>
+                                        @endif
                                     </p>
-                                    <!--<p class="review">"{{ $status->review }}"</p>-->
                                 </div>
-                                <!--
-                                @if($status->replies()->count())
-                                    <div class="comments">
-                                        <img src="{{asset('img/icons/comments.png')}}" />
-                                        <p class="count">{{ $status->replies()->count() }}</p>
-                                    </div>
-                                @endif
-                                -->
-                                <!--<p class="timing">{{ $status->created_at->diffForHumans() }}</p>-->
                                 @if(Auth::user()->id == $user->id)
                                     <div class="edit-pick">
                                         <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit</a>

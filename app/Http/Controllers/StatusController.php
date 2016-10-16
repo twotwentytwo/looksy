@@ -168,13 +168,15 @@ class StatusController extends Controller
         $title = $request->input('title');
         $type = $request->input('type');
         $review = $request->input('review');
+        $image = $request->input('image');
 
         Auth::user()->statuses()
             ->where('id', $statusId)
             ->update([
                 'title' => $title, 
                 'review' => $review, 
-                'type' => $type
+                'type' => $type, 
+                'image' => $image
             ]);
 
         return view('pick.index')
