@@ -413,24 +413,25 @@ ol li {
 	display:inline-block;
 }
 
-.website-wrapper .details p {
-	color: #fff;
-	background: #ff6462;
-	padding:0;
-	margin:0;
-}
-
 .website-wrapper .details .title {
 	font-size: 1em;
-	padding:0 4px;
+	padding:0;
 	margin:0;
+	display:inline;
+	color: #fff;
+	background: #ff6462;
 }
 
 .website-wrapper .details .review {
 	font-size: 1em;
-	padding:0 4px;
-	margin:0;
+	padding:0;
+	margin:4px 0 0 0;
 	color: #000;
+	background: #ff6462;
+	width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .type {
