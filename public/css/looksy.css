@@ -668,15 +668,20 @@ ol li {
  */
 
 .profile .pick {
+	position: relative;
+	margin-bottom: 16px;
+	padding-bottom: 16px;
+}
+
+.profile .website-wrapper.pick .image {
 	height: 140px;
 	overflow: hidden;
-	margin-bottom: 16px;
 	position: relative;
 }
 
 .profile .pick .details {
 	position: absolute;
-	bottom: 16px;
+	bottom: 24px;
 	left: 8px;
 }
 
@@ -684,6 +689,7 @@ ol li {
 	position: absolute;
 	top: 8px;
 	left: 8px;
+	z-index: 1;
 }
 
 .profile .pick .edit-pick {
