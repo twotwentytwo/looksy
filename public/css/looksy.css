@@ -503,8 +503,9 @@ ol li {
  */
 
 .reply {
-	padding:0;
-	margin:0;
+	padding: 0;
+    margin: 8px 0 0 0;
+    height: 66px;
 }
 
 .pick .reply {
@@ -513,13 +514,13 @@ ol li {
 
 .pick .reply .comment {
 	color: #fff;
-	padding: 8px 16px;
-	background: url('../img/template/reply.png') 0px 0px no-repeat;
-	height: 33px;
-	width: 144px;
-	position: absolute;
-	left: 44px;
-	top: 0;
+    padding: 8px 16px;
+    background: url('../img/template/comment2.png') 0px 0px no-repeat;
+    height: 58px;
+    width: 321px;
+    position: absolute;
+    left: 44px;
+    top: 0px;
 }
 
 .pick .reply .comment .text {
@@ -537,6 +538,8 @@ ol li {
 
 .pick .reply .profile-image {
 	margin-top: 16px;
+	position: relative;
+	top: 10px;
 }
 
 .form-reply {
