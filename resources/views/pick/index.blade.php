@@ -27,7 +27,7 @@
                         <div class="website-wrapper">
                             <div class="type {{ $status->type }}">
                                 <a href="{{ route('pick.category', ['category' => $status->type]) }}">
-                                    <img src="../img/icons/categories/{{ $status->type }}.png" />
+                                    <img src="/img/icons/categories/{{ $status->type }}.png" />
                                 </a>
                             </div>
                             <div class="image">
