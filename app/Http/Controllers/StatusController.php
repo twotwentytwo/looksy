@@ -193,7 +193,9 @@ class StatusController extends Controller
     public function postRemovePick($statusId)
     {
         $user = Auth::user();
-        $statuses = $user->statuses()->notReply()->get();
+
+        $statuses_collection = collect($user->statuses()->notReply()->get());
+        $statuses = $statuses_collection->reverse();
 
         DB::table('statuses')->where('id', $statusId)->delete();
 
