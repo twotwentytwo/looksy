@@ -81,11 +81,14 @@
                                 <div class="details">
                                     <p class="title">
                                         <a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a>
-                                        @if(isset($status->source))
-                                            <span class="source">@ {{ $status->source }}</span>
-                                        @endif
                                     </p>
                                 </div>
+                                @if($status->replies()->count())
+                                    <div class="comments">
+                                        <img src="{{asset('img/icons/comments.png')}}" />
+                                        <p class="count">{{ $status->replies()->count() }}</p>
+                                    </div>
+                                @endif
                                 @if(Auth::user()->id == $user->id)
                                     <div class="edit-pick">
                                         <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit</a>

@@ -655,6 +655,10 @@ ol li {
 	position: absolute;
 	bottom: 24px;
 	left: 8px;
+	width: 250px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .profile .pick .type, 
@@ -686,6 +690,23 @@ ol li {
 	top: 0;
 	right: 0;
 	width: 40px;
+}
+
+.profile .comments img, 
+.myprofile .comments img {
+	width: 30px;
+    height: 28px;
+    position: absolute;
+    right: 8px;
+    bottom: 22px;
+}
+
+.profile .comments .count, 
+.myprofile .comments .count {
+	color: #fff;
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
 }
 
 /*
