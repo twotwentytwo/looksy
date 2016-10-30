@@ -35,23 +35,15 @@
                 </div>
             @endif
                 <div class="review">
-                    <div class="media user">
-                        <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
-                            <img class="media-object profile-image" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl('40') }}">
-                        </a>
-                    </div>
                     <div class="comment">
-                        <p class="text">{{ $status->review }}</p>
+                        <p class="text">{{ $status->review }} by <a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></p>
                         <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                     </div>
                 </div>
                 @foreach($status->replies as $reply)
-                    <div class="media reply">
-                        <a class="pull-left" href="{{ route('profile.index', ['username' => $reply->user->username]) }}">
-                            <img class="media-object  profile-image" alt="{{ $reply->user->getNameOrUsername() }}" src="{{ $reply->user->getAvatarUrl('40') }}">
-                        </a>
-                        <div class="media-body comment">
-                            <p class="text">{{ $reply->body }}</p>
+                    <div class="reply">
+                        <div class="comment">
+                            <p class="text">{{ $reply->body }} by <a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $reply->user->getNameOrUsername() }}</a></p>
                             <p class="timing">{{ $reply->created_at->diffForHumans() }}</p>
                         </div>
                     </div>

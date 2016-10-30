@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-	font-size: 2.4em;
+	font-size: 3em;
 	text-align: center;
 	color: #ff8d6b;
 	font-weight: bold;
@@ -466,26 +466,15 @@ ol li {
 	background: url('../img/template/comment.png') 0px 0px no-repeat;
 	height: 58px;
 	width: 321px;
-	position: absolute;
-	left: 44px;
-	top: 0;
 }
 
 .pick .review .comment .text {
 	padding:0;
 	margin:0;
-	width: 280px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
-.pick .review .user {
-	position: initial;
-}
-
-.pick .review .profile-image {
-	margin-top: 32px;
+.pick .review .comment .text a {
+	color: #fff;
 }
 
 .pick .details {
@@ -500,7 +489,6 @@ ol li {
 .reply {
 	padding: 0;
     margin: 8px 0 0 0;
-    height: 66px;
 }
 
 .pick .reply {
@@ -513,9 +501,7 @@ ol li {
     background: url('../img/template/comment2.png') 0px 0px no-repeat;
     height: 58px;
     width: 321px;
-    position: absolute;
-    left: 44px;
-    top: 0px;
+    margin-left:60px;
 }
 
 .pick .reply .comment .text {
