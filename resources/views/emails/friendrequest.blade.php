@@ -1,1 +1,1 @@
-Hello {{ $name }}, you have a new friend request from {{ $friend }} on Pick List.
+Hello {{ $name }}, you have a new friend request from {{ $friend }} on PickList.

@@ -1,1 +1,1 @@
-Hello there {{ $name }}, you have a new comment on "{{ $pick }}" from {{ $friend }} on Pick List. 
+Hello there {{ $name }}, you have a new comment "{{ $comment }}" on your pick {{ $pick }} from {{ $friend }} on PickList. 

@@ -129,7 +129,7 @@ class StatusController extends Controller
 
         $user = Auth::user();
 
-        Mail::send('emails.comment', ['name'=> $status->user->username, 'friend' => Auth::user()->username, 'pick' => $status->title, 'id' => $status->id], function($message) use($user, $status)
+        Mail::send('emails.comment', ['name'=> $status->user->username, 'friend' => Auth::user()->username, 'pick' => $status->title, 'id' => $status->id, 'comment' => $reply->body], function($message) use($user, $status)
         {
             $message
                 ->to($status->user->email, $user->username)

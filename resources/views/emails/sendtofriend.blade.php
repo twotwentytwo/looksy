@@ -1,1 +1,1 @@
-Hello there {{ $email }}, someone thinks you'll like Pick List - a new sharing app for you and your friends to share your top cultural picks. 
+Hello there {{ $email }}, someone thinks you'll like PickList - a new sharing app for you and your friends to share your top cultural picks. 
