@@ -8,6 +8,30 @@
 
         <!-- Looksy css  -->
 
+        <!-- Disable tap highlight on IE -->
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <!-- Web Application Manifest -->
+        <link rel="manifest" href="/manifest.json">
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="PickList">
+        <link rel="icon" sizes="192x192" href="/img/touch/chrome-touch-icon-192x192.png">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <!--<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+        <meta name="apple-mobile-web-app-title" content="PickList">
+        <link rel="apple-touch-icon" href="/img/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="/img/touch/ms-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#ff8d6b">
+
+        <!-- Color the status bar on mobile devices -->
+        <meta name="theme-color" content="#ff8d6b">
+
         <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
             
