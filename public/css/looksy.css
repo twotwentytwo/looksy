@@ -275,7 +275,7 @@ ol li {
  */
 
 .authentication {
-	background: url('../img/template/auth_background.jpg') 0 0 no-repeat;
+	background: url('../img/template/auth_background.jpg') 0 0 repeat;
 }
 
 .authentication #email {

@@ -14,7 +14,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-6 col-md-offset-3">
             <div class="friend-block">
                 @if (!$friends->count())
                     <p>You don't have any friends yet.</p>
@@ -32,10 +32,9 @@
                     @endforeach
                 @endif
             </div>
-        </div>
-        <div class="col-lg-6">
-            <h3>Friend requests</h3>
+            
             <div class="friend-block requests">
+            <h3>Friend requests</h3>
                 @if (!$requests->count())
                     <p>You have no friend requests.</p>
                 @else
@@ -49,23 +48,23 @@
                     @endforeach
                 @endif
             </div>
-        </div>
-        <div class="col-lg-6">
-            <h3>Search friends</h3>
-            <form class="navbar-form navbar-left search-form" role="search" action="{{ route('search.results') }}">
-                <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">
-                    <input type="text" name="query" class="form-control" placeholder="Enter friends name">
-                    @if($errors->has('query'))
-                        <span class="help-block">{{ $errors->first('query') }}</span>
-                    @endif
-                </div>
-                <button type="submit" class="btn btn-default">Search</button>
-            </form>
-        </div>
-        <!--
-        <div class="col-lg-6">
-            <h3>Invite friends</h3>
+
             <div class="friend-block">
+                <h3>Search friends</h3>
+                <form role="search" action="{{ route('search.results') }}">
+                    <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">
+                        <input type="text" name="query" class="form-control" placeholder="Enter friends name">
+                        @if($errors->has('query'))
+                            <span class="help-block">{{ $errors->first('query') }}</span>
+                        @endif
+                    </div>
+                    <button type="submit" class="btn btn-default">Search</button>
+                </form>
+            </div>
+
+            
+            <div class="friend-block">
+                <h3>Invite friends</h3>
                 <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
                     <div class="form-group{{ $errors->has('invite') ? ' has-error' : '' }}">
                         <input placeholder="Type in friends email here" name="invite" class="form-control add">
@@ -78,6 +77,5 @@
                 </form>
             </div>
         </div>
-        -->
     </div>
 @stop  

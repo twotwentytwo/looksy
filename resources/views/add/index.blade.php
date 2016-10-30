@@ -10,7 +10,7 @@
 
 @section('content')
  			<div class="row">
-			    <div class="col-lg-6">
+			    <div class="col-md-6 col-md-offset-3">
             @if(Auth::user()->statuses()->notReply()->count() >= 5)
               <p>You already have your top 5 picks... To add another you must remove an existing pick on your <a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">profile</a> page.</p>
             @else

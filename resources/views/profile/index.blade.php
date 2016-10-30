@@ -57,7 +57,7 @@
                 @endif
             </nav>
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-md-6 col-md-offset-3">
                     @include('templates.partials.alerts')
                     @if(!$statuses->count())
                         @if(Auth::user()->id == $user->id)

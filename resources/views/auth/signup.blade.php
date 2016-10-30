@@ -13,7 +13,7 @@
 
 @section('content')
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-md-6 col-md-offset-3">
 			<p class="strapline">Good things happen when you share.</p>
 		    <form class="form-vertical" role="form" method="post" action="{{ route('auth.signup') }}">
 		        <div class="form-group{{ $errors->has('email') ? ' has-error' :''}}">

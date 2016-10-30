@@ -14,7 +14,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-6 col-md-offset-3">
             <h3>Categories</h3>
             <ul class="categories">
                 <li class="film"><a href="{{ route('pick.category', ['category' => 'film']) }}"><img src="../img/icons/categories/film.png" /><span>Film</span></a></li>

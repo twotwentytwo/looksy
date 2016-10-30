@@ -14,7 +14,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-md-6 col-md-offset-3">
             @if($status->source == 'YouTube')
                 <div class="videoWrapper">
                     <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>

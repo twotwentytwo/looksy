@@ -14,11 +14,11 @@
 
 @section('content')
 	<div class="row">
-	    <div class="col-lg-5">
+	    <div class="col-md-6 col-md-offset-3">
 	        @if(!$statuses->count())
 	        	<h3>Get started</h3>
 	        	<ol>
-	        		<li>First of all you want to add some <a href="{{ route('friend.index') }}">friends</a> - they may have already posted some picks you might like...</li>
+	        		<li>First of all you want to add some <a href="{{ route('friend.index') }}">friends</a> - they may have already posted some picks you might like... If they don't have a PickList account, invite them to join.</li>
 	        		<li>You can start <a href="{{ route('add.index') }}">sharing your top picks</a> to inspire your friends right away.</li>
 	        		<li>You can have up to 5 picks. If you already have 5, then you have to remove one to add more.</li>
 	        	</ol>

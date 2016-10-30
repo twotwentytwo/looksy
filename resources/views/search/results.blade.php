@@ -18,7 +18,7 @@
 		<p>No results found, sorry.</p>
 	@else
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-md-6 col-md-offset-3">
     			@if(!$users->count())
                     <p>Cannot find any friends called "{{ Request::input('query') }}".</p>
                     <p>Try <a href="{{ route('friend.index') }}">searching</a> again...</p>

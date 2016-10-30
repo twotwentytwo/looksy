@@ -14,7 +14,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-6 col-md-offset-3">
             <form class="form-vertical" role="form" method="post" action="#" enctype="multipart/form-data">
 
                 <img src="{{Auth::user()->getAvatarUrl('144') }}" class="profile-image-edit" />

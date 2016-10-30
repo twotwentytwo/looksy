@@ -38,7 +38,7 @@
 	        @yield('navigation')
 		</nav>
 		<div class="container">
-			@include('templates.partials.alerts')
+			<!--@include('templates.partials.alerts')-->
 			@yield('content')
 		</div>
 	</body>
