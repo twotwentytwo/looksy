@@ -153,27 +153,27 @@ ol li {
 
 .looksy-navigation .home a {
 	background: url('../img/navigation/off/home.png') 0 0 no-repeat;
-	background-size: 32px;
-	width: 32px;
-	height: 32px;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
 	position: relative;
 	top: 8px;
 }
 
 .home .looksy-navigation .home a {
 	background: url('../img/navigation/on/home.png') 0 0 no-repeat;
-	background-size: 32px;
-	width: 32px;
-	height: 32px;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
 	position: relative;
 	top: 8px;
 }
 
 .looksy-navigation .search a {
 	background: url('../img/navigation/off/search.png') 0 0 no-repeat;
-	background-size: 32px;
-	width: 32px;
-	height: 32px;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
 	position: relative;
 	top: 8px;
 }
@@ -181,59 +181,52 @@ ol li {
 .search .looksy-navigation .search a, 
 .categories-page .looksy-navigation .search a {
 	background: url('../img/navigation/on/search.png') 0 0 no-repeat;
-	background-size: 32px;
-	width: 32px;
-	height: 32px;
+	background-size: 40px;
+	width: 40px;
+	height: 40px;
 	position: relative;
 	top: 8px;
 }
 
 .looksy-navigation .add a {
-	background: url('../img/navigation/off/add.png') 0 0 no-repeat;
-	background-size: 50px;
-	width: 50px;
-	height: 50px;
-}
-
-.add-page .looksy-navigation .add a {
 	background: url('../img/navigation/on/add.png') 0 0 no-repeat;
-	background-size: 50px;
-	width: 50px;
-	height: 50px;
+	background-size: 60px;
+	width: 60px;
+	height: 60px;
 }
 
 .looksy-navigation .friends a {
 	background: url('../img/navigation/off/friends.png') 0 0 no-repeat;
-    background-size: 38px;
-    width: 38px;
-    height: 32px;
+    background-size: 48px;
+    width: 48px;
+    height: 40px;
     position: relative;
-    top: 8px;
+	top: 8px;
 }
 
 .friends .looksy-navigation .friends a {
 	background: url('../img/navigation/on/friends.png') 0 0 no-repeat;
-	background-size: 38px;
-    width: 38px;
-    height: 32px;
+	background-size: 48px;
+    width: 48px;
+    height: 40px;
     position: relative;
-    top: 8px;
+	top: 8px;
 }
 
 .looksy-navigation .profile a {
 	background: url('../img/navigation/off/profile.png') 0 0 no-repeat;
-	background-size: 32px;
-	width: 32px;
-	height: 32px;
+	background-size: 37px;
+	width: 40px;
+	height: 40px;
 	position: relative;
 	top: 8px;
 }
 
 .profile .looksy-navigation .profile a {
 	background: url('../img/navigation/on/profile.png') 0 0 no-repeat;
-	background-size: 32px;
-	width: 32px;
-	height: 32px;
+	background-size: 37px;
+	width: 40px;
+	height: 40px;
 	position: relative;
 	top: 8px;
 }
@@ -246,7 +239,7 @@ ol li {
 .looksy-menu .friends .friend-requests {
     position: absolute;
     right: -4px;
-    bottom: 8px;
+    bottom: 0;
     display:block;
     background: url('../img/icons/count.png') 0px 0px no-repeat;
     background-size: 15px;
@@ -256,18 +249,18 @@ ol li {
 
 .looksy-menu .categories {
 	position: absolute;
-    top: -49px;
-    margin: 0;
-    height: 49px;
-    width: 100%;
-    padding: 8px;
+    top: -84px;
+    margin: 0px 12.5%;
+    height: 84px;
+    width: 75%;
+    padding: 8px 16px;
     overflow-x: scroll;
     background: #FF6464;
     display:none;
 }
 
 .looksy-menu .categories ul {
-	width: 652px; 
+	width: 716px; 
 	padding:0;
 	margin:0;
 }
@@ -430,10 +423,15 @@ ol li {
 	background: #ff6462;
 }
 
-.type {
+.website-wrapper .type {
     position: absolute;
     top: 8px;
     left: 8px;
+    width: 32px;
+}
+
+.website-wrapper .type img {
+	width: 100%;
 }
 
 .website-wrapper .details .timing {
@@ -553,15 +551,10 @@ ol li {
 }
 
 .comments .count {
-	background: url('../img/icons/count.png') 0px 0px no-repeat;
-    background-size: 20px;
-    color: #fff;
+	color: #fff;
     position: absolute;
-    right: 4px;
-    bottom: 36px;
-    width: 20px;
-    height: 20px;
-    padding-left: 7px;
+    right: 24px;
+    bottom: 47px;
 }
 
 /*
@@ -728,13 +721,17 @@ ol li {
 
 
 .categories {
-	padding:12px 0 0 0;
+	padding:0;
 	margin:0;
 	list-style:none;
 }
 
 .categories li {
 	padding-bottom: 16px;
+}
+
+.categories li img {
+	width: 40px;
 }
 
 .categories span {
@@ -762,6 +759,11 @@ ol li {
 	position: absolute;
 	top: 32px;
 	right: 16px;
+	width: 40px;
+}
+
+.edit-link img {
+	width: 100%;
 }
 
 .profile .edit-link {
@@ -780,6 +782,11 @@ ol li {
 	position: absolute;
 	top: 32px;
 	left: 16px;
+	width: 40px;
+}
+
+.back-link img {
+	width: 100%;
 }
 
 .edit .profile-image-edit {
