@@ -36,8 +36,8 @@
             @endif
                 <div class="review">
                     <div class="comment">
-                        <p class="text">{{ $status->review }}</p>
-                        <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
+                        <p class="text">{{ $status->review }} by <a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a> {{ $status->created_at->diffForHumans() }}</p>
+                        
                     </div>
                 </div>
                 @foreach($status->replies as $reply)
