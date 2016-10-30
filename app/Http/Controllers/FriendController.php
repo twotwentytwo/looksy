@@ -94,6 +94,15 @@ class FriendController extends Controller
 
 		Auth::user()->acceptFriendRequest($user);
 
+		Mail::send('emails.friendrequestaccepted', 
+			['name'=> $user->username, 'friend' => Auth::user()->username], 
+				function($message) use($user)
+    				{
+        				$message
+        					->to($user->email, $user->username)
+        					->subject('Friend request accepted on PickList');
+    	});
+
 		return redirect()
 			->route('friend.index', ['username' => $username])
 			->with('info', 'Friend request accepted');

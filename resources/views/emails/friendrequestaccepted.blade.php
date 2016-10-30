@@ -1,0 +1,1 @@
+Hello {{ $name }}, {{ $friend }} accepted your friend request on PickList.

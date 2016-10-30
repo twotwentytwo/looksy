@@ -18,9 +18,9 @@
                 <h3>Paste in a URL</h3>
                 <p>Share something to inspire your friends.</p>
                 <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-                  <input placeholder="URL goes here" name="status" class="form-control add">
+                  <input placeholder="URL for your pick" name="status" class="form-control add">
                   @if($errors->has('status'))
-                    <span class="help-block">{{ $errors->first('status') }}</span>
+                    <span class="help-block">Please enter a valid URL</span>
                   @endif
                 </div>
 

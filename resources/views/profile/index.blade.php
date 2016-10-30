@@ -36,7 +36,12 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
             
     </head>
-    <body class="profile">
+    @if(Auth::user()->id == $user->id)
+        <body class="myprofile">
+    @else
+        <body class="profile">
+    @endif
+    
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
                 @if(Auth::user()->id == $user->id)

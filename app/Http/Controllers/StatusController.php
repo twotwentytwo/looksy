@@ -18,7 +18,7 @@ class StatusController extends Controller
     public function postStatus(Request $request)
     {
     	$this->validate($request, [
-    		'status' => 'required|max:500', 
+    		'status' => 'required|url', 
             'type' => 'required|max:500', 
             'review' => 'required|max:1000'
     	]);
