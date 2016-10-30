@@ -398,13 +398,11 @@ ol li {
     left: 8px;
     text-align: left;
     margin: 0 auto;
-    width: 96%;
 }
 
 .website-wrapper .details a {
 	color: #fff;
 	background: #ff6462;
-	display:inline-block;
 }
 
 .website-wrapper .details .title {
@@ -529,18 +527,18 @@ ol li {
  */
 
 .comments img {
-	width: 45px;
-	height: 42px;
-	position: absolute;
-	right: 8px;
-	bottom: 44px;
+	width: 30px;
+    height: 28px;
+    position: absolute;
+    right: 8px;
+    bottom: 44px;
 }
 
 .comments .count {
 	color: #fff;
     position: absolute;
-    right: 24px;
-    bottom: 47px;
+    right: 20px;
+    bottom: 40px;
 }
 
 /*
