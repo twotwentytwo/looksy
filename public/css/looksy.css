@@ -636,43 +636,56 @@ ol li {
  * PROFILE
  */
 
-.profile .pick {
+.profile .pick, 
+.myprofile .pick {
 	position: relative;
 	margin-bottom: 16px;
 	padding-bottom: 16px;
 }
 
-.profile .website-wrapper.pick .image {
+.profile .website-wrapper.pick .image, 
+.myprofile .website-wrapper.pick .image {
 	height: 140px;
 	overflow: hidden;
 	position: relative;
 }
 
-.profile .pick .details {
+.profile .pick .details, 
+.myprofile .pick .details {
 	position: absolute;
 	bottom: 24px;
 	left: 8px;
 }
 
-.profile .pick .type {
+.profile .pick .type, 
+.myprofile .pick .type {
 	position: absolute;
 	top: 8px;
 	left: 8px;
 	z-index: 1;
 }
 
-.profile .pick .edit-pick {
+.profile .pick .edit-pick, 
+.myprofile .pick .edit-pick {
 	position: absolute;
 	top: 8px;
 	right: 8px;
 }
 
-.profile .pick .edit-pick a {
+.profile .pick .edit-pick a, 
+.myprofile .pick .edit-pick a {
 	color: #fff;
 	background: #FF6464;
 	font-size: 1.2em;
 	padding: 0 4px;
 	text-transform: uppercase;
+}
+
+.myprofile  .edit-link {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
 }
 
 /*

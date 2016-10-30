@@ -60,8 +60,13 @@
                 <div class="col-lg-5">
                     @include('templates.partials.alerts')
                     @if(!$statuses->count())
-                        <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet.</p>
-                        <p>Start <a href="{{ route('add.index') }}">posting</a> your top picks.</p>
+                        @if(Auth::user()->id == $user->id)
+                            <p>You haven't posted anything yet.</p>
+                            <p>Start <a href="{{ route('add.index') }}">posting</a> your top picks today to inspire your friends.</p>
+                        @else
+                            <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet.</p>
+                        @endif
+                        
                     @else
                         @foreach($statuses as $status)
                             <div class="website-wrapper pick">

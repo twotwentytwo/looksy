@@ -20,7 +20,7 @@
 	        	<ol>
 	        		<li>First of all you want to add some <a href="{{ route('friend.index') }}">friends</a> - they may have already posted some picks you might like...</li>
 	        		<li>You can start <a href="{{ route('add.index') }}">sharing your top picks</a> to inspire your friends right away.</li>
-	        		<li>You can have up to 10 picks. If you already have 10, then you have to remove one to add more.</li>
+	        		<li>You can have up to 5 picks. If you already have 5, then you have to remove one to add more.</li>
 	        	</ol>
 	        @else
 	        	@foreach($statuses as $status)
