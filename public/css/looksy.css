@@ -734,10 +734,6 @@ ol li {
 	position: absolute;
 	bottom: 24px;
 	left: 8px;
-	width: 250px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
 .profile .pick .type, 
