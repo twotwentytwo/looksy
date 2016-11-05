@@ -709,7 +709,9 @@ ol li {
 	font-size: 1.2em;
 }
 
-.add 
+.add .limit {
+	font-size: 1.2em;
+}
 
 /*
  * PROFILE
@@ -722,14 +724,16 @@ ol li {
 	padding-bottom: 16px;
 }
 
-.profile .website-wrapper.pick .image, 
+.profile .website-wrapper.pick .image,
+.add .website-wrapper.pick .image, 
 .myprofile .website-wrapper.pick .image {
 	height: 140px;
 	overflow: hidden;
 	position: relative;
 }
 
-.profile .pick .details, 
+.profile .pick .details,
+.add .pick .details, 
 .myprofile .pick .details {
 	position: absolute;
 	bottom: 24px;
@@ -737,7 +741,8 @@ ol li {
 }
 
 .profile .pick .type, 
-.myprofile .pick .type {
+.myprofile .pick .type, 
+.add .pick .type {
 	position: absolute;
 	top: 8px;
 	left: 8px;
@@ -745,13 +750,15 @@ ol li {
 }
 
 .profile .pick .edit-pick, 
-.myprofile .pick .edit-pick {
+.myprofile .pick .edit-pick, 
+.add .pick .edit-pick {
 	position: absolute;
 	top: 8px;
 	right: 8px;
 }
 
 .profile .pick .edit-pick a, 
+.add .pick .edit-pick a, 
 .myprofile .pick .edit-pick a {
 	color: #fff;
 	background: #FF6464;
@@ -764,6 +771,13 @@ ol li {
 	position: absolute;
 	top: 0;
 	right: 0;
+	width: 40px;
+}
+
+.add .delete-link {
+	position: absolute;
+	top: 8px;
+	right: 8px;
 	width: 40px;
 }
 
@@ -809,7 +823,7 @@ ol li {
 
 
 /*
- * SEARCH
+ * CATEGORIES 
  */
 
 
