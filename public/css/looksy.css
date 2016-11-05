@@ -468,9 +468,28 @@ ol li {
 .pick .review .comment {
 	color: #fff;
 	padding: 8px 16px;
-	background: url('../img/template/comment.png') 0px 0px no-repeat;
+	background: #ff6462;
 	height: 58px;
 	width: 321px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.pick .review .comment:after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: -4px;
+    border-style: solid;
+    border-width: 15px 9px 0;
+    border-color: #ff6462 transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    transform: rotate(-71deg);
+    -ms-transform: rotate(-71deg);
+    -webkit-transform: rotate(-71deg);
 }
 
 .pick .review .comment .text {
@@ -503,10 +522,29 @@ ol li {
 .pick .reply .comment {
 	color: #fff;
     padding: 8px 16px;
-    background: url('../img/template/comment2.png') 0px 0px no-repeat;
+    background: #000;
     height: 58px;
     width: 321px;
     margin-left:60px;
+    -moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.pick .reply .comment:after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 97%;
+    border-style: solid;
+    border-width: 15px 9px 0;
+    border-color: #000 transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    transform: rotate(-57deg);
+    -ms-transform: rotate(-57deg);
+    -webkit-transform: rotate(-57deg);
 }
 
 .pick .reply .comment .text {
@@ -527,6 +565,8 @@ ol li {
 .form-reply {
 	margin-top: 16px;
 }
+
+
 
 
 /*
