@@ -7,12 +7,21 @@ $(".add-form .add").change(function() {
 		if(json.hybridGraph.title && json.hybridGraph.image) {
 			$('.preview').show();
 			$('.preview .title').text(json.hybridGraph.title);
-			$('.preview img').attr('src', json.hybridGraph.image);
+			$('.preview .image').attr('src', json.hybridGraph.image);
 		}
-	});   
+	});
+
+	//$('.before-add').hide();
+	
 });
 
 $(".looksy-menu .search a").click(function(e) {
 	e.preventDefault();
   	$(".categories").toggle();
+});
+
+$(document).ready(function() {
+	$("#selectImage").imagepicker({
+		hide_select: true
+	});
 });

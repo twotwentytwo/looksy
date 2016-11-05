@@ -30,30 +30,37 @@
 
                     <input type="text" name="title" class="form-control" id="title" placeholder="Title" value="{{ $status->title }}">
                 </div>
+
+                <label>Category</label>
+
+                <div class="categories-picker">
+
+                <select name="type" id="selectImage">
+                    <option value="">Choose pick category</option>
+                    <option value="film" data-img-src="/img/icons/categories/film.png">Film</option>
+                    <option value="tv" data-img-src="/img/icons/categories/tv.png">TV show</option>
+                    <option value="video" data-img-src="/img/icons/categories/video.png">Video clip</option>
+                    <option value="music" data-img-src="/img/icons/categories/music.png">Music</option>
+                    <option value="podcast" data-img-src="/img/icons/categories/podcast.png">Podcast</option>
+                    <option value="web" data-img-src="/img/icons/categories/web.png">Web</option>
+                    <option value="news" data-img-src="/img/icons/categories/news.png">News</option>
+                    <option value="app" data-img-src="/img/icons/categories/app.png">Mobile app</option>
+                    <option value="food" data-img-src="/img/icons/categories/food.png">Food &amp; drink</option>
+                    <option value="art" data-img-src="/img/icons/categories/art.png">Art</option>
+                    <option value="book" data-img-src="/img/icons/categories/book.png">Book / Writing</option>
+                    <option value="shop" data-img-src="/img/icons/categories/shop.png">Shop</option>
+                  </select>
+
+              </div>
+
+
                 <div class="form-group{{ $errors->has('review') ? ' has-error': '' }}">
                     <label>Review</label>
                     
                     <input type="text" name="review" class="form-control" id="review" placeholder="Review" value="{{ $status->review }}">
                 </div>
 
-                <label>Category</label>
-
-                <select name="type">
-                    <option value="{{ $status->type }}">{{ $status->type }}</option>
-                    <option value="film">Film</option>
-                    <option value="tv">TV show</option>
-                    <option value="video">Video clip</option>
-                    <option value="music">Music</option>
-                    <option value="podcast">Podcast</option>
-                    <option value="web">Web</option>
-                    <option value="news">News</option>
-                    <option value="app">Mobile app</option>
-                    <option value="food">Food &amp; drink</option>
-                    <option value="art">Art</option>
-                    <option value="book">Book / Writing</option>
-                    <!--<option value="shop">Shop</option>-->
-                    <!--<option value="location">Location</option>-->
-                </select>
+                
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-default">Update</button>

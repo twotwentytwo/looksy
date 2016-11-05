@@ -8,6 +8,10 @@
   @include('templates.partials.navigation')
 @stop
 
+@section('body-class')
+  add
+@stop
+
 @section('content')
  			<div class="row">
 			    <div class="col-md-6 col-md-offset-3">
@@ -15,52 +19,50 @@
               <p>You already have your top 5 picks... To add another you must remove an existing pick on your <a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">profile</a> page.</p>
             @else
               <form role="form" action="{{ route('status.post') }}" method="post" class="add-form">
-                <h3>Paste in a URL</h3>
-                <p>Share something to inspire your friends.</p>
-                <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-                  <input placeholder="URL for your pick" name="status" class="form-control add">
-                  @if($errors->has('status'))
-                    <span class="help-block">Please enter a valid URL</span>
-                  @endif
+                
+                <div class="before-add">
+                  <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
+                    <input placeholder="Paste a URL here" name="status" class="form-control add">
+                    @if($errors->has('status'))
+                      <span class="help-block">Oooops... you need to enter a valid URL.</span>
+                    @endif
+                  </div>
+                  <!--<p class="share-text">Why not share something to inspire your friends?</p>
+                  <p class="share-text">Good things happen when we share.</p>-->
                 </div>
 
               <div class="preview">
-                <h3>Preview</h3>
                 <img src="" class="image" />
                 <p class="title"></p>
               </div>
 
-              <h3>Add details</h3>
-              <p>Add a category and a review for your friends.</p>
-
-              <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
-                <select name="type">
-                  <option value="">Choose category</option>
-                  <option value="film">Film</option>
-                  <option value="tv">TV show</option>
-                  <option value="video">Video clip</option>
-                  <option value="music">Music</option>
-                  <option value="podcast">Podcast</option>
-                  <option value="web">Web</option>
-                  <option value="news">News</option>
-                  <option value="app">Mobile app</option>
-                  <option value="food">Food &amp; drink</option>
-                  <option value="art">Art</option>
-                  <option value="book">Book / Writing</option>
-                  <option value="shop">Shop</option>
-                  <option value="location">Location</option>
-                </select>
-                @if($errors->has('category'))
-                  <span class="help-block">{{ $errors->first('category') }}</span>
-                @endif
-              </div>
-                <div class="form-group{{ $errors->has('review') ? ' has-error' : '' }}">
-                  <textarea placeholder="Add a mini review" name="review" class="form-control add" rows="2"></textarea>
-                  @if($errors->has('review'))
-                    <span class="help-block">{{ $errors->first('review') }}</span>
+              <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }} categories-picker">
+                  <select name="type" id="selectImage">
+                    <option value="">Choose pick category</option>
+                    <option value="film" data-img-src="/img/icons/categories/film.png">Film</option>
+                    <option value="tv" data-img-src="/img/icons/categories/tv.png">TV show</option>
+                    <option value="video" data-img-src="/img/icons/categories/video.png">Video clip</option>
+                    <option value="music" data-img-src="/img/icons/categories/music.png">Music</option>
+                    <option value="podcast" data-img-src="/img/icons/categories/podcast.png">Podcast</option>
+                    <option value="web" data-img-src="/img/icons/categories/web.png">Web</option>
+                    <option value="news" data-img-src="/img/icons/categories/news.png">News</option>
+                    <option value="app" data-img-src="/img/icons/categories/app.png">Mobile app</option>
+                    <option value="food" data-img-src="/img/icons/categories/food.png">Food &amp; drink</option>
+                    <option value="art" data-img-src="/img/icons/categories/art.png">Art</option>
+                    <option value="book" data-img-src="/img/icons/categories/book.png">Book / Writing</option>
+                    <option value="shop" data-img-src="/img/icons/categories/shop.png">Shop</option>
+                  </select>
+                  @if($errors->has('category'))
+                    <span class="help-block">{{ $errors->first('category') }}</span>
                   @endif
-                </div>
-                <button type="submit" class="btn btn-default">Share</button>
+                  </div>
+                  <div class="form-group{{ $errors->has('review') ? ' has-error' : '' }}">
+                    <textarea placeholder="Add your review" name="review" class="form-control add" rows="2"></textarea>
+                    @if($errors->has('review'))
+                      <span class="help-block">{{ $errors->first('review') }}</span>
+                   @endif
+                  </div>
+                  <button type="submit" class="btn btn-default">Share</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
   			      </form>
             @endif
