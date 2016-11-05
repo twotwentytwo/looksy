@@ -614,7 +614,6 @@ ol li {
 .friend-block.requests {
 	margin-bottom: 8px;
 	border-bottom: 4px solid #fff;
-	padding-bottom: 8px;
 }
 
 .friends #friends {
@@ -625,6 +624,15 @@ ol li {
 
 .not-yet-friend-of-mine {
 	position:relative;
+	margin-bottom: 16px;
+	border-bottom: 4px solid #fff;
+	padding-bottom: 16px;
+}
+
+.not-yet-friend-of-mine:last-child {
+	border-bottom: none;
+	margin-bottom: 16px;
+	padding-bottom: 16px;
 }
 
 .friend-of-mine {
