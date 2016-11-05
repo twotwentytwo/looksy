@@ -26,7 +26,6 @@
                     @endif
                 </div>
                 <div class="form-group{{ $errors->has('last_name') ? ' has-error': '' }}">
-                    
                     <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last name" value="{{ Request::old('last_name') ?: Auth::user()->last_name }}">
                     @if($errors->has('last_name'))
                         <span class="help-block">{{ $errors->first('last_name') }}</span> 

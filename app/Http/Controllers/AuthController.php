@@ -22,9 +22,12 @@ class AuthController extends Controller
 			'password' => 'required|min:6'
 		]);
 
+		$image_id = substr($request->input('image'), -37, 36);
+
 		User::create([
 			'email' => $request->input('email'), 
 			'username' => $request->input('username'),
+			'location' => $image_id,
 			'password' => bcrypt($request->input('password'))
 		]);
 

@@ -63,6 +63,7 @@
             </div>
 
             
+            <!--
             <div class="friend-block">
                 <h3>Invite friends</h3>
                 <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
@@ -76,6 +77,7 @@
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
                 </form>
             </div>
+            -->
         </div>
     </div>
 @stop  

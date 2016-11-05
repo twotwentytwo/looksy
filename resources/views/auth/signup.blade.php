@@ -16,6 +16,7 @@
 		<div class="col-md-6 col-md-offset-3">
 			<p class="strapline">Good things happen when you share.</p>
 		    <form class="form-vertical" role="form" method="post" action="{{ route('auth.signup') }}">
+
 		        <div class="form-group{{ $errors->has('email') ? ' has-error' :''}}">
 		            <input type="text" name="email" class="form-control" id="email" placeholder="Email address" value="{{ Request::old('email') ? : '' }}">
 		            @if($errors->has('email'))
@@ -34,6 +35,10 @@
 		            	<span class="help-block">{{ $errors->first('password') }}</span>
 		            @endif
 		        </div>
+
+		        <label>Add profile image</label>
+		    	<input type="hidden" role="uploadcare-uploader" name="image" data-clearable="true">
+
 		        <div class="form-group">
 		            <button type="submit" class="btn btn-default">Create account</button>
 		        </div>
