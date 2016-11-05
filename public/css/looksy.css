@@ -616,6 +616,11 @@ ol li {
 	border-bottom: 4px solid white;
 }
 
+.friends .profile-image {
+	position:relative;
+	left: 0px;
+}
+
 /*
  * ADD
  */
