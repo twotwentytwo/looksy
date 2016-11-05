@@ -504,6 +504,12 @@ ol li {
 	bottom: 16px;
 }
 
+.pick .comment .timing, 
+.pick .reply .timing {
+	margin:0;
+	padding:0;
+}
+
 
 /*
  * REPLIES
