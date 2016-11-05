@@ -348,7 +348,7 @@ ol li {
 	height: 40px;
 	z-index: 1;
 	border-radius: 50%;
-	border: 2px solid #FF6464;
+	border: 3px solid #FF6464;
 	position:relative;
 	left: 4px;
 }
