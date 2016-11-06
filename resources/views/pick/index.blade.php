@@ -30,7 +30,7 @@
                         <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
                     </div>
                     <div class="details">
-                        <p class="title"><a target="_blank" href="{{ $status->url }}">{{ $status->title }}</a> @if(isset($status->source)) @ {{ $status->source }} @endif</p>
+                        <p class="title"><a target="_blank" href="{{ $status->url }}">{{ $status->title }}</a></p>
                     </div>        
                 </div>
             @endif

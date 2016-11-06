@@ -18,9 +18,6 @@
             @if(Auth::user()->statuses()->notReply()->count() >= 5)
               <p class="limit">Whoops... you have reached your limit of 5 picks</p>
               <p>To add something new you have to <a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">edit &amp; remove</a> an old pick.</p>
-
-              
-
             @else
               <form role="form" action="{{ route('status.post') }}" method="post" class="add-form">
                 

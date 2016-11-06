@@ -51,6 +51,7 @@
 						        <h4 class="media-heading username"><a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></h4>
 						    </div>
 						</div>
+						<p class="review"><span>"{{ $status->review }}"</span></p>
 						<p class="timing">{{ $status->created_at->diffForHumans() }}</p>
 	            	</div>
 	        	@endforeach
