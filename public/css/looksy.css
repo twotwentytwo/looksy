@@ -426,16 +426,20 @@ ol li {
 
 .website-wrapper .review {
 	position: absolute;
-    bottom: 37px;
-    left: 8px;
+	bottom: 37px;
+	left: 8px;
+	width: 238px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.website-wrapper .review span{
     font-weight: bold;
     background: #ff6462;
     font-size: 1.2em;
     color: #000;
-    width: 238px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    width: 100%;
 }
 
 .website-wrapper .type {
