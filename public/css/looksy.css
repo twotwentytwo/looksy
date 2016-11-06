@@ -432,6 +432,10 @@ ol li {
     background: #ff6462;
     font-size: 1.2em;
     color: #000;
+    width: 238px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .website-wrapper .type {
