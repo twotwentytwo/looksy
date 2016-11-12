@@ -440,6 +440,7 @@ ol li {
     font-size: 1.2em;
     color: #000;
     width: 100%;
+    font-style: italic;
 }
 
 .website-wrapper .type {
