@@ -1,16 +1,21 @@
 $(".add-input").change(function() {
-	
-	var url = $(".add-form .add-input").val();
+
+	// get the input field 
+	var url = $(".add-input").val();
+
+	// validate to see if the input is a URL or not
 	var url_validate = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-	
+
+	// if it's not a URL
 	if(!url_validate.test(url)) {
 
-		$( ".add-input" ).after( "<span class='help-block'>Oooops... you need to enter a valid URL for your Pick.</span>" );
+		// print an error message
+		$(".help-block").show();
 	
+	// if it is a URL, go and get the metadata
 	} else {
 	   	
 	   	var urlEncoded = encodeURIComponent(url);
-		
 		var requestUrl = 'http://opengraph.io/api/1.0/site/' + urlEncoded;
 		
 		$.getJSON(requestUrl, function(json) {	
@@ -21,7 +26,10 @@ $(".add-input").change(function() {
 			}
 		});
 
+		// then hide the input field
 		$('.before-add').hide();
+
+		// and change the title of the page
 		$('h1').replaceWith( "<h1>Edit Pick</h1>" );
 	}
 });

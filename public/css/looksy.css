@@ -896,6 +896,10 @@ ol li {
 	font-size: 1.2em;
 }
 
+.before-add .help-block {
+	display:none;
+}
+
 /*
  * PROFILE
  */

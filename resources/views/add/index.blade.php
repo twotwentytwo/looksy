@@ -24,6 +24,7 @@
                 <div class="before-add">
                   <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
                     <input placeholder="Paste a URL here" name="status" class="form-control add-input">
+                    <span class="help-block">Oooops... you need to enter a valid URL for your Pick.</span>
                     @if($errors->has('status'))
                       <span class="help-block">Oooops... you need to enter a valid URL for your Pick.</span>
                     @endif
