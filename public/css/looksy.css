@@ -468,6 +468,7 @@ ol li {
 	color: #000;
 	font-size: 1.4em;
 	display: block;
+	padding: 0 4px;
 }
 
 .website-wrapper .type a:first-letter {
