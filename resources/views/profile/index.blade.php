@@ -45,7 +45,7 @@
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
                 @if(Auth::user()->id == $user->id)
-                    <h1>My top picks</h1>
+                    <h1>My PickList</h1>
                 @else
                     <h1>{{ $user->getNameOrUsername() }}'s picks</h1>
                 @endif
@@ -69,10 +69,11 @@
                         
                     @else
                         @foreach($statuses as $status)
-                            <div class="website-wrapper pick">
+                            <div class="website-wrapper pick pick-{{ $status->type }}">
                                 <div class="type {{ $status->type }}">
                                     <a href="{{ route('pick.category', ['category' => $status->type]) }}">
-                                        <img src="/img/icons/categories/{{ $status->type }}.png" />
+                                        <!--<img src="/img/icons/categories/{{ $status->type }}.png" />-->
+                                        {{ $status->type }}
                                     </a>
                                 </div>
                                 <div class="image">

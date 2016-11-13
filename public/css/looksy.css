@@ -1,5 +1,5 @@
 /*
- * LOOKSY STYLES 
+ * PICKLIST STYLES 
  */
 
 
@@ -252,25 +252,33 @@ ol li {
 
 .looksy-menu .categories {
 	position: absolute;
-    top: -84px;
+    top: -40px;
     margin: 0px 12.5%;
-    height: 84px;
+    height: 40px;
     width: 75%;
-    padding: 8px 16px;
+    padding: 6px 8px;
     overflow-x: scroll;
-    background: #FF6464;
+    background: #ff8d6b;
     display:none;
+    border-top: 3px solid #ff6462;
+    border-left: 3px solid #ff6462;
+    border-right: 3px solid #ff6462;
 }
 
 .looksy-menu .categories ul {
-	width: 716px; 
-	padding:0;
-	margin:0;
+	width: 690px; 
+	padding: 0;
+	margin: 0;
 }
 
 .looksy-menu .categories li {
 	display:inline;
 	margin-right: 16px;
+	font-size: 1.4em;
+}
+
+.looksy-menu .categories a {
+	color: #000;
 }
 
 /*
@@ -328,7 +336,7 @@ ol li {
 
 .user {
 	position: absolute;
-    bottom: 72px;
+    bottom: 74px;
     left: 8px;
 }
 
@@ -361,7 +369,7 @@ ol li {
 	background: #FF6464;
     display: inline-block;
     color: #fff;
-    padding: 0 0 0 54px;
+    padding: 0 0 0 48px;
     font-size: 1em;
     position: absolute;
     left: 0;
@@ -417,11 +425,11 @@ ol li {
 }
 
 .website-wrapper .details .title {
-	font-size: 1.6em;
+	font-size: 1.8em;
     padding: 0;
     margin: 0;
     color: #fff;
-    line-height: 1.24em;
+    line-height: 1.19em;
 }
 
 .website-wrapper .review {
@@ -437,7 +445,7 @@ ol li {
 .website-wrapper .review span{
     font-weight: bold;
     background: #ff6462;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #000;
     width: 100%;
     font-style: italic;
@@ -447,7 +455,6 @@ ol li {
     position: absolute;
     top: 8px;
     left: 8px;
-    width: 32px;
 }
 
 .website-wrapper .type img {
@@ -460,6 +467,165 @@ ol li {
     display: inline-block;
 }
 
+.website-wrapper .type a {
+	color: #000;
+	font-size: 1.4em;
+	display: block;
+}
+
+.website-wrapper .type a:first-letter {
+	text-transform: uppercase;
+}
+
+/* colour scheme */
+
+/* taste */
+
+.pick-food .review span, 
+.pick-food .label-food, 
+.pick-food .details a,
+.pick-food .user .username a {
+    background: #FF73B7;
+}
+
+.pick-food .profile-image,
+.pick-food .user .profile-image {
+	border: 3px solid #FF73B7;
+}
+
+/* read */
+
+.pick-web .review span, 
+.pick-web .label-web, 
+.pick-web .details a,
+.pick-web .user .username a {
+    background: #FF6B97;
+}
+
+.pick-web .profile-image,
+.pick-web .user .profile-image {
+	border: 3px solid #FF6B97;
+}
+
+.pick-news .review span, 
+.pick-news .label-news, 
+.pick-news .details a,
+.pick-news .user .username a {
+    background: #FF6B97;
+}
+
+.pick-news .profile-image,
+.pick-news .user .profile-image {
+	border: 3px solid #FF6B97;
+}
+
+/* watch */
+
+.pick-tv .review span, 
+.pick-tv .label-tv, 
+.pick-tv .details a,
+.pick-tv .user .username a {
+    background: #FF6379;
+}
+
+.pick-tv .profile-image,
+.pick-tv .user .profile-image {
+	border: 3px solid #FF6379;
+}
+
+.pick-film .review span, 
+.pick-film .label-film, 
+.pick-film .details a,
+.pick-film .user .username a {
+    background: #FF6379;
+}
+
+.pick-film .profile-image,
+.pick-film .user .profile-image {
+	border: 3px solid #FF6379;
+}
+
+.pick-video .review span, 
+.pick-video .label-video, 
+.pick-video .details a,
+.pick-video .user .username a {
+    background: #FF6379;
+}
+
+.pick-video .profile-image,
+.pick-video .user .profile-image {
+	border: 3px solid #FF6379;
+}
+
+/* see */
+
+.pick-art .review span, 
+.pick-art .label-art, 
+.pick-art .details a,
+.pick-art .user .username a {
+    background: #FF5A58;
+}
+
+.pick-art .profile-image,
+.pick-art .user .profile-image {
+	border: 3px solid #FF5A58;
+}
+
+/* listen */
+
+.pick-music .review span, 
+.pick-music .label-music, 
+.pick-music .details a,
+.pick-music .user .username a {
+    background: #FF6C50;
+}
+
+.pick-music .profile-image,
+.pick-music .user .profile-image {
+	border: 3px solid #FF6C50;
+}
+
+.pick-podcast .review span, 
+.pick-podcast .label-podcast, 
+.pick-podcast .details a,
+.pick-podcast .user .username a {
+    background: #FF6C50;
+}
+
+.pick-podcast .profile-image,
+.pick-podcast .user .profile-image {
+	border: 3px solid #FF6C50;
+}
+
+/* buy  FF7F48 */
+
+/* play */
+
+.pick-game .review span, 
+.pick-game .label-game, 
+.pick-game .details a,
+.pick-game .user .username a {
+    background: #FF8F3F;
+}
+
+.pick-game .profile-image,
+.pick-game .user .profile-image {
+	border: 3px solid #FF8F3F;
+}
+
+/* use */
+
+.pick-app .review span, 
+.pick-app .label-app, 
+.pick-app .details a,
+.pick-app .user .username a {
+    background: #FFA135;
+}
+
+.pick-app .profile-image,
+.pick-app .user .profile-image {
+	border: 3px solid #FFA135;
+}
 
 
 
@@ -694,16 +860,16 @@ ol li {
  * Add
  */
 
-.add .share-text {
+.add-page .share-text {
 	font-size: 1.4em;
 	font-weight: bold;
 }
 
-.add form {
+.add-page form {
 	margin-bottom: 16px;
 }
 
-.add .add {
+.add-page .add {
 	margin-bottom: 10px;
 }
 
@@ -713,7 +879,7 @@ ol li {
 
 .preview img {
 	width: 100%;
-	
+	margin-bottom: 32px;
 }
 
 .preview .title {
@@ -721,7 +887,7 @@ ol li {
 	font-size: 1.2em;
 }
 
-.add .limit {
+.add-page .limit {
 	font-size: 1.2em;
 }
 
@@ -931,11 +1097,13 @@ ol li {
 
 select {
 	background: #fff;
-	width: 100%;
-	margin-bottom: 10px;
-	font-family: 'Karla', sans-serif;
-	padding: 4px 8px;
-	color: #999;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: 'Karla', sans-serif;
+    height: 36px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    border: 1px solid #ccc;
+    font-size: 1.2em;
 }
 
 .uploadcare-widget-button-open {
@@ -956,18 +1124,18 @@ select {
 
 @media only screen and (min-device-width : 0px) and (max-device-width : 320px) { 
 
-.looksy-navigation li {
-    margin-right: 12px;
-}
+	.looksy-navigation li {
+	    margin-right: 12px;
+	}
 
 
 }
 
 @media only screen and (min-device-width : 0px) and (max-device-width : 360px) { 
 
-.looksy-navigation li {
-    margin-right: 16px;
-}
+	.looksy-navigation li {
+	    margin-right: 16px;
+	}
 
 }
 

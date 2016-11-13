@@ -23,23 +23,21 @@
                 
                 <div class="before-add">
                   <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-                    <input placeholder="Paste a URL here" name="status" class="form-control add">
+                    <input placeholder="Paste a URL here" name="status" class="form-control add-input">
                     @if($errors->has('status'))
-                      <span class="help-block">Oooops... you need to enter a valid URL.</span>
+                      <span class="help-block">Oooops... you need to enter a valid URL for your Pick.</span>
                     @endif
                   </div>
-                  <!--<p class="share-text">Why not share something to inspire your friends?</p>
-                  <p class="share-text">Good things happen when we share.</p>-->
+                  <p class="share-text">Why not share something to inspire your friends?</p>
+                  <p class="share-text">Good things happen when we share.</p>
                 </div>
 
               <div class="preview">
                 <img src="" class="image" />
-                <p class="title"></p>
-              </div>
 
-              <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }} categories-picker">
+                <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }} categories-picker">
                   <select name="type" id="selectImage">
-                    <option value="">Choose pick category</option>
+                    <option value="">Add category</option>
                     <option value="film" data-img-src="/img/icons/categories/film.png">Film</option>
                     <option value="tv" data-img-src="/img/icons/categories/tv.png">TV show</option>
                     <option value="video" data-img-src="/img/icons/categories/video.png">Video clip</option>
@@ -51,19 +49,31 @@
                     <option value="food" data-img-src="/img/icons/categories/food.png">Food &amp; drink</option>
                     <option value="art" data-img-src="/img/icons/categories/art.png">Art</option>
                     <option value="book" data-img-src="/img/icons/categories/book.png">Book / Writing</option>
-                    <option value="shop" data-img-src="/img/icons/categories/shop.png">Shop</option>
+                    <!--<option value="shop" data-img-src="/img/icons/categories/shop.png">Shop</option>-->
                   </select>
-                  @if($errors->has('category'))
-                    <span class="help-block">{{ $errors->first('category') }}</span>
-                  @endif
-                  </div>
-                  <div class="form-group{{ $errors->has('review') ? ' has-error' : '' }}">
-                    <textarea placeholder="Add your review" name="review" class="form-control add" rows="2"></textarea>
-                    @if($errors->has('review'))
-                      <span class="help-block">{{ $errors->first('review') }}</span>
-                   @endif
-                  </div>
-                  <button type="submit" class="btn btn-default">Share</button>
+                @if($errors->has('category'))
+                <span class="help-block">{{ $errors->first('category') }}</span>
+                @endif
+                </div>
+
+                <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+                <input placeholder="Title" name="title" class="form-control title">
+                @if($errors->has('title'))
+                <span class="help-block">{{ $errors->first('title') }}</span>
+                @endif
+                </div>
+
+
+                <div class="form-group{{ $errors->has('review') ? ' has-error' : '' }}">
+                <textarea placeholder="Review" name="review" class="form-control" rows="2"></textarea>
+                @if($errors->has('review'))
+                <span class="help-block">{{ $errors->first('review') }}</span>
+                @endif
+                </div>
+              </div>
+
+
+                  <button type="submit" class="btn btn-default">Pick</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
   			      </form>
             @endif
