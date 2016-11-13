@@ -543,6 +543,10 @@ ol li {
     background: #FF6379;
 }
 
+.label-tv {
+	text-transform: uppercase;
+}
+
 .pick-tv .profile-image,
 .pick-tv .user .profile-image {
 	border: 3px solid #FF6379;
