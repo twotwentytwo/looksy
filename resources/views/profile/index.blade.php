@@ -80,10 +80,13 @@
                                     <a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
                                 </div>
                                 <div class="details">
-                                    <p class="title">
-                                        <a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a>
-                                    </p>
+                                    <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
+                                    @if(!(Auth::user()->id == $user->id))
+                                     
+                                        <p class="review"><span>"{{ $status->review }}"</span></p>
+                                    @endif
                                 </div>
+                                <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
                                 @if($status->replies()->count())
                                     <div class="comments">
                                         <img src="{{asset('img/icons/comments.png')}}" />

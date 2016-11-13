@@ -520,6 +520,19 @@ ol li {
 	border: 3px solid #FF6B97;
 }
 
+.pick-book .review span, 
+.pick-book .label-book, 
+.pick-book .details a,
+.pick-book .user .username a, 
+.pick-book .edit-pick a  {
+    background: #FF6B97;
+}
+
+.pick-book .profile-image,
+.pick-book .user .profile-image {
+	border: 3px solid #FF6B97;
+}
+
 /* watch */
 
 .pick-tv .review span, 
@@ -911,7 +924,6 @@ ol li {
 	padding-bottom: 16px;
 }
 
-.profile .website-wrapper.pick .image,
 .add .website-wrapper.pick .image, 
 .myprofile .website-wrapper.pick .image {
 	height: 140px;
@@ -919,11 +931,28 @@ ol li {
 	position: relative;
 }
 
-.profile .pick .details,
+.profile .website-wrapper.pick .image {
+	height: 265px;
+	overflow: hidden;
+	position: relative;
+}
+
 .add .pick .details, 
 .myprofile .pick .details {
 	position: absolute;
-	bottom: 24px;
+	bottom: 54px;
+	left: 8px;
+}
+
+.profile .pick .details {
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+}
+
+.profile .pick .details .title {
+	position: absolute;
+	bottom: 82px;
 	left: 8px;
 }
 
@@ -967,7 +996,21 @@ ol li {
 	width: 40px;
 }
 
-.profile .comments img, 
+.profile .comments img {
+	width: 30px;
+    height: 28px;
+    position: absolute;
+    right: 8px;
+    bottom: 86px;
+}
+
+.profile .comments .count {
+	color: #fff;
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
+}
+
 .myprofile .comments img {
 	width: 30px;
     height: 28px;
@@ -975,8 +1018,7 @@ ol li {
     right: 8px;
     bottom: 22px;
 }
-
-.profile .comments .count, 
+ 
 .myprofile .comments .count {
 	color: #fff;
     position: absolute;
