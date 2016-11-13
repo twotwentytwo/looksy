@@ -260,9 +260,6 @@ ol li {
     overflow-x: scroll;
     background: #ff8d6b;
     display:none;
-    border-top: 3px solid #ff6462;
-    border-left: 3px solid #ff6462;
-    border-right: 3px solid #ff6462;
 }
 
 .looksy-menu .categories ul {
@@ -484,7 +481,8 @@ ol li {
 .pick-food .review span, 
 .pick-food .label-food, 
 .pick-food .details a,
-.pick-food .user .username a {
+.pick-food .user .username a, 
+.pick-food .edit-pick a {
     background: #FF73B7;
 }
 
@@ -498,7 +496,8 @@ ol li {
 .pick-web .review span, 
 .pick-web .label-web, 
 .pick-web .details a,
-.pick-web .user .username a {
+.pick-web .user .username a, 
+.pick-web .edit-pick a  {
     background: #FF6B97;
 }
 
@@ -510,7 +509,8 @@ ol li {
 .pick-news .review span, 
 .pick-news .label-news, 
 .pick-news .details a,
-.pick-news .user .username a {
+.pick-news .user .username a, 
+.pick-news .edit-pick a  {
     background: #FF6B97;
 }
 
@@ -524,7 +524,8 @@ ol li {
 .pick-tv .review span, 
 .pick-tv .label-tv, 
 .pick-tv .details a,
-.pick-tv .user .username a {
+.pick-tv .user .username a, 
+.pick-tv .edit-pick a  {
     background: #FF6379;
 }
 
@@ -536,7 +537,8 @@ ol li {
 .pick-film .review span, 
 .pick-film .label-film, 
 .pick-film .details a,
-.pick-film .user .username a {
+.pick-film .user .username a, 
+.pick-film .edit-pick a  {
     background: #FF6379;
 }
 
@@ -548,7 +550,8 @@ ol li {
 .pick-video .review span, 
 .pick-video .label-video, 
 .pick-video .details a,
-.pick-video .user .username a {
+.pick-video .user .username a, 
+.pick-video .edit-pick a  {
     background: #FF6379;
 }
 
@@ -562,7 +565,8 @@ ol li {
 .pick-art .review span, 
 .pick-art .label-art, 
 .pick-art .details a,
-.pick-art .user .username a {
+.pick-art .user .username a, 
+.pick-art .edit-pick a  {
     background: #FF5A58;
 }
 
@@ -576,7 +580,8 @@ ol li {
 .pick-music .review span, 
 .pick-music .label-music, 
 .pick-music .details a,
-.pick-music .user .username a {
+.pick-music .user .username a, 
+.pick-music .edit-pick a  {
     background: #FF6C50;
 }
 
@@ -588,7 +593,8 @@ ol li {
 .pick-podcast .review span, 
 .pick-podcast .label-podcast, 
 .pick-podcast .details a,
-.pick-podcast .user .username a {
+.pick-podcast .user .username a, 
+.pick-podcast .edit-pick a  {
     background: #FF6C50;
 }
 
@@ -604,7 +610,8 @@ ol li {
 .pick-game .review span, 
 .pick-game .label-game, 
 .pick-game .details a,
-.pick-game .user .username a {
+.pick-game .user .username a, 
+.pick-game .edit-pick a  {
     background: #FF8F3F;
 }
 
@@ -618,7 +625,8 @@ ol li {
 .pick-app .review span, 
 .pick-app .label-app, 
 .pick-app .details a,
-.pick-app .user .username a {
+.pick-app .user .username a, 
+.pick-app .edit-pick a  {
     background: #FFA135;
 }
 
@@ -939,7 +947,6 @@ ol li {
 .add .pick .edit-pick a, 
 .myprofile .pick .edit-pick a {
 	color: #fff;
-	background: #FF6464;
 	font-size: 1.2em;
 	padding: 0 4px;
 	text-transform: uppercase;

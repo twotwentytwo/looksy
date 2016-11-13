@@ -70,7 +70,7 @@
                     @else
                         @foreach($statuses as $status)
                             <div class="website-wrapper pick pick-{{ $status->type }}">
-                                <div class="type {{ $status->type }}">
+                                <div class="type label-{{ $status->type }}">
                                     <a href="{{ route('pick.category', ['category' => $status->type]) }}">
                                         <!--<img src="/img/icons/categories/{{ $status->type }}.png" />-->
                                         {{ $status->type }}
