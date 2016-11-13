@@ -20,10 +20,11 @@
                     <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
                 </div>
             @else
-                <div class="website-wrapper">
-                    <div class="type {{ $status->type }}">
+                <div class="website-wrapper pick-{{ $status->type }}">
+                    <div class="type label-{{ $status->type }}">
                         <a href="{{ route('pick.category', ['category' => $status->type]) }}">
-                            <img src="/img/icons/categories/{{ $status->type }}.png" />
+                            <!--<img src="/img/icons/categories/{{ $status->type }}.png" />-->
+                            {{ $status->type }}
                         </a>
                     </div>
                     <div class="image">
