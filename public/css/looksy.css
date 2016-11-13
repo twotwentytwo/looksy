@@ -433,7 +433,7 @@ ol li {
 	position: absolute;
 	bottom: 37px;
 	left: 8px;
-	width: 238px;
+	width: 94%;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -774,14 +774,14 @@ ol li {
     height: 28px;
     position: absolute;
     right: 8px;
-    bottom: 44px;
+    bottom: 78px;
 }
 
 .comments .count {
 	color: #fff;
     position: absolute;
     right: 20px;
-    bottom: 40px;
+    bottom: 72px;
 }
 
 /*
