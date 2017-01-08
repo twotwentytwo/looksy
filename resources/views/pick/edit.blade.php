@@ -36,19 +36,15 @@
                 <div class="categories-picker">
 
                 <select name="type" id="selectImage">
-                    <option value="">Choose pick category</option>
-                    <option value="film" data-img-src="/img/icons/categories/film.png">Film</option>
-                    <option value="tv" data-img-src="/img/icons/categories/tv.png">TV show</option>
-                    <option value="video" data-img-src="/img/icons/categories/video.png">Video clip</option>
-                    <option value="music" data-img-src="/img/icons/categories/music.png">Music</option>
-                    <option value="podcast" data-img-src="/img/icons/categories/podcast.png">Podcast</option>
-                    <option value="web" data-img-src="/img/icons/categories/web.png">Web</option>
-                    <option value="news" data-img-src="/img/icons/categories/news.png">News</option>
-                    <option value="app" data-img-src="/img/icons/categories/app.png">Mobile app</option>
-                    <option value="food" data-img-src="/img/icons/categories/food.png">Food &amp; drink</option>
-                    <option value="art" data-img-src="/img/icons/categories/art.png">Art</option>
-                    <option value="book" data-img-src="/img/icons/categories/book.png">Book / Writing</option>
-                    <option value="shop" data-img-src="/img/icons/categories/shop.png">Shop</option>
+                    <option value="">Choose category</option>
+                    <option value="see">See</option>
+                    <option value="watch">Watch</option>
+                    <option value="read">Read</option>
+                    <option value="taste">Taste</option>
+                    <option value="listen">Listen</option>
+                    <option value="buy">Buy</option>
+                    <option value="play">Play</option>
+                    <option value="use">Use</option>
                   </select>
 
               </div>
