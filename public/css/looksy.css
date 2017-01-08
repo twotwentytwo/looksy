@@ -445,7 +445,7 @@ ol li {
     padding: 0;
     margin: 0;
     color: #fff;
-    line-height: 1.19em;
+    line-height: 1.15em;
 }
 
 .website-wrapper .review {
@@ -924,11 +924,11 @@ ol li {
 	position: relative;
 }
 
-.add .pick .details, 
-.myprofile .pick .details {
+.add .website-wrapper.pick .details, 
+.myprofile .website-wrapper.pick .details {
 	position: absolute;
-	bottom: 54px;
 	left: 8px;
+	top: 48px;
 }
 
 .profile .pick .details {
@@ -956,8 +956,8 @@ ol li {
 .myprofile .pick .edit-pick, 
 .add .pick .edit-pick {
 	position: absolute;
-	top: 8px;
-	right: 8px;
+	top: 29px;
+	left: 8px;
 }
 
 .profile .pick .edit-pick a, 

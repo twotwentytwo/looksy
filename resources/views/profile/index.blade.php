@@ -70,19 +70,12 @@
                     @else
                         @foreach($statuses as $status)
                             <div class="website-wrapper pick pick-{{ $status->type }}">
-                                <div class="type label-{{ $status->type }}">
-                                    <a href="{{ route('pick.category', ['category' => $status->type]) }}">
-                                        <!--<img src="/img/icons/categories/{{ $status->type }}.png" />-->
-                                        {{ $status->type }}
-                                    </a>
-                                </div>
                                 <div class="image">
                                     <a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
                                 </div>
                                 <div class="details">
                                     <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
                                     @if(!(Auth::user()->id == $user->id))
-                                     
                                         <p class="review"><span>"{{ $status->review }}"</span></p>
                                     @endif
                                 </div>
