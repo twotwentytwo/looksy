@@ -1,3 +1,5 @@
+/*
+
 $(".add-input").change(function() {
 
 	// get the input field 
@@ -16,9 +18,13 @@ $(".add-input").change(function() {
 	} else {
 	   	
 	   	var urlEncoded = encodeURIComponent(url);
-		var requestUrl = 'http://opengraph.io/api/1.0/site/' + urlEncoded;
-		
+		var requestUrl = 'https://opengraph.io/api/1.0/site/' + urlEncoded;
+
 		$.getJSON(requestUrl, function(json) {	
+
+			console.log(json.hybridGraph.title);
+			console.log(json.hybridGraph.image);
+
 			if(json.hybridGraph.title && json.hybridGraph.image) {
 				$('.preview').show();
 				$('.title').val(json.hybridGraph.title);
@@ -34,15 +40,9 @@ $(".add-input").change(function() {
 	}
 });
 
+*/
+
 $(".looksy-menu .search a").click(function(e) {
 	e.preventDefault();
   	$(".categories").toggle();
 });
-
-/*
-$(document).ready(function() {
-	$("#selectImage").imagepicker({
-		hide_select: true
-	});
-});
-*/

@@ -47,7 +47,7 @@ class StatusController extends Controller
 
         $url = $object->url;
         $title = $object->title;
-        $image = $object->images[0]->url;
+        $image = (isset($object->images) && !empty($object->images) ? $object->images[0]->url : 'http://twotwentytwo.co.uk/dev/looksy/placeholder_image.png');
         $source = $object->siteName;
         $segment = null;
 
@@ -70,7 +70,7 @@ class StatusController extends Controller
             'item_id' => (isset($segment) ? $segment : null), 
             'type' => $request->input('type'),
             'review' => $request->input('review'), 
-            'image' => (isset($image) ? $image : 'http://twotwentytwo.co.uk/dev/looksy/placeholder_image.png'), 
+            'image' => $image, 
             'title' => (isset($title) ? $title : null), 
             'url' => (isset($url) ? $url : null),
             'source' => (isset($source) ? $source : null) 

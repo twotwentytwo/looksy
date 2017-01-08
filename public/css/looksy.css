@@ -22,14 +22,14 @@ body {
 h1 {
 	font-size: 2.6em;
 	text-align: center;
-	color: #ff8d6b;
+	color: #333;
 	font-weight: bold;
 	padding:0;
 	margin:0;
 }
 
 h1 a {
-	color: #ff8d6b;
+	color: #333;
 }
 
 h2 {
@@ -129,11 +129,11 @@ ol li {
 
 .looksy-navigation {
  	list-style: none;
- 	background: #f4eeed;
+ 	background: #333;
  	margin:0;
     text-align: center;
     padding: 0 0 10px 0;
-    border-top: 5px solid #ff6462;
+    border-top: 0;
 }
 
 .looksy-navigation li {
@@ -158,6 +158,7 @@ ol li {
 	height: 40px;
 	position: relative;
 	top: 8px;
+	left: 8px;
 }
 
 .home .looksy-navigation .home a {
@@ -167,25 +168,28 @@ ol li {
 	height: 40px;
 	position: relative;
 	top: 8px;
+	left: 8px;
 }
 
 .looksy-navigation .search a {
-	background: url('../img/navigation/off/search.png') 0 0 no-repeat;
+	background: url('../img/navigation/off/filter.png') 0 0 no-repeat;
 	background-size: 40px;
 	width: 40px;
 	height: 40px;
 	position: relative;
 	top: 8px;
+	left: 8px;
 }
 
 .search .looksy-navigation .search a, 
 .categories-page .looksy-navigation .search a {
-	background: url('../img/navigation/on/search.png') 0 0 no-repeat;
+	background: url('../img/navigation/on/filter.png') 0 0 no-repeat;
 	background-size: 40px;
 	width: 40px;
 	height: 40px;
 	position: relative;
 	top: 8px;
+	left: 8px;
 }
 
 .looksy-navigation .add a {
@@ -193,6 +197,8 @@ ol li {
 	background-size: 60px;
 	width: 60px;
 	height: 60px;
+	position: relative;
+	left: 8px;
 }
 
 .looksy-navigation .friends a {
@@ -202,6 +208,7 @@ ol li {
     height: 40px;
     position: relative;
 	top: 8px;
+	left: 8px;
 }
 
 .friends .looksy-navigation .friends a {
@@ -211,24 +218,27 @@ ol li {
     height: 40px;
     position: relative;
 	top: 8px;
+	left: 8px;
 }
 
 .looksy-navigation .profile a {
-	background: url('../img/navigation/off/profile.png') 0 0 no-repeat;
-	background-size: 37px;
-	width: 40px;
+	background: url('../img/navigation/off/profile.png') 6px 0 no-repeat;
+	background-size: 36px;
+	width: 49px;
 	height: 40px;
 	position: relative;
 	top: 8px;
+	left: 8px;
 }
 
 .myprofile .looksy-navigation .profile a {
-	background: url('../img/navigation/on/profile.png') 0 0 no-repeat;
-	background-size: 37px;
-	width: 40px;
+	background: url('../img/navigation/on/profile.png') 6px 0 no-repeat;
+	background-size: 36px;
+	width: 49px;
 	height: 40px;
 	position: relative;
 	top: 8px;
+	left: 8px;
 }
 
 .looksy-menu .friends {
@@ -263,7 +273,7 @@ ol li {
 }
 
 .looksy-menu .categories ul {
-	width: 772px; 
+	width: 500px; 
 	padding: 0;
 	margin: 0;
 }
@@ -276,6 +286,15 @@ ol li {
 
 .looksy-menu .categories a {
 	color: #000;
+}
+
+.looksy-menu .looksy-navigation li span {
+	position: relative;
+    top: 46px;
+    display: block;
+    left: 0;
+    color: white;
+    font-size: 12px;
 }
 
 /*
@@ -333,7 +352,7 @@ ol li {
 
 .user {
 	position: absolute;
-    bottom: 74px;
+    bottom: 96px;
     left: 8px;
 }
 
@@ -409,7 +428,7 @@ ol li {
 .website-wrapper .details {
 	padding: 0;
     position: absolute;
-    bottom: 143px;
+    top: 67px;
     left: 8px;
     text-align: left;
     margin: 0 auto;
@@ -422,7 +441,7 @@ ol li {
 }
 
 .website-wrapper .details .title {
-	font-size: 1.8em;
+	font-size: 2.3em;
     padding: 0;
     margin: 0;
     color: #fff;
@@ -431,7 +450,7 @@ ol li {
 
 .website-wrapper .review {
 	position: absolute;
-	bottom: 37px;
+	bottom: 58px;
 	left: 8px;
 	width: 94%;
 	white-space: nowrap;
@@ -450,7 +469,7 @@ ol li {
 
 .website-wrapper .type {
     position: absolute;
-    top: 8px;
+    top: 40px;
     left: 8px;
 }
 
@@ -477,179 +496,123 @@ ol li {
 
 /* colour scheme */
 
-/* taste */
+/* see */
 
-.pick-food .review span, 
-.pick-food .label-food, 
-.pick-food .details a,
-.pick-food .user .username a, 
-.pick-food .edit-pick a {
-    background: #FF73B7;
+.pick-see .review span, 
+.pick-see .label-see a, 
+.pick-see .details a,
+.pick-see .user .username a, 
+.pick-see .edit-pick a  {
+    background: #FF8F3F;
 }
 
-.pick-food .profile-image,
-.pick-food .user .profile-image {
-	border: 3px solid #FF73B7;
-}
-
-/* read */
-
-.pick-web .review span, 
-.pick-web .label-web, 
-.pick-web .details a,
-.pick-web .user .username a, 
-.pick-web .edit-pick a  {
-    background: #FF6B97;
-}
-
-.pick-web .profile-image,
-.pick-web .user .profile-image {
-	border: 3px solid #FF6B97;
-}
-
-.pick-news .review span, 
-.pick-news .label-news, 
-.pick-news .details a,
-.pick-news .user .username a, 
-.pick-news .edit-pick a  {
-    background: #FF6B97;
-}
-
-.pick-news .profile-image,
-.pick-news .user .profile-image {
-	border: 3px solid #FF6B97;
-}
-
-.pick-book .review span, 
-.pick-book .label-book, 
-.pick-book .details a,
-.pick-book .user .username a, 
-.pick-book .edit-pick a  {
-    background: #FF6B97;
-}
-
-.pick-book .profile-image,
-.pick-book .user .profile-image {
-	border: 3px solid #FF6B97;
+.pick-see .profile-image,
+.pick-see .user .profile-image {
+	border: 3px solid #FF8F3F;
 }
 
 /* watch */
 
-.pick-tv .review span, 
-.pick-tv .label-tv, 
-.pick-tv .details a,
-.pick-tv .user .username a, 
-.pick-tv .edit-pick a  {
+.pick-watch .review span, 
+.pick-watch .label-watch a, 
+.pick-watch .details a,
+.pick-watch .user .username a, 
+.pick-watch .edit-pick a  {
     background: #FF6379;
 }
 
-.label-tv {
-	text-transform: uppercase;
-}
-
-.pick-tv .profile-image,
-.pick-tv .user .profile-image {
+.pick-watch .profile-image,
+.pick-watch .user .profile-image {
 	border: 3px solid #FF6379;
 }
 
-.pick-film .review span, 
-.pick-film .label-film, 
-.pick-film .details a,
-.pick-film .user .username a, 
-.pick-film .edit-pick a  {
-    background: #FF6379;
+/* read */
+
+.pick-read .review span, 
+.pick-read .label-read a, 
+.pick-read .details a,
+.pick-read .user .username a, 
+.pick-read .edit-pick a  {
+    background: #FF6b97;
 }
 
-.pick-film .profile-image,
-.pick-film .user .profile-image {
-	border: 3px solid #FF6379;
+.pick-read .profile-image,
+.pick-read .user .profile-image {
+	border: 3px solid #FF6b97;
 }
 
-.pick-video .review span, 
-.pick-video .label-video, 
-.pick-video .details a,
-.pick-video .user .username a, 
-.pick-video .edit-pick a  {
-    background: #FF6379;
+/* taste */
+
+.pick-taste .review span, 
+.pick-taste .label-taste a, 
+.pick-taste .details a,
+.pick-taste .user .username a, 
+.pick-taste .edit-pick a  {
+    background: #FF73b7;
 }
 
-.pick-video .profile-image,
-.pick-video .user .profile-image {
-	border: 3px solid #FF6379;
-}
-
-/* see */
-
-.pick-art .review span, 
-.pick-art .label-art, 
-.pick-art .details a,
-.pick-art .user .username a, 
-.pick-art .edit-pick a  {
-    background: #FF5A58;
-}
-
-.pick-art .profile-image,
-.pick-art .user .profile-image {
-	border: 3px solid #FF5A58;
+.pick-taste .profile-image,
+.pick-taste .user .profile-image {
+	border: 3px solid #FF73b7;
 }
 
 /* listen */
 
-.pick-music .review span, 
-.pick-music .label-music, 
-.pick-music .details a,
-.pick-music .user .username a, 
-.pick-music .edit-pick a  {
-    background: #FF6C50;
+.pick-listen .review span, 
+.pick-listen .label-listen a, 
+.pick-listen .details a,
+.pick-listen .user .username a, 
+.pick-listen .edit-pick a  {
+    background: #FF6c50;
 }
 
-.pick-music .profile-image,
-.pick-music .user .profile-image {
-	border: 3px solid #FF6C50;
-}
-
-.pick-podcast .review span, 
-.pick-podcast .label-podcast, 
-.pick-podcast .details a,
-.pick-podcast .user .username a, 
-.pick-podcast .edit-pick a  {
-    background: #FF6C50;
-}
-
-.pick-podcast .profile-image,
-.pick-podcast .user .profile-image {
-	border: 3px solid #FF6C50;
+.pick-listen .profile-image,
+.pick-listen .user .profile-image {
+	border: 3px solid #FF6c50;
 }
 
 /* buy  FF7F48 */
 
+.pick-buy .review span, 
+.pick-buy .label-buy a, 
+.pick-buy .details a,
+.pick-buy .user .username a, 
+.pick-buy .edit-pick a  {
+    background: #FF7F48;
+}
+
+.pick-buy .profile-image,
+.pick-buy .user .profile-image {
+	border: 3px solid #FF7F48;
+}
+
 /* play */
 
-.pick-game .review span, 
-.pick-game .label-game, 
-.pick-game .details a,
-.pick-game .user .username a, 
-.pick-game .edit-pick a  {
+.pick-play .review span, 
+.pick-play .label-play a, 
+.pick-play .details a,
+.pick-play .user .username a, 
+.pick-play .edit-pick a  {
     background: #FF8F3F;
 }
 
-.pick-game .profile-image,
-.pick-game .user .profile-image {
+.pick-play .profile-image,
+.pick-play .user .profile-image {
 	border: 3px solid #FF8F3F;
 }
 
 /* use */
 
-.pick-app .review span, 
-.pick-app .label-app, 
-.pick-app .details a,
-.pick-app .user .username a, 
-.pick-app .edit-pick a  {
+.pick-use .review span, 
+.pick-use .label-use a, 
+.pick-use .details a,
+.pick-use .user .username a, 
+.pick-use .edit-pick a  {
     background: #FFA135;
 }
 
-.pick-app .profile-image,
-.pick-app .user .profile-image {
+.pick-use .profile-image,
+.pick-use .user .profile-image {
 	border: 3px solid #FFA135;
 }
 
@@ -895,13 +858,22 @@ ol li {
 	margin-bottom: 16px;
 }
 
-.preview {
-	display:none;
+.add-form input, 
+.add-form select, 
+.add-form textarea {
+	font-size: 14px;
+	color: #999;
 }
 
-.preview img {
-	width: 100%;
-	margin-bottom: 32px;
+.add-form select {
+	padding-left: 6px;
+}
+
+
+/*
+
+.preview {
+	display:none;
 }
 
 .preview .title {
@@ -909,13 +881,24 @@ ol li {
 	font-size: 1.2em;
 }
 
+.before-add .help-block {
+	display:none;
+}
+
+*/
+
+.preview img {
+	width: 100%;
+	margin-bottom: 32px;
+}
+
+
+
 .add-page .limit {
 	font-size: 1.2em;
 }
 
-.before-add .help-block {
-	display:none;
-}
+
 
 /*
  * PROFILE
@@ -1152,7 +1135,7 @@ ol li {
 select {
 	background: #fff;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     font-family: 'Karla', sans-serif;
     height: 36px;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);

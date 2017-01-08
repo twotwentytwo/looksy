@@ -23,53 +23,53 @@
                 
                 <div class="before-add">
                   <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-                    <input placeholder="Paste a URL here" name="status" class="form-control add-input">
-                    <span class="help-block">Oooops... you need to enter a valid URL for your Pick.</span>
+                    <input placeholder="Add URL for your pick" name="status" class="form-control add-input">
+                    <!--<span class="help-block">Oooops... you need to enter a valid URL for your Pick.</span>-->
                     @if($errors->has('status'))
                       <span class="help-block">Oooops... you need to enter a valid URL for your Pick.</span>
                     @endif
                   </div>
+                  <!-- 
                   <p class="share-text">Why not share something to inspire your friends?</p>
                   <p class="share-text">Good things happen when we share.</p>
+                  -->
                 </div>
 
               <div class="preview">
-                <img src="" class="image" />
+                
+                <!--<img src="" class="image" />-->
 
                 <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }} categories-picker">
                   <select name="type" id="selectImage">
                     <option value="">Add category</option>
-                    <option value="film" data-img-src="/img/icons/categories/film.png">Film</option>
-                    <option value="tv" data-img-src="/img/icons/categories/tv.png">TV show</option>
-                    <option value="video" data-img-src="/img/icons/categories/video.png">Video clip</option>
-                    <option value="music" data-img-src="/img/icons/categories/music.png">Music</option>
-                    <option value="podcast" data-img-src="/img/icons/categories/podcast.png">Podcast</option>
-                    <option value="web" data-img-src="/img/icons/categories/web.png">Web</option>
-                    <option value="news" data-img-src="/img/icons/categories/news.png">News</option>
-                    <option value="app" data-img-src="/img/icons/categories/app.png">Mobile app</option>
-                    <option value="food" data-img-src="/img/icons/categories/food.png">Food &amp; drink</option>
-                    <option value="art" data-img-src="/img/icons/categories/art.png">Art</option>
-                    <option value="book" data-img-src="/img/icons/categories/book.png">Book / Writing</option>
-                    <!--<option value="shop" data-img-src="/img/icons/categories/shop.png">Shop</option>-->
+                    <option value="see">See</option>
+                    <option value="watch">Watch</option>
+                    <option value="read">Read</option>
+                    <option value="taste">Taste</option>
+                    <option value="listen">Listen</option>
+                    <option value="buy">Buy</option>
+                    <option value="play">Play</option>
+                    <option value="use">Use</option>
                   </select>
-                @if($errors->has('category'))
-                <span class="help-block">{{ $errors->first('category') }}</span>
-                @endif
+                  @if($errors->has('category'))
+                    <span class="help-block">{{ $errors->first('category') }}</span>
+                  @endif
                 </div>
 
+                <!--
                 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                <input placeholder="Title" name="title" class="form-control title">
-                @if($errors->has('title'))
-                <span class="help-block">{{ $errors->first('title') }}</span>
-                @endif
+                  <input placeholder="Title" name="title" class="form-control title">
+                  @if($errors->has('title'))
+                    <span class="help-block">{{ $errors->first('title') }}</span>
+                  @endif
                 </div>
-
+                -->
 
                 <div class="form-group{{ $errors->has('review') ? ' has-error' : '' }}">
-                <textarea placeholder="Review" name="review" class="form-control" rows="2"></textarea>
-                @if($errors->has('review'))
-                <span class="help-block">{{ $errors->first('review') }}</span>
-                @endif
+                  <textarea placeholder="Add your review" name="review" class="form-control" rows="2"></textarea>
+                  @if($errors->has('review'))
+                    <span class="help-block">{{ $errors->first('review') }}</span>
+                  @endif
                 </div>
               </div>
 
