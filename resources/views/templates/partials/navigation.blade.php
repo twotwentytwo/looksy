@@ -20,7 +20,7 @@
             <li class="listen"><a href="{{ route('pick.category', ['category' => 'listen']) }}"><!--<img src="../img/icons/categories/white/podcast.png" />-->Listen</a></li>
             <li class="buy"><a href="{{ route('pick.category', ['category' => 'buy']) }}"><!--<img src="../img/icons/categories/white/web.png" /></a>-->Buy</a></li>
             <li class="play"><a href="{{ route('pick.category', ['category' => 'play']) }}"><!--<img src="../img/icons/categories/white/news.png" />-->Play</a></li>
-            <li class="use"><a href="{{ route('pick.category', ['category' => 'use']) }}"><!--<img src="../img/icons/categories/white/app.png" /></a>-->Use</li>
+            <li class="use"><a href="{{ route('pick.category', ['category' => 'use']) }}"><!--<img src="../img/icons/categories/white/app.png" />-->Use</a></li>
         </ul>
     </div>
 </div>
