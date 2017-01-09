@@ -9,6 +9,7 @@
 
 h1, h2, h3, p, li, a, input, textarea, button, label, span {
     font-family: 'Karla', sans-serif;
+    letter-spacing: -0.025em;
 }
 
 body {
@@ -20,12 +21,13 @@ body {
 }
 
 h1 {
-	font-size: 2.6em;
+	font-size: 3em;
 	text-align: center;
 	color: #333;
 	font-weight: bold;
 	padding:0;
 	margin:0;
+	letter-spacing: -0.05em;
 }
 
 h1 a {
@@ -294,7 +296,7 @@ ol li {
     display: block;
     left: 0;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 /*
@@ -458,11 +460,11 @@ ol li {
 	text-overflow: ellipsis;
 }
 
-.website-wrapper .review span{
+.website-wrapper .review span {
     font-weight: bold;
     background: #ff6462;
     font-size: 1.4em;
-    color: #000;
+    color: #333;
     width: 100%;
     font-style: italic;
 }
@@ -484,7 +486,7 @@ ol li {
 }
 
 .website-wrapper .type a {
-	color: #000;
+	color: #333;
 	font-size: 1.4em;
 	display: block;
 	padding: 0 4px;
@@ -1140,7 +1142,7 @@ select {
     height: 36px;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     border: 1px solid #ccc;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .uploadcare-widget-button-open {

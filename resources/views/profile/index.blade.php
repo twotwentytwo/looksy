@@ -32,7 +32,7 @@
         <!-- Color the status bar on mobile devices -->
         <meta name="theme-color" content="#ff8d6b">
 
-        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{asset('css/looksy.css')}}">
             
     </head>
@@ -45,7 +45,7 @@
         <div class="container">
             <nav class="navbar navbar-default" role="navigation">
                 @if(Auth::user()->id == $user->id)
-                    <h1>My PickList</h1>
+                    <h1>My Picks</h1>
                 @else
                     <h1>{{ $user->getNameOrUsername() }}'s picks</h1>
                 @endif
