@@ -1182,14 +1182,6 @@ select {
 
 }
 
-@media only screen and (min-device-width : 0px) and (max-device-width : 360px) { 
-
-	.looksy-navigation li {
-	    margin-right: 16px;
-	}
-
-}
-
 
 
 
