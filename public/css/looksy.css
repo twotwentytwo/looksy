@@ -149,6 +149,15 @@ ol li {
  	font-size: 0;
 }
 
+.looksy-navigation li span {
+	position: relative;
+    top: 46px;
+    display: block;
+    left: 0;
+    color: white;
+    font-size: 11px;
+}
+
 .reply {
 	margin-top: 10px;
 }
@@ -264,14 +273,13 @@ ol li {
 
 .looksy-menu .categories {
 	position: absolute;
-    top: -60px;
-    margin: 0px 12.5%;
-    height: 60px;
-    width: 75%;
-    padding: 16px;
+    top: -80px;
+    height: 80px;
     overflow-x: scroll;
-    background: #ff8d6b;
-    display:none;
+    background: #fff;
+    display: none;
+    padding-top: 4px;
+    padding-left: 4px;
 }
 
 .looksy-menu .categories ul {
@@ -282,22 +290,21 @@ ol li {
 
 .looksy-menu .categories li {
 	display:inline;
-	margin-right: 16px;
-	font-size: 1.4em;
 }
 
 .looksy-menu .categories a {
-	color: #000;
+	color: #fff;
+    border: 3px solid #999;
+    display: inline-block;
+    width: 98px;
+    background: #bab4af;
+    font-size: 1.4em;
+    text-align: center;
+    border-radius: 0.3em;
+    margin-bottom: 4px;
 }
 
-.looksy-menu .looksy-navigation li span {
-	position: relative;
-    top: 46px;
-    display: block;
-    left: 0;
-    color: white;
-    font-size: 11px;
-}
+
 
 /*
  * SIGN IN
@@ -819,8 +826,8 @@ ol li {
 .unfriend {
 	display: block;
 	width: 100%;
-	background: #fff;
-	color: #ff6462;
+	background: #333;
+	color: #fff;
 	border: 1px solid #ccc;
 }
 
@@ -834,6 +841,11 @@ ol li {
 .friends .media h4, 
 .friends .media p{
 	margin-bottom: 0;
+}
+
+.friends a {
+	color: #333;
+	font-size: 1em;
 }
 
 .friends .search-form {
@@ -910,7 +922,7 @@ ol li {
 .myprofile .pick {
 	position: relative;
 	margin-bottom: 16px;
-	padding-bottom: 16px;
+	padding-bottom: 0;
 }
 
 .add .website-wrapper.pick .image, 
@@ -958,7 +970,7 @@ ol li {
 .myprofile .pick .edit-pick, 
 .add .pick .edit-pick {
 	position: absolute;
-	top: 29px;
+	top: 20px;
 	left: 8px;
 }
 
@@ -966,7 +978,7 @@ ol li {
 .add .pick .edit-pick a, 
 .myprofile .pick .edit-pick a {
 	color: #fff;
-	font-size: 1.2em;
+	font-size: 1.6em;
 	padding: 0 4px;
 	text-transform: uppercase;
 }
