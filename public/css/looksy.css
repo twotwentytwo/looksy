@@ -27,7 +27,6 @@ h1 {
 	font-weight: bold;
 	padding:0;
 	margin:0;
-	letter-spacing: -0.05em;
 }
 
 h1 a {
@@ -303,15 +302,9 @@ ol li {
     margin-bottom: 4px;
 }
 
-
-
 /*
  * SIGN IN
  */
-
-.authentication {
-	background: url('../img/template/auth_background.jpg') 0 0 repeat;
-}
 
 .authentication #email {
 	background: #fff url('../img/icons/email.png') 4px 7px no-repeat;
@@ -329,29 +322,51 @@ ol li {
 }
 
 .authentication h1 {
-	color: #FF6464;
-	font-size: 5em;
-	font-weight: bold;
+	color: #333;
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: -0.07em;
+}
+
+.authentication form {
+	margin-top: 40px;
 }
 
 .authentication .strapline {
-	font-size: 1.4em;
+	font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: -0.07em;
+    margin: 0 83px;
+    line-height: 1em;
 }
 
 .authentication .form-control {
 	font-size: 1.4em;
 }
 
-.btn {
-	background: #FF6464;
-	width: 100%;
+.authentication .btn {
+	background: #ff5a58;
+	width: 50%;
 	text-align: center;
 	color: #fff;
 	border: none;
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+.authentication .sign-in {
+	text-align: center;
 }
 
 .authentication .auth-form {
 	margin-top: 100px;
+}
+
+.authentication .sign-up-cta {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-top: 40px;
 }
 
 /*
@@ -648,7 +663,7 @@ ol li {
 .pick .review .comment {
 	color: #fff;
 	padding: 8px 16px;
-	background: #ff6462;
+	background: #333;
 	width: 321px;
 	-moz-border-radius: 12px;
 	-webkit-border-radius: 12px;
@@ -662,7 +677,7 @@ ol li {
     left: -4px;
     border-style: solid;
     border-width: 15px 9px 0;
-    border-color: #ff6462 transparent;
+    border-color: #333 transparent;
     display: block;
     width: 0;
     z-index: 1;
@@ -881,7 +896,6 @@ ol li {
 .add-form select {
 	padding-left: 6px;
 }
-
 
 /*
 

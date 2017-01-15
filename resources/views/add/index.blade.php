@@ -56,6 +56,7 @@
                   @endif
                 </div>
 
+                
                 <!--
                 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                   <input placeholder="Title" name="title" class="form-control title">
