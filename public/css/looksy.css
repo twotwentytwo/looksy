@@ -362,7 +362,8 @@ ol li {
 	margin-top: 100px;
 }
 
-.authentication .sign-up-cta {
+.authentication .sign-up-cta, 
+.authentication .sign-in-cta {
 	text-align: center;
 	font-weight: bold;
 	font-size: 1.4em;

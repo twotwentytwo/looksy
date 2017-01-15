@@ -1,9 +1,5 @@
 @extends('templates.default')  
 
-@section('title')
-  PickList
-@stop
-
 @section('body-class')
   authentication sign-up
 @stop
@@ -14,6 +10,7 @@
 @section('content')
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
+			<h1>PickList</h1>
 			<p class="strapline">Good things happen when you share.</p>
 		    <form class="form-vertical" role="form" method="post" action="{{ route('auth.signup') }}">
 
@@ -36,15 +33,15 @@
 		            @endif
 		        </div>
 
-		        <label>Add profile image</label>
-		    	<input type="hidden" role="uploadcare-uploader" name="image" data-clearable="true">
+		        <!--<label>Add profile image</label>
+		    	<input type="hidden" role="uploadcare-uploader" name="image" data-clearable="true">-->
 
-		        <div class="form-group">
+		        <div class="form-group sign-in">
 		            <button type="submit" class="btn btn-default">Create account</button>
 		        </div>
 		        <input type="hidden" name="_token" value="{{ Session::token() }}">
 		    </form>
-		    <p>Signed up? Now try <a class="sign-up" href="{{ route('auth.signin') }}">signing in</a>.</p>
+		    <p class="sign-in-cta">Signed up? Now try <a class="sign-up" href="{{ route('auth.signin') }}">signing in</a>.</p>
 		</div>
 	</div>
 @stop
