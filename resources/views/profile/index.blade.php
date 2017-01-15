@@ -79,13 +79,6 @@
                                         <p class="review"><span>"{{ $status->review }}"</span></p>
                                     @endif
                                 </div>
-                                <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
-                                @if($status->replies()->count())
-                                    <div class="comments">
-                                        <img src="{{asset('img/icons/comments.png')}}" />
-                                        <p class="count">{{ $status->replies()->count() }}</p>
-                                    </div>
-                                @endif
                                 @if(Auth::user()->id == $user->id)
                                     <div class="edit-pick">
                                         <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit</a>

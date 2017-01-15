@@ -258,16 +258,17 @@ ol li {
 
 .looksy-menu .friends .friend-requests {
     position: absolute;
-    right: -6px;
-    bottom: 0;
+    left: 41px;
+    top: 34px;
     display: block;
     background: url('../img/icons/count.png') 0px 0px no-repeat;
     background-size: 20px;
     width: 20px;
     height: 20px;
-    color: white;
-    font-size: 11px;
-    padding-top: 3px;
+    color: #333;
+    font-size: 13px;
+    padding-top: 2px;
+    font-weight: bold;
 }
 
 .looksy-menu .categories {
@@ -394,12 +395,12 @@ ol li {
 .profile-image, 
 .user .profile-image {
 	width: 40px;
-	height: 40px;
-	z-index: 1;
-	border-radius: 50%;
-	border: 3px solid #FF6464;
-	position:relative;
-	left: 4px;
+    height: 40px;
+    z-index: 1;
+    border-radius: 50%;
+    border: 2px solid #333;
+    position: relative;
+    left: 4px;
 }
 
 .media .location {
@@ -541,6 +542,11 @@ ol li {
 	border: 3px solid #FF8F3F;
 }
 
+.pick-see .comments {
+	background: url('../img/icons/comment/see.png') 0 0 no-repeat;
+	background-size: 32px;
+}
+
 /* watch */
 
 .pick-watch .review span, 
@@ -554,6 +560,11 @@ ol li {
 .pick-watch .profile-image,
 .pick-watch .user .profile-image {
 	border: 3px solid #FF6379;
+}
+
+.pick-watch .comments {
+	background: url('../img/icons/comment/watch.png') 0 0 no-repeat;
+	background-size: 32px;
 }
 
 /* read */
@@ -571,6 +582,11 @@ ol li {
 	border: 3px solid #FF6b97;
 }
 
+.pick-read .comments {
+	background: url('../img/icons/comment/read.png') 0 0 no-repeat;
+	background-size: 32px;
+}
+
 /* taste */
 
 .pick-taste .review span, 
@@ -584,6 +600,11 @@ ol li {
 .pick-taste .profile-image,
 .pick-taste .user .profile-image {
 	border: 3px solid #FF73b7;
+}
+
+.pick-taste .comments {
+	background: url('../img/icons/comment/taste.png') 0 0 no-repeat;
+	background-size: 32px;
 }
 
 /* listen */
@@ -601,7 +622,12 @@ ol li {
 	border: 3px solid #FF6c50;
 }
 
-/* buy  FF7F48 */
+.pick-listen .comments {
+	background: url('../img/icons/comment/listen.png') 0 0 no-repeat;
+	background-size: 32px;
+}
+
+/* buy */
 
 .pick-buy .review span, 
 .pick-buy .label-buy a, 
@@ -614,6 +640,11 @@ ol li {
 .pick-buy .profile-image,
 .pick-buy .user .profile-image {
 	border: 3px solid #FF7F48;
+}
+
+.pick-buy .comments {
+	background: url('../img/icons/comment/buy.png') 0 0 no-repeat;
+	background-size: 32px;
 }
 
 /* play */
@@ -631,6 +662,11 @@ ol li {
 	border: 3px solid #FF8F3F;
 }
 
+.pick-play .comments {
+	background: url('../img/icons/comment/play.png') 0 0 no-repeat;
+	background-size: 32px;
+}
+
 /* use */
 
 .pick-use .review span, 
@@ -646,7 +682,10 @@ ol li {
 	border: 3px solid #FFA135;
 }
 
-
+.pick-use .comments {
+	background: url('../img/icons/comment/use.png') 0 0 no-repeat;
+	background-size: 40px;
+}
 
 /*
  * PICKS
@@ -779,19 +818,22 @@ ol li {
  * COMMENTS
  */
 
-.comments img {
-	width: 30px;
-    height: 28px;
+.comments {
+    width: 50px;
+    height: 50px;
     position: absolute;
-    right: 8px;
-    bottom: 78px;
+    right: 0;
+    bottom: 80px;
 }
+
 
 .comments .count {
 	color: #fff;
     position: absolute;
-    right: 20px;
-    bottom: 72px;
+    right: 32px;
+    bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 /*
@@ -807,6 +849,8 @@ ol li {
 	position: absolute;
 	top:0;
 	right:0;
+	background: #ff5a58;
+	border:none;
 }
 
 .friend-block {
@@ -1005,7 +1049,7 @@ ol li {
 
 .myprofile .edit-link {
 	position: absolute;
-	top: 0;
+	top: 4px;
 	right: 0;
 	width: 40px;
 }

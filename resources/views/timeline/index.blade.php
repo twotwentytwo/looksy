@@ -40,7 +40,6 @@
 	            		</div>
 	            		@if($status->replies()->count())
 		            		<div class="comments">
-		            			<img src="{{asset('img/icons/comments.png')}}" />
 		            			<p class="count">{{ $status->replies()->count() }}</p>
 		            		</div>
 	            		@endif
