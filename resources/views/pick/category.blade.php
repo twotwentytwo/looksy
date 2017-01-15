@@ -1,7 +1,7 @@
 @extends('templates.default')  
 
 @section('title')
-  PickList
+  {{ $category }}
 @stop
 
 @section('body-class')
@@ -15,7 +15,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <h3>Picks tagged as '{{ $category }}'</h3>
+            
             @if(!$statuses->count())
                 <p>There are no picks tagged as '{{ $category }}' right now</p>
             @else
@@ -32,7 +32,6 @@
                         </div>
                         <div class="details">
                             <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
-                            <!--<p class="review">"{{ $status->review }}"</p>-->
                         </div>
                     </div>
                 @endforeach

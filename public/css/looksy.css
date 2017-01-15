@@ -29,6 +29,10 @@ h1 {
 	margin:0;
 }
 
+h1::first-letter {
+	text-transform: uppercase;
+}
+
 h1 a {
 	color: #333;
 }
@@ -47,7 +51,7 @@ h3 {
 }
 
 a {
-	color: #ff6462;
+	color: #333;
 	font-weight: bold;
 }
 

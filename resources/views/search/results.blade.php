@@ -1,7 +1,7 @@
 @extends('templates.default')  
 
 @section('title')
-  Results
+  {{ Request::input('query') }}
 @stop
 
 @section('body-class')
@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-	<h3>Your search for "{{ Request::input('query') }}"</h3>
+	
 	@if(!$users->count() && !$statuses->count())
 		<p>No results found, sorry.</p>
 	@else
