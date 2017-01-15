@@ -9,7 +9,7 @@
 
 h1, h2, h3, p, li, a, input, textarea, button, label, span {
     font-family: 'Karla', sans-serif;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.07em;
 }
 
 body {
@@ -279,6 +279,7 @@ ol li {
     display: none;
     padding-top: 4px;
     padding-left: 4px;
+    width: 100%;
 }
 
 .looksy-menu .categories ul {
@@ -440,9 +441,9 @@ ol li {
 
 .website-wrapper {
 	position: relative;
-	border-bottom: 4px solid #fff;
-	padding-bottom: 8px;
-	margin-bottom: 16px;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 0;
+    margin-bottom: 8px;
 }
 
 .website-wrapper .image {
@@ -516,6 +517,11 @@ ol li {
 
 .website-wrapper .type a:first-letter {
 	text-transform: uppercase;
+}
+
+.home .timing {
+	font-weight: bold;
+	font-size: 1.2em;
 }
 
 /* colour scheme */
