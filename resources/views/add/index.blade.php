@@ -19,7 +19,11 @@
               <p class="limit">Whoops... you have reached your limit of 5 picks</p>
               <p>To add something new you have to <a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">edit &amp; remove</a> an old pick.</p>
             @else
+
+              <p class="share-text">Why not share something to inspire your friends?</p>
               <form role="form" action="{{ route('status.post') }}" method="post" class="add-form">
+
+
                 
                 <div class="before-add">
                   <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
@@ -30,7 +34,7 @@
                     @endif
                   </div>
                   <!-- 
-                  <p class="share-text">Why not share something to inspire your friends?</p>
+                  
                   <p class="share-text">Good things happen when we share.</p>
                   -->
                 </div>
@@ -74,9 +78,10 @@
                 </div>
               </div>
 
-
-                  <button type="submit" class="btn btn-default">Pick</button>
-                <input type="hidden" name="_token" value="{{ Session::token() }}">
+              <div class="pick-btn">
+                  <button type="submit" class="btn btn-default pick">Pick</button>
+              </div>  
+              <input type="hidden" name="_token" value="{{ Session::token() }}">
   			      </form>
             @endif
 			    </div>

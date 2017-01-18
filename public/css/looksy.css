@@ -701,7 +701,7 @@ ol li {
 }
 
 .pick .website-wrapper {
-	margin-bottom: 8px;
+	margin-bottom: 16px;
 	border-bottom:none;
 	padding-bottom: 8px;
 }
@@ -745,14 +745,34 @@ ol li {
 	color: #fff;
 }
 
-.pick .details {
-	bottom: 16px;
-}
-
 .pick .comment .timing, 
 .pick .reply .timing {
 	margin:0;
 	padding:0;
+}
+
+.pick .website-wrapper .details {
+    padding: 0;
+    position: absolute;
+    top: 97%;
+    left: 0;
+    width: 100%;
+}
+
+.pick .website-wrapper .details .title {
+    background: #ff5a58;
+    width: 100%;
+    padding:0;
+    margin:0;
+    font-size: 1em;
+}
+
+.pick .website-wrapper .details .title a {
+    color: #333;
+    
+    background:none;
+    padding:0;
+    margin:0;
 }
 
 
@@ -772,7 +792,7 @@ ol li {
 .pick .reply .comment {
 	color: #fff;
     padding: 8px 16px;
-    background: #000;
+    background: #ccc;
     width: 321px;
     margin-left:60px;
     -moz-border-radius: 12px;
@@ -787,7 +807,7 @@ ol li {
     left: 97%;
     border-style: solid;
     border-width: 15px 9px 0;
-    border-color: #000 transparent;
+    border-color: #ccc transparent;
     display: block;
     width: 0;
     z-index: 1;
@@ -908,7 +928,7 @@ ol li {
 }
 
 .friends .media h4, 
-.friends .media p{
+.friends .media p {
 	margin-bottom: 0;
 }
 
@@ -928,13 +948,19 @@ ol li {
 	left: 0px;
 }
 
+.friends h4 {
+	font-size: 1.4em;
+}
+
 /*
  * Add
  */
 
 .add-page .share-text {
-	font-size: 1.4em;
-	font-weight: bold;
+	font-size: 2em;
+    font-weight: bold;
+    line-height: 1em;
+    margin-bottom: 40px;
 }
 
 .add-page form {
@@ -944,8 +970,9 @@ ol li {
 .add-form input, 
 .add-form select, 
 .add-form textarea {
-	font-size: 14px;
+	font-size: 1.4em;
 	color: #999;
+	font-weight: bold;
 }
 
 .add-form select {
@@ -978,6 +1005,19 @@ ol li {
 
 .add-page .limit {
 	font-size: 1.2em;
+}
+
+.pick-btn {
+	text-align: center;
+}
+
+.pick.btn {
+	background: #ff5a58;
+	width: 50%;
+	color: #fff;
+	border: none;
+	font-size: 1.6em;
+	font-weight: bold;
 }
 
 
@@ -1108,6 +1148,20 @@ ol li {
 .profile-edit img {
 	height: 44px;	
 	width: 44px;
+}
+
+.update-btn {
+	text-align: center;
+}
+
+.update.btn {
+	background: #ff5a58;
+	width: 50%;
+	
+	color: #fff;
+	border: none;
+	font-size: 1.6em;
+	font-weight: bold;
 }
 
 /*

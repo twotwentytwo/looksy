@@ -39,9 +39,19 @@
                 </div>
 
                 <input type="hidden" role="uploadcare-uploader" name="image" data-clearable="true">
+
+                <!--
+
+                <label for="switch">Show notifications</label>
+                <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+                <label for="switch">Email notifications</label>
+                <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+                <p><a href="#">Terms &amp; conditions</a></p>
+                <p><a href="#">Privacy policy</a></p>
+                -->
                     
-                <div class="form-group">
-                    <button type="submit" class="btn btn-default">Update</button>
+                <div class="form-group update-btn">
+                    <button type="submit" class="btn btn-default update">Update</button>
                 </div>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
                 @if (Auth::check())      

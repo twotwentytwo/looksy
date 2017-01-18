@@ -1,7 +1,7 @@
 @extends('templates.default')  
 
 @section('title')
-  PickList
+  {{ $status->type }}
 @stop
 
 @section('body-class')
@@ -21,12 +21,7 @@
                 </div>
             @else
                 <div class="website-wrapper pick-{{ $status->type }}">
-                    <div class="type label-{{ $status->type }}">
-                        <a href="{{ route('pick.category', ['category' => $status->type]) }}">
-                            <!--<img src="/img/icons/categories/{{ $status->type }}.png" />-->
-                            {{ $status->type }}
-                        </a>
-                    </div>
+                    
                     <div class="image">
                         <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
                     </div>
