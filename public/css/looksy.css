@@ -462,7 +462,7 @@ ol li {
     left: 8px;
     text-align: left;
     margin: 0 auto;
-    width: 306px;
+    width: 100%;
 }
 
 .website-wrapper .details a {
@@ -701,7 +701,7 @@ ol li {
 }
 
 .pick .website-wrapper {
-	margin-bottom: 16px;
+	margin-bottom: 40px;
 	border-bottom:none;
 	padding-bottom: 8px;
 }
@@ -714,7 +714,7 @@ ol li {
 	color: #fff;
 	padding: 8px 16px;
 	background: #333;
-	width: 321px;
+	width: 100%;
 	-moz-border-radius: 12px;
 	-webkit-border-radius: 12px;
 	border-radius: 12px;
@@ -754,7 +754,7 @@ ol li {
 .pick .website-wrapper .details {
     padding: 0;
     position: absolute;
-    top: 96%;
+    top: 100%;
     left: 0;
     width: 100%;
 }
@@ -765,6 +765,7 @@ ol li {
     padding: 0;
     margin: 0;
     font-size: 1.6em;
+    padding: 4px;
 }
 
 .pick .website-wrapper .details .title a {
@@ -793,8 +794,7 @@ ol li {
 	color: #fff;
     padding: 8px 16px;
     background: #ccc;
-    width: 321px;
-    margin-left:60px;
+    width: 100%;
     -moz-border-radius: 12px;
 	-webkit-border-radius: 12px;
 	border-radius: 12px;
@@ -1164,6 +1164,10 @@ ol li {
 	font-weight: bold;
 }
 
+.upload-image {
+	text-align: center;
+}
+
 /*
  * CATEGORIES 
  */
@@ -1301,6 +1305,17 @@ select {
 	    margin-right: 12px;
 	}
 
+	.authentication .strapline {
+    	margin: 0px 36px;
+	}
+
+	.looksy-menu .categories a {
+	    width: 23%;
+	}
+
+	.add-page .share-text {
+    	font-size: 1.8em;
+	}
 
 }
 
