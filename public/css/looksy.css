@@ -1063,12 +1063,15 @@ ol li {
 }
 
 .profile .pick .type, 
-.myprofile .pick .type, 
 .add .pick .type {
 	position: absolute;
 	top: 112px;
 	left: 8px;
 	z-index: 1;
+}
+
+.myprofile .pick .type {
+	display:none;
 }
 
 .profile .pick .edit-pick, 
