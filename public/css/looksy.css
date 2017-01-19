@@ -994,17 +994,16 @@ ol li {
 	display:none;
 }
 
-*/
-
 .preview img {
 	width: 100%;
 	margin-bottom: 32px;
 }
 
-
+*/
 
 .add-page .limit {
-	font-size: 1.2em;
+    font-size: 1.6em;
+    font-weight: bold;
 }
 
 .pick-btn {
@@ -1019,8 +1018,6 @@ ol li {
 	font-size: 1.6em;
 	font-weight: bold;
 }
-
-
 
 /*
  * PROFILE
@@ -1069,7 +1066,7 @@ ol li {
 .myprofile .pick .type, 
 .add .pick .type {
 	position: absolute;
-	top: 8px;
+	top: 112px;
 	left: 8px;
 	z-index: 1;
 }
@@ -1133,6 +1130,10 @@ ol li {
     position: absolute;
     right: 20px;
     bottom: 18px;
+}
+
+.profile .review {
+	top:162px;
 }
 
 /*

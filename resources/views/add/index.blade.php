@@ -16,8 +16,9 @@
  			<div class="row">
 			    <div class="col-md-6 col-md-offset-3">
             @if(Auth::user()->statuses()->notReply()->count() >= 5)
-              <p class="limit">Whoops... you have reached your limit of 5 picks</p>
-              <p>To add something new you have to <a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">edit &amp; remove</a> an old pick.</p>
+              <p class="limit">Whoops! please choose one of your picks to replace.</p>
+              <p>We limit picks to five at a time to keep things currated and fresh.</p>
+              
             @else
 
               <p class="share-text">Why not share something to inspire your friends?</p>
