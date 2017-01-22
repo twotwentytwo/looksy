@@ -18,6 +18,22 @@
             @if(Auth::user()->statuses()->notReply()->count() >= 5)
               <p class="limit">Whoops! please choose one of your picks to replace.</p>
               <p>We limit picks to five at a time to keep things currated and fresh.</p>
+
+              @foreach($statuses as $status)
+                  <div class="website-wrapper pick pick-{{ $status->type }}">
+                      <div class="image">
+                          <a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
+                      </div>
+                      <div class="details">
+                          <p class="title"><a href="{{ route('pick.index', ['statusId' => $status->id]) }}">{{ $status->title }}</a></p>
+                      </div>
+                      @if(Auth::user()->id == $user->id)
+                          <div class="delete-pick">
+                              <a href="{{ route('pick.remove', ['statusId' => $status->id]) }}">Delete</a>
+                          </div>
+                      @endif
+                  </div>
+              @endforeach
               
             @else
 

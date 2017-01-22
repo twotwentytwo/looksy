@@ -81,7 +81,14 @@ class StatusController extends Controller
 
     public function getAdd()
     {
-        return view('add.index');
+        $user = Auth::user();
+
+        $statuses_collection = collect($user->statuses()->notReply()->get());
+        $statuses = $statuses_collection->reverse();
+
+        return view('add.index')
+            ->with('statuses', $statuses)
+            ->with('user', $user);
     }
 
     public function getPicksByCategory($category)

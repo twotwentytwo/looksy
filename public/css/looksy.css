@@ -558,6 +558,10 @@ ol li {
 	background-size: 32px;
 }
 
+.pick-see .delete-pick {
+    background: #FF8F3F;
+}
+
 /* watch */
 
 .pick-watch .review span, 
@@ -576,6 +580,10 @@ ol li {
 .pick-watch .comments {
 	background: url('../img/icons/comment/watch.png') 0 0 no-repeat;
 	background-size: 32px;
+}
+
+.pick-watch .delete-pick {
+    background: #FF6379;
 }
 
 /* read */
@@ -598,6 +606,10 @@ ol li {
 	background-size: 32px;
 }
 
+.pick-read .delete-pick {
+    background: #FF6b97;
+}
+
 /* taste */
 
 .pick-taste .review span, 
@@ -616,6 +628,10 @@ ol li {
 .pick-taste .comments {
 	background: url('../img/icons/comment/taste.png') 0 0 no-repeat;
 	background-size: 32px;
+}
+
+.pick-taste .delete-pick {
+    background: #FF73b7;
 }
 
 /* listen */
@@ -638,6 +654,10 @@ ol li {
 	background-size: 32px;
 }
 
+.pick-listen .delete-pick {
+    background: #FF6c50;
+}
+
 /* buy */
 
 .pick-buy .review span, 
@@ -656,6 +676,10 @@ ol li {
 .pick-buy .comments {
 	background: url('../img/icons/comment/buy.png') 0 0 no-repeat;
 	background-size: 32px;
+}
+
+.pick-buy .delete-pick {
+    background: #FF7F48;
 }
 
 /* play */
@@ -678,6 +702,10 @@ ol li {
 	background-size: 32px;
 }
 
+.pick-play .delete-pick {
+    background: #FF8F3F;
+}
+
 /* use */
 
 .pick-use .review span, 
@@ -696,6 +724,10 @@ ol li {
 .pick-use .comments {
 	background: url('../img/icons/comment/use.png') 0 0 no-repeat;
 	background-size: 40px;
+}
+
+.pick-use .delete-pick {
+    background: #FFA135;
 }
 
 /*
@@ -839,9 +871,6 @@ ol li {
 .form-reply {
 	margin-top: 16px;
 }
-
-
-
 
 /*
  * COMMENTS
@@ -1022,6 +1051,19 @@ ol li {
 	border: none;
 	font-size: 1.6em;
 	font-weight: bold;
+}
+
+.add-page .website-wrapper.pick .image {
+	height: 140px;
+	overflow: hidden;
+	position: relative;
+}
+
+.website-wrapper .delete-pick {
+	font-size: 1.4em;
+    position: absolute;
+    top: 38px;
+    left: 8px;
 }
 
 /*

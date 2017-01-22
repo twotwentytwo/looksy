@@ -2,7 +2,7 @@
     <ul class="looksy-navigation">
 		<li class="home"><a href="{{ route('home') }}"><span>Home</span></a></li>
 		<li class="search"><a href="{{ route('search.index') }}"><span>Filter</span></a></li>
-		<li class="add"><a href="{{ route('add.index') }}">Add</a></li>
+		<li class="add"><a href="{{ route('add.index', ['username' => Auth::user()->username]) }}">Add</a></li>
 		<li class="friends">
             <a href="{{ route('friend.index') }}"><span>Friends</span></a>
             @if(Auth::user()->friendRequests()->count())
