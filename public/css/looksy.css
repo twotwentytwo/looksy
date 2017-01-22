@@ -1065,7 +1065,7 @@ ol li {
 .profile .pick .type, 
 .add .pick .type {
 	position: absolute;
-	top: 112px;
+	top: 76px;
 	left: 8px;
 	z-index: 1;
 }

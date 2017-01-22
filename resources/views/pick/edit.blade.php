@@ -36,7 +36,7 @@
                 <div class="categories-picker">
 
                 <select name="type" id="selectImage">
-                    <option value="">Choose category</option>
+                    <option value="{{ $status->type }}">{{ucfirst($status->type)}}</option>
                     <option value="see">See</option>
                     <option value="watch">Watch</option>
                     <option value="read">Read</option>
