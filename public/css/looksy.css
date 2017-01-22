@@ -1132,10 +1132,9 @@ ol li {
 .profile .pick .edit-pick a, 
 .add .pick .edit-pick a, 
 .myprofile .pick .edit-pick a {
-	color: #fff;
+	color: #333;
 	font-size: 1.6em;
 	padding: 0 4px;
-	text-transform: uppercase;
 }
 
 .myprofile .edit-link {

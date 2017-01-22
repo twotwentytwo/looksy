@@ -30,6 +30,7 @@
             </div>
 
             <div class="friend-block">
+                <h3>Friends</h3>
                 @if (!$friends->count())
                     <p>You don't have any friends yet.</p>
                 @else
