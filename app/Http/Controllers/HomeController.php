@@ -22,6 +22,7 @@ class HomeController extends Controller
 			/* Cold start */
 			$picks = DB::table('statuses')
 	    		->orderBy('created_at', 'desc')
+	    		->where('parent_id', null)
 	    		->take(3)
 	    		->get();
 
