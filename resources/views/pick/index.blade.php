@@ -1,7 +1,7 @@
 @extends('templates.default')  
 
 @section('title')
-  {{ $status->type }}
+  {{ ucfirst($status->type) }}
 @stop
 
 @section('body-class')
@@ -32,27 +32,29 @@
             @endif
                 <div class="review">
                     <div class="comment">
-                        <p class="text">{{ $status->review }} by <a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></p>
-                        <p class="timing">{{ $status->created_at->diffForHumans() }}</p>
+                        <p class="text">{{ $status->review }} <a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></p>
+                        <!--<p class="timing">{{ $status->created_at->diffForHumans() }}</p>-->
                     </div>
                 </div>
                 @foreach($status->replies as $reply)
                     <div class="reply">
                         <div class="comment">
-                            <p class="text">{{ $reply->body }} by <a href="{{ route('profile.index', ['username' => $reply->user->username]) }}">{{ $reply->user->getNameOrUsername() }}</a></p>
-                            <p class="timing">{{ $reply->created_at->diffForHumans() }}</p>
+                            <p class="text">{{ $reply->body }} <a href="{{ route('profile.index', ['username' => $reply->user->username]) }}">{{ $reply->user->getNameOrUsername() }}</a></p>
+                            <!--<p class="timing">{{ $reply->created_at->diffForHumans() }}</p>-->
                         </div>
                     </div>
                 @endforeach
                 @if(Auth::user()->isFriendsWith($status->user) || Auth::user()->id == $user->id)
                     <form role="form" action="{{ route('status.reply', ['statusId' => $status->id]) }}" method="post" class="form-reply">
                         <div class="form-group{{ $errors->has("reply-{$status->id}") ? ' has-error': '' }}">
-                            <textarea name="reply-{{ $status->id }}" class="form-control" rows="2" placeholder="Reply to this"></textarea>
+                            <textarea name="reply-{{ $status->id }}" class="form-control" rows="2" placeholder="Reply to this comment"></textarea>
                             @if($errors->has("reply-{$status->id}"))
                                 <span class="help-block">{{ $errors->first("reply-{$status->id}") }}</span> 
                             @endif
                         </div>
-                        <input type="submit" value="Reply" class="btn btn-default btn-sm">
+                        <div class="reply-btn">
+                            <input type="submit" value="Reply" class="btn btn-default btn-sm reply">
+                        </div>
                         <input type="hidden" name="_token" value="{{ Session::token() }}">
                     </form>
                 @endif

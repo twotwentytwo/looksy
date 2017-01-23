@@ -858,9 +858,19 @@ ol li {
     -webkit-transform: rotate(-57deg);
 }
 
-.pick .reply .comment .text {
+.comment .text {
 	padding:0;
 	margin:0;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.pick .reply .comment .text a {
+	color: #333;
+}
+
+.pick .review .comment .text a {
+	color: #ccc;
 }
 
 .pick .reply .user {
@@ -875,6 +885,19 @@ ol li {
 
 .form-reply {
 	margin-top: 16px;
+}
+
+.reply-btn {
+	text-align: center;
+}
+
+.reply.btn {
+	background: #ff5a58;
+	width: 50%;
+	color: #fff;
+	border: none;
+	font-size: 1.6em;
+	font-weight: bold;
 }
 
 /*
