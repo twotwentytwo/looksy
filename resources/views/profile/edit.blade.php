@@ -40,6 +40,14 @@
                     @endif
                 </div>
 
+                <div class="form-group{{ $errors->has('email_notifications') ? ' has-error': '' }}">
+                    <input type="radio" name="email_notifications" value="on" checked>On<br>
+                    <input type="radio" name="email_notifications" value="off">Off<br>
+                    @if($errors->has('location2'))
+                        <span class="help-block">{{ $errors->first('email_notifications') }}</span> 
+                    @endif
+                </div>
+
                 
 
                 <!--

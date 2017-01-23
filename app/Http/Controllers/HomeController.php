@@ -21,13 +21,13 @@ class HomeController extends Controller
 
 			/* Cold start */
 
-			if($statuses->count() == 0) {
+			//if($statuses->count() == 0) {
 				$picks = DB::table('statuses')
 	    			->orderBy('created_at', 'desc')
 	    			->where('parent_id', null)
 	    			->take(5)
 	    			->get();
-	    	}
+	    	//}
 
 			return view('timeline.index')
 				->with('statuses', $statuses)
