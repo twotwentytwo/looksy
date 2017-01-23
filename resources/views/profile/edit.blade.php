@@ -41,12 +41,32 @@
                 </div>
 
                 <div class="form-group{{ $errors->has('email_notifications') ? ' has-error': '' }}">
+                    <label for="email_notifications">Email notifications</label>
                     <input type="radio" name="email_notifications" value="on" checked>On<br>
                     <input type="radio" name="email_notifications" value="off">Off<br>
                     @if($errors->has('location2'))
                         <span class="help-block">{{ $errors->first('email_notifications') }}</span> 
                     @endif
                 </div>
+
+                <div class="form-group{{ $errors->has('push_notifications') ? ' has-error': '' }}">
+                    <label for="push_notifications">Push notifications</label>
+                    <input type="radio" name="push_notifications" value="on" checked>On<br>
+                    <input type="radio" name="push_notifications" value="off">Off<br>
+                    @if($errors->has('location2'))
+                        <span class="help-block">{{ $errors->first('push_notifications') }}</span> 
+                    @endif
+                </div>
+
+                <p><a href="#">Terms &amp; conditions</a></p>
+
+                <p><a href="#">Privacy policy</a></p>
+
+                <p><a href="#">Report an error</a></p>
+
+                @if (Auth::check())      
+                    <p><a href="{{ route('auth.signout') }}">Sign out</a></p>
+                @endif
 
                 
 
@@ -64,9 +84,7 @@
                     <button type="submit" class="btn btn-default update">Update</button>
                 </div>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
-                @if (Auth::check())      
-                    <a href="{{ route('auth.signout') }}">Sign out</a>
-                @endif
+                
             </form>
         </div>
     </div>
