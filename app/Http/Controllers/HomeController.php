@@ -3,6 +3,7 @@
 namespace Looksy\Http\Controllers;
 
 use Auth;
+use DB;
 use Looksy\Models\Status;
 
 class HomeController extends Controller
@@ -18,8 +19,15 @@ class HomeController extends Controller
 			->orderBy('created_at', 'desc')
 			->paginate(10);
 
+			/* Cold start */
+			$picks = DB::table('statuses')
+	    		->orderBy('created_at', 'desc')
+	    		->take(3)
+	    		->get();
+
 			return view('timeline.index')
-				->with('statuses', $statuses);
+				->with('statuses', $statuses)
+				->with('picks', $picks);
 		}
 
 		return view('auth.signin');

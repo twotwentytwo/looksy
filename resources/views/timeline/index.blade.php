@@ -16,12 +16,23 @@
 	<div class="row">
 	    <div class="col-md-6 col-md-offset-3">
 	        @if(!$statuses->count())
-	        	<h3>Get started</h3>
-	        	<ol>
-	        		<li>First of all you want to add some <a href="{{ route('friend.index') }}">friends</a>.</li>
-	        		<li>You can start <a href="{{ route('add.index') }}">sharing your top picks</a> to inspire your friends right away.</li>
-	        		<li>You can have up to 5 picks. If you already have 5, then you have to remove one to add more.</li>
-	        	</ol>
+	        	<div class="cold-start">
+	        		<p>Start sharing your top picks and add some friends. You can have up to 5 picks to keep things fresh.</p>
+	        		<p>Latest picks to inspire you.</p>
+	        	</div>
+	        	@foreach($picks as $pick)
+	            	<div class="website-wrapper pick-{{ $pick->type }}">
+	            		<div class="type label-{{ $pick->type }}">
+	            			<a href="{{ route('pick.category', ['category' => $pick->type]) }}">{{ $pick->type }}</a>
+	            		</div>
+	            		<div class="image">
+	            			<a href="{{ route('pick.index', ['statusId' => $pick->id]) }}"><img src="{{ $pick->image }}" /></a>
+	            		</div>
+	            		<div class="details">
+	            			<p class="title"><a href="{{ route('pick.index', ['statusId' => $pick->id]) }}">{{ $pick->title }}</a></p>	
+	            		</div>
+	            	</div>
+	        	@endforeach
 	        @else
 	        	@foreach($statuses as $status)
 	            	<div class="website-wrapper pick-{{ $status->type }}">

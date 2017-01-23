@@ -376,6 +376,11 @@ ol li {
  * TIMELINE
  */
 
+.cold-start p {
+	font-size: 1.6em;
+	font-weight:bold;
+}
+
 .user {
 	position: absolute;
     bottom: 96px;
