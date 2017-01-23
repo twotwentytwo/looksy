@@ -14,17 +14,20 @@ class HomeController extends Controller
 			$statuses = Status::notReply()->where(function($query) {
 				return $query->where('user_id', Auth::user()->id)
 					->orWhereIn('user_id', Auth::user()->friends()->pluck('id')
-						);
+				);
 			})
 			->orderBy('created_at', 'desc')
 			->paginate(10);
 
 			/* Cold start */
-			$picks = DB::table('statuses')
-	    		->orderBy('created_at', 'desc')
-	    		->where('parent_id', null)
-	    		->take(3)
-	    		->get();
+
+			if($statuses->count() == 0) {
+				$picks = DB::table('statuses')
+	    			->orderBy('created_at', 'desc')
+	    			->where('parent_id', null)
+	    			->take(5)
+	    			->get();
+	    	}
 
 			return view('timeline.index')
 				->with('statuses', $statuses)
