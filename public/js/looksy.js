@@ -42,6 +42,14 @@ $(".add-input").change(function() {
 
 */
 
+if("serviceWorker" in navigator) {
+  navigator.serviceWorker.register('/js/service-worker.js').then(function(registration) {
+    console.log('Yay!');
+  }).catch(function(error) {
+    console.log('boo!', error);
+  });
+}
+
 $(".looksy-menu .search a").click(function(e) {
 	e.preventDefault();
   	$(".categories").toggle();
