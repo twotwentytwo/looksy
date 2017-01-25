@@ -57,4 +57,9 @@ class ProfileController extends Controller
 			->route('profile.edit')
 			->with('info', 'Your profile has been updated');
     }
+
+    public function getTerms() 
+    {
+        return view('profile.terms');
+    }
 }

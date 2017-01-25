@@ -59,6 +59,12 @@ Route::get('/profile/edit', [
     'middleware' => ['auth']
 ]);
 
+Route::get('/terms', [
+    'uses' => '\Looksy\Http\Controllers\ProfileController@getTerms',
+    'as' => 'profile.terms',
+    'middleware' => ['auth']
+]);
+
 Route::post('/profile/edit', [
     'uses' => '\Looksy\Http\Controllers\ProfileController@postPostEdit',
     'as' => 'profile.edit', 

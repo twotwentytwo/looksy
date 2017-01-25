@@ -58,28 +58,17 @@
                     @endif
                 </div>
 
-                <p><a href="#">Terms &amp; conditions</a></p>
+                <p><a href="{{ route('profile.terms') }}">Terms &amp; conditions</a></p>
 
+                <!--
                 <p><a href="#">Privacy policy</a></p>
-
                 <p><a href="#">Report an error</a></p>
+                -->
 
                 @if (Auth::check())      
                     <p><a href="{{ route('auth.signout') }}">Sign out</a></p>
                 @endif
-
-                
-
-                <!--
-
-                <label for="switch">Show notifications</label>
-                <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
-                <label for="switch">Email notifications</label>
-                <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
-                <p><a href="#">Terms &amp; conditions</a></p>
-                <p><a href="#">Privacy policy</a></p>
-                -->
-                    
+    
                 <div class="form-group update-btn">
                     <button type="submit" class="btn btn-default update">Update</button>
                 </div>

@@ -1384,7 +1384,23 @@ select {
 }
 
 
-/* desktop styles for neatness */
+/*
+ * Terms 
+ */
+
+.terms p {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.terms h3 {
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+/*
+ * Desktop 
+ */
 
 @media only screen and (min-device-width : 0px) and (max-device-width : 320px) { 
 
@@ -1403,15 +1419,4 @@ select {
 	.add-page .share-text {
     	font-size: 1.8em;
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
