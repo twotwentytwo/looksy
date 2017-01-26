@@ -1,7 +1,7 @@
 @extends('templates.default')  
 
 @section('title')
-  {{ $category }}
+  {{ ucfirst($category) }}
 @stop
 
 @section('body-class')
