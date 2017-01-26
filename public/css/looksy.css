@@ -392,7 +392,7 @@ ol li {
 
 .user {
 	position: absolute;
-    bottom: 96px;
+    bottom: 66px;
     left: 8px;
 }
 
@@ -496,20 +496,12 @@ ol li {
     padding: 0;
     margin: 0;
     color: #fff;
-    line-height: 1.15em;
-	
-}
-
-.home .website-wrapper .details .title {
-	width: 95%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.15em;	
 }
 
 .website-wrapper .review {
 	position: absolute;
-	bottom: 58px;
+	bottom: 30px;
 	left: 8px;
 	width: 94%;
 	white-space: nowrap;
