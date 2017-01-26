@@ -918,7 +918,7 @@ ol li {
     height: 50px;
     position: absolute;
     right: 0;
-    bottom: 80px;
+    bottom: 48px;
 }
 
 
@@ -1048,6 +1048,13 @@ ol li {
 
 .add-form select {
 	padding-left: 6px;
+}
+
+.add-page .pick .title {
+	width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /*
