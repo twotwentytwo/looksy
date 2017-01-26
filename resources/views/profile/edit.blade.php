@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="form-group{{ $errors->has('email_notifications') ? ' has-error': '' }}">
-                    <label for="email_notifications">Email notifications</label>
+                    <label for="email_notifications">Notifications</label>
                     <input type="radio" name="email_notifications" value="on" checked>On<br>
                     <input type="radio" name="email_notifications" value="off">Off<br>
                     @if($errors->has('location2'))
@@ -49,6 +49,7 @@
                     @endif
                 </div>
 
+                <!--
                 <div class="form-group{{ $errors->has('push_notifications') ? ' has-error': '' }}">
                     <label for="push_notifications">Push notifications</label>
                     <input type="radio" name="push_notifications" value="on" checked>On<br>
@@ -57,6 +58,7 @@
                         <span class="help-block">{{ $errors->first('push_notifications') }}</span> 
                     @endif
                 </div>
+                -->
 
                 <p><a href="{{ route('profile.terms') }}">Terms &amp; conditions</a></p>
 
