@@ -1142,7 +1142,7 @@ ol li {
 
 .profile .pick .details .title {
 	position: absolute;
-	bottom: 82px;
+	bottom: 120px;
 	left: 8px;
 }
 
@@ -1219,7 +1219,7 @@ ol li {
 }
 
 .profile .review {
-	top:162px;
+	top:76px;
 }
 
 .myprofile .website-wrapper .details .title, 
