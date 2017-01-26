@@ -497,6 +497,14 @@ ol li {
     margin: 0;
     color: #fff;
     line-height: 1.15em;
+	
+}
+
+.home .website-wrapper .details .title {
+	width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .website-wrapper .review {
@@ -1222,6 +1230,14 @@ ol li {
 	top:162px;
 }
 
+.myprofile .website-wrapper .details .title, 
+.profile .website-wrapper .details .title {
+	width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /*
  * PROFILE EDIT
  */
@@ -1286,6 +1302,8 @@ ol li {
 .categories span {
 	padding-left: 8px;
 }
+
+
 
 /*
  * EDIT 
