@@ -319,7 +319,7 @@ ol li {
 
 .looksy-menu .categories a {
 	color: #fff;
-    border: 3px solid #999;
+    border: 3px solid #bab4af;
     display: inline-block;
     width: 24%;
     background: #bab4af;
@@ -437,7 +437,6 @@ ol li {
 }
 
 .media-heading {
-    margin-top: 4px;
     margin-bottom:0;
 }
 
@@ -986,6 +985,8 @@ ol li {
 	right:0;
 	background: #ff5a58;
 	border:none;
+	font-size: 17px;
+    font-weight: bold;
 }
 
 .friend-block {
@@ -1038,14 +1039,8 @@ ol li {
 	right:0;
 }
 
-.friends .media h4, 
-.friends .media p {
-	margin-bottom: 0;
-}
-
 .friends a {
 	color: #333;
-	font-size: 1em;
 }
 
 .friends .search-form {
@@ -1060,7 +1055,27 @@ ol li {
 }
 
 .friends h4 {
-	font-size: 1.4em;
+	font-size: 20px;
+}
+
+.friends .form-control {
+	font-size: 17px;
+	color: #bab4af;
+	text-align: center;
+}
+
+.no-friends {
+	font-size: 17px;
+}
+
+.friends h3 {
+	font-size: 25px;
+}
+
+.friends .location {
+	font-size: 17px;
+	position: relative;
+	bottom: 4px;
 }
 
 /*
@@ -1068,7 +1083,7 @@ ol li {
  */
 
 .add-page .share-text {
-	font-size: 2em;
+	font-size: 25px;
     font-weight: bold;
     line-height: 1em;
     margin-bottom: 40px;
@@ -1081,8 +1096,8 @@ ol li {
 .add-form input, 
 .add-form select, 
 .add-form textarea {
-	font-size: 1.4em;
-	color: #999;
+	font-size: 20px;
+	color: #bab4af!important;
 	font-weight: bold;
 }
 
@@ -1133,7 +1148,7 @@ ol li {
 	width: 50%;
 	color: #fff;
 	border: none;
-	font-size: 1.6em;
+	font-size: 25px;
 	font-weight: bold;
 }
 
