@@ -37,7 +37,7 @@
 		    	<input type="hidden" role="uploadcare-uploader" name="image" data-clearable="true">-->
 
 		        <div class="form-group sign-in">
-		            <button type="submit" class="btn btn-default">Create account</button>
+		            <button type="submit" class="btn btn-default create">Create account</button>
 		        </div>
 		        <input type="hidden" name="_token" value="{{ Session::token() }}">
 		    </form>
