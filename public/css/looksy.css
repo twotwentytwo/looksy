@@ -319,7 +319,7 @@ ol li {
 
 .looksy-menu .categories a {
 	color: #fff;
-    border: 3px solid #bab4af;
+    border: 3px solid #999;
     display: inline-block;
     width: 24%;
     background: #bab4af;
@@ -1196,7 +1196,7 @@ p.latest-picks {
 
 .add .website-wrapper.pick .image, 
 .myprofile .website-wrapper.pick .image {
-	height: 104px;
+	height: 120px;
 	overflow: hidden;
 	position: relative;
 }
