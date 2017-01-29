@@ -17,8 +17,8 @@
 	    <div class="col-md-6 col-md-offset-3">
 	        @if(!$statuses->count())
 	        	<div class="cold-start">
-	        		<p>Start sharing your top picks and add some friends. You can have up to 5 picks to keep things fresh.</p>
-	        		<p>Latest picks to inspire you.</p>
+	        		<p>Start sharing your top picks and add some friends. You can have <br>up to 5 picks to keep things fresh.</p>
+	        		<p class="latest-picks">Here's the latest picks to inspire you.</p>
 	        	</div>
 	        	@foreach($picks as $pick)
 	            	<div class="website-wrapper pick-{{ $pick->type }}">

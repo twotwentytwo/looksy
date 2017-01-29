@@ -47,7 +47,7 @@
                 @if(Auth::user()->id == $user->id)
                     <h1>My Picks</h1>
                 @else
-                    <h1>{{ $user->getNameOrUsername() }}'s picks</h1>
+                    <h1>{{ $user->getNameOrUsername() }}</h1>
                 @endif
                 @include('templates.partials.navigation')
                 @if(Auth::user()->id == $user->id)
@@ -61,8 +61,8 @@
                     @include('templates.partials.alerts')
                     @if(!$statuses->count())
                         @if(Auth::user()->id == $user->id)
-                            <p>You haven't posted anything yet.</p>
-                            <p>Start <a href="{{ route('add.index') }}">posting</a> your top picks today to inspire your friends.</p>
+                            <p class="no-picks-yet-title">You haven't posted anything yet.</p>
+                            <p class="no-picks-yet-text">Start <a href="{{ route('add.index') }}">posting</a> your top picks today to inspire your friends.</p>
                         @else
                             <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet.</p>
                         @endif

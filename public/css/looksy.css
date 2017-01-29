@@ -426,8 +426,9 @@ ol li {
  */
 
 .cold-start p {
-	font-size: 1.6em;
-	font-weight:bold;
+	font-size: 25px;
+    font-weight: bold;
+    line-height: 1.3em;
 }
 
 .user {
@@ -555,6 +556,7 @@ ol li {
     color: #333;
     width: 100%;
     font-style: italic;
+    letter-spacing: -0.035em;
 }
 
 .website-wrapper .type {
@@ -783,6 +785,10 @@ ol li {
     background: #FFA135;
 }
 
+p.latest-picks {
+	font-size: 17px;
+}
+
 /*
  * PICKS
  */
@@ -855,7 +861,7 @@ ol li {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-size: 1.6em;
+    font-size: 17px;
     padding: 4px;
 }
 
@@ -909,8 +915,10 @@ ol li {
 .comment .text {
 	padding:0;
 	margin:0;
-	font-size: 1.2em;
+	font-size: 20px;
 	font-weight: bold;
+	font-style: italic;
+	letter-spacing: -0.035em;
 }
 
 .pick .reply .comment .text a {
@@ -918,7 +926,10 @@ ol li {
 }
 
 .pick .review .comment .text a {
-	color: #ccc;
+	color: #bab4af;
+	font-style: normal;
+	letter-spacing: -0.05em;
+	font-size: 17px;
 }
 
 .pick .reply .user {
@@ -960,7 +971,6 @@ ol li {
     bottom: 48px;
 }
 
-
 .comments .count {
 	color: #fff;
     position: absolute;
@@ -968,6 +978,13 @@ ol li {
     bottom: 13px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.form-reply textarea {
+	font-size: 17px;
+	color: #bab4af;
+	text-align: center;
+	height: 44px;
 }
 
 /*
@@ -1064,7 +1081,8 @@ ol li {
 	text-align: center;
 }
 
-.no-friends {
+.no-friends, 
+.no-friend-requests {
 	font-size: 17px;
 }
 
@@ -1178,7 +1196,7 @@ ol li {
 
 .add .website-wrapper.pick .image, 
 .myprofile .website-wrapper.pick .image {
-	height: 140px;
+	height: 104px;
 	overflow: hidden;
 	position: relative;
 }
@@ -1193,7 +1211,7 @@ ol li {
 .myprofile .website-wrapper.pick .details {
 	position: absolute;
 	left: 8px;
-	top: 48px;
+	top: 40px;
 }
 
 .profile .pick .details {
@@ -1202,9 +1220,17 @@ ol li {
 	left: 0;
 }
 
+.myprofile .website-wrapper .details .title {
+	font-size: 25px;
+}
+
+.profile .website-wrapper .details .title {
+	font-size: 29px;
+}
+
 .profile .pick .details .title {
 	position: absolute;
-	bottom: 120px;
+	bottom: 124px;
 	left: 8px;
 }
 
@@ -1232,7 +1258,7 @@ ol li {
 .add .pick .edit-pick a, 
 .myprofile .pick .edit-pick a {
 	color: #333;
-	font-size: 1.6em;
+	font-size: 17px;
 	padding: 0 4px;
 }
 
@@ -1281,7 +1307,7 @@ ol li {
 }
 
 .profile .review {
-	top:76px;
+	top:166px;
 }
 
 .myprofile .website-wrapper .details .title, 
@@ -1290,6 +1316,14 @@ ol li {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.no-picks-yet-title {
+	font-size: 25px;
+}
+
+.no-picks-yet-text {
+	font-size: 17px;
 }
 
 /*
@@ -1364,11 +1398,15 @@ ol li {
  */
 
 .edit input {
-	font-size: 1em;
+	font-size: 20px;
 }
 
 .edit form {
 	margin-top: 10px;
+}
+
+.edit .form-control {
+	height: 44px;
 }
 
 .edit #description {
@@ -1406,9 +1444,9 @@ ol li {
 
 .back-link {
 	position: absolute;
-	top: 32px;
-	left: 16px;
-	width: 40px;
+    top: 24px;
+    left: 16px;
+    width: 30px;
 }
 
 .back-link img {

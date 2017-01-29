@@ -51,7 +51,7 @@
             <div class="friend-block requests">
                 <h3>Friend requests</h3>
                 @if (!$requests->count())
-                    <p>You have no friend requests.</p>
+                    <p class="no-friend-requests">You have no friend requests.</p>
                 @else
                     @foreach($requests as $user)
                         <div class="not-yet-friend-of-mine">
