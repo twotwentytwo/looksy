@@ -995,7 +995,7 @@ p.latest-picks {
 	font-size: 1.2em;
 }
 
-.accept {
+.friends .accept {
 	width: 100px;
 	position: absolute;
 	top:0;
@@ -1094,6 +1094,17 @@ p.latest-picks {
 	font-size: 17px;
 	position: relative;
 	bottom: 4px;
+}
+
+.search .accept {
+	width: 100px;
+    position: relative;
+    top: -40px;
+    left: 250px;
+    background: #ff5a58;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 /*
@@ -1391,6 +1402,10 @@ p.latest-picks {
 	padding-left: 8px;
 }
 
+.no-results {
+	font-size: 17px;
+}
+
 
 
 /*
@@ -1433,9 +1448,9 @@ p.latest-picks {
 
 .delete-link {
 	position: absolute;
-	top: 30px;
-	right: 16px;
-	width: 40px;
+    top: 18px;
+    right: 16px;
+    width: 30px;
 }
 
 .delete-link img {

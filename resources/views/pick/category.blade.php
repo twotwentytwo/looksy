@@ -17,7 +17,7 @@
         <div class="col-md-6 col-md-offset-3">
             
             @if(!$statuses->count())
-                <p>There are no picks tagged as '{{ $category }}' right now</p>
+                <p class="no-results">There are no picks tagged as '{{ $category }}' right now</p>
             @else
                 @foreach($statuses as $status)
                     <div class="website-wrapper pick-{{ $status->type }}">

@@ -1,7 +1,7 @@
 @extends('templates.default')  
 
 @section('title')
-  {{ Request::input('query') }}
+  Search results
 @stop
 
 @section('body-class')
@@ -23,6 +23,7 @@
                     <p>Cannot find any friends called "{{ Request::input('query') }}".</p>
                     <p>Try <a href="{{ route('friend.index') }}">searching</a> again...</p>
                 @else
+                <p>You searched for "{{ Request::input('query') }}"</p>
                 @foreach ($users as $user)
     				@include('user/partials/userblock')
                     @if(Auth::user()->hasFriendRequestPending($user)) 
