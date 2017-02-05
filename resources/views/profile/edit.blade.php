@@ -19,7 +19,9 @@
 
                 <img src="{{Auth::user()->getAvatarUrl('144') }}" class="profile-image-edit" />
 
-                <input type="hidden" role="uploadcare-uploader" name="image" data-clearable="true" class="upload-image">
+                <div class="upload-image">
+                    <input type="hidden" role="uploadcare-uploader" name="image" data-clearable="true">
+                </div>
                 
                 <div class="form-group{{ $errors->has('first_name') ? ' has-error': '' }}">
                     <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First name" value="{{ Request::old('first_name') ?: Auth::user()->first_name }}">

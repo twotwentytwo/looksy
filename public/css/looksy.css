@@ -52,6 +52,10 @@ a {
 	font-weight: bold;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 .navbar-default {
 	background:none;
 	border:none;
@@ -327,6 +331,22 @@ ol li {
     text-align: center;
     border-radius: 0.3em;
     margin-bottom: 4px;
+}
+
+.looksy-menu.categories-on:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 114px;
+    border-style: solid;
+    border-width: 8px 9px 0;
+    border-color: #F3EDEC transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
 }
 
 /*
@@ -930,6 +950,7 @@ p.latest-picks {
 
 .pick .reply .comment .text a {
 	color: #333;
+	font-style: normal;
 }
 
 .pick .review .comment .text a {
@@ -1368,18 +1389,18 @@ p.latest-picks {
 	text-align: center;
 }
 
-.update.btn {
+.update-btn .update {
 	background: #ff5a58;
 	width: 50%;
-	
 	color: #fff;
 	border: none;
-	font-size: 1.6em;
+	font-size: 20px;
 	font-weight: bold;
 }
 
 .upload-image {
 	text-align: center;
+	font-size: 17px;
 }
 
 /*
@@ -1524,7 +1545,7 @@ select {
 	text-align: center;
 }
 
-.update-btn {
+.edit.profile .update .update-btn {
 	background: #ff5a58;
 	width: 50%;
 	color: #fff;
@@ -1539,6 +1560,21 @@ select {
 }
 
 .categories-picker {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* edit pick */)
+
+.edit.pick .update {
+	text-align: center;
+}
+
+.edit.pick .update .update-btn {
+	background: #ff5a58;
+	width: 50%;
+	color: #fff;
+	border: none;
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -1578,5 +1614,9 @@ select {
 
 	.add-page .share-text {
     	font-size: 1.8em;
+	}
+
+	.looksy-menu.categories-on:after {
+	    left: 80px;
 	}
 }

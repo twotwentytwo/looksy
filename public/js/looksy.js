@@ -55,4 +55,5 @@ if("serviceWorker" in navigator) {
 $(".looksy-menu .search a").click(function(e) {
 	e.preventDefault();
   	$(".categories").toggle();
+  	$(".looksy-menu").toggleClass('categories-on');
 });
