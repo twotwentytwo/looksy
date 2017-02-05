@@ -33,6 +33,9 @@
                 <!--<h3>Friends</h3>-->
                 @if (!$friends->count())
                     <p class="no-friends">You don't have any friends yet.</p>
+
+                    
+
                 @else
                     @foreach($friends as $user)
                         <div class="friend-of-mine">

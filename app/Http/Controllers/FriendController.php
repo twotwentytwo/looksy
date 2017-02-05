@@ -3,6 +3,7 @@
 namespace Looksy\Http\Controllers;
 
 use Auth;
+use DB;
 use Looksy\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -13,6 +14,13 @@ class FriendController extends Controller
 	{
 		$friends = Auth::user()->friends();
 		$requests = Auth::user()->friendRequests();
+
+		/*$people = DB::table('users')
+            ->orderBy('created_at', 'desc')
+            ->take(3)
+	    	->get();
+
+	    	//dd($people);*/
 
 		return view('friends.index')
 			->with('friends', $friends)

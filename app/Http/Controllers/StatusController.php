@@ -96,7 +96,7 @@ class StatusController extends Controller
         $statuses = DB::table('statuses')
             ->where('type', $category)
             ->orderBy('created_at', 'desc')
-            ->paginate(4);
+            ->paginate(10);
 
         return view('pick.category')
                 ->with('statuses', $statuses)
