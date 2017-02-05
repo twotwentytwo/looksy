@@ -1107,6 +1107,11 @@ p.latest-picks {
     font-weight: bold;
 }
 
+.search-input {
+	background: #fff url(../img/icons/search.png) 109px 4px no-repeat;
+    background-size: 24px;
+}
+
 /*
  * Add
  */

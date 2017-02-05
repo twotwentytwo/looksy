@@ -20,7 +20,7 @@
                 
                 <form role="search" action="{{ route('search.results') }}">
                     <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">
-                        <input type="text" name="query" class="form-control" placeholder="Search friends">
+                        <input type="text" name="query" class="form-control search-input" placeholder="Search friends">
                         @if($errors->has('query'))
                             <span class="help-block">{{ $errors->first('query') }}</span>
                         @endif
@@ -33,9 +33,6 @@
                 <!--<h3>Friends</h3>-->
                 @if (!$friends->count())
                     <p class="no-friends">You don't have any friends yet.</p>
-
-                    
-
                 @else
                     @foreach($friends as $user)
                         <div class="friend-of-mine">
