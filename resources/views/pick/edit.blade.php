@@ -35,7 +35,7 @@
 
                 <div class="categories-picker">
 
-                <select name="type" id="selectImage">
+                <select name="type">
                     <option value="{{ $status->type }}">{{ucfirst($status->type)}}</option>
                     <option value="see">See</option>
                     <option value="watch">Watch</option>
@@ -52,11 +52,11 @@
                 <div class="form-group{{ $errors->has('review') ? ' has-error': '' }}">
                     <label>Review</label>
                     
-                    <input type="text" name="review" class="form-control" id="review" placeholder="Review" value="{{ $status->review }}">
+                    <textarea type="text" name="review" class="form-control review" placeholder="Review">{{ $status->review }}</textarea>
                 </div>
 
-                <div class="form-group">
-                    <button type="submit" class="btn btn-default">Update</button>
+                <div class="form-group update">
+                    <button type="submit" class="btn btn-default update-btn">Update</button>
                 </div>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
             </form>

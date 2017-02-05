@@ -1520,6 +1520,29 @@ select {
   border-color: #FF6464;
 }
 
+.edit .update {
+	text-align: center;
+}
+
+.update-btn {
+	background: #ff5a58;
+	width: 50%;
+	color: #fff;
+	border: none;
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+.edit textarea.review {
+	font-size: 20px;
+	height: 80px;
+}
+
+.categories-picker {
+	font-size: 20px;
+	font-weight: bold;
+}
+
 
 /*
  * Terms 
