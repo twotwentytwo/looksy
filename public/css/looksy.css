@@ -599,7 +599,8 @@ ol li {
 .pick-see .label-see a, 
 .pick-see .details a,
 .pick-see .user .username a, 
-.pick-see .edit-pick a  {
+.pick-see .edit-pick a, 
+.pick .pick-see .details .title  {
     background: #FF8F3F;
 }
 
@@ -623,7 +624,8 @@ ol li {
 .pick-watch .label-watch a, 
 .pick-watch .details a,
 .pick-watch .user .username a, 
-.pick-watch .edit-pick a  {
+.pick-watch .edit-pick a, 
+.pick .pick-watch .details .title  {
     background: #FF6379;
 }
 
@@ -647,7 +649,8 @@ ol li {
 .pick-read .label-read a, 
 .pick-read .details a,
 .pick-read .user .username a, 
-.pick-read .edit-pick a  {
+.pick-read .edit-pick a, 
+.pick .pick-read .details .title  {
     background: #FF6b97;
 }
 
@@ -671,7 +674,8 @@ ol li {
 .pick-taste .label-taste a, 
 .pick-taste .details a,
 .pick-taste .user .username a, 
-.pick-taste .edit-pick a  {
+.pick-taste .edit-pick a, 
+.pick .pick-taste .details .title  {
     background: #FF73b7;
 }
 
@@ -695,7 +699,8 @@ ol li {
 .pick-listen .label-listen a, 
 .pick-listen .details a,
 .pick-listen .user .username a, 
-.pick-listen .edit-pick a  {
+.pick-listen .edit-pick a, 
+.pick .pick-listen .details .title  {
     background: #FF6c50;
 }
 
@@ -719,7 +724,8 @@ ol li {
 .pick-buy .label-buy a, 
 .pick-buy .details a,
 .pick-buy .user .username a, 
-.pick-buy .edit-pick a  {
+.pick-buy .edit-pick a, 
+.pick .pick-buy .details .title  {
     background: #FF7F48;
 }
 
@@ -743,7 +749,8 @@ ol li {
 .pick-play .label-play a, 
 .pick-play .details a,
 .pick-play .user .username a, 
-.pick-play .edit-pick a  {
+.pick-play .edit-pick a, 
+.pick .pick-play .details .title  {
     background: #FF8F3F;
 }
 
@@ -767,7 +774,8 @@ ol li {
 .pick-use .label-use a, 
 .pick-use .details a,
 .pick-use .user .username a, 
-.pick-use .edit-pick a  {
+.pick-use .edit-pick a, 
+.pick .pick-use .details .title  {
     background: #FFA135;
 }
 
@@ -857,7 +865,6 @@ p.latest-picks {
 }
 
 .pick .website-wrapper .details .title {
-    background: #ff5a58;
     width: 100%;
     padding: 0;
     margin: 0;
