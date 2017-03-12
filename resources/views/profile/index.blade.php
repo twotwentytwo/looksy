@@ -91,6 +91,12 @@
                                 @endif
                             </div>
                         @endforeach
+                        @if($statuses->count() < 5)
+                            <div class="missing">
+                                <p>{{(5-$statuses->count())}} empty {{ (5-$statuses->count()) == 1 ? 'slot' : 'slots' }} left.</p> 
+                                <p>Why not add a pick?</p>
+                            </div>
+                        @endif
                     @endif
                 </div>
             </div>
