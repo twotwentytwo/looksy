@@ -17,7 +17,7 @@
 			    <div class="col-md-6 col-md-offset-3">
             @if(Auth::user()->statuses()->notReply()->count() >= 5)
               <p class="limit">Whoops! please choose one of your picks to replace.</p>
-              <p>We limit picks to five at a time to keep things currated and fresh.</p>
+              <p>We limit picks to five at a time to keep things curated and fresh.</p>
 
               @foreach($statuses as $status)
                   <div class="website-wrapper pick pick-{{ $status->type }}">
