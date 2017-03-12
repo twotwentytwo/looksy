@@ -1238,6 +1238,10 @@ p.latest-picks {
 	padding-bottom: 0;
 }
 
+.myprofile .website-wrapper {
+	border-bottom:none;
+}
+
 .add .website-wrapper.pick .image, 
 .myprofile .website-wrapper.pick .image {
 	height: 120px;

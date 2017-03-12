@@ -47,7 +47,7 @@ class StatusController extends Controller
 
         $url = $object->url;
         $title = $object->title;
-        $image = (isset($object->images) && !empty($object->images) ? $object->images[0]->url : 'http://twotwentytwo.co.uk/dev/looksy/placeholder_image.png');
+        $image = (isset($object->images) && !empty($object->images) ? $object->images[0]->url : "/img/template/placeholder_image.png");
         $source = $object->siteName;
         $segment = null;
 

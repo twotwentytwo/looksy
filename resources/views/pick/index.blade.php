@@ -24,7 +24,9 @@
                     <div class="image">
                         <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
                     </div>
-                    <div class="external-link"><a href="{{ $status->url }}" target="_blank"></a></div>
+                    <a href="{{ $status->url }}" target="_blank">
+                        <div class="external-link"></div>
+                    </a>
                     <div class="details">
                         <p class="title"><a target="_blank" href="{{ $status->url }}">{{ $status->title }}</a></p>
                     </div>        

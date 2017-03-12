@@ -1,3 +1,3 @@
-# Looksy
+# PickList
 
-Shared recommendations with your friends. 
+Share your top 5 recommendations with friends. 
