@@ -392,7 +392,7 @@ ol li {
 
 .authentication .btn {
 	background: #ff5a58;
-	width: 50%;
+	width: 54%;
 	text-align: center;
 	color: #fff;
 	border: none;
@@ -1074,8 +1074,11 @@ p.latest-picks {
 	width: 100%;
 	background: #333;
 	color: #fff;
-	border: 1px solid #ccc;
+	font-size: 17px;
+    font-weight: bold;
 }
+
+
 
 .friends .unfriend {
 	width: 100px;
@@ -1138,6 +1141,41 @@ p.latest-picks {
 .search-input {
 	background: #fff url(../img/icons/search.png) 90px 4px no-repeat;
     background-size: 24px;
+}
+
+/*
+ * search results  
+ */
+
+.search .remove input {
+	width: 100px;
+    position: relative;
+    top: -40px;
+    left: 250px;
+    background: #333;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.search h4 {
+	font-size: 20px;
+	padding-left: 4px;
+}
+
+.pending {
+	width: 100px;
+    position: relative;
+    top: -40px;
+    left: 250px;
+    background: #ff5a58;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 3px;
+    padding: 6px;
+    text-align: center;
 }
 
 /*
@@ -1580,7 +1618,7 @@ select {
 	font-weight: bold;
 }
 
-/* edit pick */)
+/* edit pick */
 
 .edit.pick .update {
 	text-align: center;
@@ -1594,6 +1632,8 @@ select {
 	font-size: 20px;
 	font-weight: bold;
 }
+
+
 
 
 /*

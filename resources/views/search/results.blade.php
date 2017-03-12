@@ -27,13 +27,16 @@
                 @foreach ($users as $user)
     				@include('user/partials/userblock')
                     @if(Auth::user()->hasFriendRequestPending($user)) 
-                        <p>Waiting for {{ $user->getNameOrUsername() }} to accept your request.</p>
+                        <p class="pending">Pending...</p>
                     @elseif(Auth::user()->hasFriendRequestReceived($user))
                         <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
                     @elseif(Auth::user()->isFriendsWith($user))
-                        <p>You and {{ $user->getNameOrUsername() }} are friends.</p>
+                        <form action="{{ route('friend.remove', ['username' => $user->username]) }}" method="post" class="remove">
+                            <input type="submit" value="Unfriend" class="unfriend btn btn-primary">
+                            <input type="hidden" name="_token" value="{{ Session::token() }}">
+                        </form>
                     @elseif(Auth::user()->id !== $user->id)
-                        <a class="btn btn-primary accept" href="{{ route('friend.add', ['username' => $user->username]) }}">Add</a>
+                        <a class="btn btn-primary accept" href="{{ route('friend.add', ['username' => $user->username]) }}">Add friend</a>
                     @endif
     			@endforeach
                 @endif            
