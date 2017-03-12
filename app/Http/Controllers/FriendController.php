@@ -63,7 +63,7 @@ class FriendController extends Controller
     				{
         				$message
         					->to($user->email, $user->username)
-        					->subject('You have a new friend request from ' . Auth::user()->username);
+        					->subject('You have a new friend request from ' . Auth::user()->getNameOrUsername());
     	});
 
 		return redirect()
