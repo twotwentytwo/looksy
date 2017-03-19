@@ -1641,12 +1641,12 @@ select {
  */
 
 .terms p {
-	font-size: 1.2em;
-	font-weight: bold;
+	font-size: 14px;
+	font-weight: normal;
 }
 
 .terms h3 {
-	font-size: 1.6em;
+	font-size: 17px;
 	font-weight: bold;
 }
 
