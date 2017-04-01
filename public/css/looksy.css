@@ -356,6 +356,7 @@ ol li {
 .authentication {
 	background: url('../img/template/auth_background.png') 0 0 no-repeat;
 	background-size:100%;
+	background-position: fixed;
 }
 
 .authentication #email {
@@ -368,7 +369,9 @@ ol li {
 	padding-left: 33px;
 }
 
-.authentication #username {
+.authentication #username, 
+.authentication #first_name, 
+.authentication #last_name {
 	background: #fff url('../img/icons/username.png') 4px 6px no-repeat;
 	padding-left: 33px;
 }
@@ -444,6 +447,34 @@ ol li {
 
 .btn.create {
 	margin-top: 24px;
+}
+
+.authentication .upload-image {
+    text-align: left;
+    font-size: 17px;
+}
+
+.authentication .uploadcare-widget-button-open {
+    font-family: 'Karla', sans-serif;
+    font-size: 17px;
+    background: #333;
+}
+
+.authentication .uploadcare-widget {
+    margin-bottom: 8px;
+}
+
+.authentication .uploadcare-widget-button {
+    font-family: 'Karla', sans-serif;
+    font-size: 17px;
+    background: #333;
+}
+
+.authentication .uploadcare-link, 
+.authentication .uploadcare-link:link, 
+.authentication .uploadcare-link:visited {
+	color: #fff;
+	margin-bottom: 16px;
 }
 
 /*

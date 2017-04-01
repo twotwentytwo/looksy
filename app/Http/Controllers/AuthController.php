@@ -18,7 +18,9 @@ class AuthController extends Controller
 	{
 		$this->validate($request, [
 			'email' => 'required|unique:users|email|max:255', 
-			'username' => 'required|unique:users|alpha_dash|max:20', 
+			'username' => 'required|unique:users|alpha_dash|max:20',
+			'first_name' => 'required|max:255',
+			'last_name' => 'required|max:255', 
 			'password' => 'required|min:6'
 		]);
 
@@ -27,6 +29,8 @@ class AuthController extends Controller
 		User::create([
 			'email' => $request->input('email'), 
 			'username' => $request->input('username'),
+			'first_name' => $request->input('first_name'),
+			'last_name' => $request->input('last_name'),
 			'location' => $image_id,
 			'password' => bcrypt($request->input('password'))
 		]);
