@@ -353,6 +353,11 @@ ol li {
  * SIGN IN
  */
 
+.authentication {
+	background: url('../img/template/auth_background.png') 0 0 no-repeat;
+	background-size:100%;
+}
+
 .authentication #email {
 	background: #fff url('../img/icons/email.png') 4px 10px no-repeat;
 	padding-left: 33px;
@@ -369,7 +374,7 @@ ol li {
 }
 
 .authentication h1 {
-	color: #333;
+	color: #fff;
     font-size: 73px;
     font-weight: bold;
 }
@@ -391,7 +396,7 @@ ol li {
 }
 
 .authentication .btn {
-	background: #ff5a58;
+	background: #333;
 	width: 54%;
 	text-align: center;
 	color: #fff;
@@ -426,7 +431,7 @@ ol li {
 }
 
 .authentication .sign-up {
-	color: #ff5a58;
+	color: #fff;
 }
 
 .authentication .form-group {
