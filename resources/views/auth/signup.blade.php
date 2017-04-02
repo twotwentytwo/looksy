@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<h1>PickList</h1>
-			<p class="strapline">Good things happen when you share.</p>
+			<p class="strapline">Good things happen when we share.</p>
 		    <form class="form-vertical" role="form" method="post" action="{{ route('auth.signup') }}">
 
 		    	<div class="upload-image">

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Looksy\Models\User;
 use Illuminate\Support\Facades\Mail;
 use Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -48,6 +49,102 @@ class AuthController extends Controller
 	public function getSignin()
 	{
 		return view('auth.signin');
+	}
+
+	public function getRecover()
+	{
+		return view('auth.recover');
+	}
+
+	public function postRecover(Request $request)
+	{
+		$this->validate($request, [
+			'email' => 'required|email'
+		]);
+
+		$user = User::where('email', $request->email)->first();
+
+		if(!$user) {
+			return redirect()->route('auth.recover')->with('info', 'Could not find that user');
+		} else {
+			$identifier = str_random(128);
+			$user->update([
+				'recover_hash' => bcrypt($identifier), 
+			]);
+			Mail::send('emails.recover', ['user'=> $user, 'identifier'=> $identifier], function($message) use($user)
+	        {
+	            $message->to($user->email);
+	            $message->subject('PickList recover your password');
+	        });
+			return redirect()->route('home')->with('info', 'An email has been sent with a reset link');
+		}
+	}
+
+	public function getReset(Request $request)
+	{
+		$email = $request->email;
+		$identifier = $request->identifier;
+		$hashedIdentifier = bcrypt($request->identifier);
+		$user = User::where('email', $request->email)->first();
+
+		if(!$user) {
+			return redirect()->route('home');
+		} 
+		if(!$user->recover_hash) {
+			return redirect()->route('home');
+		} 
+
+		/* ERROR HERE, NEEDS REFACTOR */
+
+		if(Hash::check($user->recover_hash, $hashedIdentifier)) {
+			return redirect()->route('home');
+		} 
+
+		/* ERROR HERE, NEEDS REFACTOR */
+
+		return view('auth.reset')
+            ->with('email', $user->email)
+            ->with('identifier', $identifier);
+	}
+
+	public function postReset(Request $request)
+	{	
+		$email = $request->email;
+		$identifier = $request->identifier;
+
+		$password = $request->password;
+		$passwordConfirm = $request->confirm_password;
+
+		$hashedIdentifier = bcrypt($request->identifier);
+
+		$user = User::where('email', $request->email)->first();
+
+		if(!$user) {
+			return redirect()->route('home');
+		} 
+		if(!$user->recover_hash) {
+			return redirect()->route('home');
+		} 
+
+		/* ERROR HERE, NEEDS REFACTOR */
+
+		if(Hash::check($user->recover_hash, $hashedIdentifier)) {
+			return redirect()->route('home');
+		} 
+
+		/* ERROR HERE, NEEDS REFACTOR */
+
+		$this->validate($request, [
+			'password' => 'required|min:6', 
+			'confirm_password' => 'required|same:password'
+		]);
+
+		$user->update([
+                'password' => bcrypt($password), 
+                'recover_hash' =>  null
+        ]);
+
+        return redirect()->route('auth.signin')->with('info', 'Your password has been reset, you can now sign in with your new password.');
 	}
 
 	public function postSignin(Request $request)

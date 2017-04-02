@@ -18,7 +18,8 @@ class User extends Model implements AuthenticatableContract
         'password',
         'first_name', 
         'last_name', 
-        'location'
+        'location', 
+        'recover_hash'
     ];
 
     protected $hidden = [

@@ -15,15 +15,18 @@ class FriendController extends Controller
 		$friends = Auth::user()->friends();
 		$requests = Auth::user()->friendRequests();
 
-		/*$people = DB::table('users')
-            ->orderBy('created_at', 'desc')
-            ->take(3)
-	    	->get();
-
-	    	//dd($people);*/
+		/*
+		$friendsOfFriends = DB::table('users')
+			->orderBy('created_at', 'desc')
+			->where('id', '!=', Auth::user()->id)
+			->take(5)
+			->get();*/
 
 		return view('friends.index')
 			->with('friends', $friends)
+			/*
+			->with('friendsOfFriends', $friendsOfFriends)
+			*/
 			->with('requests', $requests);
 	}
 

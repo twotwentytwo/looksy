@@ -33,6 +33,30 @@ Route::get('/signin', [
 	'middleware' => ['guest']
 ]);
 
+Route::get('/recover', [
+    'uses' => '\Looksy\Http\Controllers\AuthController@getRecover', 
+    'as' => 'auth.recover', 
+    'middleware' => ['guest']
+]);
+
+Route::post('/recover', [
+    'uses' => '\Looksy\Http\Controllers\AuthController@postRecover', 
+    'as' => 'auth.recover', 
+    'middleware' => ['guest']
+]);
+
+Route::get('/reset', [
+    'uses' => '\Looksy\Http\Controllers\AuthController@getReset', 
+    'as' => 'auth.reset', 
+    'middleware' => ['guest']
+]);
+
+Route::post('/reset', [
+    'uses' => '\Looksy\Http\Controllers\AuthController@postReset', 
+    'as' => 'auth.reset', 
+    'middleware' => ['guest']
+]);
+
 Route::post('/signin', [
 	'uses' => '\Looksy\Http\Controllers\AuthController@postSignin', 
 	'middleware' => ['guest']

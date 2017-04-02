@@ -66,10 +66,17 @@ a:hover {
 }
 
 .alert-info {
-    color: #ff6464;
-    background-color: #fff;
+    color: #fff;
+    background:none;
+    font-size: 17px;
     font-family: 'Karla', sans-serif;
-    font-size: 1em;
+}
+
+.alert {
+    padding: 0;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 0;
 }
 
 .pagination>.active>a, 
@@ -364,7 +371,8 @@ ol li {
 	padding-left: 33px;
 }
 
-.authentication #password {
+.authentication #password, 
+.authentication #confirm_password {
 	background: #fff url('../img/icons/password.png') 5px 7px no-repeat;
 	padding-left: 33px;
 }
@@ -475,6 +483,15 @@ ol li {
 .authentication .uploadcare-link:visited {
 	color: #fff;
 	margin-bottom: 16px;
+}
+
+.authentication .forgot_password {
+	font-size: 17px;
+}
+
+.authentication .help-block {
+	font-size: 17px;
+	color: #fff;
 }
 
 /*
