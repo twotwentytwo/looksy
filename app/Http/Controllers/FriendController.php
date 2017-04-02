@@ -15,18 +15,8 @@ class FriendController extends Controller
 		$friends = Auth::user()->friends();
 		$requests = Auth::user()->friendRequests();
 
-		/*
-		$friendsOfFriends = DB::table('users')
-			->orderBy('created_at', 'desc')
-			->where('id', '!=', Auth::user()->id)
-			->take(5)
-			->get();*/
-
 		return view('friends.index')
 			->with('friends', $friends)
-			/*
-			->with('friendsOfFriends', $friendsOfFriends)
-			*/
 			->with('requests', $requests);
 	}
 
@@ -126,16 +116,18 @@ class FriendController extends Controller
     		'invite' => 'required|max:500'
     	]);
 
+    	$name = Auth::user()->getNameOrUsername();
+
 		$email = $request->input('invite');
 		
-		Mail::send('emails.sendtofriend', ['email' => $email], function($message) use ($email)
+		Mail::send('emails.sendtofriend', ['email' => $email, 'name'=> $name], function($message) use ($email, $name)
 		{
-        	$message->to($email, 'Tom Kershaw')->subject('Someone wants you to check out Pick List');
+        	$message->to($email)->subject('Check out PickList');
     	});
 
 		return redirect()
 			->route('friend.index')
-			->with('info', 'Invite to friend sent.');
+			->with('info', 'Invite sent.');
 
 	}    
 }

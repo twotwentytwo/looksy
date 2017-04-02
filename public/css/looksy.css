@@ -1131,7 +1131,13 @@ p.latest-picks {
     font-weight: bold;
 }
 
-
+.friends .alert-info {
+    color: #333;
+    background:none;
+    font-size: 17px;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+}
 
 .friends .unfriend {
 	width: 100px;

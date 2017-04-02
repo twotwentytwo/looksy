@@ -17,7 +17,6 @@
         <div class="col-md-6 col-md-offset-3">
 
             <div class="friend-block">
-                
                 <form role="search" action="{{ route('search.results') }}">
                     <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">
                         <input type="text" name="query" class="form-control search-input" placeholder="Search friends">
@@ -64,33 +63,19 @@
                 @endif
             </div>
 
-            <!--
-            <div class="friend-block requests">
-                <h3>People you may know</h3>
-                @foreach($friendsOfFriends as $user)
-                    <div class="not-yet-friend-of-mine">
-                        <div class="media">
-                            <a class="pull-left" href="{{ route('profile.index', ['username' =>  $user->username]) }}">
-                                @if ($user->location)
-                                    <img class="media-object profile-image" src="https://ucarecdn.com/{{ $user->location }}/-/scale_crop/40x40/center/-/quality/best/-/progressive/yes/">
-                                @else
-                                    <img class="media-object profile-image" src="https://www.gravatar.com/avatar/59b04b6cf46844615d8b2a465427e7f8?s=40&d=mm">
-                                @endif
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">
-                                    <a href="{{ route('profile.index', ['username' =>  $user->username]) }}">{{ $user->first_name }} {{ $user->last_name }}</a>
-                                </h4>
-                            </div>
-                            @if ($user->location2)
-                                <p class="location">{{ $user->location2 }}</p>
-                            @endif
+            <div class="friend-block invite-friends">
+                <h3>Invite friends</h3>
+                <p class="no-friend-requests">PickList is better with friends, so start adding to your trusted network today.</p>
+                <div class="friend-block">
+                    <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
+                        <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
+                            <input placeholder="Enter friend's email" name="invite" class="form-control add">
                         </div>
-                        <a class="btn btn-primary accept" href="{{ route('friend.add', ['username' => $user->username]) }}">Add</a>
-                    </div>
-                @endforeach
+                        <input type="hidden" name="_token" value="{{ Session::token() }}">
+                    </form>
+                    @include('templates.partials.alerts')
+                </div>
             </div>
-            -->
 
         </div>
     </div>
