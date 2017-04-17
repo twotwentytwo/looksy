@@ -44,7 +44,7 @@
 						</div>
 					</div>
 					<div class="page-3">
-						<p>Let’s get connected with some friends...</p>
+						<p>Connect with your friends</p>
 			            <div class="friend-block">
 			                <form role="search" action="{{ route('search.results') }}">
 			                    <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">

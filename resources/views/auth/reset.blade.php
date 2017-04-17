@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<h1>PickList</h1>
-			<p class="strapline">Good things happen when we share.</p>
+			<p class="strapline">Great things happen when we share.</p>
 		    <form class="form-vertical" role="form" method="post" action="{{ route('auth.reset') }}?email={{ $email }}&identifier={{ urlencode($identifier) }}" autocomplete="off">
 		        <div class="form-group">
 		            <input type="password" name="password" class="form-control" id="password" placeholder="Password">

@@ -61,7 +61,7 @@
                     @include('templates.partials.alerts')
                     @if(!$statuses->count())
                         @if(Auth::user()->id == $user->id)
-                            <p class="no-picks-yet-title">You haven't posted and Picks yet.</p>
+                            <p class="no-picks-yet-title">You haven't posted any Picks yet.</p>
                             <p class="no-picks-yet-text">Start <a href="{{ route('add.index') }}">sharing your Picks</a> today to inspire your friends.</p>
                         @else
                             <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet.</p>
@@ -94,7 +94,7 @@
                         @if(Auth::user()->id == $user->id)
                             @if($statuses->count() < 5)
                                 <div class="missing">
-                                    <p>{{(5-$statuses->count())}} empty {{ (5-$statuses->count()) == 1 ? 'slot' : 'slots' }} left.</p> 
+                                    <p>{{(5-$statuses->count())}} empty {{ (5-$statuses->count()) == 1 ? 'slot' : 'slots' }} left. Add more Picks. </p> 
                                     <p>Why not add a pick?</p>
                                 </div>
                             @endif

@@ -37,7 +37,7 @@
               
             @else
 
-              <p class="share-text">Why not share something to inspire your friends?</p>
+              <p class="share-text">Inspire your friends – share something now</p>
               <form role="form" action="{{ route('status.post') }}" method="post" class="add-form">
 
 
