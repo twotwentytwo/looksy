@@ -18,7 +18,7 @@
 @section('content')
 	<div class="row">
 	    <div class="col-md-6 col-md-offset-3">
-	        @if(!$statuses->count())
+	        @if($user_statuses_count == 0)
 	        	<div class="cold-start">
 	        		<div class="page-1">
 	        			<div class="section-top">

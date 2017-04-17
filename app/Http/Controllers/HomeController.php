@@ -19,19 +19,15 @@ class HomeController extends Controller
 			->orderBy('created_at', 'desc')
 			->paginate(10);
 
-			/* Cold start */
+			$user = Auth::user();
+			$user_statuses_count = $user->statuses()->notReply()->count();
 
-			//if($statuses->count() == 0) {
-				$picks = DB::table('statuses')
-	    			->orderBy('created_at', 'desc')
-	    			->where('parent_id', null)
-	    			->take(5)
-	    			->get();
-	    	//}
+			
 
 			return view('timeline.index')
 				->with('statuses', $statuses)
-				->with('picks', $picks);
+				->with('user_statuses_count', $user_statuses_count);
+				
 		}
 
 		return view('auth.signin');

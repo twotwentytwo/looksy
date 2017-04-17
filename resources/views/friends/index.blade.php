@@ -46,37 +46,6 @@
                     @endforeach
                 @endif
             </div>
-            
-            <div class="friend-block requests">
-                <h3>Friend requests</h3>
-                @if (!$requests->count())
-                    <p class="no-friend-requests">You have no friend requests.</p>
-                @else
-                    @foreach($requests as $user)
-                        <div class="not-yet-friend-of-mine">
-                            @include('user.partials.userblock')
-                            @if(Auth::user()->hasFriendRequestReceived($user))
-                                <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
-                            @endif
-                        </div>
-                    @endforeach
-                @endif
-            </div>
-
-            <div class="friend-block invite-friends">
-                <h3>Invite friends</h3>
-                <p class="no-friend-requests">PickList is better with friends, so start adding to your trusted network today.</p>
-                <div class="friend-block">
-                    <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
-                        <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-                            <input placeholder="Enter friend's email" name="invite" class="form-control add">
-                        </div>
-                        <input type="hidden" name="_token" value="{{ Session::token() }}">
-                    </form>
-                    @include('templates.partials.alerts')
-                </div>
-            </div>
-
         </div>
     </div>
 @stop  

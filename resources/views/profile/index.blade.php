@@ -61,8 +61,8 @@
                     @include('templates.partials.alerts')
                     @if(!$statuses->count())
                         @if(Auth::user()->id == $user->id)
-                            <p class="no-picks-yet-title">You haven't posted anything yet.</p>
-                            <p class="no-picks-yet-text">Start <a href="{{ route('add.index') }}">posting</a> your top picks today to inspire your friends.</p>
+                            <p class="no-picks-yet-title">You haven't posted and Picks yet.</p>
+                            <p class="no-picks-yet-text">Start <a href="{{ route('add.index') }}">sharing your Picks</a> today to inspire your friends.</p>
                         @else
                             <p>{{ $user->getNameOrUsername() }} hasn't posted anything yet.</p>
                         @endif
