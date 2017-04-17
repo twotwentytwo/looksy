@@ -1598,7 +1598,7 @@ select {
 
 	.cold-start .looksy-menu {
 		position: fixed;
-	    bottom: 27px;
+	    bottom: 24px;
 	    left: 0;
 	    width: 100%;
 	    z-index: 2;
