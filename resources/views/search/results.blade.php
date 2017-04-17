@@ -15,15 +15,26 @@
 @section('content')
 	
 	@if(!$users->count() && !$statuses->count())
-		<p>No results found, sorry.</p>
+		
+
+        <div class="friend-block invite-friends">
+                <h3>We can't find anyone by that name</h3>
+                <p class="no-friend-requests">Enter their email address and we’ll send them an invite.</p>
+                <div class="friend-block">
+                    <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
+                        <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
+                            <input placeholder="Their email address" name="invite" class="form-control add">
+                        </div>
+                        <input type="hidden" name="_token" value="{{ Session::token() }}">
+                    </form>
+                    @include('templates.partials.alerts')
+                </div>
+            </div>
 	@else
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
-    			@if(!$users->count())
-                    <p>Cannot find any friends called "{{ Request::input('query') }}".</p>
-                    <p>Try <a href="{{ route('friend.index') }}">searching</a> again...</p>
-                @else
-                <p>You searched for "{{ Request::input('query') }}"</p>
+    			
+                
                 @foreach ($users as $user)
     				@include('user/partials/userblock')
                     @if(Auth::user()->hasFriendRequestPending($user)) 
@@ -39,7 +50,7 @@
                         <a class="btn btn-primary accept" href="{{ route('friend.add', ['username' => $user->username]) }}">Add friend</a>
                     @endif
     			@endforeach
-                @endif            
+                      
 			</div>
 		</div>
 	@endif

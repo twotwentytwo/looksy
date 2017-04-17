@@ -142,220 +142,6 @@ ol li {
   opacity: 1;
 }
 
-
-/*
- * NAVIGATION
- */
-
-.looksy-menu {
-	position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-.looksy-navigation {
- 	list-style: none;
- 	background: #333;
- 	margin:0;
-    text-align: center;
-    padding: 0 0 10px 0;
-    border-top: 0;
-}
-
-.looksy-navigation li {
- 	display: inline-block;
- 	margin-right: 20px;
- 	font-size: 0;
-}
-
-.looksy-navigation li a {
- 	display: inline-block;
- 	font-size: 0;
-}
-
-.looksy-navigation li span {
-	position: relative;
-    top: 46px;
-    display: block;
-    left: 0;
-    color: #bab4af;
-    font-size: 11px;
-}
-
-.reply {
-	margin-top: 10px;
-}
-
-.looksy-navigation .home a {
-	background: url('../img/navigation/off/home.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
-	position: relative;
-	top: 12px;
-	left: 8px;
-}
-
-.home .looksy-navigation .home a {
-	background: url('../img/navigation/on/home.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
-	position: relative;
-	top: 12px;
-	left: 8px;
-}
-
-.home .looksy-navigation .home span,
-.search .looksy-navigation .search span,
-.categories-page .looksy-navigation .search span,
-.friends .looksy-navigation .friends span,
-.myprofile .looksy-navigation .profile span, 
-.profile .looksy-navigation .profile span {
-	color: #fff;
-}
-
-.looksy-navigation .search a {
-	background: url('../img/navigation/off/filter.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
-	position: relative;
-	top: 12px;
-	left: 8px;
-}
-
-.search .looksy-navigation .search a, 
-.categories-page .looksy-navigation .search a {
-	background: url('../img/navigation/on/filter.png') 0 0 no-repeat;
-	background-size: 40px;
-	width: 40px;
-	height: 40px;
-	position: relative;
-	top: 12px;
-	left: 8px;
-}
-
-.looksy-navigation .add a {
-	background: url('../img/navigation/on/add.png') 0 0 no-repeat;
-	background-size: 60px;
-	width: 60px;
-	height: 60px;
-	position: relative;
-	left: 8px;
-}
-
-.looksy-navigation .friends a {
-	background: url('../img/navigation/off/friends.png') 0 0 no-repeat;
-    background-size: 48px;
-    width: 48px;
-    height: 40px;
-    position: relative;
-	top: 12px;
-	left: 8px;
-}
-
-.friends .looksy-navigation .friends a {
-	background: url('../img/navigation/on/friends.png') 0 0 no-repeat;
-	background-size: 48px;
-    width: 48px;
-    height: 40px;
-    position: relative;
-	top: 12px;
-	left: 8px;
-}
-
-.looksy-navigation .profile a {
-	background: url('../img/navigation/off/profile.png') 6px 0 no-repeat;
-	background-size: 36px;
-	width: 49px;
-	height: 40px;
-	position: relative;
-	top: 12px;
-	left: 8px;
-}
-
-.myprofile .looksy-navigation .profile a {
-	background: url('../img/navigation/on/profile.png') 6px 0 no-repeat;
-	background-size: 36px;
-	width: 49px;
-	height: 40px;
-	position: relative;
-	top: 12px;
-	left: 8px;
-}
-
-.looksy-menu .friends {
-	position: relative;
-	height: 52px;
-}
-
-.looksy-menu .friends .friend-requests {
-    position: absolute;
-    left: 41px;
-    top: 34px;
-    display: block;
-    background: url('../img/icons/count.png') 0px 0px no-repeat;
-    background-size: 20px;
-    width: 20px;
-    height: 20px;
-    color: #333;
-    font-size: 13px;
-    padding-top: 2px;
-    font-weight: bold;
-}
-
-.looksy-menu .categories {
-	position: absolute;
-    top: -80px;
-    height: 80px;
-    overflow-x: scroll;
-    background: #fff;
-    display: none;
-    padding-top: 4px;
-    padding-left: 4px;
-    width: 100%;
-}
-
-.looksy-menu .categories ul {
-	padding: 0;
-	margin: 0;
-}
-
-.looksy-menu .categories li {
-	display:inline;
-}
-
-.looksy-menu .categories a {
-	color: #fff;
-    border: 3px solid #999;
-    display: inline-block;
-    width: 24%;
-    background: #bab4af;
-    font-size: 1.4em;
-    text-align: center;
-    border-radius: 0.3em;
-    margin-bottom: 4px;
-}
-
-.looksy-menu.categories-on:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 114px;
-    border-style: solid;
-    border-width: 8px 9px 0;
-    border-color: #F3EDEC transparent;
-    display: block;
-    width: 0;
-    z-index: 1;
-    transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-}
-
 /*
  * SIGN IN
  */
@@ -498,11 +284,74 @@ ol li {
  * TIMELINE
  */
 
+.cold-start .button {
+	background: #ff5a58;
+    width: 50%;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    width: 124px;
+    padding: 8px;
+    margin-top: 32px;
+
+}
+
+.cold-start .align-button {
+	text-align: center;
+}
+
 .cold-start p {
-	font-size: 25px;
+	font-size: 23px;
     font-weight: bold;
     line-height: 1.3em;
+
 }
+
+.cold-start .container {
+	padding:0;
+	margin:0;
+}
+
+.cold-start .page-2, 
+.cold-start .page-3 {
+	display:none;
+}
+
+.cold-start .page-3 {
+	margin: 0 16px;
+}
+
+.cold-start .form-control {
+	
+	text-align: center;
+}
+
+.cold-start.ended h1 {
+	color: #222;
+}
+
+.cold-start button a {
+	color: #fff;
+}
+
+.section-top {
+	background: #ff5a58;
+    color: #fff;
+    padding: 16px;
+   
+}
+
+.section-bottom {
+	
+    background: #f3edec;
+    padding: 16px;
+    
+}	
+
+
+
+
 
 .user {
 	position: absolute;
@@ -1524,11 +1373,9 @@ p.latest-picks {
 	bottom: 16px;
 }
 
-
 /*
  * CATEGORIES 
  */
-
 
 .categories {
 	padding:0;
@@ -1551,8 +1398,6 @@ p.latest-picks {
 .no-results {
 	font-size: 17px;
 }
-
-
 
 /*
  * EDIT 
@@ -1692,9 +1537,6 @@ select {
 	font-weight: bold;
 }
 
-
-
-
 /*
  * Terms 
  */
@@ -1710,10 +1552,10 @@ select {
 }
 
 /*
- * Desktop 
+ * iphone 5 
  */
 
-@media only screen and (min-device-width : 0px) and (max-device-width : 320px) { 
+@media only screen and (min-width : 0px) and (max-width : 320px) { 
 
 	.looksy-navigation li {
 	    margin-right: 12px;
@@ -1739,4 +1581,313 @@ select {
 		padding-top: 15px;
 		height: 100px;
 	}
+}
+
+@media only screen and (min-width : 0px) and (max-width : 414px) { 
+
+	/*
+	 * NAVIGATION
+	 */
+
+	.looksy-menu {
+		position: fixed;
+	    bottom: 0;
+	    left: 0;
+	    width: 100%;
+	    z-index: 2;
+	}
+
+	.looksy-navigation {
+	 	list-style: none;
+	 	background: #333;
+	 	margin:0;
+	    text-align: center;
+	    padding: 0 0 10px 0;
+	    border-top: 0;
+	}
+
+	.looksy-navigation li {
+	 	display: inline-block;
+	 	margin-right: 20px;
+	 	font-size: 0;
+	}
+
+	.looksy-navigation li a {
+	 	display: inline-block;
+	 	font-size: 0;
+	}
+
+	.looksy-navigation li span {
+		position: relative;
+	    top: 46px;
+	    display: block;
+	    left: 0;
+	    color: #bab4af;
+	    font-size: 11px;
+	}
+
+	.reply {
+		margin-top: 10px;
+	}
+
+	.looksy-navigation .home a {
+		background: url('../img/navigation/off/home.png') 0 0 no-repeat;
+		background-size: 40px;
+		width: 40px;
+		height: 40px;
+		position: relative;
+		top: 12px;
+		left: 8px;
+	}
+
+	.home .looksy-navigation .home a {
+		background: url('../img/navigation/on/home.png') 0 0 no-repeat;
+		background-size: 40px;
+		width: 40px;
+		height: 40px;
+		position: relative;
+		top: 12px;
+		left: 8px;
+	}
+
+	.home .looksy-navigation .home span,
+	.search .looksy-navigation .search span,
+	.categories-page .looksy-navigation .search span,
+	.friends .looksy-navigation .friends span,
+	.myprofile .looksy-navigation .profile span, 
+	.profile .looksy-navigation .profile span {
+		color: #fff;
+	}
+
+	.looksy-navigation .search a {
+		background: url('../img/navigation/off/filter.png') 0 0 no-repeat;
+		background-size: 40px;
+		width: 40px;
+		height: 40px;
+		position: relative;
+		top: 12px;
+		left: 8px;
+	}
+
+	.search .looksy-navigation .search a, 
+	.categories-page .looksy-navigation .search a {
+		background: url('../img/navigation/on/filter.png') 0 0 no-repeat;
+		background-size: 40px;
+		width: 40px;
+		height: 40px;
+		position: relative;
+		top: 12px;
+		left: 8px;
+	}
+
+	.looksy-navigation .add a {
+		background: url('../img/navigation/on/add.png') 0 0 no-repeat;
+		background-size: 60px;
+		width: 60px;
+		height: 60px;
+		position: relative;
+		left: 8px;
+	}
+
+	.looksy-navigation .friends a {
+		background: url('../img/navigation/off/friends.png') 0 0 no-repeat;
+	    background-size: 48px;
+	    width: 48px;
+	    height: 40px;
+	    position: relative;
+		top: 12px;
+		left: 8px;
+	}
+
+	.friends .looksy-navigation .friends a {
+		background: url('../img/navigation/on/friends.png') 0 0 no-repeat;
+		background-size: 48px;
+	    width: 48px;
+	    height: 40px;
+	    position: relative;
+		top: 12px;
+		left: 8px;
+	}
+
+	.looksy-navigation .profile a {
+		background: url('../img/navigation/off/profile.png') 6px 0 no-repeat;
+		background-size: 36px;
+		width: 49px;
+		height: 40px;
+		position: relative;
+		top: 12px;
+		left: 8px;
+	}
+
+	.myprofile .looksy-navigation .profile a {
+		background: url('../img/navigation/on/profile.png') 6px 0 no-repeat;
+		background-size: 36px;
+		width: 49px;
+		height: 40px;
+		position: relative;
+		top: 12px;
+		left: 8px;
+	}
+
+	.looksy-menu .friends {
+		position: relative;
+		height: 52px;
+	}
+
+	.looksy-menu .friends .friend-requests {
+	    position: absolute;
+	    left: 41px;
+	    top: 34px;
+	    display: block;
+	    background: url('../img/icons/count.png') 0px 0px no-repeat;
+	    background-size: 20px;
+	    width: 20px;
+	    height: 20px;
+	    color: #333;
+	    font-size: 13px;
+	    padding-top: 2px;
+	    font-weight: bold;
+	}
+
+	.looksy-menu .categories {
+		position: absolute;
+	    top: -80px;
+	    height: 80px;
+	    overflow-x: scroll;
+	    background: #fff;
+	    display: none;
+	    padding-top: 4px;
+	    padding-left: 4px;
+	    width: 100%;
+	}
+
+	.looksy-menu .categories ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	.looksy-menu .categories li {
+		display:inline;
+	}
+
+	.looksy-menu .categories a {
+		color: #fff;
+	    border: 3px solid #999;
+	    display: inline-block;
+	    width: 24%;
+	    background: #bab4af;
+	    font-size: 1.4em;
+	    text-align: center;
+	    border-radius: 0.3em;
+	    margin-bottom: 4px;
+	}
+
+	.looksy-menu.categories-on:after {
+	    content: "";
+	    position: absolute;
+	    top: 0;
+	    left: 114px;
+	    border-style: solid;
+	    border-width: 8px 9px 0;
+	    border-color: #F3EDEC transparent;
+	    display: block;
+	    width: 0;
+	    z-index: 1;
+	    transform: rotate(0deg);
+	    -ms-transform: rotate(0deg);
+	    -webkit-transform: rotate(0deg);
+	}
+
+}
+
+/*
+ * desktop computers 
+ */
+
+@media only screen and (min-width : 1025px) { 
+
+   /*
+	* Navigation
+	*/
+
+	.navbar {
+		background: #333;
+		margin:0 0 32px 0;
+		height: 76px;
+	}
+
+	h1 {
+		color: #fff;
+		text-align:left;
+		position: absolute;
+		top: 16px;
+		left: 16px;
+	}
+
+	.looksy-menu {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	}
+
+	.looksy-navigation {
+		list-style: none;
+		text-align: right;
+		margin: 24px 0 0 0;
+		padding: 0;
+	}
+
+	.looksy-navigation li {
+	 	display: inline-block;
+	 	margin-right: 16px;
+	 	font-size: 23px;
+	 	font-weight: normal;
+	}
+
+	.looksy-navigation li a {
+	 	display: inline-block;
+	 	width: 100%;
+	 	height: 100%;
+	 	color: #fff;
+	}
+
+	.looksy-navigation li span {
+	    font-size: 23px;
+	}
+
+	.looksy-menu .categories {
+		position: absolute;
+	    top: 75px;
+	    height: 100px;
+	    overflow-x: scroll;
+	    background: #fff;
+	    display: none;
+	}
+
+	.looksy-menu .categories ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	.looksy-menu .categories li {
+		display:inline;
+	}
+
+	.looksy-menu .categories a {
+		color: #fff;
+	    display: block;
+	    background: #bab4af;
+	    font-size: 1.4em;
+	}
+
+	.missing {
+	    height: 200px;
+	}
+
+	.add .website-wrapper.pick .image, 
+	.myprofile .website-wrapper.pick .image {
+    	height: 100%;
+	}
+
 }

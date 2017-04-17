@@ -5,7 +5,10 @@
 @stop
 
 @section('body-class')
-  home
+  home 
+  @if(!$statuses->count())
+  	cold-start
+  @endif
 @stop
 
 @section('navigation')
@@ -17,22 +20,43 @@
 	    <div class="col-md-6 col-md-offset-3">
 	        @if(!$statuses->count())
 	        	<div class="cold-start">
-	        		<p>Start sharing your top picks and add some friends. You can have up to 5 picks to keep things fresh.</p>
-	        		<p class="latest-picks">Here's the latest picks to inspire you.</p>
+	        		<div class="page-1">
+	        			<div class="section-top">
+	        				<p>Whether you're raving about a film, a must-see exhibition or the best new pizza in town, great things happen when you share.</p>
+						</div>
+						<div class="section-bottom">
+							<p>PickList – inspire friends and keep your finger on the pulse by sharing Picks with people you know.</p>
+							<div class="align-button">
+								<button type="submit" class="button"><a href="#" class="got-it">Got it!</a></button>
+							</div>
+						</div>
+						
+					</div>
+					<div class="page-2">
+						<div class="section-top">
+	        				<p>Only connecting with people you know means that your feed will only ever feature Picks from people whose opinions you trust.</p>
+						</div>
+						<div class="section-bottom">
+							<p>We limit the number of Picks you can upload to five at a time. This helps to ensure a curated feed packed with quality Picks – it also keeps things nice and fresh.</p>
+							<div class="align-button">
+								<button type="submit" class="button"><a href="#" class="ok-great">OK great!</a></button>
+							</div>
+						</div>
+					</div>
+					<div class="page-3">
+						<p>Let’s get connected with some friends...</p>
+			            <div class="friend-block">
+			                <form role="search" action="{{ route('search.results') }}">
+			                    <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">
+			                        <input type="text" name="query" class="form-control search-input" placeholder="Search friends">
+			                        @if($errors->has('query'))
+			                            <span class="help-block">{{ $errors->first('query') }}</span>
+			                        @endif
+			                    </div>
+			                </form>
+			            </div>
+			        </div>
 	        	</div>
-	        	@foreach($picks as $pick)
-	            	<div class="website-wrapper pick-{{ $pick->type }}">
-	            		<div class="type label-{{ $pick->type }}">
-	            			<a href="{{ route('pick.category', ['category' => $pick->type]) }}">{{ $pick->type }}</a>
-	            		</div>
-	            		<div class="image">
-	            			<a href="{{ route('pick.index', ['statusId' => $pick->id]) }}"><img src="{{ $pick->image }}" /></a>
-	            		</div>
-	            		<div class="details">
-	            			<p class="title"><a href="{{ route('pick.index', ['statusId' => $pick->id]) }}">{{ $pick->title }}</a></p>	
-	            		</div>
-	            	</div>
-	        	@endforeach
 	        @else
 	        	@foreach($statuses as $status)
 	            	<div class="website-wrapper pick-{{ $status->type }}">

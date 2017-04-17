@@ -41,21 +41,21 @@
     @else
         <body class="profile">
     @endif
+        <nav class="navbar navbar-default" role="navigation">
+            @if(Auth::user()->id == $user->id)
+                <h1>My Picks</h1>
+            @else
+                <h1>{{ $user->getNameOrUsername() }}</h1>
+            @endif
+            @include('templates.partials.navigation')
+            @if(Auth::user()->id == $user->id)
+                <div class="edit-link">
+                    <a href="{{ route('profile.edit') }}"><img src="{{asset('../img/icons/edit.png')}}" /></a>
+                </div>
+            @endif
+        </nav>
     
-        <div class="container">
-            <nav class="navbar navbar-default" role="navigation">
-                @if(Auth::user()->id == $user->id)
-                    <h1>My Picks</h1>
-                @else
-                    <h1>{{ $user->getNameOrUsername() }}</h1>
-                @endif
-                @include('templates.partials.navigation')
-                @if(Auth::user()->id == $user->id)
-                    <div class="edit-link">
-                        <a href="{{ route('profile.edit') }}"><img src="{{asset('../img/icons/edit.png')}}" /></a>
-                    </div>
-                @endif
-            </nav>
+        <div class="container">        
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     @include('templates.partials.alerts')
