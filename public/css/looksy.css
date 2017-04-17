@@ -184,7 +184,7 @@ ol li {
 	font-size: 25px;
     font-weight: bold;
     letter-spacing: -0.07em;
-    margin: 0 72px;
+    margin: 0 55px;
     line-height: 1em;
 }
 
@@ -1257,8 +1257,8 @@ p.latest-picks {
 
 .myprofile .edit-link {
 	position: absolute;
-	top: 4px;
-	right: 0;
+	top: 0;
+	right: 8px;
 	width: 40px;
 }
 
@@ -1591,6 +1591,14 @@ select {
 	.looksy-menu {
 		position: fixed;
 	    bottom: 0;
+	    left: 0;
+	    width: 100%;
+	    z-index: 2;
+	}
+
+	.cold-start .looksy-menu {
+		position: fixed;
+	    bottom: 27px;
 	    left: 0;
 	    width: 100%;
 	    z-index: 2;

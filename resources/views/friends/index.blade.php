@@ -31,7 +31,7 @@
             <div class="friend-block">
                 <!--<h3>Friends</h3>-->
                 @if (!$friends->count())
-                    <p class="no-friends">You don't have any friends yet. Search above to add.</p>
+                    <p class="no-friends">Connect with your friends.</p>
                 @else
                     @foreach($friends as $user)
                         <div class="friend-of-mine">
@@ -47,6 +47,7 @@
                 @endif
             </div>
             
+            @if ($requests->count() !== 0)
             <div class="friend-block requests">
                 <h3>Friend requests</h3>
                 @if (!$requests->count())
@@ -62,6 +63,7 @@
                     @endforeach
                 @endif
             </div>
+            @endif
 
             
 
