@@ -46,6 +46,25 @@
                     @endforeach
                 @endif
             </div>
+            
+            <div class="friend-block requests">
+                <h3>Friend requests</h3>
+                @if (!$requests->count())
+                    <p class="no-friend-requests">You have no friend requests.</p>
+                @else
+                    @foreach($requests as $user)
+                        <div class="not-yet-friend-of-mine">
+                            @include('user.partials.userblock')
+                            @if(Auth::user()->hasFriendRequestReceived($user))
+                                <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
+                            @endif
+                        </div>
+                    @endforeach
+                @endif
+            </div>
+
+            
+
         </div>
     </div>
 @stop  
