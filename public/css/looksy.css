@@ -312,6 +312,10 @@ ol li {
 	display:none;
 } 
 
+.cold-start .logo {
+	display: none;
+}
+
 .cold-start .button {
 	background: #ff5a58;
     width: 50%;

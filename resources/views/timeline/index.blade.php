@@ -2,7 +2,7 @@
 
 @section('body-class')
   home 
-  @if(!$statuses->count())
+  @if($user_statuses_count == 0)
   	cold-start
   @endif
 @stop
@@ -55,6 +55,9 @@
 			                    </div>
 			                </form>
 			            </div>
+			            <div class="align-button">
+								<button type="submit" class="button"><a href="#" class="ok-great">Got it!</a></button>
+							</div>
 			        </div>
 	        	</div>
 	        @else
