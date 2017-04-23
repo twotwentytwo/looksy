@@ -161,6 +161,9 @@ ol li {
 	margin-bottom: 0;
 }
 
+.authentication .logo {
+	display:none;
+}
 
 .authentication {
 	background: url('../img/template/auth_background.png') 0 0 no-repeat;
@@ -290,7 +293,7 @@ ol li {
 .authentication .forgot_password {
 	font-size: 17px;
 	position:absolute;
-	bottom: 13%;
+	bottom: -24%;
 	left: 36%;
 }
 

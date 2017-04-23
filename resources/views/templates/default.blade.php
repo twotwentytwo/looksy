@@ -38,8 +38,6 @@
 	        <h1 class="logo"><img src="/img/template/logo_black.png"></h1>
 		</nav>
 		<div class="container">
-			@include('templates.partials.alerts')
-			
 			@yield('content')
 		</div>
 		@yield('navigation')
