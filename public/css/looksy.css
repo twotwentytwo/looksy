@@ -781,6 +781,9 @@ p.latest-picks {
 
 .pick .review {
 	position: relative;
+}
+
+.pick.youtube .review {
 	padding-top: 24px;
 }
 

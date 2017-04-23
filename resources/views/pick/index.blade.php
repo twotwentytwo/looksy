@@ -6,6 +6,9 @@
 
 @section('body-class')
   pick
+  @if($status->source == 'YouTube')
+    youtube
+  @endif
 @stop
 
 @section('navigation')

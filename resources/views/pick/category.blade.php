@@ -22,10 +22,7 @@
                 @foreach($statuses as $status)
                     <div class="website-wrapper pick-{{ $status->type }}">
                         <div class="type label-{{ $status->type }}">
-                            <a href="{{ route('pick.category', ['category' => $status->type]) }}">
-                                <!--<img src="../img/icons/categories/{{ $status->type }}.png" />-->
-                                {{ $status->type }}
-                            </a>
+                            <a href="{{ route('pick.category', ['category' => $status->type]) }}">{{ $status->type }}</a>
                         </div>
                         <div class="image">
                             <a href="{{ route('pick.index', ['statusId' => $status->id]) }}"><img src="{{ $status->image }}" /></a>
