@@ -10,14 +10,14 @@
 @section('content')
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-			<h1>PickList</h1>
+			<h1><img src="/img/template/logo_white.png"></h1>
 			<p class="strapline">Great things happen when we share.</p>
 		    <form class="form-vertical" role="form" method="post" action="{{ route('auth.signup') }}" autocomplete="off">
 
-		    	<div class="upload-image">
+		    	<!--<div class="upload-image">
 		    		<label>Add image</label>
 		    		<input type="hidden" role="uploadcare-uploader" name="image" data-clearable="true">
-		    	</div>
+		    	</div>-->
 		        <div class="form-group{{ $errors->has('email') ? ' has-error' :''}}">
 		            <input type="text" name="email" class="form-control" id="email" placeholder="Email address" value="{{ Request::old('email') ? : '' }}">
 		            @if($errors->has('email'))
@@ -59,7 +59,7 @@
 		        </div>
 		        <input type="hidden" name="_token" value="{{ Session::token() }}">
 		    </form>
-		    <p class="sign-in-cta">Signed up? Now try <a class="sign-up" href="{{ route('auth.signin') }}">signing in</a>.</p>
+		    <p class="sign-in-cta"><a class="sign-up" href="{{ route('auth.signin') }}">Or Sign In</a></p>
 		</div>
 	</div>
 @stop

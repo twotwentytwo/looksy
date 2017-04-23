@@ -9,8 +9,8 @@
 
 @section('content')
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-			<h1>PickList</h1>
+		<div class="col-md-6 col-md-offset-3 inner-container-content">
+			<h1><img src="/img/template/logo_white.png"></h1>
 			<p class="strapline">Great things happen when we share.</p>
 		    <form class="form-vertical" role="form" method="post" action="{{ route('auth.signin') }}">
 		    	@include('templates.partials.alerts')

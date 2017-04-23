@@ -18,23 +18,24 @@
 		
 
         <div class="friend-block invite-friends">
-                <h3>We can't find anyone by that name</h3>
-                <p class="no-friend-requests">Enter their email address and we’ll send them an invite.</p>
-                <div class="friend-block">
-                    <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
-                        <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-                            <input placeholder="Their email address" name="invite" class="form-control add">
-                        </div>
-                        <input type="hidden" name="_token" value="{{ Session::token() }}">
-                    </form>
-                    @include('templates.partials.alerts')
-                </div>
+            <h3>We can't find anyone by that name</h3>
+            <p class="no-friend-requests">Enter their email address and we’ll send them an invite.</p>
+            <div class="friend-block">
+                <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
+                    <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
+                        <input placeholder="Their email address" name="invite" class="form-control add">
+                    </div>
+                    <input type="hidden" name="_token" value="{{ Session::token() }}">
+                </form>
+                @include('templates.partials.alerts')
             </div>
+        </div>
+        <div class="back-link">
+            <a onclick="window.history.back()"><img src="{{asset('img/icons/back.png')}}" /></a>
+        </div>
 	@else
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
-    			
-                
                 @foreach ($users as $user)
     				@include('user/partials/userblock')
                     @if(Auth::user()->hasFriendRequestPending($user)) 

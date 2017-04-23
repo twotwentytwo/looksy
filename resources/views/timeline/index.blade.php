@@ -1,8 +1,4 @@
-@extends('templates.default')  
-
-@section('title')
-  PickList
-@stop
+@extends('templates.default')
 
 @section('body-class')
   home 
@@ -16,12 +12,14 @@
 @stop
 
 @section('content')
+	
 	<div class="row">
 	    <div class="col-md-6 col-md-offset-3">
 	        @if($user_statuses_count == 0)
 	        	<div class="cold-start">
 	        		<div class="page-1">
 	        			<div class="section-top">
+	        				<h1><img src="/img/template/logo_white.png"></h1>
 	        				<p>Whether you're raving about a film, a must-see exhibition or the best new pizza in town, great things happen when you share.</p>
 						</div>
 						<div class="section-bottom">
@@ -34,6 +32,7 @@
 					</div>
 					<div class="page-2">
 						<div class="section-top">
+							<h1><img src="/img/template/logo_white.png"></h1>
 	        				<p>Only connecting with people you know means that your feed will only ever feature Picks from people whose opinions you trust.</p>
 						</div>
 						<div class="section-bottom">
@@ -44,7 +43,8 @@
 						</div>
 					</div>
 					<div class="page-3">
-						<p>Connect with your friends</p>
+						<h1><img src="/img/template/logo_black.png"></h1>
+						<p>Let’s get connected with some friends...</p>
 			            <div class="friend-block">
 			                <form role="search" action="{{ route('search.results') }}">
 			                    <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">
@@ -59,6 +59,7 @@
 	        	</div>
 	        @else
 	        	@foreach($statuses as $status)
+	        	
 	            	<div class="website-wrapper pick-{{ $status->type }}">
 	            		<div class="type label-{{ $status->type }}">
 	            			<a href="{{ route('pick.category', ['category' => $status->type]) }}">

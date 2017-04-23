@@ -35,13 +35,14 @@
 	</head>
 	<body class="@yield('body-class')">
 		<nav class="navbar navbar-default" role="navigation">
-	        <h1>@yield('title')</h1>
-	        @yield('navigation')
+	        <h1 class="logo"><img src="/img/template/logo_black.png"></h1>
 		</nav>
 		<div class="container">
-			<!--@include('templates.partials.alerts')-->
+			@include('templates.partials.alerts')
+			
 			@yield('content')
 		</div>
+		@yield('navigation')
 	</body>
 
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
