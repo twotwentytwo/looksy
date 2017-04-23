@@ -14,7 +14,7 @@
 
 @section('content')
  			<div class="row">
-			    <div class="col-md-6 col-md-offset-3">
+			    <div class="col-md-6 col-md-offset-3 row-inner">
             @if(Auth::user()->statuses()->notReply()->count() >= 5)
               <p class="limit">Whoops! please choose one of your picks to replace.</p>
               <p>We limit picks to five at a time to keep things curated and fresh.</p>
@@ -37,15 +37,13 @@
               
             @else
 
-              <p class="share-text">Inspire your friends – share something now</p>
+              <p class="share-text">Great things happen when you share.</p>
+              <p>Pick something now to Inspire your friends.</p>
               <form role="form" action="{{ route('status.post') }}" method="post" class="add-form">
-
-
-                
                 <div class="before-add">
                   <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
                     <input placeholder="Add URL for your pick" name="status" class="form-control add-input">
-                    <!--<span class="help-block">Oooops... you need to enter a valid URL for your Pick.</span>-->
+                    
                     @if($errors->has('status'))
                       <span class="help-block">Oooops... you need to enter a valid URL for your Pick.</span>
                     @endif

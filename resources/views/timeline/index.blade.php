@@ -11,10 +11,14 @@
     @include('templates.partials.navigation')
 @stop
 
+@section('title')
+    PickList
+@stop
+
 @section('content')
 	
 	<div class="row">
-	    <div class="col-md-6 col-md-offset-3">
+	    <div class="col-md-6 col-md-offset-3 row-inner">
 	        @if($user_statuses_count == 0)
 	        	<div class="cold-start">
 	        		<div class="page-1">

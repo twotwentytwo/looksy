@@ -85,6 +85,14 @@ a:hover {
     border-radius: 0;
 }
 
+.row {
+	margin:0;
+}
+
+.row-inner {
+	padding: 4px;
+}
+
 .pagination>.active>a, 
 .pagination>.active>a:focus, 
 .pagination>.active>a:hover, 
@@ -565,7 +573,7 @@ ol li {
 
 .pick-see .profile-image,
 .pick-see .user .profile-image {
-	border: 3px solid #FF8F3F;
+	border: 2px solid #FF8F3F;
 }
 
 .pick-see .comments {
@@ -590,7 +598,7 @@ ol li {
 
 .pick-watch .profile-image,
 .pick-watch .user .profile-image {
-	border: 3px solid #FF6379;
+	border: 2px solid #FF6379;
 }
 
 .pick-watch .comments {
@@ -615,7 +623,7 @@ ol li {
 
 .pick-read .profile-image,
 .pick-read .user .profile-image {
-	border: 3px solid #FF6b97;
+	border: 2px solid #FF6b97;
 }
 
 .pick-read .comments {
@@ -640,7 +648,7 @@ ol li {
 
 .pick-taste .profile-image,
 .pick-taste .user .profile-image {
-	border: 3px solid #FF73b7;
+	border: 2px solid #FF73b7;
 }
 
 .pick-taste .comments {
@@ -665,7 +673,7 @@ ol li {
 
 .pick-listen .profile-image,
 .pick-listen .user .profile-image {
-	border: 3px solid #FF6c50;
+	border: 2px solid #FF6c50;
 }
 
 .pick-listen .comments {
@@ -690,7 +698,7 @@ ol li {
 
 .pick-buy .profile-image,
 .pick-buy .user .profile-image {
-	border: 3px solid #FF7F48;
+	border: 2px solid #FF7F48;
 }
 
 .pick-buy .comments {
@@ -715,7 +723,7 @@ ol li {
 
 .pick-play .profile-image,
 .pick-play .user .profile-image {
-	border: 3px solid #FF8F3F;
+	border: 2px solid #FF8F3F;
 }
 
 .pick-play .comments {
@@ -740,7 +748,7 @@ ol li {
 
 .pick-use .profile-image,
 .pick-use .user .profile-image {
-	border: 3px solid #FFA135;
+	border: 2px solid #FFA135;
 }
 
 .pick-use .comments {
@@ -1131,7 +1139,6 @@ p.latest-picks {
 	font-size: 25px;
     font-weight: bold;
     line-height: 1em;
-    margin-bottom: 40px;
 }
 
 .add-page form {
@@ -1295,9 +1302,9 @@ p.latest-picks {
 
 .myprofile .edit-link {
 	position: absolute;
-	top: 0;
-	right: 8px;
-	width: 40px;
+    top: 8px;
+    right: 8px;
+    width: 24px;
 }
 
 .add .delete-link {
@@ -1360,7 +1367,7 @@ p.latest-picks {
 .missing {
 	background: url('../img/template/missing.png') 0 0 no-repeat;
 	background-size: 100%;
-	height: 130px;
+	height: 138px;
 	padding-top: 30px;
 }
 
@@ -1475,10 +1482,10 @@ p.latest-picks {
 }
 
 .delete-link {
-	position: absolute;
-    top: 18px;
+    position: absolute;
+    top: 24px;
     right: 16px;
-    width: 30px;
+    width: 20px;
 }
 
 .delete-link img {
@@ -1486,10 +1493,10 @@ p.latest-picks {
 }
 
 .back-link {
-	position: absolute;
-    top: 24px;
-    left: 16px;
-    width: 30px;
+    position: absolute;
+    top: 28px;
+    left: 8px;
+    width: 24px;
 }
 
 .back-link img {

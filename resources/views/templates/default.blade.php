@@ -35,7 +35,7 @@
 	</head>
 	<body class="@yield('body-class')">
 		<nav class="navbar navbar-default" role="navigation">
-	        <h1 class="logo"><img src="/img/template/logo_black.png"></h1>
+	        <h1>@yield('title')</h1>
 		</nav>
 		<div class="container">
 			@yield('content')

@@ -64,7 +64,7 @@
                             <p class="no-picks-yet-title">You haven't posted any Picks.</p>
                             
                             <div class="missing">
-                                <p>5 slots left.</p> 
+                                <p>You have 5 empty slots.</p> 
                                 <p>Add more Picks.</p>
                             </div>
                         @else
@@ -98,8 +98,8 @@
                         @if(Auth::user()->id == $user->id)
                             @if($statuses->count() < 5)
                                 <div class="missing">
-                                    <p>{{(5-$statuses->count())}} empty {{ (5-$statuses->count()) == 1 ? 'slot' : 'slots' }} left. Add more Picks. </p> 
-                                    <p>Why not add a pick?</p>
+                                    <p>You have {{(5-$statuses->count())}} empty {{ (5-$statuses->count()) == 1 ? 'slot' : 'slots' }}. Add more Picks. </p> 
+                                 
                                 </div>
                             @endif
                         @endif
