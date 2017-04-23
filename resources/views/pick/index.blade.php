@@ -16,9 +16,13 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3 row-inner">
             @if($status->source == 'YouTube')
-                <div class="videoWrapper">
+                <div class="videoWrapper pick-{{ $status->type }}">
                     <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
+                    <div class="details">
+                        <p class="title"><a target="_blank" href="{{ $status->url }}">{{ $status->title }}</a></p>
+                    </div> 
                 </div>
+                
             @else
                 <div class="website-wrapper pick-{{ $status->type }}">
                     <div class="image">

@@ -490,7 +490,7 @@ ol li {
     left: 8px;
     text-align: left;
     margin: 0 auto;
-    width: 90%;
+    width:90%;
 }
 
 .website-wrapper .details a {
@@ -781,6 +781,7 @@ p.latest-picks {
 
 .pick .review {
 	position: relative;
+	padding-top: 24px;
 }
 
 .pick .review .comment {
@@ -829,6 +830,7 @@ p.latest-picks {
     position: inherit;
     left: 0;
     top: 8px;
+    width:100%;
 }
 
 .pick .website-wrapper .details .title {
@@ -837,6 +839,26 @@ p.latest-picks {
     margin: 0;
     font-size: 17px;
     padding: 4px;
+    position: relative;
+    top: -6px;
+}
+
+.pick .videoWrapper .details {
+
+    position: absolute;
+    bottom: -24px;
+    left:0;
+    width: 100%;
+}
+
+.pick .videoWrapper .details .title {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    padding: 0;
+    position: relative;
+    top: 0;
 }
 
 .pick .website-wrapper .details .title a {
@@ -893,11 +915,13 @@ p.latest-picks {
 	font-weight: bold;
 	font-style: italic;
 	letter-spacing: -0.035em;
+	line-height: 1em;
 }
 
 .pick .reply .comment .text a {
 	color: #333;
 	font-style: normal;
+	font-size: 17px;
 }
 
 .pick .review .comment .text a {
@@ -949,7 +973,7 @@ p.latest-picks {
 .comments .count {
 	color: #fff;
     position: absolute;
-    right: 32px;
+    right: 29px;
     bottom: 13px;
     font-size: 20px;
     font-weight: bold;
@@ -958,8 +982,12 @@ p.latest-picks {
 .form-reply textarea {
 	font-size: 17px;
 	color: #bab4af;
-	text-align: center;
+	text-align: left;
 	height: 44px;
+}
+
+.form-reply textarea::placeholder {
+	text-align: center;
 }
 
 /*
