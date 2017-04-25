@@ -61,7 +61,7 @@
                     @include('templates.partials.alerts')
                     @if(!$statuses->count())
                         @if(Auth::user()->id == $user->id)
-                            <p class="no-picks-yet-title">You haven't posted any Picks.</p>
+                            <!-- <p class="no-picks-yet-title">You haven't posted any Picks.</p> -->
                             
                             <div class="missing">
                                 <p>You have 5 empty slots.</p> 

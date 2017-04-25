@@ -311,9 +311,8 @@ ol li {
 }
 
 /*
- * TIMELINE
+ * COLD START 
  */
-
 
 .cold-start .navbar, 
 .cold-start .looksy-menu {
@@ -334,7 +333,6 @@ ol li {
     width: 124px;
     padding: 8px;
     margin-top: 32px;
-
 }
 
 .cold-start .align-button {
@@ -345,7 +343,6 @@ ol li {
 	font-size: 23px;
     font-weight: bold;
     line-height: 1.3em;
-
 }
 
 .cold-start .container {
@@ -386,6 +383,15 @@ ol li {
 .cold-start .logo {
 	display:none;
 }	
+
+.cold-start .row-inner {
+	padding:0;
+	margin:0;
+}
+
+/*
+ * TIMELINE
+ */
 
 .section-top {
 	background: #ff5a58;

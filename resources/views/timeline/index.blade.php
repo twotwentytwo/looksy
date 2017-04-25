@@ -59,6 +59,9 @@
 			                    </div>
 			                </form>
 			            </div>
+			            <div class="align-button">
+							<button type="submit" class="button"><a href="/add" class="lets-begin">Let's begin!</a></button>
+						</div>
 			        </div>
 	        	</div>
 	        @else

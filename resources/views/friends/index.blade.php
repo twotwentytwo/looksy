@@ -24,14 +24,14 @@
                             <span class="help-block">{{ $errors->first('query') }}</span>
                         @endif
                     </div>
-                    <!--<button type="submit" class="btn btn-default">Search</button>-->
+                    <!-- <button type="submit" class="btn btn-default">Search</button> -->
                 </form>
             </div>
 
             <div class="friend-block">
                 <!--<h3>Friends</h3>-->
                 @if (!$friends->count())
-                    <p class="no-friends">Connect with your friends.</p>
+                    <!-- <p class="no-friends">Connect with your friends.</p> -->
                 @else
                     @foreach($friends as $user)
                         <div class="friend-of-mine">
