@@ -52,7 +52,7 @@
 			            <div class="friend-block">
 			                <form role="search" action="{{ route('search.results') }}">
 			                    <div class="form-group{{ $errors->has('query') ? ' has-error' : '' }}">
-			                        <input type="text" name="query" class="form-control search-input" placeholder="Search friends">
+			                        <input type="text" name="query" class="form-control search-input" placeholder="Search for friends">
 			                        @if($errors->has('query'))
 			                            <span class="help-block">{{ $errors->first('query') }}</span>
 			                        @endif
