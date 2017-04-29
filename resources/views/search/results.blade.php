@@ -25,6 +25,9 @@
                     <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
                         <input placeholder="Their email address" name="invite" class="form-control add">
                     </div>
+                    <div class="invite button">
+                        <input type="submit" value="Invite" class="invite btn btn-primary">
+                    </div>
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
                 </form>
                 @include('templates.partials.alerts')

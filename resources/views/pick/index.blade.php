@@ -25,11 +25,15 @@
                         <p class="title"><a target="_blank" href="{{ $status->url }}">{{ $status->title }}</a></p>
                     </div> 
                 </div>
-                
             @else
                 <div class="website-wrapper pick-{{ $status->type }}">
                     <div class="image">
                         <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
+                        @if(Auth::user()->id == $user->id)
+                            <div class="edit-pick">
+                                <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit</a>
+                            </div>
+                        @endif
                     </div>
                     <a href="{{ $status->url }}" target="_blank">
                         <div class="external-link"></div>

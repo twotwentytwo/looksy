@@ -88,18 +88,12 @@
                                         <p class="review"><span>"{{ $status->review }}"</span></p>
                                     @endif
                                 </div>
-                                @if(Auth::user()->id == $user->id)
-                                    <div class="edit-pick">
-                                        <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit</a>
-                                    </div>
-                                @endif
                             </div>
                         @endforeach
                         @if(Auth::user()->id == $user->id)
                             @if($statuses->count() < 5)
                                 <div class="missing">
                                     <p>You have {{(5-$statuses->count())}} empty {{ (5-$statuses->count()) == 1 ? 'slot' : 'slots' }}. Add more Picks. </p> 
-                                 
                                 </div>
                             @endif
                         @endif

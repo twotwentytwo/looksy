@@ -208,9 +208,7 @@ class StatusController extends Controller
 
         DB::table('statuses')->where('id', $statusId)->delete();
 
-        return view('profile.index')
-            ->with('info', 'Your pick has been removed')
-            ->with('statuses', $statuses)
-            ->with('user', $user);
+        return redirect()
+            ->back();
     }
 }

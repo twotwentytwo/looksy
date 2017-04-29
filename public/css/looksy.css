@@ -967,6 +967,13 @@ p.latest-picks {
 	font-weight: bold;
 }
 
+.pick .edit-pick {
+	position: absolute;
+	top: 8px;
+	right:8px;
+	font-size: 17px;
+}
+
 /*
  * COMMENTS
  */
@@ -1168,6 +1175,19 @@ p.latest-picks {
     text-align: center;
 }
 
+.search .invite.btn {
+	background: #ff5a58;
+	width: 50%;
+	color: #fff;
+	border: none;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.invite.button {
+	text-align: center;
+}
+
 /*
  * Add
  */
@@ -1201,27 +1221,24 @@ p.latest-picks {
     text-overflow: ellipsis;
 }
 
-/*
-
-.preview {
-	display:none;
+.add-page .categories-picker .btn {
+    color: #fff;
+    border: 3px solid #999;
+    display: inline-block;
+    width: 23%;
+    background: #bab4af;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 0.3em;
+    margin-bottom: 4px;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    padding:0;
 }
 
-.preview .title {
-	margin: 8px 0 16px;
-	font-size: 1.2em;
+.add-page .categories-picker .btn.on {
+    background: #ff5a58;
 }
-
-.before-add .help-block {
-	display:none;
-}
-
-.preview img {
-	width: 100%;
-	margin-bottom: 32px;
-}
-
-*/
 
 .add-page .limit {
     font-size: 1.6em;
@@ -1269,8 +1286,7 @@ p.latest-picks {
 	border-bottom:none;
 }
 
-.add .website-wrapper.pick .image, 
-.myprofile .website-wrapper.pick .image {
+.add .website-wrapper.pick .image {
 	height: 120px;
 	overflow: hidden;
 	position: relative;
@@ -1282,11 +1298,16 @@ p.latest-picks {
 	position: relative;
 }
 
-.add .website-wrapper.pick .details, 
-.myprofile .website-wrapper.pick .details {
+.add .website-wrapper.pick .details {
 	position: absolute;
 	left: 8px;
 	top: 40px;
+}
+
+.myprofile .website-wrapper.pick .details {
+	position: absolute;
+	left: 8px;
+	top: 64px;
 }
 
 .profile .pick .details {
@@ -1315,10 +1336,6 @@ p.latest-picks {
 	top: 76px;
 	left: 8px;
 	z-index: 1;
-}
-
-.myprofile .pick .type {
-	display:none;
 }
 
 .profile .pick .edit-pick, 
