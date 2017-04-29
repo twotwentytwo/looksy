@@ -29,7 +29,7 @@
                 <div class="website-wrapper pick-{{ $status->type }}">
                     <div class="image">
                         <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
-                        @if(Auth::user()->id == $user->id)
+                        @if(Auth::user() == $status->user)
                             <div class="edit-pick">
                                 <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit</a>
                             </div>
@@ -53,7 +53,6 @@
                     <div class="reply">
                         <div class="comment">
                             <p class="text">{{ $reply->body }} <a href="{{ route('profile.index', ['username' => $reply->user->username]) }}">{{ $reply->user->getNameOrUsername() }}</a></p>
-                            <!--<p class="timing">{{ $reply->created_at->diffForHumans() }}</p>-->
                         </div>
                     </div>
                 @endforeach
