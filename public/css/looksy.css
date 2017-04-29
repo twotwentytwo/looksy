@@ -1995,6 +1995,10 @@ select {
 		background: none;
 	}
 
+	.authentication	h1 {
+		text-align: center;
+	}
+
 	.authentication	h1 img {
 		width: 50%;
 	}
@@ -2040,6 +2044,10 @@ select {
 	    top: 86px;
 	    right: 8px;
 	    width: 40px;
+	}
+
+	.back-link {
+		display:none;
 	}
 
 
