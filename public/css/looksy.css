@@ -1632,9 +1632,7 @@ select {
 	font-weight: bold;
 }
 
-/*
- * iphone 5 
- */
+/* iPhone 5 */
 
 @media only screen and (min-width : 0px) and (max-width : 320px) { 
 
@@ -1664,7 +1662,9 @@ select {
 	}
 }
 
-@media only screen and (min-width : 0px) and (max-width : 414px) { 
+/* mobile menu */
+
+@media only screen and (min-width : 0px) and (max-width : 1024px) { 
 
 	/*
 	 * NAVIGATION
@@ -1895,22 +1895,34 @@ select {
 
 @media only screen and (min-width : 1025px) { 
 
-   /*
-	* Navigation
-	*/
+    /* template */
+
+	.col-md-6 {
+		width: 100%;
+	}
+
+	.col-md-offset-3 {
+		margin:0;
+	}
+
+	.container {
+		width: 970px;
+		margin: 0 auto;
+	}
+
+	h1 {
+	    font-size: 55px;
+	    text-align: left;
+	    color: white;
+	    margin: 8px;
+	}
+
+	/* navigation */
 
 	.navbar {
 		background: #333;
 		margin:0 0 32px 0;
 		height: 76px;
-	}
-
-	h1 {
-		color: #fff;
-		text-align:left;
-		position: absolute;
-		top: 16px;
-		left: 16px;
 	}
 
 	.looksy-menu {
@@ -1923,14 +1935,14 @@ select {
 	.looksy-navigation {
 		list-style: none;
 		text-align: right;
-		margin: 24px 0 0 0;
+		margin: 28px 0 0 0;
 		padding: 0;
 	}
 
 	.looksy-navigation li {
 	 	display: inline-block;
 	 	margin-right: 16px;
-	 	font-size: 23px;
+	 	font-size: 17px;
 	 	font-weight: normal;
 	}
 
@@ -1941,17 +1953,15 @@ select {
 	 	color: #fff;
 	}
 
-	.looksy-navigation li span {
-	    font-size: 23px;
-	}
-
 	.looksy-menu .categories {
-		position: absolute;
+	    position: absolute;
 	    top: 75px;
-	    height: 100px;
+	    height: 228px;
 	    overflow-x: scroll;
-	    background: #fff;
+	    background: #333;
 	    display: none;
+	    right: 196px;
+	    padding: 8px;
 	}
 
 	.looksy-menu .categories ul {
@@ -1966,17 +1976,72 @@ select {
 	.looksy-menu .categories a {
 		color: #fff;
 	    display: block;
-	    background: #bab4af;
+	    background: #333;
 	    font-size: 1.4em;
 	}
 
 	.missing {
-	    height: 200px;
+	    height: 316px;
 	}
 
 	.add .website-wrapper.pick .image, 
 	.myprofile .website-wrapper.pick .image {
     	height: 100%;
 	}
+
+	/* authentication */
+
+	.authentication .navbar {
+		background: none;
+	}
+
+	.authentication	h1 img {
+		width: 50%;
+	}
+
+	.authentication .strapline {
+    	font-size: 32px;
+    	text-align: center;
+	}
+
+	.authentication .btn {
+	    width: 20%;
+	}
+
+	/* authentication */
+
+	.website-wrapper .image img {
+    	height: 500px;
+	}
+
+	/* add pick */
+
+	.pick.btn {
+	    background: #ff5a58;
+	    width: 20%;
+	    color: #fff;
+	    border: none;
+	    font-size: 25px;
+	    font-weight: bold;
+	}
+
+	.add-page .share-text {
+	    font-size: 42px;
+	    text-align: center;
+	}
+
+	.add-page p {
+	    font-size: 23px;
+	    text-align: center;
+	}
+
+	.myprofile .edit-link {
+	    position: absolute;
+	    top: 86px;
+	    right: 8px;
+	    width: 40px;
+	}
+
+
 
 }
