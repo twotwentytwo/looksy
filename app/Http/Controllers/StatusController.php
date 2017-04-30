@@ -208,7 +208,8 @@ class StatusController extends Controller
 
         DB::table('statuses')->where('id', $statusId)->delete();
 
-        return redirect()
-            ->back();
+        return view('profile.index')
+            ->with('user', $user)
+            ->with('statuses', $statuses);
     }
 }

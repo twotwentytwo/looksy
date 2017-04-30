@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => 'hello@picklist.com',
-        'name' => 'Pick List',
+        'name' => 'PickList',
     ],
 
     /*

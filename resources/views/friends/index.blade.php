@@ -24,12 +24,10 @@
                             <span class="help-block">{{ $errors->first('query') }}</span>
                         @endif
                     </div>
-                    <!-- <button type="submit" class="btn btn-default">Search</button> -->
                 </form>
             </div>
 
             <div class="friend-block">
-                <!--<h3>Friends</h3>-->
                 @if (!$friends->count())
                     <!-- <p class="no-friends">Connect with your friends.</p> -->
                 @else
@@ -48,25 +46,22 @@
             </div>
             
             @if ($requests->count() !== 0)
-            <div class="friend-block requests">
-                <h3>Friend requests</h3>
-                @if (!$requests->count())
-                    <p class="no-friend-requests">You have no friend requests.</p>
-                @else
-                    @foreach($requests as $user)
-                        <div class="not-yet-friend-of-mine">
-                            @include('user.partials.userblock')
-                            @if(Auth::user()->hasFriendRequestReceived($user))
-                                <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
-                            @endif
-                        </div>
-                    @endforeach
-                @endif
-            </div>
+                <div class="friend-block requests">
+                    <h3>Friend requests</h3>
+                    @if (!$requests->count())
+                        <p class="no-friend-requests">You have no friend requests.</p>
+                    @else
+                        @foreach($requests as $user)
+                            <div class="not-yet-friend-of-mine">
+                                @include('user.partials.userblock')
+                                @if(Auth::user()->hasFriendRequestReceived($user))
+                                    <a class="btn btn-primary accept" href="{{ route('friend.accept', ['username' => $user->username]) }}">Accept</a>
+                                @endif
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
             @endif
-
-            
-
         </div>
     </div>
 @stop  
