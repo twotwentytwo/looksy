@@ -29,11 +29,6 @@
                 <div class="website-wrapper pick-{{ $status->type }}">
                     <div class="image">
                         <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
-                        @if(Auth::user() == $status->user)
-                            <div class="edit-pick">
-                                <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit</a>
-                            </div>
-                        @endif
                     </div>
                     <a href="{{ $status->url }}" target="_blank">
                         <div class="external-link"></div>
@@ -46,7 +41,6 @@
                 <div class="review">
                     <div class="comment">
                         <p class="text">{{ $status->review }} <a href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></p>
-                        <!--<p class="timing">{{ $status->created_at->diffForHumans() }}</p>-->
                     </div>
                 </div>
                 @foreach($status->replies as $reply)
@@ -75,5 +69,10 @@
         <div class="back-link">
             <a href="{{ url()->previous() }}"><img src="{{asset('../img/icons/back.png')}}" /></a>
         </div>
+        @if(Auth::user() == $status->user)
+            <div class="edit-pick">
+                <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}"><img src="{{asset('../img/icons/edit.png')}}" /></a>
+            </div>
+        @endif
     </div>
 @stop

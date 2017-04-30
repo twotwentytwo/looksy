@@ -969,9 +969,12 @@ p.latest-picks {
 
 .pick .edit-pick {
 	position: absolute;
-	top: 8px;
+	top: 24px;
 	right:8px;
-	font-size: 17px;
+}
+
+.pick .edit-pick img {
+	width: 30px;
 }
 
 /*
