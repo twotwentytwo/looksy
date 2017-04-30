@@ -1401,14 +1401,6 @@ p.latest-picks {
 	top:166px;
 }
 
-.myprofile .website-wrapper .details .title, 
-.profile .website-wrapper .details .title {
-	width: 95%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .no-picks-yet-title {
 	font-size: 25px;
 }
