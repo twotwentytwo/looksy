@@ -43,9 +43,11 @@
     @endif
         <nav class="navbar navbar-default" role="navigation">
             @if(Auth::user()->id == $user->id)
-                <h1>My Picks</h1>
+                <h1 class="mobile">My Picks</h1>
+                <h1 class="not-mobile">PickList</h1>
             @else
-                <h1>{{ $user->getNameOrUsername() }}</h1>
+                <h1 class="mobile">{{ $user->getNameOrUsername() }}</h1>
+                <h1 class="not-mobile">PickList</h1>
             @endif
             @include('templates.partials.navigation')
             @if(Auth::user()->id == $user->id)

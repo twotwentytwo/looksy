@@ -13,7 +13,7 @@ class SearchController extends Controller
     {
 
         $this->validate($request, [
-            'query' => 'required|max:500'
+            'query' => 'required|max:255'
         ]);
 
     	$query = $request->input('query');
@@ -26,14 +26,7 @@ class SearchController extends Controller
     	   ->orWhere('username', 'LIKE', "%{$query}%")
     	   ->get();
 
-        $statuses = DB::table('statuses')
-            ->where('title', 'LIKE', "%{$query}%")
-            ->get();
-
         return view('search.results')
-            ->with('users', $users)
-            ->with('statuses', $statuses);
+            ->with('users', $users);
     }
-
-    
 }

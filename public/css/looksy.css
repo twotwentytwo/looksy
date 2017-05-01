@@ -30,6 +30,10 @@ h1 {
 	margin:0;
 }
 
+.not-mobile {
+	display:none;
+}
+
 .logo img {
 	width: 40%;
 	margin: 16px 0;
@@ -1750,7 +1754,7 @@ select {
 	.home .looksy-navigation .home span,
 	.search .looksy-navigation .search span,
 	.categories-page .looksy-navigation .search span,
-	.friends .looksy-navigation .friends span,
+	.friends .looksy-navigation .friends a span,
 	.myprofile .looksy-navigation .profile span, 
 	.profile .looksy-navigation .profile span {
 		color: #fff;
@@ -1914,12 +1918,17 @@ select {
 	}
 
 	.container {
-		width: 970px;
+		width: 770px;
 		margin: 0 auto;
 	}
 
-	h1 {
-	    font-size: 55px;
+	h1.mobile {
+		display:none;
+	}
+
+	.not-mobile {
+		display:block;
+		font-size: 55px;
 	    text-align: left;
 	    color: white;
 	    margin: 8px;
@@ -1988,6 +1997,22 @@ select {
 	    font-size: 1.4em;
 	}
 
+	.looksy-menu .friends .friend-requests {
+	    position: absolute;
+	    right: 117px;
+	    top: 10px;
+	    display: block;
+	    background: url(../img/icons/count.png) 0px 0px no-repeat;
+	    background-size: 20px;
+	    width: 20px;
+	    height: 20px;
+	    color: #333;
+	    font-size: 14px;
+	    padding-top: 2px;
+	    font-weight: bold;
+	    padding-right: 8px;
+	}
+
 	.missing {
 	    height: 316px;
 	}
@@ -2018,6 +2043,10 @@ select {
 
 	.authentication .btn {
 	    width: 20%;
+	}
+
+	.authentication .not-mobile {
+	    display:none;
 	}
 
 	/* authentication */
@@ -2058,6 +2087,11 @@ select {
 		display:none;
 	}
 
+	/* pick */ 
+
+	.reply.btn {
+		width: 20%;
+	}
 
 
 }

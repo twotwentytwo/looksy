@@ -35,7 +35,8 @@
 	</head>
 	<body class="@yield('body-class')">
 		<nav class="navbar navbar-default" role="navigation">
-	        <h1>@yield('title')</h1>
+	        <h1 class="mobile">@yield('title')</h1>
+	        <h1 class="not-mobile">PickList</h1>
 		</nav>
 		<div class="container">
 			@yield('content')

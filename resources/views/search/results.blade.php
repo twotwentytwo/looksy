@@ -13,10 +13,7 @@
 @stop
 
 @section('content')
-	
-	@if(!$users->count() && !$statuses->count())
-		
-
+	@if(!$users->count())
         <div class="friend-block invite-friends">
             <h3>We can't find anyone by that name</h3>
             <p class="no-friend-requests">Enter their email address and we’ll send them an invite.</p>
@@ -24,6 +21,9 @@
                 <form role="form" action="{{ route('emails.sendtofriend') }}" method="post">
                     <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
                         <input placeholder="Their email address" name="invite" class="form-control add">
+                        @if($errors->has('invite'))
+                            <span class="help-block">{{ $errors->first('invite') }}</span>
+                        @endif
                     </div>
                     <div class="invite button">
                         <input type="submit" value="Invite" class="invite btn btn-primary">
