@@ -1336,7 +1336,7 @@ p.latest-picks {
 .profile .pick .type, 
 .add .pick .type {
 	position: absolute;
-	top: 76px;
+	top: 40px;
 	left: 8px;
 	z-index: 1;
 }
