@@ -2,7 +2,7 @@
 
 @section('body-class')
   home 
-  @if($user_statuses_count == 0 || $friends_count == 0)
+  @if($user_statuses_count == 0)
   	cold-start
   @endif
 @stop
@@ -19,7 +19,7 @@
 	
 	<div class="row">
 	    <div class="col-md-6 col-md-offset-3 row-inner">
-	        @if($user_statuses_count == 0 || $friends_count == 0)
+	        @if($user_statuses_count == 0)
 	        	<div class="cold-start">
 	        		<div class="page-1">
 	        			<div class="section-top">

@@ -22,11 +22,8 @@ class HomeController extends Controller
 			$user = Auth::user();
 			$user_statuses_count = $user->statuses()->notReply()->count();
 
-			$friends_count = $user->friends()->count();
-
 			return view('timeline.index')
 				->with('statuses', $statuses)
-				->with('friends_count', $friends_count)
 				->with('user_statuses_count', $user_statuses_count);
 				
 		}
