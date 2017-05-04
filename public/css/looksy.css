@@ -1319,7 +1319,7 @@ p.latest-picks {
 
 .profile .pick .details {
 	position: absolute;
-	bottom: 8px;
+	top: 66px;
 	left: 0;
 }
 
@@ -1329,7 +1329,6 @@ p.latest-picks {
 
 .profile .pick .details .title {
 	position: absolute;
-	bottom: 124px;
 	left: 8px;
 }
 
