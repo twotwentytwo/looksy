@@ -578,12 +578,12 @@ ol li {
 .pick-see .user .username a, 
 .pick-see .edit-pick a, 
 .pick .pick-see .details .title  {
-    background: #FF8F3F;
+    background: #ff5a58;
 }
 
 .pick-see .profile-image,
 .pick-see .user .profile-image {
-	border: 2px solid #FF8F3F;
+	border: 2px solid #ff5a58;
 }
 
 .pick-see .comments {
@@ -592,7 +592,7 @@ ol li {
 }
 
 .pick-see .delete-pick {
-    background: #FF8F3F;
+    background: #ff5a58;
 }
 
 /* watch */
