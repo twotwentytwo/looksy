@@ -989,8 +989,10 @@ p.latest-picks {
 	right:8px;
 }
 
-.pick .edit-pick img {
-	width: 24px;
+.pick .edit-pick a {
+	font-size: 17px;
+	color: #fff;
+	padding:8px;
 }
 
 /*

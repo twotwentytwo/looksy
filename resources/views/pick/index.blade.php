@@ -5,7 +5,7 @@
 @stop
 
 @section('body-class')
-  pick
+  pick pick-{{ $status->type }}
   @if($status->source == 'YouTube')
     youtube
   @endif
@@ -75,7 +75,7 @@
         </div>
         @if(Auth::user() == $status->user)
             <div class="edit-pick">
-                <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}"><img src="{{asset('../img/icons/edit.png')}}" /></a>
+                <a href="{{ route('pick.edit', ['statusId' => $status->id]) }}">Edit pick</a>
             </div>
         @endif
     </div>

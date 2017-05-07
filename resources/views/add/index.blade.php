@@ -48,7 +48,7 @@
                 <div class="preview">
                   <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }} categories-picker">
                     <select name="type" id="selectImage">
-                      <option>Add category</option>
+                      <option>Choose category</option>
                       <option value="see">See</option>
                       <option value="watch">Watch</option>
                       <option value="read">Read</option>
