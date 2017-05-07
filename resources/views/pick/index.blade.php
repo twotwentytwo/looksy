@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3 row-inner">
             @if($status->source == 'YouTube')
-                <div class="videoWrapper pick-{{ $status->type }} youtube">
+                <div class="videoWrapper pick-{{ $status->type }} @if(!isset($status->item_id)) youtube @endif">
                     @if(isset($status->item_id))
                         <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
                     @else
