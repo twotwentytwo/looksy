@@ -5,7 +5,7 @@
 @stop
 
 @section('body-class')
-  pick pick-{{ $status->type }}
+  pick
   @if($status->source == 'YouTube')
     youtube
   @endif

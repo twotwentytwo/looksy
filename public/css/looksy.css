@@ -986,13 +986,11 @@ p.latest-picks {
 .pick .edit-pick {
 	position: absolute;
 	top: 26px;
-	right:8px;
+	right: 8px;
 }
 
 .pick .edit-pick a {
 	font-size: 17px;
-	color: #fff;
-	padding:8px;
 }
 
 /*
