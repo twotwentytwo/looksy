@@ -2,7 +2,6 @@
 
 namespace Looksy\Http\Controllers;
 
-
 use Auth;	
 use DB;
 use Looksy\Models\User;
@@ -54,13 +53,17 @@ class StatusController extends Controller
         // GET YOUTUBE ID IF REQUIRED
 
         if($youtube_desktop) {
+
             $url = $request->input('status');
             parse_str(parse_url( $url, PHP_URL_QUERY ), $get_id_from_url );
-            $segment = $get_id_from_url['v'];
+            $segment = (isset($get_id_from_url['v']) ? $get_id_from_url['v'] : null);
+
         } elseif ($youtube_mobile) {
+
             $url = $request->input('status');
             preg_match('/youtu\.be\/([^\&\?\/]+)/', $url, $id);
-            $segment = $id[1];
+            $segment = (isset($id[1]) ? $id[1] : null);
+
         }
 
         // CREATE ITEM 
