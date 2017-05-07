@@ -797,6 +797,18 @@ p.latest-picks {
 	padding-top: 24px;
 }
 
+.pick.youtube .videoWrapper.youtube {
+	overflow: hidden;
+}
+
+.pick.youtube .videoWrapper.youtube .details {
+    bottom: 0;
+}
+
+.pick.youtube .videoWrapper.youtube img {
+    width: 100%;
+}
+
 .pick .review .comment {
 	color: #fff;
 	padding: 8px 16px;

@@ -19,8 +19,12 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3 row-inner">
             @if($status->source == 'YouTube')
-                <div class="videoWrapper pick-{{ $status->type }}">
-                    <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
+                <div class="videoWrapper pick-{{ $status->type }} youtube">
+                    @if(isset($status->item_id))
+                        <iframe src="https://www.youtube.com/embed/{{ $status->item_id }} " frameborder="0" allowfullscreen></iframe>
+                    @else
+                        <a href="{{ $status->url }}" target="_blank"><img src="{{ $status->image }}" /></a>
+                    @endif
                     <div class="details">
                         <p class="title"><a target="_blank" href="{{ $status->url }}">{{ $status->title }}</a></p>
                     </div> 
